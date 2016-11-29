@@ -7,7 +7,10 @@ Ames
 Ansible
 antispam
 antispyware
+antivirus
 apikey
+App
+app
 architected
 asettle
 Async
@@ -53,6 +56,7 @@ deliverables
 deployer
 deployers
 deprecations
+deselect
 Dev
 dev
 dfw
@@ -110,7 +114,11 @@ indices
 initialisms
 inline
 internet
+intranet
 io
+iPad
+iPhone
+iPod
 iptables
 IPv
 ipv
@@ -167,7 +175,9 @@ nonverbs
 npm
 nz
 octocat
+offline
 offsite
+online
 onsite
 Openstack
 openstack
@@ -237,6 +247,7 @@ Shorewall
 shorewall
 signup
 snet
+spam
 SQLite
 SSL
 startup
@@ -255,6 +266,7 @@ tcp
 tcpflags
 tempsuffix
 timeline
+toolbar
 toolchain
 tooltip
 tox
@@ -263,6 +275,7 @@ udp
 un
 unabbreviated
 Uncomment
+uninstall
 unordered
 Uploader
 uptime
