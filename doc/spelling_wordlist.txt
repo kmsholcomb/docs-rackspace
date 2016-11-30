@@ -1,3 +1,4 @@
+
 aaS
 adam
 addtional
@@ -32,9 +33,11 @@ catlook
 CDN
 Ceph
 Cheatsheet
+checksyntax
 ci
 colocate
 colocation
+conditionalize
 conf
 config
 contentIDbase
@@ -70,6 +73,7 @@ Eker
 el
 Elasticsearch
 entityId
+env
 erikmwilson
 Esc
 eth
@@ -111,6 +115,7 @@ IaaS
 idempotency
 Inavero
 indices
+ini
 initialisms
 inline
 internet
@@ -265,6 +270,8 @@ symlink
 tcp
 tcpflags
 tempsuffix
+testenv
+testenvs
 timeline
 toolbar
 toolchain
@@ -277,12 +284,16 @@ unabbreviated
 Uncomment
 uninstall
 unordered
+unstaged
 Uploader
 uptime
 url
 username
 vCPU
 venv
+Versioned
+versioned
+versioned
 virtualenv
 virtualization
 vlan
@@ -292,6 +303,8 @@ vxlan
 Vyatta
 webhook
 Webmail
+whitelist
+whitelisted
 Wi
 wiki
 Wikipedia
