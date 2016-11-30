@@ -381,17 +381,23 @@ or through VPN. You only need to perform these steps once.
       upstream	git@github.com:rackerlabs/docs-rpc.git (fetch)
       upstream	git@github.com:rackerlabs/docs-rpc.git (push)
 
-#. Checkout the internal gh-pages branch:
+#. Update your remotes:
 
    .. code::
 
-      $ git checkout -b gh-pages internal/gh-pages
+      $ git remote update
+
+#. Create a local gh-pages branch that tracks internal/gh-pages:
+
+   .. code::
+
+      $ git branch gh-pages --track internal/gh-pages
 
 Publishing internally
 ---------------------
 
-Run the following command while connected to the Rackspace network directly
-or through VPN:
+Run the following command from the master branch while connected to the
+Rackspace network directly or through VPN:
 
 .. code::
 

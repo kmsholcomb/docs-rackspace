@@ -508,8 +508,13 @@ upstream  git@github.com:rackerlabs/docs-rpc.git (push)
 </pre></div>
 </div>
 </li>
-<li><p class="first">Checkout the internal gh-pages branch:</p>
-<div class="code highlight-default"><div class="highlight"><pre><span></span>$ git checkout -b gh-pages internal/gh-pages
+<li><p class="first">Update your remotes:</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span>$ git remote update
+</pre></div>
+</div>
+</li>
+<li><p class="first">Create a local gh-pages branch that tracks internal/gh-pages:</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span>$ git branch gh-pages --track internal/gh-pages
 </pre></div>
 </div>
 </li>
@@ -517,8 +522,8 @@ upstream  git@github.com:rackerlabs/docs-rpc.git (push)
 </div>
 <div class="section" id="publishing-internally">
 <h3>Publishing internally<a class="headerlink" href="#publishing-internally" title="Permalink to this headline">#</a></h3>
-<p>Run the following command while connected to the Rackspace network directly
-or through VPN:</p>
+<p>Run the following command from the master branch while connected to the
+Rackspace network directly or through VPN:</p>
 <div class="code highlight-default"><div class="highlight"><pre><span></span>$ tox -e publish
 </pre></div>
 </div>
