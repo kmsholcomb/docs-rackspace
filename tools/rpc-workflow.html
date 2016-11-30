@@ -1,0 +1,642 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>RPC workflow &mdash; Rackspace Documentation Guides  documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../_static/bespoke.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../_static/bolditalic.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="Rackspace Documentation Guides  documentation" href="../index.html"/>
+        <link rel="up" title="Tools" href="index.html"/>
+        <link rel="next" title="Importing and exporting labels" href="manage-labels-readme.html"/>
+        <link rel="prev" title="Carina by Rackspace" href="GitHub-infra-templates/README-carina.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Rackspace Documentation Guides
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../contributor-collateral/index.html">Contribute to Rackspace documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rpc/index.html">RPC team documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../style-guide/index.html">Style guidelines for technical content</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../templates/index.html">Templates</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Tools</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="add-github-links-to-docs.html">Adding support for contributions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="build-from-source.html">Building from Source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GitHub-infra-templates/index.html">GitHub Infra Templates</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">RPC workflow</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#using-tox">Using tox</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#configuration">Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#description-of-tox-ini-options">Description of tox.ini options</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#troubleshooting">Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#local-builds">Local builds</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#advanced-local-builds">Advanced local builds</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#adding-your-working-branch-to-the-whitelist">Adding your working branch to the whitelist</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pushing-to-origin">Pushing to origin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#building-the-versioned-site">Building the versioned site</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#removing-your-working-branch-from-the-whitelist">Removing your working branch from the whitelist</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#publishing">Publishing</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#initial-repository-setup-for-internal-publishing">Initial repository setup for internal publishing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#publishing-internally">Publishing internally</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#using-conditionals">Using conditionals</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usage">Usage</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="manage-labels-readme.html">Importing and exporting labels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mdsphinx.html">Markdown to RST table conversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nexus-deletion.html">Content deletion from Nexus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="publishing.html">Configure development and production builds for Sphinx projects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rtd-tables.html">Table width fix for Read the Docs Sphinx theme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="table-conversion.html">Convert grid tables to list-table directives</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Rackspace Documentation Guides</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">Tools</a> &raquo;</li>
+      
+    <li>RPC workflow</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/tools/rpc-workflow.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="rpc-workflow">
+<h1>RPC workflow<a class="headerlink" href="#rpc-workflow" title="Permalink to this headline">#</a></h1>
+<p><a class="reference external" href="https://github.com/rackerlabs/docs-rpc">docs-rpc</a> is a private GitHub
+repository that contains both external and internal-only content. The
+repository has some extra configuration elements that enable us to
+build both types of content from a single <code class="docutils literal"><span class="pre">doc</span></code> directory while also
+providing access to multiple versions of the documentation.</p>
+<p>As a result of this extra configuration, there are a few ways in which
+docs-rpc interaction differs from our standard workflow.</p>
+<div class="section" id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">#</a></h2>
+<p>Tox is required for building, testing, and internal publishing:</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span>$ sudo pip install tox
+</pre></div>
+</div>
+</div>
+<div class="section" id="using-tox">
+<h2>Using tox<a class="headerlink" href="#using-tox" title="Permalink to this headline">#</a></h2>
+<p><a class="reference external" href="https://tox.readthedocs.io/en/latest/">tox</a> is a Python tool for automated
+testing. Although it is designed primarily for testing code, it is also useful
+for testing and building docs.</p>
+<p>Tox provides us with two main benefits:</p>
+<ul class="simple">
+<li>it handles dependency installation, which enables us to avoid installing
+requirements locally and ensures we are all using the same package versions</li>
+<li>it provides a virtual environment that can be reproduced on a variety of
+machines</li>
+</ul>
+<p>In other words, if the documentation builds correctly in one tox environment,
+it should build correctly in all tox environments.</p>
+<div class="section" id="configuration">
+<h3>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">#</a></h3>
+<p>Tox configuration is controlled by a <code class="docutils literal"><span class="pre">tox.ini</span></code> file in the repository root.
+It consists of general tox settings, a series of testenvs that can be
+invoked individually (e.g. <code class="docutils literal"><span class="pre">tox</span> <span class="pre">-e</span> <span class="pre">checkbuild</span></code>), and configuration for
+certain tests.</p>
+<p>For our purposes, this file is relatively simple:</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">tox</span><span class="p">]</span>
+<span class="n">minversion</span> <span class="o">=</span> <span class="mf">1.6</span>
+<span class="n">envlist</span> <span class="o">=</span> <span class="n">checksyntax</span><span class="p">,</span><span class="n">checkbuild</span>
+<span class="n">skipsdist</span> <span class="o">=</span> <span class="kc">True</span>
+
+<span class="p">[</span><span class="n">testenv</span><span class="p">]</span>
+<span class="n">deps</span> <span class="o">=</span> <span class="o">-</span><span class="n">r</span><span class="p">{</span><span class="n">toxinidir</span><span class="p">}</span><span class="o">/</span><span class="n">requirements</span><span class="o">.</span><span class="n">txt</span>
+
+<span class="n">whitelist_externals</span> <span class="o">=</span>
+  <span class="n">bash</span>
+  <span class="n">make</span>
+
+<span class="p">[</span><span class="n">testenv</span><span class="p">:</span><span class="n">checkbuild</span><span class="p">]</span>
+<span class="n">commands</span> <span class="o">=</span>
+  <span class="n">make</span> <span class="n">html</span> <span class="o">-</span><span class="n">C</span> <span class="p">{</span><span class="n">toxinidir</span><span class="p">}</span><span class="o">/</span><span class="n">doc</span>
+
+<span class="p">[</span><span class="n">testenv</span><span class="p">:</span><span class="n">checklinks</span><span class="p">]</span>
+<span class="n">commands</span> <span class="o">=</span>
+  <span class="n">make</span> <span class="n">linkcheck</span> <span class="o">-</span><span class="n">C</span> <span class="p">{</span><span class="n">toxinidir</span><span class="p">}</span><span class="o">/</span><span class="n">doc</span>
+
+<span class="p">[</span><span class="n">testenv</span><span class="p">:</span><span class="n">checkspelling</span><span class="p">]</span>
+<span class="n">commands</span> <span class="o">=</span>
+  <span class="n">make</span> <span class="n">spelling</span> <span class="o">-</span><span class="n">C</span> <span class="p">{</span><span class="n">toxinidir</span><span class="p">}</span><span class="o">/</span><span class="n">doc</span>
+
+<span class="p">[</span><span class="n">testenv</span><span class="p">:</span><span class="n">checksyntax</span><span class="p">]</span>
+<span class="n">commands</span> <span class="o">=</span>
+  <span class="n">doc8</span> <span class="n">doc</span>
+
+<span class="p">[</span><span class="n">testenv</span><span class="p">:</span><span class="n">checkversions</span><span class="p">]</span>
+<span class="n">commands</span> <span class="o">=</span>
+  <span class="n">sphinx</span><span class="o">-</span><span class="n">versioning</span> <span class="n">build</span> <span class="p">{</span><span class="n">toxinidir</span><span class="p">}</span><span class="o">/</span><span class="n">doc</span> <span class="p">{</span><span class="n">toxinidir</span><span class="p">}</span><span class="o">/</span><span class="n">doc</span><span class="o">/</span><span class="n">_build</span><span class="o">/</span><span class="n">html</span>
+
+<span class="p">[</span><span class="n">testenv</span><span class="p">:</span><span class="n">publish</span><span class="p">]</span>
+<span class="n">commands</span> <span class="o">=</span>
+  <span class="n">sphinx</span><span class="o">-</span><span class="n">versioning</span> <span class="n">push</span> <span class="p">{</span><span class="n">toxinidir</span><span class="p">}</span><span class="o">/</span><span class="n">doc</span> <span class="n">gh</span><span class="o">-</span><span class="n">pages</span> <span class="o">.</span>
+
+<span class="p">[</span><span class="n">doc8</span><span class="p">]</span>
+<span class="c1"># Ignore target directories</span>
+<span class="n">ignore</span><span class="o">-</span><span class="n">path</span> <span class="o">=</span> <span class="n">doc</span><span class="o">/</span><span class="n">_build</span><span class="o">*</span>
+<span class="c1"># File extensions to use</span>
+<span class="n">extensions</span> <span class="o">=</span> <span class="o">.</span><span class="n">rst</span><span class="p">,</span><span class="o">.</span><span class="n">txt</span>
+<span class="c1"># Maximal line length is 79.</span>
+<span class="nb">max</span><span class="o">-</span><span class="n">line</span><span class="o">-</span><span class="n">length</span> <span class="o">=</span> <span class="mi">79</span>
+<span class="c1"># Disable D000: Check RST validity (cannot handle lineos directive)</span>
+<span class="c1"># ignore = D000</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="description-of-tox-ini-options">
+<h3>Description of tox.ini options<a class="headerlink" href="#description-of-tox-ini-options" title="Permalink to this headline">#</a></h3>
+<dl class="docutils">
+<dt>[tox]</dt>
+<dd><ul class="first last simple">
+<li><strong>minversion</strong>: minimum version of tox to use</li>
+<li><strong>envlist</strong>: testenvs to run when none are specified. I.e. when you run
+<code class="docutils literal"><span class="pre">tox</span></code>.</li>
+<li><strong>skipdist</strong>: run tox without requiring a <code class="docutils literal"><span class="pre">setup.py</span></code> file</li>
+</ul>
+</dd>
+<dt>[testenv]</dt>
+<dd><ul class="first last simple">
+<li><strong>deps</strong>: packages required by all testenvs. We install them from the
+<code class="docutils literal"><span class="pre">requirements.txt</span></code> file.</li>
+<li><strong>whitelist_exernals</strong>: commands sourced from the local operating system
+instead of being downloaded and installed by tox</li>
+</ul>
+</dd>
+<dt>[testenv:NAME]</dt>
+<dd><ul class="first last simple">
+<li><strong>checkbuild</strong>: build the current branch using <code class="docutils literal"><span class="pre">make</span> <span class="pre">html</span></code>.
+Configuration is in <code class="docutils literal"><span class="pre">conf.py</span></code> and <code class="docutils literal"><span class="pre">Makefile</span></code>.</li>
+<li><strong>checklinks</strong>: run link checker. Configuration is in <code class="docutils literal"><span class="pre">conf.py</span></code>.</li>
+<li><strong>checkspelling</strong>: run spell checker. Configuration is in <code class="docutils literal"><span class="pre">Makefile</span></code> and
+the custom dictionary is <code class="docutils literal"><span class="pre">spelling_wordlist.txt</span></code></li>
+<li><strong>checksyntax</strong>: run RST syntax check. Configuration is in <code class="docutils literal"><span class="pre">tox.ini</span></code>.</li>
+<li><strong>checkversions</strong>: build versioned docs. Configuration is in <code class="docutils literal"><span class="pre">conf.py</span></code>.</li>
+<li><strong>publish</strong>: builds the documentation and pushes it to the our internal
+gh-pages site. Configuration is in <code class="docutils literal"><span class="pre">conf.py</span></code>. Using this command has
+special requirements. See <a class="reference internal" href="#publishing">Publishing</a>.</li>
+</ul>
+</dd>
+<dt>[doc8]</dt>
+<dd><ul class="first last simple">
+<li>configuration options for the doc8 tests run in the checksyntax env</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="troubleshooting">
+<h3>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">#</a></h3>
+<p>In order to run more quickly, tox reuses elements of its virtual test
+environment. This makes sense, as there is no need to re-download all the
+packages required for building the docs if the requirements have not changed.
+However, when a configuration option changes or a new package is available,
+tox does not automatically refresh its environment.</p>
+<p>If you or someone else changes a configuration option in <code class="docutils literal"><span class="pre">tox.ini</span></code> or alters
+the <code class="docutils literal"><span class="pre">requirements.txt</span></code> file, you must force tox to recreate the test
+environment. You can do this in two ways:</p>
+<ul>
+<li><p class="first">Add the <code class="docutils literal"><span class="pre">-r,</span> <span class="pre">--recreate</span></code> option the next time you run tox:</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span>$ tox -r
+</pre></div>
+</div>
+</li>
+<li><p class="first">Delete the hidden <code class="docutils literal"><span class="pre">.tox</span></code> directory in the repository root where the
+environment is stored:</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span>$ rm -rf .tox
+</pre></div>
+</div>
+</li>
+</ul>
+<p>Most of the time, recreating the tox environment solves tox-related problems.
+If you are still having issues, check the configuration in <code class="docutils literal"><span class="pre">tox.ini</span></code>
+is correct.</p>
+<p>On rare occasions, a new version of an upstream dependency causes a failure
+when installing from <code class="docutils literal"><span class="pre">requirements.txt</span></code>. The tox error output should provide
+some clue in the traceback. Package maintainers will usually fix it these sorts
+of errors fairly quickly. In the meantime, you can pin that package to the
+most recent working version in <code class="docutils literal"><span class="pre">requirements.txt</span></code>. For example:</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="n">sphinx</span><span class="o">&lt;=</span><span class="mf">1.4</span><span class="o">.</span><span class="mi">1</span>
+<span class="n">sphinx_rtd_theme</span><span class="o">==</span><span class="mf">0.1</span><span class="o">.</span><span class="mi">9</span>
+</pre></div>
+</div>
+<p>If you do this, please retest every few days and remove the version requirement
+when the package is fixed.</p>
+</div>
+</div>
+<div class="section" id="local-builds">
+<h2>Local builds<a class="headerlink" href="#local-builds" title="Permalink to this headline">#</a></h2>
+<p>You have three options for building the current working branch.</p>
+<p>The recommended approach is using <code class="docutils literal"><span class="pre">tox</span></code>, which loads all requirements into
+a virtual environment. Tox commands can be run from any location within the
+docs-rpc repository.</p>
+<ul>
+<li><p class="first">Run syntax checks and build the docs (recommended):</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span>$ tox
+</pre></div>
+</div>
+</li>
+<li><p class="first">Build the docs without syntax checks (slightly faster):</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span>$ tox -e checkbuild
+</pre></div>
+</div>
+</li>
+</ul>
+<p>Tox builds the documentation by calling <code class="docutils literal"><span class="pre">make</span> <span class="pre">html</span></code>. You can, however, run
+the make command directly if required. Before doing this, you need to install
+locally all the dependencies listed in the <code class="docutils literal"><span class="pre">requirements.txt</span></code> file. This only
+needs to be done once, but you should regularly update your installed packages
+to the latest versions while keeping them in sync with any pinned dependencies
+in <code class="docutils literal"><span class="pre">requirements.txt</span></code>:</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span>$ sudo pip install -r requirements.txt
+</pre></div>
+</div>
+<p>You can then build the documentation by changing into the <code class="docutils literal"><span class="pre">doc</span></code> directory and
+running <code class="docutils literal"><span class="pre">make</span></code>:</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span>$ make html
+</pre></div>
+</div>
+<p>View the built documentation by opening <code class="docutils literal"><span class="pre">doc/_build/html/index.html</span></code>
+in your browser.</p>
+</div>
+<div class="section" id="advanced-local-builds">
+<h2>Advanced local builds<a class="headerlink" href="#advanced-local-builds" title="Permalink to this headline">#</a></h2>
+<p>The basic <a class="reference internal" href="#local-builds">local builds</a> options are sufficient for testing changes on your
+current working branch before creating a pull request.</p>
+<p>However, the basic build <em>only</em> builds the current working branch, and we
+have several versions of the RPC docs on stable branches. When we publish to
+the internal gh-pages site, we publish all the stable branches using a single
+index page with a version selector.</p>
+<p>You can build the versioned site locally, but there are a few extra steps you
+must take:</p>
+<ol class="arabic simple">
+<li>Add your working branch to the whitelist.</li>
+<li>Push your branch to origin before building.</li>
+<li>Build the versioned documentation site.</li>
+<li>Remove your working branch from the whitelist before creating a PR.</li>
+</ol>
+<div class="section" id="adding-your-working-branch-to-the-whitelist">
+<h3>Adding your working branch to the whitelist<a class="headerlink" href="#adding-your-working-branch-to-the-whitelist" title="Permalink to this headline">#</a></h3>
+<p>Versioned builds are created using <a class="reference external" href="https://robpol86.github.io/sphinxcontrib-versioning">SCVersioning</a>, which is configured
+in <code class="docutils literal"><span class="pre">conf.py</span></code>:</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="n">scv_root_ref</span> <span class="o">=</span> <span class="s1">&#39;v13&#39;</span>
+<span class="n">scv_overflow</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;-q&#39;</span><span class="p">,</span> <span class="p">)</span>
+<span class="n">scv_show_banner</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">scv_banner_main_ref</span> <span class="o">=</span> <span class="s1">&#39;v13&#39;</span>
+<span class="n">scv_whitelist_branches</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;master&#39;</span><span class="p">,</span> <span class="s1">&#39;v13&#39;</span><span class="p">,</span> <span class="s1">&#39;v12&#39;</span><span class="p">,</span> <span class="s1">&#39;v11&#39;</span><span class="p">,</span> <span class="s1">&#39;v10&#39;</span><span class="p">)</span>
+<span class="n">scv_whitelist_tags</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;NIL&#39;</span><span class="p">,</span> <span class="p">)</span>
+<span class="n">scv_push_remote</span> <span class="o">=</span> <span class="s1">&#39;internal&#39;</span>
+<span class="n">scv_grm_exclude</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;.nojekyll&#39;</span><span class="p">,</span> <span class="s1">&#39;.gitignore&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Our interest here is <code class="docutils literal"><span class="pre">scv_whitelist_branches</span></code>. For information about the
+other configuration options, see <a class="reference external" href="https://robpol86.github.io/sphinxcontrib-versioning/settings.html">sphinxcontrib-versioning options</a>.</p>
+<p>SCVersioning works by reading the list of whitelisted branches and building
+each one as a version of the documentation suite. If you are on a working
+branch, you must add it to the whitelist in order to include it in the build.</p>
+<p>While testing your content, you may also want to remove some of the other
+branches to speed up local builds. Commenting out the production list makes
+it easier to restore later.</p>
+<p>Assuming a working branch named <code class="docutils literal"><span class="pre">issue-123</span></code>, you could use:</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="c1"># scv_whitelist_branches = (&#39;master&#39;, &#39;v13&#39;, &#39;v12&#39;, &#39;v11&#39;, &#39;v10&#39;)</span>
+<span class="n">scv_whitelist_branches</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;v13&#39;</span><span class="p">,</span> <span class="s1">&#39;issue-123&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>While you can remove most branches during testing, you must keep the branch
+designated as <code class="docutils literal"><span class="pre">scv_root_ref</span></code>, as this is the branch treated as the default
+version. Normally, this is the latest release of the RPC docs.</p>
+</div>
+<div class="section" id="pushing-to-origin">
+<h3>Pushing to origin<a class="headerlink" href="#pushing-to-origin" title="Permalink to this headline">#</a></h3>
+<p>SCVersioning only works with remote branches and ignores local changes
+(committed, staged, unstaged, etc). You must push your work to origin or
+SCVersioning cannot see it. This eliminates race conditions when multiple CI
+jobs are building docs at the same time.</p>
+<p>After you commit you work locally, push it to origin:</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span>$ git push --set-upstream origin issue-123
+</pre></div>
+</div>
+<p>You only need to set the upstream once. For pushing subsequent commits
+to origin, use:</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span>$ git push
+</pre></div>
+</div>
+</div>
+<div class="section" id="building-the-versioned-site">
+<h3>Building the versioned site<a class="headerlink" href="#building-the-versioned-site" title="Permalink to this headline">#</a></h3>
+<p>SCVersioning uses its own build command to produce the versioned site. The
+recommended way to invoke it is using the <code class="docutils literal"><span class="pre">checkversions</span></code> tox environment:</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span>$ tox -e checkversions
+</pre></div>
+</div>
+<p>Alternatively, you can run the build command directly from the repository root,
+but the same caveats apply regarding dependencies as running <code class="docutils literal"><span class="pre">make</span> <span class="pre">html</span></code>
+directly:</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span>$ sphinx-versioning build doc doc/_build/html
+</pre></div>
+</div>
+<p>Open <code class="docutils literal"><span class="pre">doc/_build/html/index.html</span></code> in a browser to view the versioned site.
+Use the version selector to view your branch and see the latest changes.</p>
+</div>
+<div class="section" id="removing-your-working-branch-from-the-whitelist">
+<h3>Removing your working branch from the whitelist<a class="headerlink" href="#removing-your-working-branch-from-the-whitelist" title="Permalink to this headline">#</a></h3>
+<p>When you are finished testing and you are ready to create a pull request, you
+must remove your branch from the whitelist and restore the list of stable
+branches. Commit, push, then open your PR.</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="n">scv_whitelist_branches</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;master&#39;</span><span class="p">,</span> <span class="s1">&#39;v13&#39;</span><span class="p">,</span> <span class="s1">&#39;v12&#39;</span><span class="p">,</span> <span class="s1">&#39;v11&#39;</span><span class="p">,</span> <span class="s1">&#39;v10&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Reviewers can check your content using the Nexus preview. If they need to see
+the internal gh-page styling or the versioned build, they must clone your fork
+and build using the above workflow.</p>
+</div>
+</div>
+<div class="section" id="publishing">
+<h2>Publishing<a class="headerlink" href="#publishing" title="Permalink to this headline">#</a></h2>
+<p>Publishing externally to <a class="reference external" href="https://developer.rackspace.com/docs/">developer.rackspace.com</a> happens automatically when a PR is
+merged into docs-rpc.</p>
+<p>Publishing internally to <a class="reference external" href="https://pages.github.rackspace.com/rpc-internal/docs-rpc/">github.rackspace.com</a> requires a few
+extra steps.</p>
+<div class="section" id="initial-repository-setup-for-internal-publishing">
+<h3>Initial repository setup for internal publishing<a class="headerlink" href="#initial-repository-setup-for-internal-publishing" title="Permalink to this headline">#</a></h3>
+<p>Publishing to the internal gh-pages site uses two remote repositories:</p>
+<ul class="simple">
+<li>a public or private repository on <em>github.com</em>, where you develop docs</li>
+<li>an internal repository on <em>github.rackspace.com</em>, where you push built docs</li>
+</ul>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last"><strong>Do not edit the internal repository directly</strong>, as it acts as a
+mirror of the external repository. Make all changes upstream in the
+<em>github.com</em> repository, then push the built site to the internal
+<em>github.rackspace.com</em> repository.</p>
+</div>
+<p>Run the following commands while connected to the Rackspace network directly
+or through VPN. You only need to perform these steps once.</p>
+<ol class="arabic">
+<li><p class="first">In your local docs-rpc repository, add the internal repository as a remote:</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span>$ git remote add internal git@github.rackspace.com:rpc-internal/docs-rpc.git
+</pre></div>
+</div>
+</li>
+<li><p class="first">Confirm your remote setup:</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span>$ git remote -v
+internal  git@github.rackspace.com:rpc-internal/docs-rpc.git (fetch)
+internal  git@github.rackspace.com:rpc-internal/docs-rpc.git (push)
+origin    git@github.com:username/docs-rpc.git (fetch)
+origin    git@github.com:username/docs-rpc.git (push)
+upstream  git@github.com:rackerlabs/docs-rpc.git (fetch)
+upstream  git@github.com:rackerlabs/docs-rpc.git (push)
+</pre></div>
+</div>
+</li>
+<li><p class="first">Checkout the internal gh-pages branch:</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span>$ git checkout -b gh-pages internal/gh-pages
+</pre></div>
+</div>
+</li>
+</ol>
+</div>
+<div class="section" id="publishing-internally">
+<h3>Publishing internally<a class="headerlink" href="#publishing-internally" title="Permalink to this headline">#</a></h3>
+<p>Run the following command while connected to the Rackspace network directly
+or through VPN:</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span>$ tox -e publish
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="using-conditionals">
+<h2>Using conditionals<a class="headerlink" href="#using-conditionals" title="Permalink to this headline">#</a></h2>
+<p>In order to have both internal and external documents in a single directory,
+we use the <a class="reference external" href="http://www.sphinx-doc.org/en/1.4.8/ext/ifconfig.html">ifconfig</a>
+directive to label content that should only be published internally.</p>
+<div class="section" id="id1">
+<h3>Configuration<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
+<p>Sphinx includes content labeled <code class="docutils literal"><span class="pre">internal</span></code> based on configuration settings
+in <code class="docutils literal"><span class="pre">conf.py</span></code>:</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="c1"># set ifconfig tags</span>
+<span class="k">if</span> <span class="s1">&#39;CONTENT_ID_BASE&#39;</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">:</span>
+    <span class="c1"># for Nexus preview</span>
+    <span class="n">internal</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="k">elif</span> <span class="s1">&#39;ASSET_DIR&#39;</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">:</span>
+    <span class="c1"># for Nexus publishing</span>
+    <span class="n">internal</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="c1"># for gh-pages and local builds</span>
+    <span class="n">internal</span> <span class="o">=</span> <span class="kc">True</span>
+
+<span class="o">...</span>
+
+<span class="k">def</span> <span class="nf">setup</span><span class="p">(</span><span class="n">app</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Create the internal config value and set to False.&quot;&quot;&quot;</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">add_config_value</span><span class="p">(</span><span class="s1">&#39;internal&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="s1">&#39;env&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="usage">
+<h3>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">#</a></h3>
+<p>Use <code class="docutils literal"><span class="pre">ifconfig</span></code> like other directives, indenting content beneath it that you
+want to apply to internal documents only.</p>
+<p>For example:</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="n">This</span> <span class="ow">is</span> <span class="n">some</span> <span class="n">text</span> <span class="n">that</span> <span class="n">will</span> <span class="n">appear</span> <span class="ow">in</span> <span class="n">internal</span> <span class="ow">and</span> <span class="n">external</span> <span class="n">documentation</span><span class="o">.</span>
+
+<span class="o">..</span> <span class="n">ifconfig</span><span class="p">::</span> <span class="n">internal</span>
+
+   <span class="n">This</span> <span class="n">text</span> <span class="n">will</span> <span class="n">only</span> <span class="n">appear</span> <span class="ow">in</span> <span class="n">internal</span> <span class="n">documenation</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>Currently, we have completely separate books for internal and external
+content. We only use this directive to conditionalize the <code class="docutils literal"><span class="pre">doc/index.rst</span></code>
+file.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="manage-labels-readme.html" class="btn btn-neutral float-right" title="Importing and exporting labels" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="GitHub-infra-templates/README-carina.html" class="btn btn-neutral" title="Carina by Rackspace" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Rackspace.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -10,7 +10,7 @@ How to use the Cloud documentation team tools.
    add-github-links-to-docs.rst
    build-from-source.rst
    GitHub-infra-templates/index.rst
-   internal-publish-script.rst
+   rpc-workflow.rst
    manage-labels-readme.md
    mdsphinx.rst
    nexus-deletion.md
