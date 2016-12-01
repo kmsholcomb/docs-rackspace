@@ -122,6 +122,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#usage">Usage</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="#deconst-global-table-of-contents">Deconst global table of contents</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="manage-labels-readme.html">Importing and exporting labels</a></li>
@@ -478,21 +479,23 @@ extra steps.</p>
 <div class="section" id="initial-repository-setup-for-internal-publishing">
 <h3>Initial repository setup for internal publishing<a class="headerlink" href="#initial-repository-setup-for-internal-publishing" title="Permalink to this headline">#</a></h3>
 <p>Publishing to the internal gh-pages site uses two remote repositories:</p>
-<ul class="simple">
-<li>a public or private repository on <em>github.com</em>, where you develop docs</li>
-<li>an internal repository on <em>github.rackspace.com</em>, where you push built docs</li>
-</ul>
+<dl class="docutils">
+<dt><a class="reference external" href="https://github.com/rackerlabs/docs-rpc">rackerlabs/docs-rpc</a></dt>
+<dd>a private repository on <em>github.com</em> where RPC documentation is developed</dd>
+<dt><a class="reference external" href="https://github.rackspace.com/rpc-internal/docs-rpc">rpc-internal/docs-rpc</a></dt>
+<dd>an internal repository on <em>github.rackspace.com</em> that is only accessible to
+users on the Rackspace network. This repository hosts our <a class="reference external" href="https://pages.github.rackspace.com/rpc-internal/docs-rpc/">internal gh-pages
+site</a>.</dd>
+</dl>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
-<p class="last"><strong>Do not edit the internal repository directly</strong>, as it acts as a
-mirror of the external repository. Make all changes upstream in the
-<em>github.com</em> repository, then push the built site to the internal
-<em>github.rackspace.com</em> repository.</p>
+<p class="last">Do not edit the internal repository directly.</p>
 </div>
 <p>Run the following commands while connected to the Rackspace network directly
 or through VPN. You only need to perform these steps once.</p>
 <ol class="arabic">
-<li><p class="first">In your local docs-rpc repository, add the internal repository as a remote:</p>
+<li><p class="first">In your local <strong>docs-rpc</strong> repository, add the internal repository as a
+remote:</p>
 <div class="code highlight-default"><div class="highlight"><pre><span></span>$ git remote add internal git@github.rackspace.com:rpc-internal/docs-rpc.git
 </pre></div>
 </div>
@@ -513,12 +516,13 @@ upstream  git@github.com:rackerlabs/docs-rpc.git (push)
 </pre></div>
 </div>
 </li>
-<li><p class="first">Create a local gh-pages branch that tracks internal/gh-pages:</p>
+<li><p class="first">Create a local <strong>gh-pages</strong> branch that tracks <strong>internal/gh-pages</strong>:</p>
 <div class="code highlight-default"><div class="highlight"><pre><span></span>$ git branch gh-pages --track internal/gh-pages
 </pre></div>
 </div>
 </li>
 </ol>
+<p>You are now ready to publish the RPC docs internally.</p>
 </div>
 <div class="section" id="publishing-internally">
 <h3>Publishing internally<a class="headerlink" href="#publishing-internally" title="Permalink to this headline">#</a></h3>
@@ -539,15 +543,12 @@ directive to label content that should only be published internally.</p>
 <p>Sphinx includes content labeled <code class="docutils literal"><span class="pre">internal</span></code> based on configuration settings
 in <code class="docutils literal"><span class="pre">conf.py</span></code>:</p>
 <div class="code highlight-default"><div class="highlight"><pre><span></span><span class="c1"># set ifconfig tags</span>
-<span class="k">if</span> <span class="s1">&#39;CONTENT_ID_BASE&#39;</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">:</span>
-    <span class="c1"># for Nexus preview</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="s1">&#39;CONTENT_ID_BASE&#39;</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span> <span class="ow">or</span> <span class="s1">&#39;build-&#39;</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;CONTENT_ID_BASE&#39;</span><span class="p">]:</span>
+    <span class="c1"># Nexus previews, gh-pages, and local builds</span>
     <span class="n">internal</span> <span class="o">=</span> <span class="kc">True</span>
-<span class="k">elif</span> <span class="s1">&#39;ASSET_DIR&#39;</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">:</span>
-    <span class="c1"># for Nexus publishing</span>
-    <span class="n">internal</span> <span class="o">=</span> <span class="kc">False</span>
 <span class="k">else</span><span class="p">:</span>
-    <span class="c1"># for gh-pages and local builds</span>
-    <span class="n">internal</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="c1"># Nexus publishing</span>
+    <span class="n">internal</span> <span class="o">=</span> <span class="kc">False</span>
 
 <span class="o">...</span>
 
@@ -573,6 +574,20 @@ want to apply to internal documents only.</p>
 content. We only use this directive to conditionalize the <code class="docutils literal"><span class="pre">doc/index.rst</span></code>
 file.</p>
 </div>
+</div>
+<div class="section" id="deconst-global-table-of-contents">
+<h2>Deconst global table of contents<a class="headerlink" href="#deconst-global-table-of-contents" title="Permalink to this headline">#</a></h2>
+<p>Deconst builds two tables of contents for Sphinx projects:</p>
+<ul class="simple">
+<li>the main text area uses the table of contents provided by <code class="docutils literal"><span class="pre">doc/index.rst</span></code>.
+A <code class="docutils literal"><span class="pre">..</span> <span class="pre">toctree::</span></code> directive with the <code class="docutils literal"><span class="pre">:hidden:</span></code> option does not appear.</li>
+<li>the sidebar uses a global table of contents. Normally this is built from
+<code class="docutils literal"><span class="pre">doc/index.rst</span></code>. However, the global table of contents does not honor the
+<code class="docutils literal"><span class="pre">:hidden:</span></code> option, thus hidden toctrees appear in the sidebar. To avoid
+this, a special <code class="docutils literal"><span class="pre">_toc.rst</span></code> file is used to specify the sidebar table of
+contents. For more information, see
+<a class="reference external" href="https://deconst.horse/writing-docs/author/sphinx/#tables-of-contents">https://deconst.horse/writing-docs/author/sphinx/#tables-of-contents</a>.</li>
+</ul>
 </div>
 </div>
 

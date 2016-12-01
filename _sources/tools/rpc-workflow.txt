@@ -350,20 +350,23 @@ Initial repository setup for internal publishing
 
 Publishing to the internal gh-pages site uses two remote repositories:
 
-- a public or private repository on *github.com*, where you develop docs
-- an internal repository on *github.rackspace.com*, where you push built docs
+`rackerlabs/docs-rpc <https://github.com/rackerlabs/docs-rpc>`_
+   a private repository on *github.com* where RPC documentation is developed
+
+`rpc-internal/docs-rpc <https://github.rackspace.com/rpc-internal/docs-rpc>`_
+   an internal repository on *github.rackspace.com* that is only accessible to
+   users on the Rackspace network. This repository hosts our `internal gh-pages
+   site <https://pages.github.rackspace.com/rpc-internal/docs-rpc/>`_.
 
 .. warning::
 
-   **Do not edit the internal repository directly**, as it acts as a
-   mirror of the external repository. Make all changes upstream in the
-   *github.com* repository, then push the built site to the internal
-   *github.rackspace.com* repository.
+   Do not edit the internal repository directly.
 
 Run the following commands while connected to the Rackspace network directly
 or through VPN. You only need to perform these steps once.
 
-#. In your local docs-rpc repository, add the internal repository as a remote:
+#. In your local **docs-rpc** repository, add the internal repository as a
+   remote:
 
    .. code::
 
@@ -387,11 +390,13 @@ or through VPN. You only need to perform these steps once.
 
       $ git remote update
 
-#. Create a local gh-pages branch that tracks internal/gh-pages:
+#. Create a local **gh-pages** branch that tracks **internal/gh-pages**:
 
    .. code::
 
       $ git branch gh-pages --track internal/gh-pages
+
+You are now ready to publish the RPC docs internally.
 
 Publishing internally
 ---------------------
@@ -420,15 +425,12 @@ in ``conf.py``:
 .. code::
 
    # set ifconfig tags
-   if 'CONTENT_ID_BASE' in os.environ:
-       # for Nexus preview
+   if not 'CONTENT_ID_BASE' in os.environ or 'build-' in os.environ['CONTENT_ID_BASE']:
+       # Nexus previews, gh-pages, and local builds
        internal = True
-   elif 'ASSET_DIR' in os.environ:
-       # for Nexus publishing
-       internal = False
    else:
-       # for gh-pages and local builds
-       internal = True
+       # Nexus publishing
+       internal = False
 
    ...
 
@@ -455,3 +457,18 @@ For example:
 Currently, we have completely separate books for internal and external
 content. We only use this directive to conditionalize the ``doc/index.rst``
 file.
+
+
+Deconst global table of contents
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Deconst builds two tables of contents for Sphinx projects:
+
+-  the main text area uses the table of contents provided by ``doc/index.rst``.
+   A ``.. toctree::`` directive with the ``:hidden:`` option does not appear.
+-  the sidebar uses a global table of contents. Normally this is built from
+   ``doc/index.rst``. However, the global table of contents does not honor the
+   ``:hidden:`` option, thus hidden toctrees appear in the sidebar. To avoid
+   this, a special ``_toc.rst`` file is used to specify the sidebar table of
+   contents. For more information, see
+   https://deconst.horse/writing-docs/author/sphinx/#tables-of-contents.
