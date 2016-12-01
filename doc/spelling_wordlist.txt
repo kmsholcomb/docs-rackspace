@@ -273,6 +273,8 @@ tempsuffix
 testenv
 testenvs
 timeline
+toctree
+toctrees
 toolbar
 toolchain
 tooltip
