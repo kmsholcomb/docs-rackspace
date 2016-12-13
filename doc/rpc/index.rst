@@ -12,9 +12,7 @@ Non-product material for the RPC documentation team.
    HowTo-OpenStack-On-RAX-Cloud-CentOS.rst
    HowTo-OpenStack-On-RAX-Cloud-Ubuntu.rst
    HowTo-OpenStack-On-RAX-Cloud-RR.rst
-   HowTo-RPCDocs-With-A-Fork.rst
-   HowTo-RPC-RAX-Cloud-Networks.rst
-   RPCDocs-Overview.rst
+   HowTo-docs-rpc-With-A-Fork.rst
 
 .. toctree::
    :caption: Other documentation

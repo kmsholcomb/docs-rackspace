@@ -132,7 +132,7 @@ Configure additional network interfaces
       ONBOOT=yes
       NM_CONTROLLED=no
 
-#. Create *~/vxlan1.sh* with the following content:
+#. Create *~/vxlan.sh* with the following content:
 
    .. code-block:: bash
 
@@ -142,11 +142,11 @@ Configure additional network interfaces
       ip link add vxlan1 type vxlan id 1 group 239.0.0.1 dev eth3 dstport 4789
       ip addr add 10.1.13.1/24 brd 10.1.13.255 dev vxlan1
 
-#. Run the *vxlan1.sh* script:
+#. Run the *vxlan.sh* script:
 
    .. code-block:: console
 
-      # bash -x ~/vxlan1.sh
+      # bash -x ~/vxlan.sh
 
    This script needs to be run every time the node boots.
 
@@ -335,7 +335,7 @@ Configure network interfaces
       ONBOOT=yes
       NM_CONTROLLED=no
 
-#. Create *~/vxlan1.sh* with the following content:
+#. Create *~/vxlan.sh* with the following content:
 
    .. code-block:: bash
 
@@ -345,11 +345,11 @@ Configure network interfaces
       ip link add vxlan1 type vxlan id 1 group 239.0.0.1 dev eth2 dstport 4789
       ip addr add 10.1.13.21/24 brd 10.1.13.255 dev vxlan1
 
-#. Run the *vxlan1.sh* script:
+#. Run the *vxlan.sh* script:
 
    .. code-block:: console
 
-      # bash -x ~/vxlan1.sh
+      # bash -x ~/vxlan.sh
 
    This script needs to be run every time the node boots.
 
@@ -385,6 +385,12 @@ Configure network interfaces
 
       # reboot now
 
+#. After rebooting, run the *vxlan.sh* script:
+
+   .. code-block:: console
+
+      # bash -x ~/vxlan.sh
+
 Test and update
 ---------------
 
@@ -410,8 +416,9 @@ Test and update
 
       # yum update -y
 
-#. If performing pre-release testing, install the repository for the relevant
-   release candidate:
+#. For a normal install, follow the package installation instructions in
+   the Install Guide. If performing pre-release testing, install the repository
+   for the relevant release candidate:
 
    .. code-block:: console
 
@@ -422,6 +429,12 @@ Test and update
    .. code-block:: console
 
       # reboot now
+
+#. After rebooting, run the *vxlan.sh* script:
+
+   .. code-block:: console
+
+      # bash -x ~/vxlan.sh
 
 
 OpenStack compute node (compute)
@@ -436,6 +449,9 @@ OpenStack compute node (compute)
    - Networks: management
 
 #. In the cloud control panel, add the **internal** network to the
+   node.
+
+#. In the cloud control panel, add the **external** network to the
    node.
 
 #. Access the node from the network services node using the IP address
@@ -482,6 +498,38 @@ Configure network interfaces
       ONBOOT=yes
       NM_CONTROLLED=no
 
+#. Edit */etc/sysconfig/network-scripts/ifcfg-eth2*. Do not touch the
+   HWADDR line, as this is determined by the system:
+
+   .. code-block:: ini
+
+      # Label external
+      DEVICE=eth2
+      BOOTPROTO=static
+      HWADDR=bc:76:4e:18:03:c2
+      IPADDR=10.1.10.31
+      NETMASK=255.255.255.0
+      ONBOOT=yes
+      NM_CONTROLLED=no
+
+#. Create *~/vxlan.sh* with the following content:
+
+   .. code-block:: bash
+
+      #!/bin/bash
+
+      modprobe vxlan
+      ip link add vxlan1 type vxlan id 1 group 239.0.0.1 dev eth2 dstport 4789
+      ip addr add 10.1.13.21/24 brd 10.1.13.255 dev vxlan1
+
+#. Run the *vxlan.sh* script:
+
+   .. code-block:: console
+
+      # bash -x ~/vxlan.sh
+
+   This script needs to be run every time the node boots.
+
 #. Edit the */etc/hosts* file:
 
    .. code-block:: text
@@ -500,6 +548,13 @@ Configure network interfaces
 
       nameserver 8.8.8.8
       nameserver 8.8.4.4
+
+#. Stop and disable firewalld to prevent access problems by other nodes:
+
+   .. code-block:: console
+
+      # systemctl stop firewalld
+      # systemctl disable firewalld
 
 #. Reboot the node:
 
@@ -533,14 +588,15 @@ Test and update
 
       # yum update -y
 
-#. If performing pre-release testing, install the repository for the relevant
-   release candidate:
+#. For a normal install, follow the package installation instructions in
+   the Install Guide. If performing pre-release testing, install the repository
+   for the relevant release candidate:
 
    .. code-block:: console
 
       # yum install https://rdoproject.org/repos/openstack-newton/rdo-release-newton.rpm
 
-#. Reboot the node: console
+#. Reboot the node:
 
    .. code-block:: console
 
@@ -623,6 +679,13 @@ Configure network interfaces
       nameserver 8.8.8.8
       nameserver 8.8.4.4
 
+#. Stop and disable firewalld to prevent access problems by other nodes:
+
+   .. code-block:: console
+
+      # systemctl stop firewalld
+      # systemctl disable firewalld
+
 #. Reboot the node:
 
    .. code-block:: console
@@ -655,8 +718,9 @@ Test and update
 
       # yum update -y
 
-#. If performing pre-release testing, install the repository for the relevant
-   release candidate:
+#. For a normal install, follow the package installation instructions in
+   the Install Guide. If performing pre-release testing, install the repository
+   for the relevant release candidate:
 
    .. code-block:: console
 
@@ -686,8 +750,8 @@ Create block storage volume (block1)
 Install and configure OpenStack services
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Use the `Draft OpenStack Installation Guides
-<http://docs.openstack.org/project-install-guide/draft/>`_ with the
+Use the `RDO OpenStack Installation Guides
+<http://docs.openstack.org/newton/install-guide-rdo/>`_ with the
 following changes:
 
 - Configuring the basic environment on all nodes:
@@ -702,28 +766,25 @@ following changes:
       */etc/chrony.conf* file.
     - ``systemctl start chronyd.service``
 
-  - Skip the repository set up on the **OpenStack Packages** page and go
-    directly to **Finalize the installation**.
-
 - Configuring the Compute service on the compute node:
 
   - Use *qemu* instead of *kvm* virtualization.
 
 - Configuring networking:
 
-  - on the *controller*, use ``physical_interface_mappings = provider:eth2``
-  - on the *compute* node, use ``physical_interface_mappings = provider:eth0``
-  - Creating initial networks.
+  - on the *controller*, use ``physical_interface_mappings = provider:vxlan1``
+  - on the *compute* node, use ``physical_interface_mappings =
+    provider:vxlan1``
+  - use the following command to create the subnet:
 
-      - Use the following command for the subnet on the external network:
+    .. code-block:: console
 
-      .. code-block:: console
-
-         neutron subnet-create --name provider \
-         --allocation-pool start=10.1.13.101,end=10.1.13.200 --disable-dhcp \
-         --dns-nameserver 8.8.4.4 --gateway 10.1.11.1 provider 10.1.13.0/24
+       neutron subnet-create --name provider \
+       --allocation-pool start=10.1.13.101,end=10.1.13.200 --enable-dhcp \
+       --dns-nameserver 8.8.4.4 --gateway 10.1.11.1 provider 10.1.13.0/24
 
   .. note::
 
      After performing the initial tenant network creation procedure,
-     try pinging 10.1.13.101 from the network services node.
+     ping 10.1.13.101 from the network services node to confirm you have
+     connectivity on the external network.

@@ -12,10 +12,10 @@ services.
 .. toctree::
    :maxdepth: 1
 
-   basic-writing-guidelines.md
-   a-l-style-guidelines.md
-   m-z-style-guidelines.md
-   terminology-guidelines.md
-   screenshot-diagram-guidelines.md
-   release-notes-guidelines.md
-   revision-history.md
+   basic-writing-guidelines.rst
+   a-l-style-guidelines.rst
+   m-z-style-guidelines.rst
+   terminology-guidelines.rst
+   screenshot-diagram-guidelines.rst
+   release-notes-guidelines.rst
+   revision-history.rst
