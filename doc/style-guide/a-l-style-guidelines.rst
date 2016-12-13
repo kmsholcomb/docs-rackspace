@@ -941,7 +941,7 @@ format, which is *yyyy*-*mm*-*dd* (for example, 2012-11-10 for November
        extents from data collections beginning August 19, 2010.
        
 For information about and examples for showing a date range, see
-`Dashes <../a-l-style-guidelines.hmtl#dashes>`_.
+:ref:`dashes`.
 
 Email addresses
 ~~~~~~~~~~~~~~~
