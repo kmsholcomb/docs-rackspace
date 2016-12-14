@@ -117,7 +117,7 @@ the Monitoring documentation index page on developer.rackspace.com.
 
 If these rules were reversed, the second rule would never be processed
 because all traffic to the legacy Monitoring Guide would be redirected to
-the new guide.
+the index page and the more specific rule would not be processed.
 
 Add a redirect rule
 -------------------
@@ -219,10 +219,10 @@ file.
          ]
    }
 
-   .. note::
+.. note::
 
-      You do not need a comma after the last rule. Also, delete any blank
-      lines at the end of the file.  
+   You do not need a comma after the last rule. Also, delete any blank
+   lines at the end of the file.
 
 **Individual rule redirect incorrectly or returns 404**
 
