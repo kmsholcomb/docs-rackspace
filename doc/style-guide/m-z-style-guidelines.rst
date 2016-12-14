@@ -1,10 +1,12 @@
+.. _mz-style-reference:
+
 ===================
 M-Z style reference
 ===================
 
 This section of the writing style guide provides detailed guidelines
 about and instructions for applying style conventions. For more
-guidelines, see `A-L style reference <a-l-style-guidelines.md>`__.
+guidelines, see `A-L style reference <al-style-reference>`.
 
 -  `Messages <#messages>`__
 -  `Names <#names>`__
@@ -633,6 +635,9 @@ for service and project names.
        API.
      - Cloud Servers provides the core features of OpenStack Nova.
 
+
+.. _punctuation-guidelines:
+
 Punctuation
 ~~~~~~~~~~~
 
@@ -865,7 +870,7 @@ grammar reference, such as the *Harbrace College Handbook*.
        The publications plan was printed in November, 2010, in Austin.
 
        In December 2012 the database restoration failed.
-       
+
 .. _dashes:
 
 Dashes

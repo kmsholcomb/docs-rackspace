@@ -1118,7 +1118,7 @@ are a few basic guidelines to apply:
    *read/write*.
 
 For additional specific punctuation guidelines and examples, see
-`Punctuation <../m-z-style-guidelines.html#punctuation>`__. For basic
+:ref:`Punctuation <punctuation-guidelines>`. For basic
 rules about punctuation, see a grammar book, such as the *Harbrace
 College Handbook*.
 
@@ -1497,4 +1497,4 @@ consistently.
        8-12-12
 
 For more guidance about writing dates, see
-`Dates <../a-l-style-guidelines.html#dates>`__.
+:ref:`Dates <date-format>`.

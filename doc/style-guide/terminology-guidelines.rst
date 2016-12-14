@@ -1,3 +1,5 @@
+.. _terminology-guidelines:
+
 ===========
 Terminology
 ===========

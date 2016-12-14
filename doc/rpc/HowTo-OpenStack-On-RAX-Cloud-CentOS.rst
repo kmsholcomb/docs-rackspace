@@ -35,7 +35,7 @@ Prepare cloud environment
 Keys
 ----
 
--  Upload a public key.
+Upload a public key.
 
 Networks
 --------
@@ -45,21 +45,23 @@ In the Rackspace Cloud Control Panel, select :guilabel:`Networks` in the
 
 #. management
 
-   - 10.1.11.0/24
+   10.1.11.0/24
 
 #. internal
 
-   - 10.1.12.0/24
+   10.1.12.0/24
 
 #. external
 
-   - 10.1.13.0/24
+   10.1.13.0/24
 
 
 Network services node (network-services)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #. Create a cloud server named **network-services**.
+
+   .. code-block:: console
 
    - OS: CentOS 7 (PVHVM)
    - Flavor: 1 GB General Purpose v1
@@ -107,7 +109,7 @@ Configure additional network interfaces
 #. Edit */etc/sysconfig/network-scripts/ifcfg-eth2*. Do not touch the
    HWADDR line, as this is determined by the system:
 
-   .. code-block:: ini
+   .. code-block:: console
 
       # Label management
       DEVICE=eth2
@@ -121,7 +123,7 @@ Configure additional network interfaces
 #. Edit */etc/sysconfig/network-scripts/ifcfg-eth3*. Do not touch the
    HWADDR line, as this is determined by the system:
 
-   .. code-block:: ini
+   .. code-block:: console
 
       # Label external
       DEVICE=eth3
@@ -295,7 +297,7 @@ Configure network interfaces
 #. Edit */etc/sysconfig/network-scripts/ifcfg-eth0*. Do not touch the
    HWADDR line, as this is determined by the system:
 
-   .. code-block:: ini
+   .. code-block:: console
 
       # Label management
       DEVICE=eth0
@@ -310,7 +312,7 @@ Configure network interfaces
 #. Edit */etc/sysconfig/network-scripts/ifcfg-eth1*. Do not touch the
    HWADDR line, as this is determined by the system:
 
-   .. code-block:: ini
+   .. code-block:: console
 
       # Label internal
       DEVICE=eth1
@@ -324,7 +326,7 @@ Configure network interfaces
 #. Edit */etc/sysconfig/network-scripts/ifcfg-eth2*. Do not touch the
    HWADDR line, as this is determined by the system:
 
-   .. code-block:: ini
+   .. code-block:: console
 
       # Label external
       DEVICE=eth2
@@ -472,7 +474,7 @@ Configure network interfaces
 #. Edit */etc/sysconfig/network-scripts/ifcfg-eth0*. Do not touch the
    HWADDR line, as this is determined by the system:
 
-   .. code-block:: ini
+   .. code-block:: console
 
       # Label management
       DEVICE=eth0
@@ -487,7 +489,7 @@ Configure network interfaces
 #. Edit */etc/sysconfig/network-scripts/ifcfg-eth1*. Do not touch the
    HWADDR line, as this is determined by the system:
 
-   .. code-block:: ini
+   .. code-block:: console
 
       # Label internal
       DEVICE=eth1
@@ -501,7 +503,7 @@ Configure network interfaces
 #. Edit */etc/sysconfig/network-scripts/ifcfg-eth2*. Do not touch the
    HWADDR line, as this is determined by the system:
 
-   .. code-block:: ini
+   .. code-block:: console
 
       # Label external
       DEVICE=eth2
@@ -634,7 +636,7 @@ Configure network interfaces
 #. Edit */etc/sysconfig/network-scripts/ifcfg-eth0*. Do not touch the
    HWADDR line, as this is determined by the system:
 
-   .. code-block:: ini
+   .. code-block:: console
 
       # Label management
       DEVICE=eth0
@@ -649,7 +651,7 @@ Configure network interfaces
 #. Edit */etc/sysconfig/network-scripts/ifcfg-eth1*. Do not touch the
    HWADDR line, as this is determined by the system:
 
-   .. code-block:: ini
+   .. code-block:: console
 
       # Label internal
       DEVICE=eth1
@@ -672,14 +674,14 @@ Configure network interfaces
 
       Comment out or remove any existing lines containing *block*.
 
-#. Edit */etc/resolv.conf* and add the Google DNS servers:
+#. Edit ``/etc/resolv.conf`` and add the Google DNS servers:
 
    .. code-block:: text
 
       nameserver 8.8.8.8
       nameserver 8.8.4.4
 
-#. Stop and disable firewalld to prevent access problems by other nodes:
+#. Stop and disable firewall to prevent access problems by other nodes:
 
    .. code-block:: console
 

@@ -1,5 +1,5 @@
 
-Adding support for contributions
+Add GitHub links for contributors
 ---------------------------------
 
 Add GitHub links to the documentation navigation menu to make it easy for

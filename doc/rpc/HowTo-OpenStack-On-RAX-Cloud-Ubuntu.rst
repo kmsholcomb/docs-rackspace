@@ -43,15 +43,15 @@ In the Rackspace Cloud Control Panel, select :guilabel:`Networks` in the
 
 #. net-osmgmt1
 
-   -  10.1.11.0/24
+   10.1.11.0/24
 
 #. net-osint1
 
-   -  10.1.12.0/24
+   10.1.12.0/24
 
 #. net-osext1
 
-   -  10.1.13.0/24
+   10.1.13.0/24
 
 Launch servers
 ~~~~~~~~~~~~~~
@@ -140,7 +140,7 @@ Network services node (network-services)
 
 #.  Edit the :file:`/etc/shorewall/shorewall.conf` file.
 
-    .. code-block:: ini
+    .. code-block:: console
 
        IP_FORWARDING=On
 
@@ -200,7 +200,7 @@ Network services node (network-services)
 
 #. Edit the :file:`/etc/default/shorewall` file.
 
-   .. code-block:: ini
+   .. code-block:: console
 
       startup=1
 
@@ -238,10 +238,12 @@ Network services node (network-services)
       # ssh-keygen -t rsa -b 2048 -C "ns1" -P "" -f .ssh/id_rsa
 
 OpenStack controller node (controller)
----------------------------------------
+--------------------------------------
 
 #. Create a cloud server, removing all networks except the *net-osmgmt1*
    network:
+
+   .. code-block:: console
 
    OS: Ubuntu 16.04 (Xenial Xerus) PVHVM
    Flavor: 8 GB General Purpose v1
@@ -270,31 +272,31 @@ OpenStack controller node (controller)
 
 #.  Edit the :file:`/etc/network/interfaces` file.
 
-   .. code-block:: text
+    .. code-block:: text
 
-      # Label net-osmgmt1
-      auto eth0
-      iface eth0 inet static
+       # Label net-osmgmt1
+       auto eth0
+       iface eth0 inet static
           address 10.1.11.11
           netmask 255.255.255.0
           gateway 10.1.11.1
           dns-nameserver 72.3.128.241 72.3.128.240
 
-      # Label net-osint1
-      auto eth1
-      iface eth1 inet static
+       # Label net-osint1
+       auto eth1
+       iface eth1 inet static
           address 10.1.12.21
           netmask 255.255.255.0
 
-      # Label net-osext1
-      auto eth2
-      iface eth2 inet static
+       # Label net-osext1
+       auto eth2
+       iface eth2 inet static
           address 10.1.10.21
           netmask 255.255.255.0
 
-      # Label vxlan1
-      auto vxlan1
-      iface vxlan1 inet static
+       # Label vxlan1
+       auto vxlan1
+       iface vxlan1 inet static
           pre-up ip link add vxlan1 type vxlan id 1 group 239.0.0.1 dev eth2
           address 10.1.13.21
           netmask 255.255.255.0
@@ -315,8 +317,8 @@ OpenStack controller node (controller)
 
        .. note::
 
-         Comment out or remove any existing lines containing
-         *controller*.
+          Comment out or remove any existing lines containing
+          `controller`.
 
 #.  Reboot the node.
 
@@ -351,11 +353,13 @@ OpenStack compute node (compute)
 #. Create a cloud server, removing all networks except the *net-osmgmt1*
    network:
 
-   OS: Ubuntu 16.04 (Xenial Xerus) PVHVM
-   Flavor:
-   * 3.75 GB Compute v1 (supports several CirrOS instances)
-   * 7.5 GB Compute v1 (supports a couple of Ubuntu/Fedora instances)
-   Network: net-osmgmt1
+   .. code-block:: console
+
+      OS: Ubuntu 16.04 (Xenial Xerus) PVHVM
+     Flavor:
+     * 3.75 GB Compute v1 (supports several CirrOS instances)
+     * 7.5 GB Compute v1 (supports a couple of Ubuntu/Fedora instances)
+     Network: net-osmgmt1
 
 #. Access the node from the network services node (network-services) using the
    IP address assigned by RAX on *net-osmgmt1* network.
@@ -408,7 +412,7 @@ OpenStack compute node (compute)
 
 #. Edit the :file:`/etc/hosts` file.
 
-   .. code-block:: ini
+   .. code-block:: console
 
       # hst-os1ctl1
       10.1.11.11 controller
@@ -457,9 +461,11 @@ OpenStack block storage node (block)
 #. Create a cloud server, removing all networks except the
    **16.04 (Xenial Xerus) PVHVM** network:
 
-   - OS: CentOS 7 (PVHVM)
-   - 4 GB General Purpose v1
-   - Network: net-osmgmt1
+   .. code-block:: console
+
+      OS: CentOS 7 (PVHVM)
+      4 GB General Purpose v1
+      Network: net-osmgmt1
 
 #. In the Cloud Control Panel, add the **net-osint1** network to the
    node.
@@ -478,7 +484,7 @@ OpenStack block storage node (block)
 
 #. Edit the :file:`/etc/network/interfaces` file:
 
-   .. code-block:: ini
+   .. code-block:: console
 
       # Label net-osmgmt1
       auto eth0
@@ -496,7 +502,7 @@ OpenStack block storage node (block)
 
 #. Edit the */etc/hosts* file:
 
-   .. code-block:: ini
+   .. code-block:: console
 
       # controller
       10.1.11.11 controller
@@ -554,7 +560,9 @@ Create block storage volume (block1)
    :guilabel:`Block Storage Volumes` in the :guilabel:`Storage` tab, and
    create the following volume named **block1**:
 
-   - Standard (SATA) 75GB
+   .. code-block:: console
+
+      Standard (SATA) 75GB
 
 #. Attach the volume to the **block** server.
 
@@ -576,24 +584,23 @@ the following changes:
 
 - Configuring the Compute service on the compute node:
 
-  -  Use *qemu* instead of *kvm* virtualization.
+  Use *qemu* instead of *kvm* virtualization.
 
 - Configuring the Networking service on the controller node:
 
-  -  Add the *vxlan1* interface as a port on the *br-ex* bridge.
+  Add the *vxlan1* interface as a port on the *br-ex* bridge.
 
 - Creating initial networks.
 
-  - Use the following command for the subnet on the external network:
+  Use the following command for the subnet on the external network:
 
-    .. code-block:: console
+  .. code-block:: console
 
-       neutron subnet-create --name provider \
-       --allocation-pool start=10.1.13.101,end=10.1.13.200 \
-       --enable-dhcp --gateway 10.1.13.1 provider 10.1.13.0/24
+      neutron subnet-create --name provider \
+      --allocation-pool start=10.1.13.101,end=10.1.13.200 \
+      --enable-dhcp --gateway 10.1.13.1 provider 10.1.13.0/24
 
   .. note::
 
      After performing the initial tenant network creation procedure,
      try pinging 10.1.13.101 from the network services node.
-
