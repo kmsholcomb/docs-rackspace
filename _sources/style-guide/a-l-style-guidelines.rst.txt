@@ -870,6 +870,8 @@ For both API and How-To content, copyright statements are automatically
 inserted by the system. Use the generated statement unless RackLaw gives
 you other instructions.
 
+.. _dates:
+
 Dates
 ~~~~~
 
@@ -920,9 +922,9 @@ comma following the year.
        billed for actual usage in comparison to their preselected SQL Server
        storage allocations.
 
-Use an all-numeric date only in the following situations: 
+Use an all-numeric date only in the following situations:
 
-- Space is limited, as in a table or figure. 
+- Space is limited, as in a table or figure.
 - You need to show a literal representation of the date as it is displayed
   in the software.
 
@@ -939,7 +941,7 @@ format, which is *yyyy*-*mm*-*dd* (for example, 2012-11-10 for November
    * - Use
    * - The value that is shown for 8/19/10 represents the average number of
        extents from data collections beginning August 19, 2010.
-       
+
 For information about and examples for showing a date range, see
 :ref:`dashes`.
 
