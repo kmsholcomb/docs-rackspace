@@ -4,7 +4,7 @@ Style guidelines for technical content
 
 *Last updated:* |today|
 
-This folder contains writing, style, and terminology guidelines for Rackspace
+This document contains writing, style, and terminology guidelines for Rackspace
 Public Cloud and Private Cloud documentation. Use these guidelines to create
 clear, concise, and consistent technical documentation for Rackspace Cloud
 services.
