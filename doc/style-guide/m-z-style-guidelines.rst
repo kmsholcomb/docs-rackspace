@@ -633,6 +633,8 @@ for service and project names.
        API.
      - Cloud Servers provides the core features of OpenStack Nova.
 
+.. _punctuation:
+
 Punctuation
 ~~~~~~~~~~~
 
@@ -865,7 +867,7 @@ grammar reference, such as the *Harbrace College Handbook*.
        The publications plan was printed in November, 2010, in Austin.
 
        In December 2012 the database restoration failed.
-       
+
 .. _dashes:
 
 Dashes
