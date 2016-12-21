@@ -1128,6 +1128,8 @@ such as the *Harbrace College Handbook*.
    useful when writing descriptions or instructions for customers. One
    exception is the use of question marks in FAQ topics.
 
+.. _avoid-obscure-words:
+
 Avoid obscure non-English words and abbreviations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
