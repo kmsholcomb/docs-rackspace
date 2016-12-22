@@ -433,10 +433,10 @@ information about formatting placeholders, see :ref:`text-formatting`.
 Titles and headings
 -------------------
 
-Use :ref:`sentence-style-capitalization` for most titles and headings,
+Use sentence style capitalization for most titles and headings,
 including article, chapter, table, figure, and example titles, as well as
 section and procedure headings. One exception is book titles, which use
-:ref:`title-style-capitalization`.
+title style capitalization.
 
 For additional guidelines for titles and headings, see
 :ref:`titles-and-headings`.
@@ -522,7 +522,7 @@ For additional guidelines about formatting lists, see
 Tables
 ------
 
-Use :ref:`sentence-style-capitalization` for table titles, column headers,
+Use sentence style capitalization for table titles, column headers,
 row headers, and text in table cells.
 
 
@@ -536,7 +536,7 @@ glossaries:
   term is a proper noun or acronym. For example, use *server* instead of
   *Server*.
 
-- For the definition, use :ref:`sentence-style-capitalization`.
+- For the definition, use sentence style capitalization.
 
 .. list-table::
    :widths: 100
@@ -555,7 +555,7 @@ see `Glossaries <#glossaries>`__.
 Figures
 -------
 
-Use :ref:`sentence-style-capitalization` for figure titles, text callouts
+Use sentence style capitalization for figure titles, text callouts
 within figures, and for legends associated with a figure.
 
 Capitalization with punctuation
