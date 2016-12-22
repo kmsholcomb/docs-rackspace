@@ -30,15 +30,18 @@ guidelines:
 
       **v2.20.0, June 25, 2016**
 
+
    -  If the release does not have a version number, use the API contract
       version and date. For example:
 
       **API | contract version | updates, January 07, 2016**
 
+
    -  If you are documenting a named or initial release, indicate the
       initial release in the title. For example:
 
       **API |contract version | release, January 07, 2016**
+
 
    You can precede release with a type, such as EA or UA. For example:
 
@@ -47,14 +50,19 @@ guidelines:
 -  Use the following main sections in the release notes:
 
    -  What's new
+
    -  Resolved issues
+
    -  Known issues
+
    -  Documentation changes
+
 
    .. note::
 
       Anything previously labeled as "enhancements" can be included
       either in "What's new" or "Resolved issues" as appropriate.
+
 
 -  Include the "What's new," "Resolved issues," and "Known issues"
    sections in every RN file, even if you have no content for one of
@@ -67,10 +75,12 @@ guidelines:
 
    ``|no changes|``
 
+
 -  Include the "Documentation changes" section only if you have
    significant content changes, such as adding an extended example, a
    tutorial, or new content. If you have no significant content changes
    for a release, omit that section entirely.
+
 
 -  Order your RN files from latest to earliest, so that the latest is
    always "on top." For example, the release notes for version 1.1
@@ -92,11 +102,9 @@ Formatting
 -  If you have only one item to document in a section, do not show it as
    a bullet item. Show it as regular text.
 
--  Use the punctuation guidelines for lists at `Writing list
-   items <../a-l-style-guidelines.html#writing-list-items>`__.
+-  Use the punctuation guidelines for lists at :ref:`writing-list-items`.
 
--  As needed, use the `text formatting
-   guidelines <../m-z-style-guidelines.html#text-formatting-guidelines>`__.
+-  As needed, use the guidelines at :ref:`text-formatting`.
 
 Wording
 ~~~~~~~

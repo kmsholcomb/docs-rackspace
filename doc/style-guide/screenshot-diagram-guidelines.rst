@@ -12,8 +12,8 @@ creating images for your documents.
 
 .. note::
 
-   These guidelines conform to all of the rules outlined in the
-   `writing style guide <basic-writing-guidelines.md>`__.
+   These guidelines conform to all of the rules outlined in the rest of the
+   style guide.
 
 Screenshot guidelines and process
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -119,8 +119,7 @@ Use the following standards when creating your screenshots:
    differentiate between screenshots.
 -  **Titles:** Titles are not required, especially for screenshots
    in procedures and tutorials. If you want to add a title to a
-   screenshot for clarity, follow the guidelines in `Titles and
-   headings <m-z-style-guidelines.md>`__.
+   screenshot for clarity, follow the guidelines in :ref:`titles-and-headings`.
 
 To learn how to take a screenshot and make a callout in Jing, use the
 tutorial `capture an
@@ -243,7 +242,7 @@ Objects
 
    .. note::
 
-      If you find a Rackspace product icon that is not blue, email
+      If you find a Rackspace product icon that is not blue, send an email to
       how-to@rackspace.com and a member of our team will create a blue version
       of the icon.
 
@@ -312,11 +311,8 @@ Lines and arrows
 
       Example of one-way and two-way arrows
 
-Next steps
-~~~~~~~~~~
+Next step
+~~~~~~~~~
 
--  `Contribute to our Rackspace How-To support
-   network <https://github.com/rackerlabs/rackspace-how-to>`__
-
--  `Contribute to our Rackspace core infrastructure user
-   guide <https://github.com/rackerlabs/docs-core-infra-user-guide>`__
+`Contribute to our Rackspace How-To support
+network <https://github.com/rackerlabs/rackspace-how-to>`__

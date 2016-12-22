@@ -277,6 +277,8 @@ instances of future tense, search for *will*.
        release notes.
      - Not applicable. Future tense is appropriate in this example.
 
+.. _write-to-the-user:
+
 Write to the user by using second person and imperative mood
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -559,6 +561,8 @@ perfect tense, or verbs combined with helping verbs (such as *can*,
      - If you **are using** a Red Hat distribution, iptables works a little
        differently.
 
+.. _helping-verbs:
+
 Use helping verbs accurately
 ----------------------------
 
@@ -829,6 +833,8 @@ end of a procedure that targets *novice* customers, you might write,
 
 However, because the tone of an interjection can be condescending, use
 them sparingly and with care.
+
+.. _restrictive-clauses:
 
 Use restrictive and nonrestrictive clauses correctly
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
