@@ -433,10 +433,10 @@ information about formatting placeholders, see :ref:`text-formatting`.
 Titles and headings
 -------------------
 
-Use sentence-style capitalization for most titles and headings,
+Use *sentence-style* capitalization for most titles and headings,
 including article, chapter, table, figure, and example titles, as well as
 section and procedure headings. One exception is book titles, which use
-title-style capitalization.
+*title-style* capitalization.
 
 For additional guidelines for titles and headings, see
 :ref:`titles-and-headings`.

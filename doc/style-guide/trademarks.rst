@@ -10,7 +10,7 @@ Rackspace content in the format they should be used. Common misuses are
 also provided.
 
 .. list-table::
-   :widths: 50 50
+   :widths: 30 70
    :header-rows: 1
 
    * - Correct name

@@ -7,11 +7,11 @@ Alphabetical list of terms
 This section provides usage guidelines for general terms. The table
 indicates the following special types of terms:
 
--  *Restricted*: Terms that can create problems if used incorrectly
--  *Avoid*: Terms to avoid in favor of better alternatives
--  *Do not use*: Terms that should not be used
+-  Restricted: Terms that can create problems if used incorrectly
+-  Avoid: Terms to avoid in favor of better alternatives
+-  Do not use: Terms that should not be used
 
-A blank cell in the "Special Usage" column indicates that a word is
+A blank cell in the "Special usage" column indicates that a word is
 generally acceptable and should be used as directed in the "Comments"
 column.
 
@@ -28,7 +28,7 @@ parts of speech:
    :header-rows: 1
 
    * - Term
-     - Special Usage
+     - Special usage
      - Comments
    * - 24x7x365
      -
@@ -236,8 +236,13 @@ parts of speech:
        use API options to create servers without the PublicNet network or the
        ServiceNet network.
 
-       You are now ready to complete one or more of the following tasks: •
-       Create a profile • Modify the sample files • Generate a job
+       You are now ready to complete one or more of the following tasks:
+
+       - Create a profile
+
+       - Modify the sample files
+
+       - Generate a job
 
        From this window you can edit the job, schedule it to run later, or
        both.
@@ -487,7 +492,9 @@ parts of speech:
    * - bottom left, bottom right
      - Do not use
      - When referring to the location of an item on a UI, use *lower left* and
-       *lower right* instead. See `left <#left>`__ and `right <#right>`__.
+       *lower right* instead.
+
+       See also *left* and *right*.
    * - box
      -
      - Use *box* instead of *field* to describe a box (including a text box,
@@ -497,7 +504,7 @@ parts of speech:
        when naming a check box. In contrast, when citing one of these terms
        generically, use the complete term, such as *list box*.
 
-       .. note:: Do not use *box* to refer to a computer.
+       **Note**: Do not use *box* to refer to a computer.
 
        *Use:*
 
@@ -543,12 +550,12 @@ parts of speech:
        To save the configuration, click **OK**.
    * - by using
      -
-     - See `using, by using, with <#using>`__.
+     - See *using, by using, with*.
    * - can
      -
-     - Use *can* to indicate the power or ability to perform an action. See
-       also `may <#may>`__, `might <#might>`__, `must <#must>`__, and `should
-       <#should>`__.
+     - Use *can* to indicate the power or ability to perform an action.
+
+       See also *may*, *might*, *must*, *should*, and :ref:`helping-verbs`.
 
        *Use:*
 
@@ -652,8 +659,7 @@ parts of speech:
        or file. Use *close* to refer to the **Close** button or closing a
        window, dialog box, or file.
 
-       See also `collapse, expand <#collapse>`__ and `exit (close, quit, stop)
-       <#exit>`__.
+       See also *collapse, expand* and *exit (close, quit, stop)*.
    * - co (prefix)
      -
      - Do not hyphenate words that begin with the prefix *co*, such as
@@ -835,7 +841,7 @@ parts of speech:
      - Use *remove* or *delete* instead.
    * - dialog
      - Avoid
-     - See `dialog box <#dialog-box>`__.
+     - See *dialog box*.
    * - dialog box
      -
      - Do not use *dialog*, *dialogue*, *window*, *pop-up*, *screen*, or
@@ -843,22 +849,23 @@ parts of speech:
        of a name that is shown in the software. Use lowercase letters for
        generic references (the filter dialog box).
 
-       .. note::
-
-          A dialog box is usually modal, which means that you cannot
-          minimize it and must respond to it before proceeding. In contrast,
-          you can keep a window open but minimized while working on another
-          task.
+       **Note**: A dialog box is usually modal, which means that you cannot
+       minimize it and must respond to it before proceeding. In contrast,
+       you can keep a window open but minimized while working on another
+       task.
    * - different than
      - Do not use
      - Use *different from* instead.
    * - dimmed
      -
      - Use *dimmed* to describe the appearance of an unavailable command,
-       option, or button. Do not use *disabled*, *grayed*, or *grayed out*. See
-       also `unavailable <#unavailable>`__.
+       option, or button. Do not use *disabled*, *grayed*, or *grayed out*.
 
-       *Use:* If the button is dimmed, it is unavailable.
+       See also *unavailable*.
+
+       *Use:*
+
+       If the button is dimmed, it is unavailable.
    * - disabled
      - Restricted
      - Do not use *disabled* to describe inactive commands, options, or buttons
@@ -907,8 +914,9 @@ parts of speech:
      -
      - When documenting instructions for mobile devices, use *double-tap* to
        express the action of quickly touching and releasing an item on the
-       device screen twice in quick succession. Always hyphenate. See also `tap
-       <#tap>`__.
+       device screen twice in quick succession. Always hyphenate.
+
+       See also *tap*.
 
        *Use:*
 
@@ -965,8 +973,9 @@ parts of speech:
      -
      - Use these terms (instead of *lower* and *higher* or *below* and *above*)
        when referring to product releases and version numbers. Do not use
-       *earlier* or *later* to refer to information in text. See also
-       `following, preceding <#following>`__.
+       *earlier* or *later* to refer to information in text.
+
+       See also *following, preceding*.
 
        *Use:*
 
@@ -1004,9 +1013,7 @@ parts of speech:
        The open cloud has a long-term effect on innovation.
    * - e.g.
      - Do not use
-     - Use *for example* instead. See `Avoid obscure non-English words and
-       abbreviations
-       <../basic-writing-guidelines.html#avoid-obscure-non-english-words-and-abbreviations>`__.
+     - Use *for example* instead. See :ref:`avoid-obscure-words.
    * - either
      -
      - Use *either* for two items only.
@@ -1074,10 +1081,10 @@ parts of speech:
      - Use *ensure* to mean *make certain of an action, event, or outcome*. Do
        not use the following similar terms to convey that meaning:
 
-       • *assure* (which means to set someone's mind at ease)
-       • *be sure*
-       • *insure* (which means to guarantee financially against risk) • *make
-         sure*
+       - *assure* (which means to set someone's mind at ease)
+       - *be sure*
+       - *insure* (which means to guarantee financially against risk)
+       - *make sure*
    * - error message
      -
      - Use *error message*, and not *error* alone, to refer to the message that
@@ -1099,9 +1106,8 @@ parts of speech:
      - Do not use
      - Remove *etc.* from the text and replace it with *and so on* or explain
        what it means (in general terms or by example). Precede a limited list
-       of examples with *such as*, or list all specific items. See `Avoid
-       obscure non-English words and abbreviations
-       <../basic-writing-guidelines.html#avoid-obscure-non-english-words-and-abbreviations>`__.
+       of examples with *such as*, or list all specific items. See
+       :ref:`avoid-obscure-words`.
    * - Ethernet
      -
      - Capitalize.
@@ -1150,8 +1156,9 @@ parts of speech:
 
        *Use:*
 
-       Our dedication to *Fanatical Support* extends beyond expert live
-       assistance to ensuring that customers have access to self-help tools.
+       Our dedication to :bolditalic:`Fanatical Support` ® extends beyond
+       expert live assistance to ensuring that customers have access to
+       self-help tools.
 
        *Do not use:*
 
@@ -1266,8 +1273,9 @@ parts of speech:
      - Restricted
      - Use *gray* (not *grey*) only to express color. When referring to the
        state of inactive commands, options, or buttons on an interface, use
-       *unavailable* (not *dimmed* or *gray* or *grayed out*). See also `dimmed
-       <#dimmed>`__.
+       *unavailable* (not *dimmed* or *gray* or *grayed out*).
+
+       See also *dimmed*.
 
        *Use:*
 
@@ -1305,8 +1313,9 @@ parts of speech:
    * - home page
      -
      - Use *home page* to refer to the first (main) page that you see when you
-       enter a website. See also `web, web page, website, WWW, www, home page
-       <#web>`__.
+       enter a website.
+
+       See also *web, web page, website, WWW, www, home page*.
    * - host list, host name
      -
      - Use each of these terms as two words.
@@ -1316,7 +1325,7 @@ parts of speech:
        articles about Rackspace Cloud services, show the name as How-To.
    * - hyperlink
      -
-     - See `link <#link>`__.
+     - See *link*.
    * - icon
      -
      - Do not use *icon* and *button* interchangeably. If you are referring to
@@ -1341,9 +1350,7 @@ parts of speech:
        user who is affected by the incident.
    * - i.e.
      - Do not use
-     - Use *that is* instead. See `Avoid obscure non-English words and
-       abbreviations
-       <../basic-writing-guidelines.html#avoid-obscure-non-english-words-and-abbreviations>`__.
+     - Use *that is* instead. See :ref:`avoid-obscure-words`.
    * - if necessary
      - Avoid
      - Avoid using this ambiguous phrase. Instead, describe the circumstance in
@@ -1436,10 +1443,8 @@ parts of speech:
 
        The install script sets the required values for system variables.
 
-       .. note::
-
-          Use *site* (not *installation*) for the location of a system
-          or facility.
+       **Note**: Use *site* (not *installation*) for the location of a system
+       or facility.
    * - insure
      - Restricted
      - Use *ensure* to mean make certain of an action, event, or outcome. Do
@@ -1474,14 +1479,12 @@ parts of speech:
        network made up of smaller networks that are connected by routers. The
        World Wide Web is part of the Internet.
 
-       .. note::
+       **Note**: An intranet is a network that usually uses applications that
+       are associated with the Internet (such as web pages and an e-mail
+       system), but the network is accessible only to people within a given
+       company or organization.
 
-          An intranet is a network that usually uses applications that
-          are associated with the Internet (such as web pages and an e-mail
-          system), but the network is accessible only to people within a given
-          company or organization.
-
-       See also `web, web page, website, WWW, www, home page <#web>`__.
+       See also *web, web page, website, WWW, www, home page*.
    * - its, it's
      -
      - *Its* is the possessive form of *it*. *It's* is the contraction of *it
@@ -1526,7 +1529,7 @@ parts of speech:
      - Use *cancel*, *stop*, or *end* instead.
    * - later
      -
-     - See `earlier, later <#earlier>`__.
+     - See *earlier, later*.
    * - launch
      - Avoid
      - Use *start* instead of *launch* to refer to programs, services, jobs,
@@ -1563,7 +1566,7 @@ parts of speech:
        staff experience.
    * - lets
      - Restricted
-     - See `allows <#allow>`__.
+     - See *allows*.
    * - leverage
      - Restricted
      - In technical content, use *use* instead. In marketing content, use
@@ -1630,8 +1633,7 @@ parts of speech:
      - Do not use *lower-case*. Do not use *upper/lowercase* to mean mixed
        case.
 
-       See also `mixed case, mixed-case (compound modifier preceding a noun)
-       <#mixed-case>`__.
+       See also *mixed case, mixed-case (compound modifier preceding a noun)*.
    * - lower, higher
      - Restricted
      - Do not use these terms when referring to product releases and version
@@ -1651,8 +1653,9 @@ parts of speech:
    * - lower left, lower right
      -
      - When referring to the location of an item on a UI, use *lower left* and
-       *lower right* instead of *bottom left* or *bottom right*. See `left
-       <#left>`__ and `right <#right>`__.
+       *lower right* instead of *bottom left* or *bottom right*.
+
+       See also *left* and *right*.
    * - machine
      - Restricted
      - Use *machine* only when referring to a virtual machine (VM). In all
@@ -1690,8 +1693,9 @@ parts of speech:
      - As the plural of *matrix*, use *matrixes* rather than *matrices*.
    * - may
      -
-     - Use *may* to indicate permission only. See also `can <#can>`__, `might
-       <#might>`__, `must <#must>`__, and `should <#should>`__.
+     - Use *may* to indicate permission only.
+
+       See also *can*, *might*, *must*, *should*, and :ref:`helping-verbs`.
    * - menu
      -
      - Capitalize *menu* only if it is part of the name that is shown in the
@@ -1701,9 +1705,9 @@ parts of speech:
      - Do not use
      - Use *command* instead of *menu item* in the following situations:
 
-       • Referring to a selection on a menu
-       • Referring to an order or instruction for an action to take place
-       • Naming or referring to a command within a product
+       - Referring to a selection on a menu
+       - Referring to an order or instruction for an action to take place
+       - Naming or referring to a command within a product
    * - message
      -
      - You can use *message* as a general term to refer to an error,
@@ -1721,8 +1725,9 @@ parts of speech:
      - Do not hyphenate.
    * - might
      -
-     - Use *might* to indicate probability or possibility. See also `can
-       <#can>`__, `may <#may>`__, `must <#must>`__, and `should <#should>`__.
+     - Use *might* to indicate probability or possibility.
+
+       See also *can*, *may*, *must*, *should*, and :ref:`helping-verbs`.
    * - mixed case (n), mixed-case (adj)
      -
      - Use *mixed case* to refer to terms that have been formatted with a
@@ -1768,11 +1773,12 @@ parts of speech:
    * - must
      -
      - To indicate the necessity of an action, use *must* rather than *have to*
-       or *need to*. See also `can <#can>`__, `may <#may>`__, `might
-       <#might>`__, and `should <#should>`__.
+       or *need to*.
+
+       See also *can*, *may*, *might*, *should*, and :ref:`helping-verbs`.
    * - NA
      - Restricted
-     - See `not applicable (NA) <#not-applicable>`__.
+     - See *not applicable (NA)*.
    * - name server
      -
      - Use as two words.
@@ -1817,10 +1823,10 @@ parts of speech:
      - Do not hyphenate these terms.
    * - on
      -
-     - See `about, on <#about>`__.
+     - See *about, on*.
    * - once
      -
-     - See `after, once <#after>`__.
+     - See *after, once*.
    * - online
      -
      - Do not hyphenate.
@@ -1862,7 +1868,7 @@ parts of speech:
        on-premises or off-premises.
    * - open
      -
-     - See `close, open <#close>`__.
+     - See *close, open*.
    * - open source (n), open-source (adj)
      -
      - Use lowercase. Hyphenate when used as a modifier.
@@ -1892,8 +1898,9 @@ parts of speech:
    * - over, more than
      -
      - Do not use *over* to indicate quantities; use *more than* instead. Also,
-       do not use *over* to refer to version numbers. See `earlier, later
-       <#earlier>`__.
+       do not use *over* to refer to version numbers.
+
+       See also *earlier, later*.
 
        *Use:*
 
@@ -1909,8 +1916,8 @@ parts of speech:
        windows of the wizard. Do not use *dialog box*, *pane*, *screen*, or
        *window*.
 
-       See also `web, web page, website, WWW, www, home page <#web>`__; and
-       `wizard page <#wizard>`__.
+       See also *web, web page, website, WWW, www, home page* and *wizard
+       page*.
    * - pane
      -
      - Use *pane* to refer to a portion of a window, screen, or console that
@@ -1934,11 +1941,11 @@ parts of speech:
    * - per
      -
      - Use *per* rather than a slash in text to mean for each. In graphical
-       material, use the slash if space is a constraint. See `Avoid obscure
-       non-English words and abbreviations
-       <../basic-writing-guidelines.html#avoid-obscure-non-english-words-and-abbreviations>`__.
+       material, use the slash if space is a constraint.
 
        Do not use *per* to mean *according to* or *by way of*.
+
+       See also :ref:`avoid-obscure-words`.
 
        *Use:*
 
@@ -1982,15 +1989,14 @@ parts of speech:
        opposed to a whole system), such as a file, directory, or printer shared
        on a network.
 
-       .. note::
-
-          The meaning of this term can vary. Ensure that you use the
-          term correctly for the product or technology that you are
-          documenting.
+       **Note**: The meaning of this term can vary. Ensure that you use the
+       term correctly for the product or technology that you are
+       documenting.
 
        Do not use *permissions*, *privileges*, and *rights* interchangeably to
-       mean the same thing. See `privileges <#privileges>`__ and `rights
-       <#rights>`__.
+       mean the same thing.
+
+       See also *privileges* and *rights*.
 
        *Use:*
 
@@ -1999,7 +2005,7 @@ parts of speech:
        granted.
    * - permit
      - Restricted
-     - See `allow <#allow>`__.
+     - See *allow*.
    * - platform as a service (PaaS)
      -
      - Note the capitalization of the spelled-out term and the abbreviation. On
@@ -2060,13 +2066,13 @@ parts of speech:
        *prerequisite*, unless the root word is a proper noun or a date.
    * - preceding
      -
-     - See `following, preceding <#following>`__.
+     - See *following, preceding*.
    * - press
      -
      - Use *press* to mean to push down a key or keys. Do not use the verbs
        *strike*, *punch*, *depress*, *push*, or *hit*.
 
-       See also `click <#click>`__.
+       See also *click*.
 
        *Use:*
 
@@ -2078,7 +2084,9 @@ parts of speech:
    * - prior
      -
      - You can use *prior* as an adjective, but the preferred term is
-       *earlier*. See `earlier, later <#earlier>`__.
+       *earlier*.
+
+       See also *earlier, later*.
    * - privileges
      -
      - In general, you can use *privilege* to refer to the capability of
@@ -2087,15 +2095,14 @@ parts of speech:
        statement). A privilege can be granted or assigned to local groups,
        global groups, and individual users.
 
-       .. note::
-
-          The meaning of this term can vary. Ensure that you use the
-          term correctly for the product or technology that you are
-          documenting.
+       **Note**: The meaning of this term can vary. Ensure that you use the
+       term correctly for the product or technology that you are
+       documenting.
 
        Do not use *permissions*, *privileges*, and *rights* interchangeably to
-       mean the same thing. See `permissions <#permissions>`__ and `rights
-       <#rights>`__.
+       mean the same thing.
+
+       See also *permissions* and *rights*.
 
        *Use:*
 
@@ -2114,7 +2121,7 @@ parts of speech:
 
        When you finish updating parameters, type ``q`` to quit.
 
-       See also `exit (close, quit, stop) <#exit>`__.
+       See also *exit (close, quit, stop)*.
    * - quotation mark
      -
      - Use *quotation mark*, not *quote*, when referring to single quotation
@@ -2248,15 +2255,14 @@ parts of speech:
        groups, global groups, and individual users to allow them to perform
        certain actions on the system.
 
-       .. note::
-
-          The meaning of this term can vary. Ensure that you use the
-          term correctly for the product or technology that you are
-          documenting.
+       **Note**: The meaning of this term can vary. Ensure that you use the
+       term correctly for the product or technology that you are
+       documenting.
 
        Do not use *permissions*, *privileges*, and *rights* interchangeably to
-       mean the same thing. See `permissions <#permissions>`__ and `privileges
-       <#privileges>`__.
+       mean the same thing.
+
+       See also *permissions* and *privileges*.
 
        *Use:*
 
@@ -2356,7 +2362,7 @@ parts of speech:
        Do not use *should* to indicate probability; use *might* instead. Do not
        use *should* to indicate necessity; use *must* instead.
 
-       See also `can <#can>`__, `may <#may>`__, and `must <#must>`__.
+       See also *can*, *may*, *might*, *must*, and :ref:`helping-verbs`.
    * - shut down (v), shutdown (adj, n)
      -
      - *Use:*
@@ -2380,7 +2386,9 @@ parts of speech:
    * - since
      -
      - Use *since* to express a passage of time, not to explain why. Use
-       *because* to explain why. See also `as, since (restricted use) <#as>`__.
+       *because* to explain why.
+
+       See also *as, since (restricted use)*.
    * - slash
      -
      - Use *slash* to refer to the / character. Use *backslash* to refer to
@@ -2422,7 +2430,8 @@ parts of speech:
    * - stop
      -
      - Use *stop* to refer to hardware operations, jobs, services, or routines.
-       See also `exit (close, quit, stop) <#exit>`__.
+
+       See also *exit (close, quit, stop)*.
 
        *Use:*
 
@@ -2450,7 +2459,9 @@ parts of speech:
      -
      - When documenting instructions for mobile devices, use *tap* to express
        the action of quickly touching and releasing an item on the device
-       screen. See also `double-tap <#double-tap>`__.
+       screen.
+
+       See also *double-tap*.
 
        *Use:*
 
@@ -2475,8 +2486,9 @@ parts of speech:
      - Use *that* to introduce a restrictive clause, and do not use a comma.
        Use *which* to introduce a nonrestrictive clause, and use a comma. If a
        nonrestrictive clause occurs in midsentence, set the clause off with
-       commas. See also `Use restrictive and nonrestrictive clauses correctly
-       <../basic-writing-guidelines.html#use-restrictive-and-nonrestrictive-clauses-correctly>`__.
+       commas.
+
+       See also :ref:`restrictive-clauses`.
 
        *Use:*
 
@@ -2549,7 +2561,9 @@ parts of speech:
    * - top left, top right
      - Do not use
      - When referring to the location of an item on a UI, use *upper left* and
-       *upper right* instead. See `left <#left>`__ and `right <#right>`__.
+       *upper right* instead.
+
+       See also *left* and *right*.
    * - towards
      - Do not use
      - Use *toward* instead.
@@ -2574,7 +2588,9 @@ parts of speech:
      -
      - Use *unavailable* (not *dimmed* or *gray*) to refer to the state, not
        the appearance, of inactive commands, options, or buttons on the
-       interface. See also `dimmed <#dimmed>`__.
+       interface.
+
+       See also *dimmed*.
 
        *Use:*
 
@@ -2614,13 +2630,15 @@ parts of speech:
        check an IPv6 address.
    * - uppercase
      -
-     - Do not use *upper-case* or *upper-lowercase*. See also `mixed case,
-       mixed-case (compound modifier preceding a noun) <#mixed-case>`__.
+     - Do not use *upper-case* or *upper-lowercase*.
+
+       See also *mixed case, mixed-case (compound modifier preceding a noun)*.
    * - upper left, upper right
      -
      - When referring to the location of an item on a UI, use *upper left* and
-       *upper right* instead of *top left* or *top right*. See `left <#left>`__
-       and `right <#right>`__.
+       *upper right* instead of *top left* or *top right*.
+
+       See also *left* and *right*.
    * - uptime
      -
      - Use *uptime* as one word.
@@ -2630,9 +2648,8 @@ parts of speech:
        noun that it modifies.
    * - us
      - Restricted
-     - Use first person judiciously. For more information, see `Write to the
-       user by using second person and imperative mood
-       <../basic-writing-guidelines.html#write-to-the-user-by-using-second-person-and-imperative-mood>`__.
+     - Use first person judiciously. For more information, see
+       :ref:`write-to-the-user`.
    * - usable
      -
      - Use *usable* instead of *useable*.
@@ -2666,21 +2683,21 @@ parts of speech:
    * - versus, vs.
      - Avoid
      - Use *compared with* instead. In a title, you can use *versus* to save
-       space. See `Avoid obscure non-English words and abbreviations
-       <../basic-writing-guidelines.html#avoid-obscure-non-english-words-and-abbreviations>`__.
+       space.
+
+       See also :ref:`avoid-obscure-words`.
    * - via
      - Avoid
-     - Use *through* or *by way of* instead. See `Avoid obscure non-English
-       words and abbreviations
-       <../basic-writing-guidelines.html#avoid-obscure-non-english-words-and-abbreviations>`__.
+     - Use *through* or *by way of* instead.
+
+       See also :ref:`avoid-obscure-words`.
    * - want
      -
      - Use *want*, or another appropriate word, instead of *desire* or *wish*.
    * - we
      - Restricted
-     - Use first person judiciously. For more information, see `Write to the
-       user by using second person and imperative mood
-       <../basic-writing-guidelines.html#write-to-the-user-by-using-second-person-and-imperative-mood>`__.
+     - Use first person judiciously. For more information, see
+       :ref:`write-to-the-user`.
    * - web, web page, website, www, home page
      -
      - You can use *the web* as a short form of *the World Wide Web*. Use
@@ -2690,7 +2707,7 @@ parts of speech:
        and (typically) several additional documents. Use *home page* to refer
        to the first (main) page that you see when you enter a site.
 
-       See also `internet, Internet, intranet <#internet>`__.
+       See also *internet, Internet, intranet*.
    * - when, whenever
      -
      - Use *when*, not *whenever*, to mean at a particular time. *Whenever*
@@ -2719,10 +2736,10 @@ parts of speech:
        where ``<controlFile>`` represents the name of the control file.
    * - whether, whether or not
      -
-     - See `if, whether <#if>`__.
+     - See *if, whether*.
    * - which
      -
-     - See `that, which <#that>`__.
+     - See *that, which*.
    * - while
      -
      - Use *while* to refer to something occurring during a period of time. Do
@@ -2756,13 +2773,13 @@ parts of speech:
        displayed. A window can contain documents and messages and can be
        minimized.
 
-       See also `dialog box <#dialog-box>`__.
+       See also *dialog box*.
    * - wish
      - Do not use
      - Use *want* or another appropriate word instead.
    * - with
      -
-     - See `using, by using, with <#using>`__.
+     - See *using, by using, with*.
    * - wizard, wizard page
      -
      - Use lowercase letters for generic references to a wizard; use initial

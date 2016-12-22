@@ -8,41 +8,34 @@ November 10, 2016
 ~~~~~~~~~~~~~~~~~
 
 -  Converted the style guide to reStructuredText.
--  `Trademarks <../m-z-style-guidelines.html#trademarks>`__: Added
-   guidelines to show the term *Fanatical Support* in bold and italics
-   (using the ``:bolditalic:`` directive in RST) and to show a
+-  :ref:`trademarks`: Added guidelines to show the term *Fanatical Support* in
+   bold and italics (using the ``:bolditalic:`` directive in RST) and to show a
    registered trademark symbol on first use.
 
 July 27, 2016
 ~~~~~~~~~~~~~
 
--  Updated the *README.md* and `index <index.rst>`__ files to add
-   Rackspace Private Cloud contributors as consumers of the style guide.
--  `Alphabetical list of
-   terms <../terminology-guidelines.html#alphabetical-list-of-terms>`__:
+-  Updated the *README* and *index* files to add Rackspace Private Cloud
+   contributors as consumers of the style guide.
+
+-  :ref:`alphabetical-list-of-terms`:
 
    -  *be sure*: Added guidelines to avoid it and use *ensure* or *verify*
       instead.
    -  *data store*: Changed guidelines from one word to two words.
    -  *dialog*: Added guideline to avoid it, and referred to *dialog box*.
 
--  `Commas in
-   numbers <../m-z-style-guidelines.html#commas-in-numbers>`__: Revised
-   to use a comma in five-digit numbers, rather than 4-digit numbers, to
-   follow IBM and OpenStack guidelines.
+-  :ref:`commas-in-numbers`: Revised to use a comma in five-digit numbers,
+   rather than 4-digit numbers, to follow IBM and OpenStack guidelines.
 
+-  :ref:`ellipses`: Added a caveat that writers can include an ellipsis with a
+   UI label if omitting it would cause confusion.
 
--  `Ellipses <../m-z-style-guidelines.html#ellipses>`__: Added a caveat
-   that writers can include an ellipsis with a UI label if omitting it
-   would cause confusion.
+-  :ref:`placeholder-text`: Revised guidelines to use ``:samp:`` directive in
+   RST.
 
--  `Placeholder (variable)
-   text <../m-z-style-guidelines.html#placeholder-variable-text>`__:
-   Revised guidelines to use ``:samp:`` directive in RST.
-
--  `Text formatting <../m-z-style-guidelines.html#text-formatting>`__:
-   Updated guidelines to use RST directives when available, and noted
-   style differences between Public and Private Cloud.
+-  :ref:`text-formatting`: Updated guidelines to use RST directives when
+   available, and noted style differences between Public and Private Cloud.
 
    -  Command names: Use monospace for Public, apply the ``:command:``
       directive (bold) for Private.
