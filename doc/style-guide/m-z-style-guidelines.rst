@@ -1372,7 +1372,7 @@ tutorials do not require numbers or titles.
 
 When creating table titles, use the following guidelines:
 
-- Use :ref:`sentence-style-capitalization` for table titles. However, for
+- Use sentence-style capitalization for table titles. However, for
   words that are always uppercase or always lowercase, match that case.
 - Do not start a table title with an article (*a*, *an*, *the*).
 - Do not end a table title with a period or colon.
@@ -1393,7 +1393,7 @@ Column headers
 
 Use the following guidelines for text in column headers:
 
--  Use :ref:`sentence-style-capitalization` in column headers. However, for
+-  Use sentence-style capitalization in column headers. However, for
    words that are always uppercase or always lowercase, match that case.
 -  Use singular nouns for column headers, unless the context requires
    otherwise.
