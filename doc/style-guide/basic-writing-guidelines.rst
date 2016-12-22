@@ -813,6 +813,8 @@ clarity and completeness for brevity.
        provision servers in the Rackspace cloud in minutes.
      - The next generation Cloud Servers is a fast cloud compute solution.
 
+.. _use-interjections-with-care:
+
 Use interjections with care
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
