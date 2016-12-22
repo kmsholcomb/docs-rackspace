@@ -950,9 +950,8 @@ Do this ... *(column header)*
 Exclamation points
 ------------------
 
-Avoid using exclamation points. For more information, see `Use
-interjections with
-care <../basic-writing-guidelines.html#use-interjections-with-care>`__.
+Avoid using exclamation points. For more information, see 
+:ref:`use-interjections-with-care`.
 
 Hyphens
 -------
