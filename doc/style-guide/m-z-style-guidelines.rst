@@ -266,6 +266,8 @@ after the numeral.
 
        zero (0) probability
 
+.. _commas-in-numbers:
+
 Commas in numbers
 -----------------
 
@@ -592,7 +594,6 @@ the following guidelines:
 -  Do not abbreviate Rackspace names, unless the abbreviation has been
    approved by the Legal and Marketing departments. For example, never
    abbreviate Cloud Block Storage as CBS.
-.
 
 -  For API documentation, the version number in the documentation should
    match the version number of the software. The combination of the API
@@ -905,6 +906,8 @@ en dash for the following purposes:
    * - ``12–13=–1``
    * - Customer Support–related queries
 
+.. _ellipses:
+
 Ellipses
 --------
 
@@ -950,7 +953,7 @@ Do this ... *(column header)*
 Exclamation points
 ------------------
 
-Avoid using exclamation points. For more information, see 
+Avoid using exclamation points. For more information, see
 :ref:`use-interjections-with-care`.
 
 Hyphens
@@ -2729,20 +2732,19 @@ documentation.
 Capitalization of titles and headings
 -------------------------------------
 
-Use *sentence-style capitalization* for most titles and headings,
+Use *sentence-style* capitalization for most titles and headings,
 including article, chapter, table, figure, and example titles, as well
 as section and procedure headings. One exception is book titles, which
-use *title-style capitalization*.
+use *title-style* capitalization.
 
-For capitalization guidelines, see
-`Capitalization <../a-l-style-guidelines.html#capitalization>`__.
+For capitalization guidelines, see :ref:`capitalization`.
 
 Article titles and headings
 ---------------------------
 
 This section provides guidelines for titles of articles and headings
 within articles. For capitalization guidelines, see `Capitalization of
-titles and headings <#capitalizatin-of-titles-and-headings>`__.
+titles and headings <#capitalization-of-titles-and-headings>`__.
 
 -  `Titles of articles <#titles-of-articles>`__
 -  `Headings in articles <#headings-in-articles>`__
@@ -3059,6 +3061,8 @@ using a pronoun that refers to the title or heading as its antecedent.
 
        This article briefly describes how to do this.
 
+.. _trademarks:
+
 Trademarks
 ~~~~~~~~~~
 
@@ -3087,8 +3091,16 @@ For a complete list, see the `Rackspace Trademark
 List <https://www.rackspace.com/information/legal/tmlist>`__.
 
 Following are examples of third-party trademarks that are often used in
-our content: - Apache - Enterprise Linux - Linux - OpenStack - Python -
-Red Hat - SQL Server - Ubuntu
+our content:
+
+- Apache
+- Enterprise Linux
+- Linux
+- OpenStack
+- Python
+- Red Hat
+- SQL Server
+- Ubuntu
 
 If you need to verify whether a name is a trademark, see that company's
 website.
@@ -3100,7 +3112,7 @@ Use the following guidelines when showing Rackspace and third-party
 trademarks in documentation.
 
 .. list-table::
-   :widths: 33 33 33
+   :widths: 40 30 30
    :header-rows: 1
 
    * - Guideline
