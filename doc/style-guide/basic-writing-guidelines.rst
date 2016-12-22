@@ -813,6 +813,8 @@ clarity and completeness for brevity.
        provision servers in the Rackspace cloud in minutes.
      - The next generation Cloud Servers is a fast cloud compute solution.
 
+.. _use-interjections-with-care:
+
 Use interjections with care
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -1127,6 +1129,8 @@ such as the *Harbrace College Handbook*.
    appear in code elements, messages, literal commands, or UIs, they are rarely
    useful when writing descriptions or instructions for customers. One
    exception is the use of question marks in FAQ topics.
+
+.. _avoid-obscure-words:
 
 Avoid obscure non-English words and abbreviations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
