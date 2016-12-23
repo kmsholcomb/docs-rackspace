@@ -1,5 +1,5 @@
 bashate
-bolditalic
+chios
 doc8
 flake8
 isort
@@ -11,7 +11,6 @@ pypandoc
 pytest
 pytest-cov
 recommonmark
-remotecode
 sphinx>=1.4.1
 sphinxcontrib-spelling
 sphinx_rtd_theme>=0.1.9

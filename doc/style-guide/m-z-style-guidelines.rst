@@ -703,9 +703,9 @@ Use the following guidelines for colons.
        sentence intervenes between the introductory sentence and the list, use a
        period instead of a colon.
 
-      **Note**: Use a sentence, rather than a fragment, to introduce a list.
-      Fragments are difficult to translate and can be harder to comprehend
-      than sentences, so avoid using them to introduce lists.
+       **Note**: Use a sentence, rather than a fragment, to introduce a list.
+       Fragments are difficult to translate and can be harder to comprehend
+       than sentences, so avoid using them to introduce lists.
      - The following monitoring checks are available to users:
 
        You can use this product to perform the following tasks:
