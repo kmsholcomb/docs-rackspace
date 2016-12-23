@@ -1013,7 +1013,7 @@ parts of speech:
        The open cloud has a long-term effect on innovation.
    * - e.g.
      - Do not use
-     - Use *for example* instead. See :ref:`avoid-obscure-words.
+     - Use *for example* instead. See :ref:`avoid-obscure-words`.
    * - either
      -
      - Use *either* for two items only.
