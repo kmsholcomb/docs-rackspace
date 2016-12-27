@@ -69,7 +69,7 @@ Following are the members of the team:
 
 * Karin Levenstein (IRC: klevenstein) - Manager of Austin, US team
 
-  * Margaret Eker - Senior Information Developer, RPC, Public Cloud
+  * Margaret Eker - Senior Information Developer, RPC and Public Cloud
   * Kelly Holcomb - Editor
   * Catherine Richardson (IRC: cathrichardson) - Senior Information Developer,
     RPC and Public Cloud
@@ -82,7 +82,7 @@ Following are the members of the team:
 
   * Nate Archer - Information Developer, How-To
   * Stephanie Fillmon - Information Developer, How-To
-  * Kyle Laffoon - Information Developer, How-To
+  * Laura Santamaria - Information Developer, How-To
   * Cat Lookabaugh (IRC: catlook) - Senior Information Developer, How-To,
     Public Cloud
 
