@@ -30,7 +30,6 @@ will review and edit the changes as necessary.
 
 For additional information, see the following sections:
 
-
 * `Who is the doc team and what do we do?`_
 * `Rackspace Private Cloud documentation`_
 * `OpenStack-Ansible (OSA) documentation`_
