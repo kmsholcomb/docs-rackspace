@@ -98,20 +98,19 @@ The RPCO docs repo is a private repo, and it is located at
 https://github.com/rackerlabs/docs-rpc. Send a message to one of the docs team
 managers for access.
 
-The two most important folders in the repo are ``/doc`` and ``/internal``.
+The ``/doc`` folder contains both the external and internal guides for RPCO.
 
-The ``/doc`` folder contains the following external guides that are published
+The following external guides that are published
 to the `Rackspace Developer Docs site
 <https://developer.rackspace.com/docs/#docs-private-cloud>`_:
 
-* Administrator Guide (rpc-admin)
 * Technical FAQ (external)
 * Operations Guide
 * Release Notes
 * Standalone Object Storage Guide (swift)
 * Upgrade Guide
 
-The ``/internal`` folder contains the internal guides that contain information
+The internal guides contain information
 specific to Rackspace support that is not intended for public use. For example,
 the internal operations guide contains the following information, which is not
 published in the external operations guide:
@@ -123,9 +122,12 @@ The following internal guides are published to the `Rackspace Developer Portal
 <https://pages.github.rackspace.com/rpc-internal/docs-rpc/>`_ using the GitHub
 pages feature:
 
-* Installation Guide
+* Administrator Guide
 * Technical FAQ (internal)
+* Installation Guide
 * Operations Guide (internal)
+* Rackspace Private Cloud Sales Engineering Documentation
+* Upgrade Expectations
 
 .. note::
 
