@@ -120,6 +120,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#using-conditionals">Using conditionals</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#id1">Configuration</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#usage">Usage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#excluding-internal-documents-from-public-builds">Excluding internal documents from public builds</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#deconst-global-table-of-contents">Deconst global table of contents</a></li>
@@ -573,6 +574,30 @@ want to apply to internal documents only.</p>
 <p>Currently, we have completely separate books for internal and external
 content. We only use this directive to conditionalize the <code class="docutils literal"><span class="pre">doc/index.rst</span></code>
 file.</p>
+</div>
+<div class="section" id="excluding-internal-documents-from-public-builds">
+<h3>Excluding internal documents from public builds<a class="headerlink" href="#excluding-internal-documents-from-public-builds" title="Permalink to this headline">#</a></h3>
+<p>Although documents labeled with <code class="docutils literal"><span class="pre">ifconfig</span></code> in a toctree do not appear in
+the external table of contents, the source is still processed and
+output to the build directory. This means that the internal content can be
+accessed externally through searches.</p>
+<p>To prevent this, directories containing internal books must be excluded from
+external builds by adding them to a conditional <code class="docutils literal"><span class="pre">exclude_patterns</span></code> list in
+<code class="docutils literal"><span class="pre">conf.py</span></code>:</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">internal</span> <span class="ow">is</span> <span class="kc">False</span><span class="p">:</span>
+    <span class="n">exclude_patterns</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="s1">&#39;rpc-faq-internal&#39;</span><span class="p">,</span> <span class="s1">&#39;rpc-install-internal&#39;</span><span class="p">,</span>
+                            <span class="s1">&#39;rpc-ops-internal&#39;</span><span class="p">,</span> <span class="s1">&#39;rpc-sales-eng-internal&#39;</span><span class="p">,</span>
+                            <span class="s1">&#39;rpc-upgrade-exp&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>Due to these files being excluded, when Strider runs a merge build it will
+output some <code class="docutils literal"><span class="pre">nonexisting</span> <span class="pre">document</span></code> and <code class="docutils literal"><span class="pre">undefined</span> <span class="pre">label</span></code> warnings. You
+can safely ignore these.</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">index</span><span class="o">.</span><span class="n">rst</span><span class="p">:</span><span class="mi">36</span><span class="p">:</span> <span class="n">WARNING</span><span class="p">:</span> <span class="n">toctree</span> <span class="n">contains</span> <span class="n">reference</span> <span class="n">to</span> <span class="n">nonexisting</span> <span class="n">document</span> <span class="s1">&#39;rpc-faq-internal/index&#39;</span>
+<span class="o">...</span>
+<span class="o">./</span><span class="n">index</span><span class="o">.</span><span class="n">rst</span><span class="p">:</span><span class="mi">31</span><span class="p">:</span> <span class="n">WARNING</span><span class="p">:</span> <span class="n">undefined</span> <span class="n">label</span><span class="p">:</span> <span class="n">rpc</span><span class="o">-</span><span class="n">faq</span><span class="o">-</span><span class="n">internal</span> <span class="p">(</span><span class="k">if</span> <span class="n">the</span> <span class="n">link</span> <span class="n">has</span> <span class="n">no</span> <span class="n">caption</span> <span class="n">the</span> <span class="n">label</span> <span class="n">must</span> <span class="n">precede</span> <span class="n">a</span> <span class="n">section</span> <span class="n">header</span><span class="p">)</span>
+</pre></div>
+</div>
 </div>
 </div>
 <div class="section" id="deconst-global-table-of-contents">
