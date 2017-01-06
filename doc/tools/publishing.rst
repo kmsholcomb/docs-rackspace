@@ -19,8 +19,8 @@ If you want to move a development project to production, update the
 nexus-control configuration by following the steps to configure a production
 build.
 
-Complete the following steps to build and deploy a documentation project to the
-development environment.
+Complete the following steps to build and deploy a documentation project to
+the development environment.
 
 #. :ref:`Add a new content repository to deconst <add-content-repo>`.
 #. :ref:`Enable Strider build automation
@@ -167,23 +167,26 @@ Configure a project for development builds
 ------------------------------------------
 
 To configure a development build on a branch, update the ``staging.horse``
-site configuration in the nexus-control content and template mapping files,
+site configuration in the nexus-control content and template mapping files.
 These files are in the nexus control repository that manages the
 build and deployment process for the Rackspace documentation websites.
 
 The content mapping file associates the content in a source repository with the
-URL where the content is deployed. The content source repository is identified by the unique content ID
-for the project, ``contentIDBase`` specified in the ``_deconst.json`` file.
+URL where the content is deployed. The content source repository is identified
+by the unique content ID for the project, the ``contentIDBase`` specified in
+the ``_deconst.json`` file.
 
-The template mapping file specifies the template applied to content when a user requests
-content. For example, for book-style content with previous and next links, use the
-user-guide.html template. For single page topics, use the single-page.html template.
+The template mapping file specifies the template applied to content when a user
+requests content. For example, for book-style content with previous and next
+links, use the ``user-guide.html`` template. For single page topics, use the
+``single-page.html`` template.
 
 #. Add the content mapping to `config/content.d/staging.horse.json <https://github.com/rackerlabs/
    nexus-control/blob/master/config/content.d/staging.horse.json>`_.
-   
-   The following example shows the specification to deploy content from the docs-rpc master branch
-   to the ``/docs/private-cloud/rpc/master/" path on the development staging server:
+
+   The following example shows the specification to deploy content from the
+   docs-rpc master branch to the ``/docs/private-cloud/rpc/master/`` path on
+   the development staging server:
 
    .. code::
 
@@ -192,9 +195,9 @@ user-guide.html template. For single page topics, use the single-page.html templ
 #. Add the template mapping to `config/routes.d/staging.horse.json
    <https://github.com/rackerlabs/nexus-control/blob/master/config/routes.d/staging.horse.json>`_
    configuration file.
-   
-   The following example shows the mapping to apply the user guide template to all
-   Rackspace private cloud content:
+
+   The following example shows the mapping to apply the user guide template to
+   all Rackspace Private Cloud content:
 
    .. code::
 
