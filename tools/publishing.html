@@ -177,8 +177,8 @@ the content is excluded from search indexing.</p>
 <p>If you want to move a development project to production, update the
 nexus-control configuration by following the steps to configure a production
 build.</p>
-<p>Complete the following steps to build and deploy a documentation project to the
-development environment.</p>
+<p>Complete the following steps to build and deploy a documentation project to
+the development environment.</p>
 <ol class="arabic simple">
 <li><a class="reference internal" href="#add-content-repo"><span class="std std-ref">Add a new content repository to deconst</span></a>.</li>
 <li><a class="reference internal" href="#enable-strider-build"><span class="std std-ref">Enable Strider build automation</span></a>.</li>
@@ -193,7 +193,7 @@ to the production environment.</p>
 <ol class="arabic simple">
 <li><a class="reference internal" href="#add-content-repo"><span class="std std-ref">Add a new content repository to deconst</span></a>.</li>
 <li><a class="reference internal" href="#enable-strider-build"><span class="std std-ref">Enable Strider build automation</span></a>.</li>
-<li><a class="reference internal" href="#configure-production-build"><span class="std std-ref">Configure a project for production builds</span></a>.</li>
+<li><a class="reference internal" href="#configure-production-build"><span class="std std-ref">Configure project for production builds</span></a>.</li>
 <li><a class="reference internal" href="#review-strider-build"><span class="std std-ref">Review Strider build information</span></a>.</li>
 <li><a class="reference internal" href="#add-documentation-to-menu"><span class="std std-ref">Add documentation to landing page</span></a>.</li>
 </ol>
@@ -305,16 +305,27 @@ indicating that the build ran successfully.</p>
 site configuration in the nexus-control content and template mapping files.
 These files are in the nexus control repository that manages the
 build and deployment process for the Rackspace documentation websites.</p>
+<p>The content mapping file associates the content in a source repository with the
+URL where the content is deployed. The content source repository is identified
+by the unique content ID for the project, the <code class="docutils literal"><span class="pre">contentIDBase</span></code> specified in
+the <code class="docutils literal"><span class="pre">_deconst.json</span></code> file.</p>
+<p>The template mapping file specifies the template applied to content when a user
+requests content. For example, for book-style content with previous and next
+links, use the <code class="docutils literal"><span class="pre">user-guide.html</span></code> template. For single page topics, use the
+<code class="docutils literal"><span class="pre">single-page.html</span></code> template.</p>
 <ol class="arabic">
-<li><p class="first">Add the contentIDBase for the branch content to the
-<a class="reference external" href="https://github.com/rackerlabs/nexus-control/blob/master/config/content.d/staging.horse.json">config/content.d/staging.horse.json</a>
-configuration file. For example:</p>
-<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="s2">&quot;/docs/private-cloud/rpc/master/&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/rackerlabs/docs-rpc/&lt;branchname&gt;/&quot;</span><span class="p">,</span>
+<li><p class="first">Add the content mapping to <a class="reference external" href="https://github.com/rackerlabs/nexus-control/blob/master/config/content.d/staging.horse.json">config/content.d/staging.horse.json</a>.</p>
+<p>The following example shows the specification to deploy content from the
+docs-rpc master branch to the <code class="docutils literal"><span class="pre">/docs/private-cloud/rpc/master/</span></code> path on
+the development staging server:</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="s2">&quot;/docs/private-cloud/rpc/master/&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/rackerlabs/docs-rpc/master&quot;</span><span class="p">,</span>
 </pre></div>
 </div>
 </li>
 <li><p class="first">Add the template mapping to <a class="reference external" href="https://github.com/rackerlabs/nexus-control/blob/master/config/routes.d/staging.horse.json">config/routes.d/staging.horse.json</a>
-configuration file. For example:</p>
+configuration file.</p>
+<p>The following example shows the mapping to apply the user guide template to
+all Rackspace Private Cloud content:</p>
 <div class="code highlight-default"><div class="highlight"><pre><span></span><span class="s2">&quot;^/docs/private-cloud/&quot;</span><span class="p">:</span> <span class="s2">&quot;developer.rackspace.com/user-guide.html&quot;</span><span class="p">,</span>
 </pre></div>
 </div>
