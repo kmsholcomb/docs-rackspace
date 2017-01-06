@@ -38,7 +38,7 @@ to the production environment.
 
 #. :ref:`Add a new content repository to deconst <add-content-repo>`.
 #. :ref:`Enable Strider build automation <enable-strider-build>`.
-#. :ref:`Configure a project for production builds <configure-production-build>`.
+#. :ref:`Configure project for production builds <configure-production-build>`.
 #. :ref:`Review Strider build information <review-strider-build>`.
 #. :ref:`Add documentation to landing page <add-documentation-to-menu>`.
 
