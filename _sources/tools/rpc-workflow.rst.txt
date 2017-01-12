@@ -365,6 +365,12 @@ Publishing to the internal gh-pages site uses two remote repositories:
 Run the following commands while connected to the Rackspace network directly
 or through VPN. You only need to perform these steps once.
 
+#. Upload an SSH key to your internal GitHub account. You can access SSH key
+   options by going to **Settings -> SSH keys** in the GitHub interface.
+
+#. Ask an RPC writer to add you to the **rpcdocs** team. This membership gives
+   you push access to the **rpc-internal** repository.
+
 #. In your local **docs-rpc** repository, add the internal repository as a
    remote:
 
