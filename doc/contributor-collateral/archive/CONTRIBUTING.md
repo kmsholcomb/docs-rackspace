@@ -23,30 +23,629 @@ Source files for the Sphinx documentation project are in the ``api-docs``
 directory. Following are the key files that define project and content
 architecture:
 
-<!--table-->
-Content | File
---- | ---
-|Index page for the main content structure| [index.rst](https://github.com/rackerlabs/docs-cloud-files/blob/master/api-docs/index.rst)
-|About the API index| [overview/index.rst](https://github.com/rackerlabs/docs-cloud-files/blob/master/api-docs/overview/index.rst)
-|Getting Started introduction| [getting-started.rst](https://github.com/rackerlabs/docs-cloud-files/blob/master/api-docs/getting-started.rst)
-|Getting Started index|[getting-started/index.rst](https://github.com/rackerlabs/docs-cloud-files/blob/master/api-docs/getting-started/index.rst)
-|Developer Guide introduction|[developer-guide.rst](https://github.com/rackerlabs/docs-cloud-files/blob/master/api-docs/developer-guide.rst)
-|Concepts section| [concepts.rst](https://github.com/rackerlabs/docs-cloud-files/blob/master/api-docs/concepts.rst)
-|General API information index|[general-api-info/index.rst](https://github.com/rackerlabs/docs-cloud-files/blob/master/api-docs/general-api-info/index.rst)
-|API Reference introduction|[api-reference.rst](https://github.com/rackerlabs/docs-cloud-files/blob/master/api-docs/api-reference.rst)
-|API Reference index for storage operations|[storage-api-operations/index.rest](https://github.com/rackerlabs/docs-cloud-files/blob/master/api-docs/storage-api-operations/index.rst)
-|API Reference index for CDN operations|[cdn-api-operations/index.rst](https://github.com/rackerlabs/docs-cloud-files/blob/master/api-docs/cdn-api-operations/index.rst)
-|API operations methods for storage, including code samples|[storage-api-operations/methods](https://github.com/rackerlabs/docs-cloud-files/tree/master/api-docs/storage-api-operations/methods)
-|API operations methods for CDN, including code samples|[cdn-api-operations/methods](https://github.com/rackerlabs/docs-cloud-files/tree/master/api-docs/cdn-api-operations/methods)
-|Special Use Cases introduction|[use-cases-information.rst](https://github.com/rackerlabs/docs-cloud-files/blob/master/api-docs/use-cases-information.rst)
-|Static websites using CDN-enabled containers|[static-websites-using-cdn-enabled-containers/index.rst](https://github.com/rackerlabs/docs-cloud-files/blob/master/api-docs/static-websites-using-cdn-enabled-containers/index.rst)
-|Bulk operations|[bulk-operations/index.rst](https://github.com/rackerlabs/docs-cloud-files/blob/master/api-docs/bulk-operations/index.rst)
-|Public access to your Cloud Files account|[public-access-to-your-cloud-files-account/index.rst](https://github.com/rackerlabs/docs-cloud-files/blob/master/api-docs/public-access-to-your-cloud-files-account/index.rst)
-|Release notes|[release-notes.rst](https://github.com/rackerlabs/docs-cloud-files/blob/master/api-docs/release-notes.rst)
-|Sphinx documentation configuration file| [conf.py](https://github.com/rackerlabs/docs-cloud-files/blob/master/api-docs/conf.py) (Typically, this file does not require changes.)
-|Linux and OS X build script|``Makefile``|
-|Windows build script|``make.bat``|
-<!--endtable-->
+```eval_rst
+.. list-table::
+   :widths: 50 50
+   :header-rows: 1
+
+   * - Cont
+     - File   * - ent
+     -
+   * - Inde
+     - `ind   * - x
+     - ex.r   * - page
+     - st <   * - for
+     - http   * - the
+     - s://   * - main
+     - gith   * - cont
+     - ub.c   * - ent
+     - om/r   * - stru
+     - acke   * - ctur
+     - rlab   * - e
+     - s/do   * - 
+     - cs-c   * - 
+     - loud   * - 
+     - -fil   * - 
+     - es/b   * - 
+     - lob/   * - 
+     - mast   * - 
+     - er/a   * - 
+     - pi-d   * - 
+     - ocs/   * - 
+     - inde   * - 
+     - x.rs   * - 
+     - t>`_   * - 
+     - _
+   * - Abou
+     - `ove   * - t
+     - rvie   * - the
+     - w/in   * - API
+     - dex.   * - inde
+     - rst   * - x
+     - <htt   * - 
+     - ps:/   * - 
+     - /git   * - 
+     - hub.   * - 
+     - com/   * - 
+     - rack   * - 
+     - erla   * - 
+     - bs/d   * - 
+     - ocs-   * - 
+     - clou   * - 
+     - d-fi   * - 
+     - les/   * - 
+     - blob   * - 
+     - /mas   * - 
+     - ter/   * - 
+     - api-   * - 
+     - docs   * - 
+     - /ove   * - 
+     - rvie   * - 
+     - w/in   * - 
+     - dex.   * - 
+     - rst>   * - 
+     - `__
+   * - Gett
+     - `get   * - ing
+     - ting   * - Star
+     - -sta   * - ted
+     - rted   * - intr
+     - .rst   * - oduc
+     - <ht   * - tion
+     - tps:   * - 
+     - //gi   * - 
+     - thub   * - 
+     - .com   * - 
+     - /rac   * - 
+     - kerl   * - 
+     - abs/   * - 
+     - docs   * - 
+     - -clo   * - 
+     - ud-f   * - 
+     - iles   * - 
+     - /blo   * - 
+     - b/ma   * - 
+     - ster   * - 
+     - /api   * - 
+     - -doc   * - 
+     - s/ge   * - 
+     - ttin   * - 
+     - g-st   * - 
+     - arte   * - 
+     - d.rs   * - 
+     - t>`_   * - 
+     - _
+   * - Gett
+     - `get   * - ing
+     - ting   * - Star
+     - -sta   * - ted
+     - rted   * - inde
+     - /ind   * - x
+     - ex.r   * - 
+     - st <   * - 
+     - http   * - 
+     - s://   * - 
+     - gith   * - 
+     - ub.c   * - 
+     - om/r   * - 
+     - acke   * - 
+     - rlab   * - 
+     - s/do   * - 
+     - cs-c   * - 
+     - loud   * - 
+     - -fil   * - 
+     - es/b   * - 
+     - lob/   * - 
+     - mast   * - 
+     - er/a   * - 
+     - pi-d   * - 
+     - ocs/   * - 
+     - gett   * - 
+     - ing-   * - 
+     - star   * - 
+     - ted/   * - 
+     - inde   * - 
+     - x.rs   * - 
+     - t>`_   * - 
+     - _
+   * - Deve
+     - `dev   * - lope
+     - elop   * - r
+     - er-g   * - Guid
+     - uide   * - e
+     - .rst   * - intr
+     - <ht   * - oduc
+     - tps:   * - tion
+     - //gi   * - 
+     - thub   * - 
+     - .com   * - 
+     - /rac   * - 
+     - kerl   * - 
+     - abs/   * - 
+     - docs   * - 
+     - -clo   * - 
+     - ud-f   * - 
+     - iles   * - 
+     - /blo   * - 
+     - b/ma   * - 
+     - ster   * - 
+     - /api   * - 
+     - -doc   * - 
+     - s/de   * - 
+     - velo   * - 
+     - per-   * - 
+     - guid   * - 
+     - e.rs   * - 
+     - t>`_   * - 
+     - _
+   * - Conc
+     - `con   * - epts
+     - cept   * - sect
+     - s.rs   * - ion
+     - t <h   * - 
+     - ttps   * - 
+     - ://g   * - 
+     - ithu   * - 
+     - b.co   * - 
+     - m/ra   * - 
+     - cker   * - 
+     - labs   * - 
+     - /doc   * - 
+     - s-cl   * - 
+     - oud-   * - 
+     - file   * - 
+     - s/bl   * - 
+     - ob/m   * - 
+     - aste   * - 
+     - r/ap   * - 
+     - i-do   * - 
+     - cs/c   * - 
+     - once   * - 
+     - pts.   * - 
+     - rst>   * - 
+     - `__
+   * - Gene
+     - `gen   * - ral
+     - eral   * - API
+     - -api   * - info
+     - -inf   * - rmat
+     - o/in   * - ion
+     - dex.   * - inde
+     - rst   * - x
+     - <htt   * - 
+     - ps:/   * - 
+     - /git   * - 
+     - hub.   * - 
+     - com/   * - 
+     - rack   * - 
+     - erla   * - 
+     - bs/d   * - 
+     - ocs-   * - 
+     - clou   * - 
+     - d-fi   * - 
+     - les/   * - 
+     - blob   * - 
+     - /mas   * - 
+     - ter/   * - 
+     - api-   * - 
+     - docs   * - 
+     - /gen   * - 
+     - eral   * - 
+     - -api   * - 
+     - -inf   * - 
+     - o/in   * - 
+     - dex.   * - 
+     - rst>   * - 
+     - `__
+   * - API
+     - `api   * - Refe
+     - -ref   * - renc
+     - eren   * - e
+     - ce.r   * - intr
+     - st <   * - oduc
+     - http   * - tion
+     - s://   * - 
+     - gith   * - 
+     - ub.c   * - 
+     - om/r   * - 
+     - acke   * - 
+     - rlab   * - 
+     - s/do   * - 
+     - cs-c   * - 
+     - loud   * - 
+     - -fil   * - 
+     - es/b   * - 
+     - lob/   * - 
+     - mast   * - 
+     - er/a   * - 
+     - pi-d   * - 
+     - ocs/   * - 
+     - api-   * - 
+     - refe   * - 
+     - renc   * - 
+     - e.rs   * - 
+     - t>`_   * - 
+     - _
+   * - API
+     - `sto   * - Refe
+     - rage   * - renc
+     - -api   * - e
+     - -ope   * - inde
+     - rati   * - x
+     - ons/   * - for
+     - inde   * - stor
+     - x.re   * - age
+     - st <   * - oper
+     - http   * - atio
+     - s://   * - ns
+     - gith   * - 
+     - ub.c   * - 
+     - om/r   * - 
+     - acke   * - 
+     - rlab   * - 
+     - s/do   * - 
+     - cs-c   * - 
+     - loud   * - 
+     - -fil   * - 
+     - es/b   * - 
+     - lob/   * - 
+     - mast   * - 
+     - er/a   * - 
+     - pi-d   * - 
+     - ocs/   * - 
+     - stor   * - 
+     - age-   * - 
+     - api-   * - 
+     - oper   * - 
+     - atio   * - 
+     - ns/i   * - 
+     - ndex   * - 
+     - .rst   * - 
+     - >`__
+   * - API
+     - `cdn   * - Refe
+     - -api   * - renc
+     - -ope   * - e
+     - rati   * - inde
+     - ons/   * - x
+     - inde   * - for
+     - x.rs   * - CDN
+     - t <h   * - oper
+     - ttps   * - atio
+     - ://g   * - ns
+     - ithu   * - 
+     - b.co   * - 
+     - m/ra   * - 
+     - cker   * - 
+     - labs   * - 
+     - /doc   * - 
+     - s-cl   * - 
+     - oud-   * - 
+     - file   * - 
+     - s/bl   * - 
+     - ob/m   * - 
+     - aste   * - 
+     - r/ap   * - 
+     - i-do   * - 
+     - cs/c   * - 
+     - dn-a   * - 
+     - pi-o   * - 
+     - pera   * - 
+     - tion   * - 
+     - s/in   * - 
+     - dex.   * - 
+     - rst>   * - 
+     - `__
+   * - API
+     - `sto   * - oper
+     - rage   * - atio
+     - -api   * - ns
+     - -ope   * - meth
+     - rati   * - ods
+     - ons/   * - for
+     - meth   * - stor
+     - ods   * - age,
+     - <htt   * - incl
+     - ps:/   * - udin
+     - /git   * - g
+     - hub.   * - code
+     - com/   * - samp
+     - rack   * - les
+     - erla   * - 
+     - bs/d   * - 
+     - ocs-   * - 
+     - clou   * - 
+     - d-fi   * - 
+     - les/   * - 
+     - tree   * - 
+     - /mas   * - 
+     - ter/   * - 
+     - api-   * - 
+     - docs   * - 
+     - /sto   * - 
+     - rage   * - 
+     - -api   * - 
+     - -ope   * - 
+     - rati   * - 
+     - ons/   * - 
+     - meth   * - 
+     - ods>   * - 
+     - `__
+   * - API
+     - `cdn   * - oper
+     - -api   * - atio
+     - -ope   * - ns
+     - rati   * - meth
+     - ons/   * - ods
+     - meth   * - for
+     - ods   * - CDN,
+     - <htt   * - incl
+     - ps:/   * - udin
+     - /git   * - g
+     - hub.   * - code
+     - com/   * - samp
+     - rack   * - les
+     - erla   * - 
+     - bs/d   * - 
+     - ocs-   * - 
+     - clou   * - 
+     - d-fi   * - 
+     - les/   * - 
+     - tree   * - 
+     - /mas   * - 
+     - ter/   * - 
+     - api-   * - 
+     - docs   * - 
+     - /cdn   * - 
+     - -api   * - 
+     - -ope   * - 
+     - rati   * - 
+     - ons/   * - 
+     - meth   * - 
+     - ods>   * - 
+     - `__
+   * - Spec
+     - `use   * - ial
+     - -cas   * - Use
+     - es-i   * - Case
+     - nfor   * - s
+     - mati   * - intr
+     - on.r   * - oduc
+     - st <   * - tion
+     - http   * - 
+     - s://   * - 
+     - gith   * - 
+     - ub.c   * - 
+     - om/r   * - 
+     - acke   * - 
+     - rlab   * - 
+     - s/do   * - 
+     - cs-c   * - 
+     - loud   * - 
+     - -fil   * - 
+     - es/b   * - 
+     - lob/   * - 
+     - mast   * - 
+     - er/a   * - 
+     - pi-d   * - 
+     - ocs/   * - 
+     - use-   * - 
+     - case   * - 
+     - s-in   * - 
+     - form   * - 
+     - atio   * - 
+     - n.rs   * - 
+     - t>`_   * - 
+     - _
+   * - Stat
+     - `sta   * - ic
+     - tic-   * - webs
+     - webs   * - ites
+     - ites   * - usin
+     - -usi   * - g
+     - ng-c   * - CDN-
+     - dn-e   * - enab
+     - nabl   * - led
+     - ed-c   * - cont
+     - onta   * - aine
+     - iner   * - rs
+     - s/in   * - 
+     - dex.   * - 
+     - rst   * - 
+     - <htt   * - 
+     - ps:/   * - 
+     - /git   * - 
+     - hub.   * - 
+     - com/   * - 
+     - rack   * - 
+     - erla   * - 
+     - bs/d   * - 
+     - ocs-   * - 
+     - clou   * - 
+     - d-fi   * - 
+     - les/   * - 
+     - blob   * - 
+     - /mas   * - 
+     - ter/   * - 
+     - api-   * - 
+     - docs   * - 
+     - /sta   * - 
+     - tic-   * - 
+     - webs   * - 
+     - ites   * - 
+     - -usi   * - 
+     - ng-c   * - 
+     - dn-e   * - 
+     - nabl   * - 
+     - ed-c   * - 
+     - onta   * - 
+     - iner   * - 
+     - s/in   * - 
+     - dex.   * - 
+     - rst>   * - 
+     - `__
+   * - Bulk
+     - `bul   * - oper
+     - k-op   * - atio
+     - erat   * - ns
+     - ions   * - 
+     - /ind   * - 
+     - ex.r   * - 
+     - st <   * - 
+     - http   * - 
+     - s://   * - 
+     - gith   * - 
+     - ub.c   * - 
+     - om/r   * - 
+     - acke   * - 
+     - rlab   * - 
+     - s/do   * - 
+     - cs-c   * - 
+     - loud   * - 
+     - -fil   * - 
+     - es/b   * - 
+     - lob/   * - 
+     - mast   * - 
+     - er/a   * - 
+     - pi-d   * - 
+     - ocs/   * - 
+     - bulk   * - 
+     - -ope   * - 
+     - rati   * - 
+     - ons/   * - 
+     - inde   * - 
+     - x.rs   * - 
+     - t>`_   * - 
+     - _
+   * - Publ
+     - `pub   * - ic
+     - lic-   * - acce
+     - acce   * - ss
+     - ss-t   * - to
+     - o-yo   * - your
+     - ur-c   * - Clou
+     - loud   * - d
+     - -fil   * - File
+     - es-a   * - s
+     - ccou   * - acco
+     - nt/i   * - unt
+     - ndex   * - 
+     - .rst   * - 
+     - <ht   * - 
+     - tps:   * - 
+     - //gi   * - 
+     - thub   * - 
+     - .com   * - 
+     - /rac   * - 
+     - kerl   * - 
+     - abs/   * - 
+     - docs   * - 
+     - -clo   * - 
+     - ud-f   * - 
+     - iles   * - 
+     - /blo   * - 
+     - b/ma   * - 
+     - ster   * - 
+     - /api   * - 
+     - -doc   * - 
+     - s/pu   * - 
+     - blic   * - 
+     - -acc   * - 
+     - ess-   * - 
+     - to-y   * - 
+     - our-   * - 
+     - clou   * - 
+     - d-fi   * - 
+     - les-   * - 
+     - acco   * - 
+     - unt/   * - 
+     - inde   * - 
+     - x.rs   * - 
+     - t>`_   * - 
+     - _
+   * - Rele
+     - `rel   * - ase
+     - ease   * - note
+     - -not   * - s
+     - es.r   * - 
+     - st <   * - 
+     - http   * - 
+     - s://   * - 
+     - gith   * - 
+     - ub.c   * - 
+     - om/r   * - 
+     - acke   * - 
+     - rlab   * - 
+     - s/do   * - 
+     - cs-c   * - 
+     - loud   * - 
+     - -fil   * - 
+     - es/b   * - 
+     - lob/   * - 
+     - mast   * - 
+     - er/a   * - 
+     - pi-d   * - 
+     - ocs/   * - 
+     - rele   * - 
+     - ase-   * - 
+     - note   * - 
+     - s.rs   * - 
+     - t>`_   * - 
+     - _
+   * - Sphi
+     - `con   * - nx
+     - f.py   * - docu
+     - <ht   * - ment
+     - tps:   * - atio
+     - //gi   * - n
+     - thub   * - conf
+     - .com   * - igur
+     - /rac   * - atio
+     - kerl   * - n
+     - abs/   * - file
+     - docs   * - 
+     - -clo   * - 
+     - ud-f   * - 
+     - iles   * - 
+     - /blo   * - 
+     - b/ma   * - 
+     - ster   * - 
+     - /api   * - 
+     - -doc   * - 
+     - s/co   * - 
+     - nf.p   * - 
+     - y>`_   * - 
+     - _   * - 
+     - (Typ   * - 
+     - ical   * - 
+     - ly,   * - 
+     - this   * - 
+     - file   * - 
+     - does   * - 
+     - not   * - 
+     - requ   * - 
+     - ire   * - 
+     - chan   * - 
+     - ges.   * - 
+     - )
+   * - Linu
+     - ``Ma   * - x
+     - kefi   * - and
+     - le``   * - OS X
+     -   * - buil
+     -   * - d
+     -   * - scri
+     -   * - pt
+     -
+   * - Wind
+     - ``ma   * - ows
+     - ke.b   * - buil
+     - at``   * - d
+     -   * - scri
+     -   * - pt
+     -
+
+```
 
 ## Updating and adding content
 
