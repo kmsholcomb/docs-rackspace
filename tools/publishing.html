@@ -213,13 +213,18 @@ repository on github.com.</p>
 <ol class="arabic">
 <li><p class="first">Update the GitHub repository settings to enable deconst to create a Strider
 build job for your project.</p>
-<ol class="arabic simple">
-<li>In the GitHub UI, click <span class="guilabel">Settings &gt; Collaborators &amp; teams</span>.</li>
-<li>Add the GitHub user ID <cite>rackernexus</cite> to the account with administrator
-privileges.</li>
-<li>In the <a class="reference external" href="https://rackdx.slack.com/archives/deconst">Deconst Slack channel</a>,
-notify the deconst administrator (&#64;bmoss or &#64;meker12) to accept the
-GitHub invitation to add the <cite>rackernexus</cite> user to the repository.</li>
+<ol class="arabic">
+<li><p class="first">In the GitHub UI, click <span class="guilabel">Settings &gt; Collaborators &amp; teams</span>.</p>
+</li>
+<li><p class="first">Add the <code class="docutils literal"><span class="pre">rackernexus</span></code> service account as a collaborator with Admin
+privileges.</p>
+<p>GitHub will send an invitation requesting that <code class="docutils literal"><span class="pre">rackernexus</span></code> join the
+repository.</p>
+</li>
+<li><p class="first">In the <a class="reference external" href="https://rackdx.slack.com/archives/deconst">Deconst Slack channel</a>,
+request the deconst administrator to accept the GitHub invitation sent to
+the <code class="docutils literal"><span class="pre">rackernexus</span></code> service account.</p>
+</li>
 </ol>
 </li>
 <li><p class="first">Create a deconst configuration file for the project you want to build.</p>
