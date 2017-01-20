@@ -146,4 +146,3 @@ source ~/.git-completion.bash
 * [Understanding the GitHub Flow](https://guides.github.com/introduction/flow/index.html)
 * [Mastering GitHub Issues](https://guides.github.com/features/issues/)
 * [GitHub Help](https://help.github.com/)
-
