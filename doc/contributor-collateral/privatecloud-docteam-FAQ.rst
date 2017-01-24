@@ -122,7 +122,6 @@ The following internal guides are published to the `Rackspace Developer Portal
 <https://pages.github.rackspace.com/rpc-internal/docs-rpc/>`_ using the GitHub
 pages feature:
 
-* Administrator Guide
 * Technical FAQ (internal)
 * Installation Guide
 * Operations Guide (internal)
