@@ -388,7 +388,7 @@
 
 
 <div class="viewcode-block" id="postparse"><a class="viewcode-back" href="../tools/mdsphinx.html#prebuild.postparse">[docs]</a><span class="k">def</span> <span class="nf">postparse</span><span class="p">(</span><span class="n">mdstring</span><span class="p">):</span>
-    <span class="sd">r&quot;&quot;&quot;</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Swap HTML substitutes for strings.</span>
 
 <span class="sd">    :param mdstring: markdown string</span>
@@ -452,7 +452,7 @@
         <span class="k">return</span> <span class="mi">1</span></div>
 
 
-<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
     <span class="n">config</span> <span class="o">=</span> <span class="n">configparser</span><span class="o">.</span><span class="n">ConfigParser</span><span class="p">()</span>
     <span class="n">config</span><span class="o">.</span><span class="n">read</span><span class="p">([</span><span class="s1">&#39;tox.ini&#39;</span><span class="p">,</span> <span class="s1">&#39;../tox.ini&#39;</span><span class="p">])</span>
     <span class="n">conf</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">config</span><span class="o">.</span><span class="n">items</span><span class="p">(</span><span class="s1">&#39;mdsphinx&#39;</span><span class="p">))</span>

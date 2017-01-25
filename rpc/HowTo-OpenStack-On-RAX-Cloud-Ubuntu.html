@@ -550,14 +550,14 @@ post-down ip link del vxlan1
 </div>
 </li>
 <li><p class="first">Edit the <code class="file docutils literal"><span class="pre">/etc/hosts</span></code> file.</p>
-<div class="highlight-ini"><div class="highlight"><pre><span></span># hst-os1ctl1
-10.1.11.11 controller
+<div class="highlight-ini"><div class="highlight"><pre><span></span><span class="c1"># hst-os1ctl1</span>
+<span class="na">10.1.11.11 controller</span>
 
-# compute
-10.1.11.21 compute
+<span class="c1"># compute</span>
+<span class="na">10.1.11.21 compute</span>
 
-# block
-10.1.11.31 block
+<span class="c1"># block</span>
+<span class="na">10.1.11.31 block</span>
 </pre></div>
 </div>
 <div class="admonition note">
@@ -618,31 +618,31 @@ assigned by Rackspace on the <strong>net-osmgmt1</strong> network:</p>
 </div>
 </li>
 <li><p class="first">Edit the <code class="file docutils literal"><span class="pre">/etc/network/interfaces</span></code> file:</p>
-<div class="highlight-ini"><div class="highlight"><pre><span></span># Label net-osmgmt1
-auto eth0
-iface eth0 inet static
-    address 10.1.11.31
-    netmask 255.255.255.0
-    gateway 10.1.11.1
-    dns-nameserver 72.3.128.241 72.3.128.240
+<div class="highlight-ini"><div class="highlight"><pre><span></span><span class="c1"># Label net-osmgmt1</span>
+<span class="na">auto eth0</span>
+<span class="na">iface eth0 inet static</span>
+    <span class="na">address 10.1.11.31</span>
+    <span class="na">netmask 255.255.255.0</span>
+    <span class="na">gateway 10.1.11.1</span>
+    <span class="na">dns-nameserver 72.3.128.241 72.3.128.240</span>
 
-# Label net-osint1
-auto eth1
-iface eth1 inet static
-    address 10.1.12.41
-    netmask 255.255.255.0
+<span class="c1"># Label net-osint1</span>
+<span class="na">auto eth1</span>
+<span class="na">iface eth1 inet static</span>
+    <span class="na">address 10.1.12.41</span>
+    <span class="na">netmask 255.255.255.0</span>
 </pre></div>
 </div>
 </li>
 <li><p class="first">Edit the <em>/etc/hosts</em> file:</p>
-<div class="highlight-ini"><div class="highlight"><pre><span></span># controller
-10.1.11.11 controller
+<div class="highlight-ini"><div class="highlight"><pre><span></span><span class="c1"># controller</span>
+<span class="na">10.1.11.11 controller</span>
 
-# compute
-10.1.11.21 compute
+<span class="c1"># compute</span>
+<span class="na">10.1.11.21 compute</span>
 
-#block
-10.1.11.31 block
+<span class="c1">#block</span>
+<span class="na">10.1.11.31 block</span>
 </pre></div>
 </div>
 <div class="admonition note">

@@ -307,8 +307,8 @@ HWADDR line, as this is determined by the system:</p>
 <div class="highlight-bash"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 
 modprobe vxlan
-ip link add vxlan1 <span class="nb">type</span> vxlan id <span class="m">1</span> group 239.0.0.1 dev eth3 dstport 4789
-ip addr add 10.1.13.1/24 brd 10.1.13.255 dev vxlan1
+ip link add vxlan1 <span class="nb">type</span> vxlan id <span class="m">1</span> group <span class="m">239</span>.0.0.1 dev eth3 dstport <span class="m">4789</span>
+ip addr add <span class="m">10</span>.1.13.1/24 brd <span class="m">10</span>.1.13.255 dev vxlan1
 </pre></div>
 </div>
 </li>
@@ -496,8 +496,8 @@ HWADDR line, as this is determined by the system:</p>
 <div class="highlight-bash"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 
 modprobe vxlan
-ip link add vxlan1 <span class="nb">type</span> vxlan id <span class="m">1</span> group 239.0.0.1 dev eth2 dstport 4789
-ip addr add 10.1.13.21/24 brd 10.1.13.255 dev vxlan1
+ip link add vxlan1 <span class="nb">type</span> vxlan id <span class="m">1</span> group <span class="m">239</span>.0.0.1 dev eth2 dstport <span class="m">4789</span>
+ip addr add <span class="m">10</span>.1.13.21/24 brd <span class="m">10</span>.1.13.255 dev vxlan1
 </pre></div>
 </div>
 </li>
@@ -661,8 +661,8 @@ HWADDR line, as this is determined by the system:</p>
 <div class="highlight-bash"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 
 modprobe vxlan
-ip link add vxlan1 <span class="nb">type</span> vxlan id <span class="m">1</span> group 239.0.0.1 dev eth2 dstport 4789
-ip addr add 10.1.13.21/24 brd 10.1.13.255 dev vxlan1
+ip link add vxlan1 <span class="nb">type</span> vxlan id <span class="m">1</span> group <span class="m">239</span>.0.0.1 dev eth2 dstport <span class="m">4789</span>
+ip addr add <span class="m">10</span>.1.13.21/24 brd <span class="m">10</span>.1.13.255 dev vxlan1
 </pre></div>
 </div>
 </li>
