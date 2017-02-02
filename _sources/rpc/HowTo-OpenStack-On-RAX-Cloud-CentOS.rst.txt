@@ -422,7 +422,7 @@ Test and update
 
    .. code-block:: console
 
-      # yum install https://rdoproject.org/repos/openstack-newton/rdo-release-newton.rpm
+      # yum install https://rdoproject.org/repos/openstack-ocata/rdo-release-ocata.rpm
 
 #. Reboot the node:
 
@@ -594,7 +594,7 @@ Test and update
 
    .. code-block:: console
 
-      # yum install https://rdoproject.org/repos/openstack-newton/rdo-release-newton.rpm
+      # yum install https://rdoproject.org/repos/openstack-ocata/rdo-release-ocata.rpm
 
 #. Reboot the node:
 
@@ -724,7 +724,7 @@ Test and update
 
    .. code-block:: console
 
-      # yum install https://rdoproject.org/repos/openstack-newton/rdo-release-newton.rpm
+      # yum install https://rdoproject.org/repos/openstack-ocata/rdo-release-ocata.rpm
 
 #. Reboot the node:
 
