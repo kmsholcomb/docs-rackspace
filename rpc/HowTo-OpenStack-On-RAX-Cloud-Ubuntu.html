@@ -224,9 +224,11 @@ the official installation guide.</li>
 <h3>Network services node (network-services)<a class="headerlink" href="#network-services-node-network-services" title="Permalink to this headline">#</a></h3>
 <ol class="arabic">
 <li><p class="first">Create a cloud server.</p>
-<p>OS: Ubuntu 16.04 (Xenial Xerus) PVHVM
-Flavor: 1 GB General Purpose v1
-Networks: PublicNet, ServiceNet</p>
+<ul class="simple">
+<li>OS: Ubuntu 16.04 (Xenial Xerus) PVHVM</li>
+<li>Flavor: 1 GB General Purpose v1</li>
+<li>Networks: PublicNet, ServiceNet</li>
+</ul>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">Adding multiple tenant networks simultaneously yields inconsistent
@@ -294,7 +296,7 @@ post-down ip link del vxlan1
 </div>
 </li>
 <li><p class="first">Configure the firewall service.</p>
-</li>
+<ol class="arabic">
 <li><p class="first">Edit the <code class="file docutils literal"><span class="pre">/etc/shorewall/shorewall.conf</span></code> file.</p>
 <div class="highlight-ini"><div class="highlight"><pre><span></span><span class="na">IP_FORWARDING</span><span class="o">=</span><span class="s">On</span>
 </pre></div>
@@ -369,6 +371,8 @@ os1t ipv4
 node is rebooted.</p>
 </div>
 </li>
+</ol>
+</li>
 <li><p class="first">Test network connectivity to the internet by pinging openstack.org:</p>
 <div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> ping openstack.org
 <span class="go">PING openstack.org (162.242.140.107) 56(84) bytes of data.</span>
@@ -390,9 +394,11 @@ node is rebooted.</p>
 <ol class="arabic">
 <li><p class="first">Create a cloud server, removing all networks except the <em>net-osmgmt1</em>
 network:</p>
-<p>OS: Ubuntu 16.04 (Xenial Xerus) PVHVM
-Flavor: 8 GB General Purpose v1
-Network: net-osmgmt1</p>
+<ul class="simple">
+<li>OS: Ubuntu 16.04 (Xenial Xerus) PVHVM</li>
+<li>Flavor: 8 GB General Purpose v1</li>
+<li>Network: net-osmgmt1</li>
+</ul>
 </li>
 <li><p class="first">Access the node from the network services node (network-services) using the
 IP address assigned by Rackspace on the <em>net-osmgmt1</em> network:</p>
@@ -458,12 +464,12 @@ iface vxlan1 inet static
 
 # block
 10.1.11.31 block
-
-.. note::
-
-  Comment out or remove any existing lines containing
-  *controller*.
 </pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Comment out or remove any existing lines containing
+<em>controller</em>.</p>
 </div>
 </li>
 <li><p class="first">Reboot the node.</p>
@@ -496,11 +502,13 @@ address on the <em>net-osmgmt1</em> network.</p>
 <ol class="arabic">
 <li><p class="first">Create a cloud server, removing all networks except the <em>net-osmgmt1</em>
 network:</p>
-<p>OS: Ubuntu 16.04 (Xenial Xerus) PVHVM
-Flavor:
-* 3.75 GB Compute v1 (supports several CirrOS instances)
-* 7.5 GB Compute v1 (supports a couple of Ubuntu/Fedora instances)
-Network: net-osmgmt1</p>
+<ul class="simple">
+<li>OS: Ubuntu 16.04 (Xenial Xerus) PVHVM</li>
+<li>Flavor:
+- 3.75 GB Compute v1 (supports several CirrOS instances)
+- 7.5 GB Compute v1 (supports a couple of Ubuntu/Fedora instances)</li>
+<li>Network: net-osmgmt1</li>
+</ul>
 </li>
 <li><p class="first">Access the node from the network services node (network-services) using the
 IP address assigned by RAX on <em>net-osmgmt1</em> network.</p>
