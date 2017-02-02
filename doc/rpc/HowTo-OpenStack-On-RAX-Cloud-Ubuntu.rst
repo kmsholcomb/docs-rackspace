@@ -61,9 +61,9 @@ Network services node (network-services)
 
 #. Create a cloud server.
 
-   OS: Ubuntu 16.04 (Xenial Xerus) PVHVM
-   Flavor: 1 GB General Purpose v1
-   Networks: PublicNet, ServiceNet
+   - OS: Ubuntu 16.04 (Xenial Xerus) PVHVM
+   - Flavor: 1 GB General Purpose v1
+   - Networks: PublicNet, ServiceNet
 
    .. note::
 
@@ -138,88 +138,88 @@ Network services node (network-services)
 
 #.  Configure the firewall service.
 
-#.  Edit the :file:`/etc/shorewall/shorewall.conf` file.
+    #.  Edit the :file:`/etc/shorewall/shorewall.conf` file.
 
-    .. code-block:: ini
+        .. code-block:: ini
 
-       IP_FORWARDING=On
+           IP_FORWARDING=On
 
-#. Create a :file:`/etc/shorewall/interfaces` file.
+    #. Create a :file:`/etc/shorewall/interfaces` file.
 
-   .. code-block:: text
+       .. code-block:: text
 
-      ext eth0 - routefilter,tcpflags
-      rax eth1
-      osm1 eth2
-      ose1 eth3
-      os1t vxlan1
+          ext eth0 - routefilter,tcpflags
+          rax eth1
+          osm1 eth2
+          ose1 eth3
+          os1t vxlan1
 
-#. Create a :file:`/etc/shorewall/masq` file.
+    #. Create a :file:`/etc/shorewall/masq` file.
 
-   .. code-block:: text
+       .. code-block:: text
 
-      eth0 10.1.11.0/24
-      eth0 10.1.13.0/24
+          eth0 10.1.11.0/24
+          eth0 10.1.13.0/24
 
-#. Create a :file:`/etc/shorewall/policy` file.
+    #. Create a :file:`/etc/shorewall/policy` file.
 
-   .. code-block:: text
+       .. code-block:: text
 
-      $FW all ACCEPT
-      ext all REJECT
-      rax all ACCEPT
-      osm1 all ACCEPT
-      ose1 all ACCEPT
-      os1t all ACCEPT
+          $FW all ACCEPT
+          ext all REJECT
+          rax all ACCEPT
+          osm1 all ACCEPT
+          ose1 all ACCEPT
+          os1t all ACCEPT
 
-#. Create a :file:`/etc/shorewall/rules` file.
+    #. Create a :file:`/etc/shorewall/rules` file.
 
-   .. code-block:: text
+       .. code-block:: text
 
-      Ping/ACCEPT ext $FW
-      SSH/ACCEPT ext $FW
-      #DNAT ext osm1:10.1.11.11  tcp    www
-      #DNAT ext osm1:10.1.11.11  tcp    6080
+          Ping/ACCEPT ext $FW
+          SSH/ACCEPT ext $FW
+          #DNAT ext osm1:10.1.11.11  tcp    www
+          #DNAT ext osm1:10.1.11.11  tcp    6080
 
-   .. note::
+       .. note::
 
-      Uncomment the DNAT rules and restart Shorewall as necessary to
-      enable remote access to the dashboard and instance consoles in the
-      OpenStack environment.
+          Uncomment the DNAT rules and restart Shorewall as necessary to
+          enable remote access to the dashboard and instance consoles in the
+          OpenStack environment.
 
-#. Create a :file:`/etc/shorewall/zones` file.
+    #. Create a :file:`/etc/shorewall/zones` file.
 
-   .. code-block:: text
+       .. code-block:: text
 
-      fw firewall
-      ext ipv4
-      rax ipv4
-      osm1 ipv4
-      ose1 ipv4
-      os1t ipv4
+          fw firewall
+          ext ipv4
+          rax ipv4
+          osm1 ipv4
+          ose1 ipv4
+          os1t ipv4
 
-#. Edit the :file:`/etc/default/shorewall` file.
+    #. Edit the :file:`/etc/default/shorewall` file.
 
-   .. code-block:: ini
+       .. code-block:: ini
 
-      startup=1
+          startup=1
 
-#. Check the shorewall configuration.
+    #. Check the shorewall configuration.
 
-   .. code-block:: console
+       .. code-block:: console
 
-      # shorewall check
+          # shorewall check
 
-#. Start the firewall service.
+    #. Start the firewall service.
 
-   .. code-block:: console
+       .. code-block:: console
 
-      # service shorewall start
+          # service shorewall start
 
-   .. note::
+       .. note::
 
-      Restart the firewall service whenever the network services
-      node is rebooted.
+          Restart the firewall service whenever the network services
+          node is rebooted.
 
 #. Test network connectivity to the internet by pinging openstack.org:
 
@@ -238,14 +238,14 @@ Network services node (network-services)
       # ssh-keygen -t rsa -b 2048 -C "ns1" -P "" -f .ssh/id_rsa
 
 OpenStack controller node (controller)
----------------------------------------
+--------------------------------------
 
 #. Create a cloud server, removing all networks except the *net-osmgmt1*
    network:
 
-   OS: Ubuntu 16.04 (Xenial Xerus) PVHVM
-   Flavor: 8 GB General Purpose v1
-   Network: net-osmgmt1
+   - OS: Ubuntu 16.04 (Xenial Xerus) PVHVM
+   - Flavor: 8 GB General Purpose v1
+   - Network: net-osmgmt1
 
 #. Access the node from the network services node (network-services) using the
    IP address assigned by Rackspace on the *net-osmgmt1* network:
@@ -313,10 +313,10 @@ OpenStack controller node (controller)
        # block
        10.1.11.31 block
 
-       .. note::
+    .. note::
 
-         Comment out or remove any existing lines containing
-         *controller*.
+       Comment out or remove any existing lines containing
+       *controller*.
 
 #.  Reboot the node.
 
@@ -351,11 +351,11 @@ OpenStack compute node (compute)
 #. Create a cloud server, removing all networks except the *net-osmgmt1*
    network:
 
-   OS: Ubuntu 16.04 (Xenial Xerus) PVHVM
-   Flavor:
-   * 3.75 GB Compute v1 (supports several CirrOS instances)
-   * 7.5 GB Compute v1 (supports a couple of Ubuntu/Fedora instances)
-   Network: net-osmgmt1
+   - OS: Ubuntu 16.04 (Xenial Xerus) PVHVM
+   - Flavor:
+     - 3.75 GB Compute v1 (supports several CirrOS instances)
+     - 7.5 GB Compute v1 (supports a couple of Ubuntu/Fedora instances)
+   - Network: net-osmgmt1
 
 #. Access the node from the network services node (network-services) using the
    IP address assigned by RAX on *net-osmgmt1* network.
@@ -596,4 +596,3 @@ the following changes:
 
      After performing the initial tenant network creation procedure,
      try pinging 10.1.13.101 from the network services node.
-
