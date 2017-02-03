@@ -99,6 +99,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#networks">Networks</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="#orchestration">Orchestration</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#network-services-node-network-services">Network services node (network-services)</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#configure-additional-network-interfaces">Configure additional network interfaces</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#configure-the-firewall-service">Configure the firewall service</a></li>
@@ -110,12 +111,12 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#openstack-compute-node-compute">OpenStack compute node (compute)</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id1">Configure network interfaces</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#compute-net">Configure network interfaces</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#id2">Test and update</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#openstack-block-storage-node-block">OpenStack block storage node (block)</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id3">Configure network interfaces</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#block-net">Configure network interfaces</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#id4">Test and update</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#create-block-storage-volume-block1">Create block storage volume (block1)</a></li>
 </ul>
@@ -231,10 +232,40 @@ the official installation guide.</li>
 </ol>
 </div>
 </div>
+<div class="section" id="orchestration">
+<h2>Orchestration<a class="headerlink" href="#orchestration" title="Permalink to this headline">#</a></h2>
+<p>You can save time by orchestrating basic server creation:</p>
+<ol class="arabic">
+<li><p class="first">In the <strong>Orchestration</strong> menu, select <strong>Custom Template</strong>.</p>
+</li>
+<li><p class="first">Paste the contents of <a class="reference download internal" href="../_downloads/centos.yml" download=""><code class="xref download docutils literal"><span class="pre">centos.yml</span></code></a> into the template editor.</p>
+</li>
+<li><p class="first">Replace <code class="docutils literal"><span class="pre">key_name:</span> <span class="pre">mykey</span></code> with the name of your SSH key.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">The template does not display login passwords, so if you do not specify
+a working SSH key you cannot access any of the nodes.</p>
+</div>
+</li>
+<li><p class="first">Click <strong>Create Template and Launch Stack</strong>.</p>
+</li>
+</ol>
+<p>The template builds the following resources:</p>
+<ul class="simple">
+<li>network-services node</li>
+<li>controller node</li>
+<li>compute node</li>
+<li>block node</li>
+<li>block storage volume (attached to the block node)</li>
+</ul>
+<p>The resources are all attached to the appropriate networks, however you still
+must manually configure the interfaces on each node.</p>
+</div>
 <div class="section" id="network-services-node-network-services">
 <h2>Network services node (network-services)<a class="headerlink" href="#network-services-node-network-services" title="Permalink to this headline">#</a></h2>
 <ol class="arabic">
-<li><p class="first">Create a cloud server named <strong>network-services</strong>.</p>
+<li><p class="first">Create a cloud server named <strong>network-services</strong>. If you orchestrated
+server creation, skip this step.</p>
 <ul class="simple">
 <li>OS: CentOS 7 (PVHVM)</li>
 <li>Flavor: 1 GB General Purpose v1</li>
@@ -424,7 +455,8 @@ nameserver 8.8.4.4
 <h2>OpenStack controller node (controller)<a class="headerlink" href="#openstack-controller-node-controller" title="Permalink to this headline">#</a></h2>
 <ol class="arabic">
 <li><p class="first">Create a cloud server named <strong>controller</strong>, removing all networks except the
-<strong>management</strong> network:</p>
+<strong>management</strong> network. If you orchestrated server creation, skip to
+<a class="reference internal" href="#controller-net"><span class="std std-ref">Configure network interfaces</span></a>.</p>
 <ul class="simple">
 <li>OS: CentOS 7 (PVHVM)</li>
 <li>Flavor: 8 GB General Purpose v1</li>
@@ -436,13 +468,6 @@ node.</p>
 </li>
 <li><p class="first">In the cloud control panel, add the <strong>external</strong> network to the
 node.</p>
-</li>
-<li><p class="first">Access the node from the <strong>network services</strong> node using the IP
-address assigned by Rackspace on the <strong>management</strong> network:</p>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> ssh-copy-id -i .ssh/id_rsa.pub root@10.1.11.2
-<span class="gp">#</span> ssh root@10.1.11.2
-</pre></div>
-</div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">The node cannot access the internet without additional configuration.</p>
@@ -450,8 +475,15 @@ address assigned by Rackspace on the <strong>management</strong> network:</p>
 </li>
 </ol>
 <div class="section" id="configure-network-interfaces">
-<h3>Configure network interfaces<a class="headerlink" href="#configure-network-interfaces" title="Permalink to this headline">#</a></h3>
+<span id="controller-net"></span><h3>Configure network interfaces<a class="headerlink" href="#configure-network-interfaces" title="Permalink to this headline">#</a></h3>
 <ol class="arabic">
+<li><p class="first">Access the node from the <strong>network services</strong> node using the IP
+address assigned by Rackspace on the <strong>management</strong> network:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> ssh-copy-id -i .ssh/id_rsa.pub root@10.1.11.2
+<span class="gp">#</span> ssh root@10.1.11.2
+</pre></div>
+</div>
+</li>
 <li><p class="first">Edit <em>/etc/sysconfig/network-scripts/ifcfg-eth0</em>. Do not touch the
 HWADDR line, as this is determined by the system:</p>
 <div class="highlight-ini"><div class="highlight"><pre><span></span><span class="c1"># Label management</span>
@@ -588,7 +620,7 @@ for the relevant release candidate:</p>
 <h2>OpenStack compute node (compute)<a class="headerlink" href="#openstack-compute-node-compute" title="Permalink to this headline">#</a></h2>
 <ol class="arabic">
 <li><p class="first">Create a cloud server, removing all networks except the <strong>management</strong>
-network:</p>
+network. If you orchestrated server creation, skip to <a class="reference internal" href="#compute-net"><span class="std std-ref">Configure network interfaces</span></a>.</p>
 <ul class="simple">
 <li>OS: CentOS 7 (PVHVM)</li>
 <li>4 GB General Purpose v1 (supports several CirrOS instances)</li>
@@ -601,22 +633,22 @@ node.</p>
 </li>
 <li><p class="first">In the cloud control panel, add the <strong>external</strong> network to the
 node.</p>
-</li>
-<li><p class="first">Access the node from the network services node using the IP address
-assigned by Rackspace on the <strong>management</strong> network:</p>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> ssh-copy-id -i .ssh/id_rsa.pub root@10.1.11.3
-<span class="gp">#</span> ssh root@10.1.11.3
-</pre></div>
-</div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">The node cannot access the internet without additional configuration.</p>
 </div>
 </li>
 </ol>
-<div class="section" id="id1">
-<h3>Configure network interfaces<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
+<div class="section" id="compute-net">
+<span id="id1"></span><h3>Configure network interfaces<a class="headerlink" href="#compute-net" title="Permalink to this headline">#</a></h3>
 <ol class="arabic">
+<li><p class="first">Access the node from the network services node using the IP address
+assigned by Rackspace on the <strong>management</strong> network:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> ssh-copy-id -i .ssh/id_rsa.pub root@10.1.11.3
+<span class="gp">#</span> ssh root@10.1.11.3
+</pre></div>
+</div>
+</li>
 <li><p class="first">Edit <em>/etc/sysconfig/network-scripts/ifcfg-eth0</em>. Do not touch the
 HWADDR line, as this is determined by the system:</p>
 <div class="highlight-ini"><div class="highlight"><pre><span></span><span class="c1"># Label management</span>
@@ -744,7 +776,7 @@ for the relevant release candidate:</p>
 <h2>OpenStack block storage node (block)<a class="headerlink" href="#openstack-block-storage-node-block" title="Permalink to this headline">#</a></h2>
 <ol class="arabic">
 <li><p class="first">Create a cloud server, removing all networks except the <strong>management</strong>
-network:</p>
+network. If you orchestrated server creation, skip to <a class="reference internal" href="#block-net"><span class="std std-ref">Configure network interfaces</span></a>.</p>
 <ul class="simple">
 <li>OS: CentOS 7 (PVHVM)</li>
 <li>4 GB General Purpose v1</li>
@@ -753,22 +785,22 @@ network:</p>
 </li>
 <li><p class="first">In the cloud control panel, add the <strong>internal</strong> network to the
 node.</p>
-</li>
-<li><p class="first">Access the node from the network services node using the IP address
-assigned by Rackspace on the <strong>management</strong> network:</p>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> ssh-copy-id -i .ssh/id_rsa.pub root@10.1.11.4
-<span class="gp">#</span> ssh root@10.1.11.4
-</pre></div>
-</div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">The node cannot access the internet without additional configuration.</p>
 </div>
 </li>
 </ol>
-<div class="section" id="id3">
-<h3>Configure network interfaces<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h3>
+<div class="section" id="block-net">
+<span id="id3"></span><h3>Configure network interfaces<a class="headerlink" href="#block-net" title="Permalink to this headline">#</a></h3>
 <ol class="arabic">
+<li><p class="first">Access the node from the network services node using the IP address
+assigned by Rackspace on the <strong>management</strong> network:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> ssh-copy-id -i .ssh/id_rsa.pub root@10.1.11.4
+<span class="gp">#</span> ssh root@10.1.11.4
+</pre></div>
+</div>
+</li>
 <li><p class="first">Edit <em>/etc/sysconfig/network-scripts/ifcfg-eth0</em>. Do not touch the
 HWADDR line, as this is determined by the system:</p>
 <div class="highlight-ini"><div class="highlight"><pre><span></span><span class="c1"># Label management</span>
@@ -865,6 +897,7 @@ for the relevant release candidate:</p>
 </div>
 <div class="section" id="create-block-storage-volume-block1">
 <h3>Create block storage volume (block1)<a class="headerlink" href="#create-block-storage-volume-block1" title="Permalink to this headline">#</a></h3>
+<p>If you orchestrated server creation, skip to <a class="reference internal" href="#services"><span class="std std-ref">Install and configure OpenStack services</span></a>.</p>
 <ol class="arabic simple">
 <li>In the Rackspace Cloud Control Panel, select
 <span class="guilabel">Block Storage Volumes</span> in the <span class="guilabel">Storage</span> tab, and
@@ -879,7 +912,7 @@ create the following volume named <strong>block1</strong>:<ul>
 </div>
 </div>
 <div class="section" id="install-and-configure-openstack-services">
-<h2>Install and configure OpenStack services<a class="headerlink" href="#install-and-configure-openstack-services" title="Permalink to this headline">#</a></h2>
+<span id="services"></span><h2>Install and configure OpenStack services<a class="headerlink" href="#install-and-configure-openstack-services" title="Permalink to this headline">#</a></h2>
 <p>Use the <a class="reference external" href="http://docs.openstack.org/newton/install-guide-rdo/">RDO OpenStack Installation Guides</a> with the
 following changes:</p>
 <ul>
