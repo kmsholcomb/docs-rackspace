@@ -56,10 +56,41 @@ In the Rackspace Cloud Control Panel, select :guilabel:`Networks` in the
    - 10.1.13.0/24
 
 
+Orchestration
+~~~~~~~~~~~~~
+
+You can save time by orchestrating basic server creation:
+
+#. In the **Orchestration** menu, select **Custom Template**.
+
+#. Paste the contents of :download:`centos.yml` into the template editor.
+
+#. Replace ``key_name: mykey`` with the name of your SSH key.
+
+   .. warning::
+
+      The template does not display login passwords, so if you do not specify
+      a working SSH key you cannot access any of the nodes.
+
+#. Click **Create Template and Launch Stack**.
+
+The template builds the following resources:
+
+-  network-services node
+-  controller node
+-  compute node
+-  block node
+-  block storage volume (attached to the block node)
+
+The resources are all attached to the appropriate networks, however you still
+must manually configure the interfaces on each node.
+
+
 Network services node (network-services)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#. Create a cloud server named **network-services**.
+#. Create a cloud server named **network-services**. If you orchestrated
+   server creation, skip this step.
 
    - OS: CentOS 7 (PVHVM)
    - Flavor: 1 GB General Purpose v1
@@ -264,7 +295,8 @@ OpenStack controller node (controller)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #. Create a cloud server named **controller**, removing all networks except the
-   **management** network:
+   **management** network. If you orchestrated server creation, skip to
+   :ref:`controller-net`.
 
    - OS: CentOS 7 (PVHVM)
    - Flavor: 8 GB General Purpose v1
@@ -277,6 +309,15 @@ OpenStack controller node (controller)
 #. In the cloud control panel, add the **external** network to the
    node.
 
+   .. note::
+
+      The node cannot access the internet without additional configuration.
+
+.. _controller-net:
+
+Configure network interfaces
+----------------------------
+
 #. Access the node from the **network services** node using the IP
    address assigned by Rackspace on the **management** network:
 
@@ -284,13 +325,6 @@ OpenStack controller node (controller)
 
       # ssh-copy-id -i .ssh/id_rsa.pub root@10.1.11.2
       # ssh root@10.1.11.2
-
-   .. note::
-
-      The node cannot access the internet without additional configuration.
-
-Configure network interfaces
-----------------------------
 
 #. Edit */etc/sysconfig/network-scripts/ifcfg-eth0*. Do not touch the
    HWADDR line, as this is determined by the system:
@@ -441,7 +475,7 @@ OpenStack compute node (compute)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #. Create a cloud server, removing all networks except the **management**
-   network:
+   network. If you orchestrated server creation, skip to :ref:`compute-net`.
 
    - OS: CentOS 7 (PVHVM)
    - 4 GB General Purpose v1 (supports several CirrOS instances)
@@ -454,6 +488,15 @@ OpenStack compute node (compute)
 #. In the cloud control panel, add the **external** network to the
    node.
 
+   .. note::
+
+      The node cannot access the internet without additional configuration.
+
+.. _compute-net:
+
+Configure network interfaces
+----------------------------
+
 #. Access the node from the network services node using the IP address
    assigned by Rackspace on the **management** network:
 
@@ -461,13 +504,6 @@ OpenStack compute node (compute)
 
       # ssh-copy-id -i .ssh/id_rsa.pub root@10.1.11.3
       # ssh root@10.1.11.3
-
-   .. note::
-
-      The node cannot access the internet without additional configuration.
-
-Configure network interfaces
-----------------------------
 
 #. Edit */etc/sysconfig/network-scripts/ifcfg-eth0*. Do not touch the
    HWADDR line, as this is determined by the system:
@@ -607,7 +643,7 @@ OpenStack block storage node (block)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #. Create a cloud server, removing all networks except the **management**
-   network:
+   network. If you orchestrated server creation, skip to :ref:`block-net`.
 
    - OS: CentOS 7 (PVHVM)
    - 4 GB General Purpose v1
@@ -616,6 +652,15 @@ OpenStack block storage node (block)
 #. In the cloud control panel, add the **internal** network to the
    node.
 
+   .. note::
+
+      The node cannot access the internet without additional configuration.
+
+.. _block-net:
+
+Configure network interfaces
+----------------------------
+
 #. Access the node from the network services node using the IP address
    assigned by Rackspace on the **management** network:
 
@@ -623,13 +668,6 @@ OpenStack block storage node (block)
 
       # ssh-copy-id -i .ssh/id_rsa.pub root@10.1.11.4
       # ssh root@10.1.11.4
-
-   .. note::
-
-      The node cannot access the internet without additional configuration.
-
-Configure network interfaces
-----------------------------
 
 #. Edit */etc/sysconfig/network-scripts/ifcfg-eth0*. Do not touch the
    HWADDR line, as this is determined by the system:
@@ -735,6 +773,8 @@ Test and update
 Create block storage volume (block1)
 ------------------------------------
 
+If you orchestrated server creation, skip to :ref:`services`.
+
 #. In the Rackspace Cloud Control Panel, select
    :guilabel:`Block Storage Volumes` in the :guilabel:`Storage` tab, and
    create the following volume named **block1**:
@@ -746,6 +786,7 @@ Create block storage volume (block1)
 #. After the device is attached, note the device name. For example,
    `/dev/xvdb`. Use this value when setting up block storage for OpenStack.
 
+.. _services:
 
 Install and configure OpenStack services
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
