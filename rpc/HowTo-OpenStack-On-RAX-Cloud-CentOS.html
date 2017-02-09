@@ -265,7 +265,7 @@ must manually configure the interfaces on each node.</p>
 <h2>Network services node (network-services)<a class="headerlink" href="#network-services-node-network-services" title="Permalink to this headline">#</a></h2>
 <ol class="arabic">
 <li><p class="first">Create a cloud server named <strong>network-services</strong>. If you orchestrated
-server creation, skip this step.</p>
+server creation, skip to <a class="reference internal" href="#net-net"><span class="std std-ref">Configure additional network interfaces</span></a>.</p>
 <ul class="simple">
 <li>OS: CentOS 7 (PVHVM)</li>
 <li>Flavor: 1 GB General Purpose v1</li>
@@ -278,6 +278,10 @@ network interface device names. This guide adds one tenant network at a
 time as it becomes necessary. Also, changing tenant networks after
 configuration erases changes made in this guide.</p>
 </div>
+</li>
+<li><p class="first">In the cloud control panel, add the <strong>management</strong> network to the node.</p>
+</li>
+<li><p class="first">In the cloud control panel, add the <strong>external</strong> network to the node.</p>
 </li>
 <li><p class="first">Access the node from a terminal using the IP address assigned by
 Rackspace.</p>
@@ -302,11 +306,13 @@ Rackspace.</p>
 </li>
 </ol>
 <div class="section" id="configure-additional-network-interfaces">
-<h3>Configure additional network interfaces<a class="headerlink" href="#configure-additional-network-interfaces" title="Permalink to this headline">#</a></h3>
+<span id="net-net"></span><h3>Configure additional network interfaces<a class="headerlink" href="#configure-additional-network-interfaces" title="Permalink to this headline">#</a></h3>
 <ol class="arabic">
-<li><p class="first">In the cloud control panel, add the <strong>management</strong> network to the node.</p>
-</li>
-<li><p class="first">In the cloud control panel, add the <strong>external</strong> network to the node.</p>
+<li><p class="first">Access the node from a terminal using the IP address assigned by
+Rackspace.</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> ssh root@&lt;IP_ADDRESS&gt;
+</pre></div>
+</div>
 </li>
 <li><p class="first">Edit <em>/etc/sysconfig/network-scripts/ifcfg-eth2</em>. Do not touch the
 HWADDR line, as this is determined by the system:</p>
@@ -443,8 +449,37 @@ nameserver 8.8.4.4
 </pre></div>
 </div>
 </li>
+<li><p class="first">Enable the <strong>network-services</strong> node to act as an NTP server for the other
+nodes:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> systemctl stop chronyd.service
+</pre></div>
+</div>
+<p>Set <code class="docutils literal"><span class="pre">allow</span> <span class="pre">10.1.11.0/24</span></code> in the <em>/etc/chrony.conf</em> file.</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> systemctl <span class="nb">enable</span> chronyd.service
+<span class="gp">#</span> systemctl start chronyd.service
+</pre></div>
+</div>
+</li>
+<li><p class="first">Confirm NTP synchronization:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> chronyc sources
+
+<span class="go">210 Number of sources = 4</span>
+<span class="go">MS Name/IP address         Stratum Poll Reach LastRx Last sample</span>
+<span class="go">=========================================================================</span>
+<span class="go">^- yarrina.connect.com.au  2   7   377    76  +1204us[+1211us] +/-   39ms</span>
+<span class="go">^- warrane.connect.com.au  2   7   377    74  +1636us[+1636us] +/-   22ms</span>
+<span class="go">^- phyapp01.mel1.afoyi.com 2   7   377    76  -3862us[-3855us] +/-  443ms</span>
+<span class="go">^* mail1.selcomm.com       1   7   377    75    +28us[  +35us] +/- 2724us</span>
+</pre></div>
+</div>
+</li>
 <li><p class="first">Generate an ssh key for accessing other nodes:</p>
 <div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> ssh-keygen -t rsa -b <span class="m">2048</span> -C <span class="s2">&quot;ns1&quot;</span> -P <span class="s2">&quot;&quot;</span> -f .ssh/id_rsa
+</pre></div>
+</div>
+</li>
+<li><p class="first">Reboot the node:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> reboot now
 </pre></div>
 </div>
 </li>
@@ -478,7 +513,8 @@ node.</p>
 <span id="controller-net"></span><h3>Configure network interfaces<a class="headerlink" href="#configure-network-interfaces" title="Permalink to this headline">#</a></h3>
 <ol class="arabic">
 <li><p class="first">Access the node from the <strong>network services</strong> node using the IP
-address assigned by Rackspace on the <strong>management</strong> network:</p>
+address assigned by Rackspace on the <strong>management</strong> network.</p>
+<p>The root password for the controller node is: <strong>openstack</strong></p>
 <div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> ssh-copy-id -i .ssh/id_rsa.pub root@10.1.11.2
 <span class="gp">#</span> ssh root@10.1.11.2
 </pre></div>
@@ -562,13 +598,17 @@ nameserver 8.8.4.4
 </pre></div>
 </div>
 </li>
-<li><p class="first">Reboot the node:</p>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> reboot now
+<li><p class="first">Set the <strong>network-services</strong> node as the NTP server:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> systemctl stop chronyd.service
+</pre></div>
+</div>
+<p>Set <code class="docutils literal"><span class="pre">server</span> <span class="pre">10.1.11.1</span> <span class="pre">iburst</span></code> as the NTP server in <em>/etc/chrony.conf</em>.</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> systemctl start chronyd.service
 </pre></div>
 </div>
 </li>
-<li><p class="first">After rebooting, run the <em>vxlan.sh</em> script:</p>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> bash -x ~/vxlan.sh
+<li><p class="first">Reboot the node:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> reboot now
 </pre></div>
 </div>
 </li>
@@ -582,12 +622,32 @@ nameserver 8.8.4.4
 </pre></div>
 </div>
 </li>
+<li><p class="first">Run the <em>vxlan.sh</em> script:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> bash -x ~/vxlan.sh
+</pre></div>
+</div>
+</li>
 <li><p class="first">Test network connectivity to the internet by pinging openstack.org:</p>
 <div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> ping openstack.org
 <span class="go">PING openstack.org (162.242.140.107) 56(84) bytes of data.</span>
 <span class="go">64 bytes from 162.242.140.107: icmp_seq=1 ttl=50 time=181 ms</span>
 <span class="go">64 bytes from 162.242.140.107: icmp_seq=2 ttl=50 time=180 ms</span>
 <span class="go">...</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If you cannot connect to the internet, restart the controller and
+network-services nodes then try again.</p>
+</div>
+</li>
+<li><p class="first">Confirm NTP synchronization:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> chronyc sources
+
+<span class="go">210 Number of sources = 1</span>
+<span class="go">MS Name/IP address  Stratum Poll Reach LastRx Last sample</span>
+<span class="go">========================================================================</span>
+<span class="go">^* gateway                2   6   377    34    +14us[  +24us] +/- 3322us</span>
 </pre></div>
 </div>
 </li>
@@ -643,7 +703,8 @@ node.</p>
 <span id="id1"></span><h3>Configure network interfaces<a class="headerlink" href="#compute-net" title="Permalink to this headline">#</a></h3>
 <ol class="arabic">
 <li><p class="first">Access the node from the network services node using the IP address
-assigned by Rackspace on the <strong>management</strong> network:</p>
+assigned by Rackspace on the <strong>management</strong> network.</p>
+<p>The root password for the compute node is: <strong>openstack</strong></p>
 <div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> ssh-copy-id -i .ssh/id_rsa.pub root@10.1.11.3
 <span class="gp">#</span> ssh root@10.1.11.3
 </pre></div>
@@ -727,6 +788,15 @@ nameserver 8.8.4.4
 </pre></div>
 </div>
 </li>
+<li><p class="first">Set the <strong>network-services</strong> node as the NTP server:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> systemctl stop chronyd.service
+</pre></div>
+</div>
+<p>Set <code class="docutils literal"><span class="pre">server</span> <span class="pre">10.1.11.1</span> <span class="pre">iburst</span></code> as the NTP server in <em>/etc/chrony.conf</em>.</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> systemctl start chronyd.service
+</pre></div>
+</div>
+</li>
 <li><p class="first">Reboot the node:</p>
 <div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> reboot now
 </pre></div>
@@ -749,6 +819,16 @@ address on the <strong>management</strong> network:</p>
 <span class="go">64 bytes from 162.242.140.107: icmp_seq=1 ttl=50 time=181 ms</span>
 <span class="go">64 bytes from 162.242.140.107: icmp_seq=2 ttl=50 time=180 ms</span>
 <span class="go">...</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Confirm NTP synchronization:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> chronyc sources
+
+<span class="go">210 Number of sources = 1</span>
+<span class="go">MS Name/IP address  Stratum Poll Reach LastRx Last sample</span>
+<span class="go">========================================================================</span>
+<span class="go">^* gateway                2   6   377    34    +14us[  +24us] +/- 3322us</span>
 </pre></div>
 </div>
 </li>
@@ -795,7 +875,8 @@ node.</p>
 <span id="id3"></span><h3>Configure network interfaces<a class="headerlink" href="#block-net" title="Permalink to this headline">#</a></h3>
 <ol class="arabic">
 <li><p class="first">Access the node from the network services node using the IP address
-assigned by Rackspace on the <strong>management</strong> network:</p>
+assigned by Rackspace on the <strong>management</strong> network.</p>
+<p>The root password for the block node is: <strong>openstack</strong></p>
 <div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> ssh-copy-id -i .ssh/id_rsa.pub root@10.1.11.4
 <span class="gp">#</span> ssh root@10.1.11.4
 </pre></div>
@@ -851,6 +932,15 @@ nameserver 8.8.4.4
 </pre></div>
 </div>
 </li>
+<li><p class="first">Set the <strong>network-services</strong> node as the NTP server:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> systemctl stop chronyd.service
+</pre></div>
+</div>
+<p>Set <code class="docutils literal"><span class="pre">server</span> <span class="pre">10.1.11.1</span> <span class="pre">iburst</span></code> as the NTP server in <em>/etc/chrony.conf</em>.</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> systemctl start chronyd.service
+</pre></div>
+</div>
+</li>
 <li><p class="first">Reboot the node:</p>
 <div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> reboot now
 </pre></div>
@@ -873,6 +963,16 @@ address on the <strong>management</strong> network:</p>
 <span class="go">64 bytes from 162.242.140.107: icmp_seq=1 ttl=50 time=181 ms</span>
 <span class="go">64 bytes from 162.242.140.107: icmp_seq=2 ttl=50 time=180 ms</span>
 <span class="go">...</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Confirm NTP synchronization:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> chronyc sources
+
+<span class="go">210 Number of sources = 1</span>
+<span class="go">MS Name/IP address  Stratum Poll Reach LastRx Last sample</span>
+<span class="go">========================================================================</span>
+<span class="go">^* gateway                2   6   377    34    +14us[  +24us] +/- 3322us</span>
 </pre></div>
 </div>
 </li>
@@ -919,15 +1019,7 @@ following changes:</p>
 <li><p class="first">Configuring the basic environment on all nodes:</p>
 <ul class="simple">
 <li>Skip the network configuration sections.</li>
-<li>In <em>/etc/chrony.conf</em> on the network services node,
-set <code class="docutils literal"><span class="pre">allow</span> <span class="pre">10.1.11.0/24</span></code>.</li>
-<li>On the <strong>controller</strong>, <strong>compute</strong>, and <strong>block</strong> nodes:<ul>
-<li><code class="docutils literal"><span class="pre">systemctl</span> <span class="pre">stop</span> <span class="pre">chronyd.service</span></code></li>
-<li>Set 10.1.11.1 (network services node) as the NTP server in the
-<em>/etc/chrony.conf</em> file.</li>
-<li><code class="docutils literal"><span class="pre">systemctl</span> <span class="pre">start</span> <span class="pre">chronyd.service</span></code></li>
-</ul>
-</li>
+<li>Skip the NTP sections.</li>
 </ul>
 </li>
 <li><p class="first">Configuring the Compute service on the compute node:</p>
