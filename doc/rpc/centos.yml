@@ -16,6 +16,10 @@ resources:
         - network: 11111111-1111-1111-1111-111111111111
         - network: management
         - network: external
+      user_data: |
+        #!/bin/bash -v
+        yum update -y
+        yum install ntp shorewall -y
 
   controller:
     type: "OS::Nova::Server"

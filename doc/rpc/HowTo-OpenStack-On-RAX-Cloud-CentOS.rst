@@ -90,7 +90,7 @@ Network services node (network-services)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #. Create a cloud server named **network-services**. If you orchestrated
-   server creation, skip this step.
+   server creation, skip to :ref:`net-net`.
 
    - OS: CentOS 7 (PVHVM)
    - Flavor: 1 GB General Purpose v1
@@ -102,6 +102,10 @@ Network services node (network-services)
       network interface device names. This guide adds one tenant network at a
       time as it becomes necessary. Also, changing tenant networks after
       configuration erases changes made in this guide.
+
+#. In the cloud control panel, add the **management** network to the node.
+
+#. In the cloud control panel, add the **external** network to the node.
 
 #. Access the node from a terminal using the IP address assigned by
    Rackspace.
@@ -128,12 +132,17 @@ Network services node (network-services)
 
       # reboot now
 
+.. _net-net:
+
 Configure additional network interfaces
 ---------------------------------------
 
-#. In the cloud control panel, add the **management** network to the node.
+#. Access the node from a terminal using the IP address assigned by
+   Rackspace.
 
-#. In the cloud control panel, add the **external** network to the node.
+   .. code-block:: console
+
+      $ ssh root@<IP_ADDRESS>
 
 #. Edit */etc/sysconfig/network-scripts/ifcfg-eth2*. Do not touch the
    HWADDR line, as this is determined by the system:
@@ -284,11 +293,45 @@ Configure the firewall service
       64 bytes from 162.242.140.107: icmp_seq=2 ttl=50 time=180 ms
       ...
 
+#. Enable the **network-services** node to act as an NTP server for the other
+   nodes:
+
+   .. code-block:: console
+
+      # systemctl stop chronyd.service
+
+   Set ``allow 10.1.11.0/24`` in the */etc/chrony.conf* file.
+
+   .. code-block:: console
+
+      # systemctl enable chronyd.service
+      # systemctl start chronyd.service
+
+#. Confirm NTP synchronization:
+
+   .. code-block:: console
+
+      # chronyc sources
+
+      210 Number of sources = 4
+      MS Name/IP address         Stratum Poll Reach LastRx Last sample
+      =========================================================================
+      ^- yarrina.connect.com.au  2   7   377    76  +1204us[+1211us] +/-   39ms
+      ^- warrane.connect.com.au  2   7   377    74  +1636us[+1636us] +/-   22ms
+      ^- phyapp01.mel1.afoyi.com 2   7   377    76  -3862us[-3855us] +/-  443ms
+      ^* mail1.selcomm.com       1   7   377    75    +28us[  +35us] +/- 2724us
+
 #. Generate an ssh key for accessing other nodes:
 
    .. code-block:: console
 
       # ssh-keygen -t rsa -b 2048 -C "ns1" -P "" -f .ssh/id_rsa
+
+#. Reboot the node:
+
+   .. code-block:: console
+
+      # reboot now
 
 
 OpenStack controller node (controller)
@@ -319,7 +362,9 @@ Configure network interfaces
 ----------------------------
 
 #. Access the node from the **network services** node using the IP
-   address assigned by Rackspace on the **management** network:
+   address assigned by Rackspace on the **management** network.
+
+   The root password for the controller node is: **openstack**
 
    .. code-block:: console
 
@@ -413,17 +458,23 @@ Configure network interfaces
       # systemctl stop firewalld
       # systemctl disable firewalld
 
+#. Set the **network-services** node as the NTP server:
+
+   .. code-block:: console
+
+      # systemctl stop chronyd.service
+
+   Set ``server 10.1.11.1 iburst`` as the NTP server in */etc/chrony.conf*.
+
+   .. code-block:: console
+
+      # systemctl start chronyd.service
+
 #. Reboot the node:
 
    .. code-block:: console
 
       # reboot now
-
-#. After rebooting, run the *vxlan.sh* script:
-
-   .. code-block:: console
-
-      # bash -x ~/vxlan.sh
 
 Test and update
 ---------------
@@ -434,6 +485,12 @@ Test and update
 
       # ssh controller
 
+#. Run the *vxlan.sh* script:
+
+   .. code-block:: console
+
+      # bash -x ~/vxlan.sh
+
 #. Test network connectivity to the internet by pinging openstack.org:
 
    .. code-block:: console
@@ -443,6 +500,22 @@ Test and update
       64 bytes from 162.242.140.107: icmp_seq=1 ttl=50 time=181 ms
       64 bytes from 162.242.140.107: icmp_seq=2 ttl=50 time=180 ms
       ...
+
+   .. note::
+
+      If you cannot connect to the internet, restart the controller and
+      network-services nodes then try again.
+
+#. Confirm NTP synchronization:
+
+   .. code-block:: console
+
+      # chronyc sources
+
+      210 Number of sources = 1
+      MS Name/IP address  Stratum Poll Reach LastRx Last sample
+      ========================================================================
+      ^* gateway                2   6   377    34    +14us[  +24us] +/- 3322us
 
 #. Update the node:
 
@@ -498,7 +571,9 @@ Configure network interfaces
 ----------------------------
 
 #. Access the node from the network services node using the IP address
-   assigned by Rackspace on the **management** network:
+   assigned by Rackspace on the **management** network.
+
+   The root password for the compute node is: **openstack**
 
    .. code-block:: console
 
@@ -592,6 +667,18 @@ Configure network interfaces
       # systemctl stop firewalld
       # systemctl disable firewalld
 
+#. Set the **network-services** node as the NTP server:
+
+   .. code-block:: console
+
+      # systemctl stop chronyd.service
+
+   Set ``server 10.1.11.1 iburst`` as the NTP server in */etc/chrony.conf*.
+
+   .. code-block:: console
+
+      # systemctl start chronyd.service
+
 #. Reboot the node:
 
    .. code-block:: console
@@ -617,6 +704,17 @@ Test and update
       64 bytes from 162.242.140.107: icmp_seq=1 ttl=50 time=181 ms
       64 bytes from 162.242.140.107: icmp_seq=2 ttl=50 time=180 ms
       ...
+
+#. Confirm NTP synchronization:
+
+   .. code-block:: console
+
+      # chronyc sources
+
+      210 Number of sources = 1
+      MS Name/IP address  Stratum Poll Reach LastRx Last sample
+      ========================================================================
+      ^* gateway                2   6   377    34    +14us[  +24us] +/- 3322us
 
 #. Update the node:
 
@@ -662,7 +760,9 @@ Configure network interfaces
 ----------------------------
 
 #. Access the node from the network services node using the IP address
-   assigned by Rackspace on the **management** network:
+   assigned by Rackspace on the **management** network.
+
+   The root password for the block node is: **openstack**
 
    .. code-block:: console
 
@@ -724,6 +824,18 @@ Configure network interfaces
       # systemctl stop firewalld
       # systemctl disable firewalld
 
+#. Set the **network-services** node as the NTP server:
+
+   .. code-block:: console
+
+      # systemctl stop chronyd.service
+
+   Set ``server 10.1.11.1 iburst`` as the NTP server in */etc/chrony.conf*.
+
+   .. code-block:: console
+
+      # systemctl start chronyd.service
+
 #. Reboot the node:
 
    .. code-block:: console
@@ -749,6 +861,17 @@ Test and update
       64 bytes from 162.242.140.107: icmp_seq=1 ttl=50 time=181 ms
       64 bytes from 162.242.140.107: icmp_seq=2 ttl=50 time=180 ms
       ...
+
+#. Confirm NTP synchronization:
+
+   .. code-block:: console
+
+      # chronyc sources
+
+      210 Number of sources = 1
+      MS Name/IP address  Stratum Poll Reach LastRx Last sample
+      ========================================================================
+      ^* gateway                2   6   377    34    +14us[  +24us] +/- 3322us
 
 #. Update the node:
 
@@ -798,14 +921,7 @@ following changes:
 - Configuring the basic environment on all nodes:
 
   - Skip the network configuration sections.
-  - In */etc/chrony.conf* on the network services node,
-    set ``allow 10.1.11.0/24``.
-  - On the **controller**, **compute**, and **block** nodes:
-
-    - ``systemctl stop chronyd.service``
-    - Set 10.1.11.1 (network services node) as the NTP server in the
-      */etc/chrony.conf* file.
-    - ``systemctl start chronyd.service``
+  - Skip the NTP sections.
 
 - Configuring the Compute service on the compute node:
 
