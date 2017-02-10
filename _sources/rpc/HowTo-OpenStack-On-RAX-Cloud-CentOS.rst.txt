@@ -929,14 +929,25 @@ following changes:
 
 - Configuring networking:
 
-  - on the *controller*, use ``physical_interface_mappings = provider:vxlan1``
+  - Use the instructions for *Networking Option 1: Provider networks*
+  - on the *controller* node, use ``physical_interface_mappings =
+    provider:vxlan1``
   - on the *compute* node, use ``physical_interface_mappings =
     provider:vxlan1``
+
+- Launching an instance (creating virtual networks):
+
   - use the following command to create the subnet:
 
     .. code-block:: console
 
        neutron subnet-create --name provider \
+       --allocation-pool start=10.1.13.101,end=10.1.13.200 --enable-dhcp \
+       --dns-nameserver 8.8.4.4 --gateway 10.1.11.1 provider 10.1.13.0/24
+
+    .. code-block:: console
+
+       openstack subnet create --network provider \
        --allocation-pool start=10.1.13.101,end=10.1.13.200 --enable-dhcp \
        --dns-nameserver 8.8.4.4 --gateway 10.1.11.1 provider 10.1.13.0/24
 
