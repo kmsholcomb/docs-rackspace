@@ -695,6 +695,12 @@ Test and update
 
       # ssh compute
 
+#. Run the *vxlan.sh* script:
+
+   .. code-block:: console
+
+      # bash -x ~/vxlan.sh
+
 #. Test network connectivity to the internet by pinging openstack.org:
 
    .. code-block:: console
@@ -938,12 +944,6 @@ following changes:
 - Launching an instance (creating virtual networks):
 
   - use the following command to create the subnet:
-
-    .. code-block:: console
-
-       neutron subnet-create --name provider \
-       --allocation-pool start=10.1.13.101,end=10.1.13.200 --enable-dhcp \
-       --dns-nameserver 8.8.4.4 --gateway 10.1.11.1 provider 10.1.13.0/24
 
     .. code-block:: console
 
