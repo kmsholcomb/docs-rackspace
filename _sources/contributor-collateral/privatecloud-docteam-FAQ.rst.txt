@@ -68,7 +68,6 @@ Following are the members of the team:
 
 * Karin Levenstein (IRC: klevenstein) - Manager of Austin, US team
 
-  * Margaret Eker - Senior Information Developer, RPC and Public Cloud
   * Kelly Holcomb - Editor
   * Catherine Richardson (IRC: cathrichardson) - Senior Information Developer,
     RPC and Public Cloud
