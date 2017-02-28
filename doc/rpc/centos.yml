@@ -27,7 +27,7 @@ resources:
       flavor: 8 GB General Purpose v1
       image: CentOS 7 (PVHVM)
       name: controller
-      admin_pass: openstack
+      admin_pass: stack
       networks:
         - network: management
         - network: internal
@@ -39,7 +39,7 @@ resources:
       flavor: 8 GB General Purpose v1
       image: CentOS 7 (PVHVM)
       name: compute
-      admin_pass: openstack
+      admin_pass: stack
       networks:
         - network: management
         - network: internal
@@ -51,7 +51,7 @@ resources:
       flavor: 4 GB General Purpose v1
       image: CentOS 7 (PVHVM)
       name: block
-      admin_pass: openstack
+      admin_pass: stack
       networks:
         - network: management
         - network: internal

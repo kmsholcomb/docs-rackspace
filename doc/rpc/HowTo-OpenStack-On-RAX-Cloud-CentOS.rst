@@ -365,7 +365,7 @@ Configure network interfaces
 #. Access the node from the **network services** node using the IP
    address assigned by Rackspace on the **management** network.
 
-   The root password for the controller node is: **openstack**
+   The root password for the controller node is: **stack**
 
    .. code-block:: console
 
@@ -576,7 +576,7 @@ Configure network interfaces
 #. Access the node from the network services node using the IP address
    assigned by Rackspace on the **management** network.
 
-   The root password for the compute node is: **openstack**
+   The root password for the compute node is: **stack**
 
    .. code-block:: console
 
@@ -773,7 +773,7 @@ Configure network interfaces
 #. Access the node from the network services node using the IP address
    assigned by Rackspace on the **management** network.
 
-   The root password for the block node is: **openstack**
+   The root password for the block node is: **stack**
 
    .. code-block:: console
 
