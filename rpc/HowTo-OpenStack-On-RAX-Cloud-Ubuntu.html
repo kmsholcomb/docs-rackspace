@@ -100,6 +100,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#networks">Networks</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="#orchestration">Orchestration</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#launch-servers">Launch servers</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#network-services-node-network-services">Network services node (network-services)</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#openstack-controller-node-controller">OpenStack controller node (controller)</a></li>
@@ -203,27 +204,56 @@ the official installation guide.</li>
 <p>In the Rackspace Cloud Control Panel, select <span class="guilabel">Networks</span> in the
 <span class="guilabel">Networking</span> tab, and create the following networks:</p>
 <ol class="arabic simple">
-<li>net-osmgmt1<ul>
+<li>management<ul>
 <li>10.1.11.0/24</li>
 </ul>
 </li>
-<li>net-osint1<ul>
+<li>internal<ul>
 <li>10.1.12.0/24</li>
 </ul>
 </li>
-<li>net-osext1<ul>
+<li>external<ul>
 <li>10.1.13.0/24</li>
 </ul>
 </li>
 </ol>
 </div>
 </div>
+<div class="section" id="orchestration">
+<h2>Orchestration<a class="headerlink" href="#orchestration" title="Permalink to this headline">#</a></h2>
+<p>You can save time by orchestrating basic server creation:</p>
+<ol class="arabic">
+<li><p class="first">In the <strong>Orchestration</strong> menu, select <strong>Custom Template</strong>.</p>
+</li>
+<li><p class="first">Paste the contents of <a class="reference download internal" href="../_downloads/ubuntu.yml" download=""><code class="xref download docutils literal"><span class="pre">ubuntu.yml</span></code></a> into the template editor.</p>
+</li>
+<li><p class="first">Replace <code class="docutils literal"><span class="pre">key_name:</span> <span class="pre">mykey</span></code> with the name of your SSH key.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">The template does not display login passwords, so if you do not specify
+a working SSH key you cannot access any of the nodes.</p>
+</div>
+</li>
+<li><p class="first">Click <strong>Create Template and Launch Stack</strong>.</p>
+</li>
+</ol>
+<p>The template builds the following resources:</p>
+<ul class="simple">
+<li>network-services node</li>
+<li>controller node</li>
+<li>compute node</li>
+<li>block node</li>
+<li>block storage volume (attached to the block node)</li>
+</ul>
+<p>The resources are all attached to the appropriate networks, however you still
+must manually configure the interfaces on each node.</p>
+</div>
 <div class="section" id="launch-servers">
 <h2>Launch servers<a class="headerlink" href="#launch-servers" title="Permalink to this headline">#</a></h2>
 <div class="section" id="network-services-node-network-services">
 <h3>Network services node (network-services)<a class="headerlink" href="#network-services-node-network-services" title="Permalink to this headline">#</a></h3>
 <ol class="arabic">
-<li><p class="first">Create a cloud server.</p>
+<li><p class="first">Create a cloud server. If you orchestrated server creation, skip this step.</p>
 <ul class="simple">
 <li>OS: Ubuntu 16.04 (Xenial Xerus) PVHVM</li>
 <li>Flavor: 1 GB General Purpose v1</li>
@@ -255,20 +285,22 @@ Rackspace.</p>
 </li>
 <li><p class="first">Reboot node.</p>
 </li>
-<li><p class="first">Add the <em>net-osmgmt1</em> network to node.</p>
+<li><p class="first">Add the <em>management</em> network to node if you did not orchestrate server
+creation.</p>
 </li>
-<li><p class="first">Add the <em>net-osext1</em> network to node.</p>
+<li><p class="first">Add the <em>external</em> network to node if you did not orchestrate server
+creation.</p>
 </li>
 <li><p class="first">Configure additional network interfaces.</p>
 </li>
 <li><p class="first">Edit the <code class="file docutils literal"><span class="pre">/etc/network/interfaces</span></code> file.</p>
-<div class="highlight-text"><div class="highlight"><pre><span></span># Label net-osmgmt1
+<div class="highlight-text"><div class="highlight"><pre><span></span># Label management
 auto eth2
 iface eth2 inet static
 address 10.1.11.1
 netmask 255.255.255.0
 
-# Label net-osext1
+# Label external
 auto eth3
 iface eth3 inet static
 address 10.1.10.1
@@ -391,40 +423,38 @@ node is rebooted.</p>
 </div>
 <div class="section" id="openstack-controller-node-controller">
 <h3>OpenStack controller node (controller)<a class="headerlink" href="#openstack-controller-node-controller" title="Permalink to this headline">#</a></h3>
+<p>If you orchestrated server creation, skip to <a class="reference internal" href="#controller-net"><span class="std std-ref">configure network interfaces</span></a>.</p>
 <ol class="arabic">
-<li><p class="first">Create a cloud server, removing all networks except the <em>net-osmgmt1</em>
-network:</p>
+<li><p class="first">Create a cloud server, removing all networks except the <em>management</em>
+network.</p>
 <ul class="simple">
 <li>OS: Ubuntu 16.04 (Xenial Xerus) PVHVM</li>
 <li>Flavor: 8 GB General Purpose v1</li>
-<li>Network: net-osmgmt1</li>
+<li>Network: management</li>
 </ul>
 </li>
-<li><p class="first">Access the node from the network services node (network-services) using the
-IP address assigned by Rackspace on the <em>net-osmgmt1</em> network:</p>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> ssh-copy-id -i .ssh/id_rsa.pub root@&lt;controller_IP_ADDRESS&gt;
-<span class="gp">#</span> ssh root@&lt;controller_IP_ADDRESS&gt;
-</pre></div>
-</div>
+<li><p class="first">In the Cloud Control Panel, add the <em>internal</em> network to the
+node.</p>
+</li>
+<li><p class="first">In the Cloud Control Panel, add the <em>external</em> network to the
+node.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">The node cannot access the internet without additional
 configuration.</p>
 </div>
 </li>
-<li><p class="first">In the Cloud Control Panel, add the <em>net-osint1</em> network to the
-node.</p>
-</li>
-<li><p class="first">In the Cloud Control Panel, add the <em>net-osext1</em> network to the
-node.</p>
+<li id="controller-net"><p class="first">Access the node from the network services node (network-services) using the
+IP address assigned by Rackspace on the <em>management</em> network:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> ssh-copy-id -i .ssh/id_rsa.pub root@&lt;controller_IP_ADDRESS&gt;
+<span class="gp">#</span> ssh root@&lt;controller_IP_ADDRESS&gt;
+</pre></div>
+</div>
 </li>
 <li><p class="first">Configure network interfaces.</p>
 </li>
 <li><p class="first">Edit the <code class="file docutils literal"><span class="pre">/etc/network/interfaces</span></code> file.</p>
-</li>
-</ol>
-<blockquote>
-<div><div class="highlight-text"><div class="highlight"><pre><span></span># Label net-osmgmt1
+<div class="highlight-text"><div class="highlight"><pre><span></span># Label management
 auto eth0
 iface eth0 inet static
     address 10.1.11.11
@@ -432,13 +462,13 @@ iface eth0 inet static
     gateway 10.1.11.1
     dns-nameserver 72.3.128.241 72.3.128.240
 
-# Label net-osint1
+# Label internal
 auto eth1
 iface eth1 inet static
     address 10.1.12.21
     netmask 255.255.255.0
 
-# Label net-osext1
+# Label external
 auto eth2
 iface eth2 inet static
     address 10.1.10.21
@@ -453,8 +483,7 @@ iface vxlan1 inet static
     post-down ip link del vxlan1
 </pre></div>
 </div>
-</div></blockquote>
-<ol class="arabic">
+</li>
 <li><p class="first">Edit the <code class="file docutils literal"><span class="pre">/etc/hosts</span></code> file.</p>
 <div class="highlight-text"><div class="highlight"><pre><span></span># controller
 10.1.11.11 controller
@@ -475,7 +504,7 @@ iface vxlan1 inet static
 <li><p class="first">Reboot the node.</p>
 </li>
 <li><p class="first">Access the node from the network services node using the new IP
-address on the <em>net-osmgmt1</em> network.</p>
+address on the <em>management</em> network.</p>
 <div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">ssh root@10.1.11.11</span>
 </pre></div>
 </div>
@@ -499,35 +528,36 @@ address on the <em>net-osmgmt1</em> network.</p>
 </div>
 <div class="section" id="openstack-compute-node-compute">
 <h3>OpenStack compute node (compute)<a class="headerlink" href="#openstack-compute-node-compute" title="Permalink to this headline">#</a></h3>
+<p>If you orchestrated server creation, skip to <a class="reference internal" href="#compute-net"><span class="std std-ref">configure network interfaces</span></a>.</p>
 <ol class="arabic">
-<li><p class="first">Create a cloud server, removing all networks except the <em>net-osmgmt1</em>
-network:</p>
+<li><p class="first">Create a cloud server, removing all networks except the <em>management</em>
+network.</p>
 <ul class="simple">
 <li>OS: Ubuntu 16.04 (Xenial Xerus) PVHVM</li>
 <li>Flavor:
 - 3.75 GB Compute v1 (supports several CirrOS instances)
 - 7.5 GB Compute v1 (supports a couple of Ubuntu/Fedora instances)</li>
-<li>Network: net-osmgmt1</li>
+<li>Network: management</li>
 </ul>
 </li>
-<li><p class="first">Access the node from the network services node (network-services) using the
-IP address assigned by RAX on <em>net-osmgmt1</em> network.</p>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> ssh-copy-id -i .ssh/id_rsa.pub root@&lt;compute_IP_ADDRESS&gt;
-<span class="gp">#</span> ssh root@&lt;compute_IP_ADDRESS&gt;
-</pre></div>
-</div>
+<li><p class="first">Add the <em>internal</em> network to the node.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">The node cannot access the internet without additional
 configuration.</p>
 </div>
 </li>
-<li><p class="first">Add the <em>net-osint1</em> network to the node.</p>
+<li id="compute-net"><p class="first">Access the node from the network services node (network-services) using the
+IP address assigned by RAX on <em>management</em> network.</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> ssh-copy-id -i .ssh/id_rsa.pub root@&lt;compute_IP_ADDRESS&gt;
+<span class="gp">#</span> ssh root@&lt;compute_IP_ADDRESS&gt;
+</pre></div>
+</div>
 </li>
 <li><p class="first">Configure network interfaces.</p>
 </li>
 <li><p class="first">Edit the <code class="file docutils literal"><span class="pre">/etc/network/interfaces</span></code> file.</p>
-<div class="highlight-text"><div class="highlight"><pre><span></span># Label net-osmgmt1
+<div class="highlight-text"><div class="highlight"><pre><span></span># Label management
 auto eth0
 iface eth0 inet static
     address 10.1.11.21
@@ -535,13 +565,13 @@ iface eth0 inet static
     gateway 10.1.11.1
     dns-nameserver 72.3.128.241 72.3.128.240
 
-# Label net-osint1
+# Label internal
 auto eth1
 iface eth1 inet static
     address 10.1.12.31
     netmask 255.255.255.0
 
-# Label net-osext1
+# Label external
 auto eth2
 iface eth2 inet static
     address 10.1.10.31
@@ -577,7 +607,7 @@ post-down ip link del vxlan1
 <li><p class="first">Reboot the node.</p>
 </li>
 <li><p class="first">Access the node from the network services node using the new IP
-address on the <em>net-osmgmt1</em> network.</p>
+address on the <em>management</em> network.</p>
 <div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">ssh root@10.1.11.21</span>
 </pre></div>
 </div>
@@ -602,31 +632,32 @@ address on the <em>net-osmgmt1</em> network.</p>
 </div>
 <div class="section" id="openstack-block-storage-node-block">
 <h2>OpenStack block storage node (block)<a class="headerlink" href="#openstack-block-storage-node-block" title="Permalink to this headline">#</a></h2>
+<p>If you orchestrated server creation, skip to <a class="reference internal" href="#block-net"><span class="std std-ref">configure network interfaces</span></a>.</p>
 <ol class="arabic">
 <li><p class="first">Create a cloud server, removing all networks except the
-<strong>16.04 (Xenial Xerus) PVHVM</strong> network:</p>
+<strong>management</strong> network.</p>
 <ul class="simple">
 <li>OS: CentOS 7 (PVHVM)</li>
 <li>4 GB General Purpose v1</li>
-<li>Network: net-osmgmt1</li>
+<li>Network: management</li>
 </ul>
 </li>
-<li><p class="first">In the Cloud Control Panel, add the <strong>net-osint1</strong> network to the
+<li><p class="first">In the Cloud Control Panel, add the <strong>internal</strong> network to the
 node.</p>
-</li>
-<li><p class="first">Access the node from the network services node using the IP address
-assigned by Rackspace on the <strong>net-osmgmt1</strong> network:</p>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> ssh-copy-id -i .ssh/id_rsa.pub root@&lt;block_IP_ADDRESS&gt;
-<span class="gp">#</span> ssh root@&lt;block_IP_ADDRESS&gt;
-</pre></div>
-</div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">The node cannot access the internet without additional configuration.</p>
 </div>
 </li>
+<li id="block-net"><p class="first">Access the node from the network services node using the IP address
+assigned by Rackspace on the <strong>management</strong> network:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> ssh-copy-id -i .ssh/id_rsa.pub root@&lt;block_IP_ADDRESS&gt;
+<span class="gp">#</span> ssh root@&lt;block_IP_ADDRESS&gt;
+</pre></div>
+</div>
+</li>
 <li><p class="first">Edit the <code class="file docutils literal"><span class="pre">/etc/network/interfaces</span></code> file:</p>
-<div class="highlight-ini"><div class="highlight"><pre><span></span><span class="c1"># Label net-osmgmt1</span>
+<div class="highlight-ini"><div class="highlight"><pre><span></span><span class="c1"># Label management</span>
 <span class="na">auto eth0</span>
 <span class="na">iface eth0 inet static</span>
     <span class="na">address 10.1.11.31</span>
@@ -634,7 +665,7 @@ assigned by Rackspace on the <strong>net-osmgmt1</strong> network:</p>
     <span class="na">gateway 10.1.11.1</span>
     <span class="na">dns-nameserver 72.3.128.241 72.3.128.240</span>
 
-<span class="c1"># Label net-osint1</span>
+<span class="c1"># Label internal</span>
 <span class="na">auto eth1</span>
 <span class="na">iface eth1 inet static</span>
     <span class="na">address 10.1.12.41</span>
@@ -662,7 +693,7 @@ assigned by Rackspace on the <strong>net-osmgmt1</strong> network:</p>
 <li><p class="first">Reboot the node.</p>
 </li>
 <li><p class="first">Access the node from the network services node using the new IP
-address on the <em>net-osmgmt1</em> network.</p>
+address on the <em>management</em> network.</p>
 <div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">ssh root@10.1.11.31</span>
 </pre></div>
 </div>
@@ -692,6 +723,7 @@ release candidate. For example:</p>
 </ol>
 <div class="section" id="create-block-storage-volume-block1">
 <h3>Create block storage volume (block1)<a class="headerlink" href="#create-block-storage-volume-block1" title="Permalink to this headline">#</a></h3>
+<p>If you orchestrated server creation, skip to <a class="reference internal" href="#services"><span class="std std-ref">Install and configure OpenStack services</span></a>.</p>
 <ol class="arabic simple">
 <li>In the Rackspace Cloud Control Panel, select
 <span class="guilabel">Block Storage Volumes</span> in the <span class="guilabel">Storage</span> tab, and
@@ -706,7 +738,7 @@ create the following volume named <strong>block1</strong>:<ul>
 </div>
 </div>
 <div class="section" id="install-and-configure-openstack-services">
-<h2>Install and configure OpenStack services<a class="headerlink" href="#install-and-configure-openstack-services" title="Permalink to this headline">#</a></h2>
+<span id="services"></span><h2>Install and configure OpenStack services<a class="headerlink" href="#install-and-configure-openstack-services" title="Permalink to this headline">#</a></h2>
 <p>Use the <a class="reference external" href="http://docs.openstack.org/newton/install-guide-ubuntu/">Newton Installation Tutorials and Guides</a> with
 the following changes:</p>
 <ul>
