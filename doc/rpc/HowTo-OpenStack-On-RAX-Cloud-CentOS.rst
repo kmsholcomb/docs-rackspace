@@ -337,9 +337,10 @@ Configure the firewall service
 OpenStack controller node (controller)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+If you orchestrated server creation, skip to :ref:`controller-net`.
+
 #. Create a cloud server named **controller**, removing all networks except the
-   **management** network. If you orchestrated server creation, skip to
-   :ref:`controller-net`.
+   **management** network.
 
    - OS: CentOS 7 (PVHVM)
    - Flavor: 8 GB General Purpose v1
@@ -547,8 +548,10 @@ Test and update
 OpenStack compute node (compute)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+If you orchestrated server creation, skip to :ref:`compute-net`.
+
 #. Create a cloud server, removing all networks except the **management**
-   network. If you orchestrated server creation, skip to :ref:`compute-net`.
+   network.
 
    - OS: CentOS 7 (PVHVM)
    - 4 GB General Purpose v1 (supports several CirrOS instances)
@@ -746,8 +749,10 @@ Test and update
 OpenStack block storage node (block)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+If you orchestrated server creation, skip to :ref:`block-net`.
+
 #. Create a cloud server, removing all networks except the **management**
-   network. If you orchestrated server creation, skip to :ref:`block-net`.
+   network.
 
    - OS: CentOS 7 (PVHVM)
    - 4 GB General Purpose v1
