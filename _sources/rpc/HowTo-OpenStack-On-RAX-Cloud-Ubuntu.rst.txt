@@ -83,6 +83,10 @@ The template builds the following resources:
 The resources are all attached to the appropriate networks, however you still
 must manually configure the interfaces on each node.
 
+.. important::
+
+   The root password for the controller, compute, and block nodes is: **stack**
+
 
 Launch servers
 ~~~~~~~~~~~~~~

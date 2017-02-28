@@ -23,7 +23,7 @@ resources:
       flavor: 8 GB General Purpose v1
       image: Ubuntu 16.04 LTS (Xenial Xerus) (PVHVM)
       name: controller
-      admin_pass: openstack
+      admin_pass: stack
       networks:
         - network: management
         - network: internal
@@ -35,7 +35,7 @@ resources:
       flavor: 8 GB General Purpose v1
       image: Ubuntu 16.04 LTS (Xenial Xerus) (PVHVM)
       name: compute
-      admin_pass: openstack
+      admin_pass: stack
       networks:
         - network: management
         - network: internal
@@ -47,7 +47,7 @@ resources:
       flavor: 4 GB General Purpose v1
       image: Ubuntu 16.04 LTS (Xenial Xerus) (PVHVM)
       name: block
-      admin_pass: openstack
+      admin_pass: stack
       networks:
         - network: management
         - network: internal
