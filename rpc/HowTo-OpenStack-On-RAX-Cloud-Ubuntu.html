@@ -108,7 +108,7 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#openstack-block-storage-node-block">OpenStack block storage node (block)</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#create-block-storage-volume-block1">Create block storage volume (block1)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#create-a-block-storage-volume-block1">Create a block storage volume (block1)</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#install-and-configure-openstack-services">Install and configure OpenStack services</a></li>
@@ -273,7 +273,7 @@ configuration erases changes made in this guide.</p>
 </li>
 <li><p class="first">Access the node from the internet using the IP address assigned by
 Rackspace.</p>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">ssh root@&lt;hst-ns1_IP_ADDRESS&gt;</span>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">ssh root@&lt;network-services_IP_ADDRESS&gt;</span>
 </pre></div>
 </div>
 </li>
@@ -437,10 +437,10 @@ network.</p>
 <li>Network: management</li>
 </ul>
 </li>
-<li><p class="first">In the Cloud Control Panel, add the <em>internal</em> network to the
+<li><p class="first">In the cloud control panel, add the <strong>internal</strong> network to the
 node.</p>
 </li>
-<li><p class="first">In the Cloud Control Panel, add the <em>external</em> network to the
+<li><p class="first">In the cloud control panel, add the <strong>external</strong> network to the
 node.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
@@ -544,7 +544,9 @@ network.</p>
 <li>Network: management</li>
 </ul>
 </li>
-<li><p class="first">Add the <em>internal</em> network to the node.</p>
+<li><p class="first">In the cloud control panel, add the <strong>internal</strong> network to the node.</p>
+</li>
+<li><p class="first">In the cloud control panel, add the <strong>external</strong> network to the node.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">The node cannot access the internet without additional
@@ -592,7 +594,7 @@ post-down ip link del vxlan1
 </div>
 </li>
 <li><p class="first">Edit the <code class="file docutils literal"><span class="pre">/etc/hosts</span></code> file.</p>
-<div class="highlight-ini"><div class="highlight"><pre><span></span><span class="c1"># hst-os1ctl1</span>
+<div class="highlight-ini"><div class="highlight"><pre><span></span><span class="c1"># controller</span>
 <span class="na">10.1.11.11 controller</span>
 
 <span class="c1"># compute</span>
@@ -641,12 +643,12 @@ address on the <em>management</em> network.</p>
 <li><p class="first">Create a cloud server, removing all networks except the
 <strong>management</strong> network.</p>
 <ul class="simple">
-<li>OS: CentOS 7 (PVHVM)</li>
+<li>OS: 16.04 (Xenial Xerus) PVHVM</li>
 <li>4 GB General Purpose v1</li>
 <li>Network: management</li>
 </ul>
 </li>
-<li><p class="first">In the Cloud Control Panel, add the <strong>internal</strong> network to the
+<li><p class="first">In the cloud control panel, add the <strong>internal</strong> network to the
 node.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
@@ -677,7 +679,7 @@ assigned by Rackspace on the <strong>management</strong> network:</p>
 </pre></div>
 </div>
 </li>
-<li><p class="first">Edit the <em>/etc/hosts</em> file:</p>
+<li><p class="first">Edit the <code class="file docutils literal"><span class="pre">/etc/hosts</span></code> file:</p>
 <div class="highlight-ini"><div class="highlight"><pre><span></span><span class="c1"># controller</span>
 <span class="na">10.1.11.11 controller</span>
 
@@ -715,7 +717,7 @@ address on the <em>management</em> network.</p>
 <li><p class="first">If performing pre-release testing, install the repository for the relevant
 release candidate. For example:</p>
 <div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> apt-get install software-properties-common
-<span class="gp">#</span> add-apt-repository cloud-archive:newton-proposed
+<span class="gp">#</span> add-apt-repository cloud-archive:ocata
 </pre></div>
 </div>
 </li>
@@ -725,8 +727,8 @@ release candidate. For example:</p>
 </div>
 </li>
 </ol>
-<div class="section" id="create-block-storage-volume-block1">
-<h3>Create block storage volume (block1)<a class="headerlink" href="#create-block-storage-volume-block1" title="Permalink to this headline">#</a></h3>
+<div class="section" id="create-a-block-storage-volume-block1">
+<h3>Create a block storage volume (block1)<a class="headerlink" href="#create-a-block-storage-volume-block1" title="Permalink to this headline">#</a></h3>
 <p>If you orchestrated server creation, skip to <a class="reference internal" href="#services"><span class="std std-ref">Install and configure OpenStack services</span></a>.</p>
 <ol class="arabic simple">
 <li>In the Rackspace Cloud Control Panel, select
@@ -743,7 +745,7 @@ create the following volume named <strong>block1</strong>:<ul>
 </div>
 <div class="section" id="install-and-configure-openstack-services">
 <span id="services"></span><h2>Install and configure OpenStack services<a class="headerlink" href="#install-and-configure-openstack-services" title="Permalink to this headline">#</a></h2>
-<p>Use the <a class="reference external" href="http://docs.openstack.org/newton/install-guide-ubuntu/">Newton Installation Tutorials and Guides</a> with
+<p>Use the <a class="reference external" href="http://docs.openstack.org/ocata/install-guide-ubuntu/">Installation Tutorials and Guides</a> with
 the following changes:</p>
 <ul>
 <li><p class="first">Configuring the basic environment on all nodes:</p>
