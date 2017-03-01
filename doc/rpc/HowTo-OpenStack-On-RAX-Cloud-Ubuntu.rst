@@ -112,7 +112,7 @@ Network services node (network-services)
 
    .. code-block:: console
 
-      ssh root@<hst-ns1_IP_ADDRESS>
+      ssh root@<network-services_IP_ADDRESS>
 
 #. Update node.
 
@@ -287,10 +287,10 @@ If you orchestrated server creation, skip to :ref:`configure network interfaces
    - Flavor: 8 GB General Purpose v1
    - Network: management
 
-#. In the Cloud Control Panel, add the *internal* network to the
+#. In the cloud control panel, add the **internal** network to the
    node.
 
-#. In the Cloud Control Panel, add the *external* network to the
+#. In the cloud control panel, add the **external** network to the
    node.
 
    .. note::
@@ -402,7 +402,9 @@ If you orchestrated server creation, skip to :ref:`configure network interfaces
      - 7.5 GB Compute v1 (supports a couple of Ubuntu/Fedora instances)
    - Network: management
 
-#. Add the *internal* network to the node.
+#. In the cloud control panel, add the **internal** network to the node.
+
+#. In the cloud control panel, add the **external** network to the node.
 
    .. note::
 
@@ -457,7 +459,7 @@ If you orchestrated server creation, skip to :ref:`configure network interfaces
 
    .. code-block:: ini
 
-      # hst-os1ctl1
+      # controller
       10.1.11.11 controller
 
       # compute
@@ -507,11 +509,11 @@ If you orchestrated server creation, skip to :ref:`configure network interfaces
 #. Create a cloud server, removing all networks except the
    **management** network.
 
-   - OS: CentOS 7 (PVHVM)
+   - OS: 16.04 (Xenial Xerus) PVHVM
    - 4 GB General Purpose v1
    - Network: management
 
-#. In the Cloud Control Panel, add the **internal** network to the
+#. In the cloud control panel, add the **internal** network to the
    node.
 
    .. note::
@@ -546,7 +548,7 @@ If you orchestrated server creation, skip to :ref:`configure network interfaces
           address 10.1.12.41
           netmask 255.255.255.0
 
-#. Edit the */etc/hosts* file:
+#. Edit the :file:`/etc/hosts` file:
 
    .. code-block:: ini
 
@@ -591,7 +593,7 @@ If you orchestrated server creation, skip to :ref:`configure network interfaces
    .. code-block:: console
 
       # apt-get install software-properties-common
-      # add-apt-repository cloud-archive:newton-proposed
+      # add-apt-repository cloud-archive:ocata
 
 #. Reboot the node:
 
@@ -599,8 +601,8 @@ If you orchestrated server creation, skip to :ref:`configure network interfaces
 
       # reboot
 
-Create block storage volume (block1)
-------------------------------------
+Create a block storage volume (block1)
+--------------------------------------
 
 If you orchestrated server creation, skip to :ref:`services`.
 
@@ -620,8 +622,8 @@ If you orchestrated server creation, skip to :ref:`services`.
 Install and configure OpenStack services
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Use the `Newton Installation Tutorials and Guides
-<http://docs.openstack.org/newton/install-guide-ubuntu/>`_ with
+Use the `Installation Tutorials and Guides
+<http://docs.openstack.org/ocata/install-guide-ubuntu/>`_ with
 the following changes:
 
 - Configuring the basic environment on all nodes:
