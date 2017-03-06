@@ -38,24 +38,22 @@ Networks
 
 Create the following networks:
 
-.. note::
-
-   The CIDR you assign does not have to match the CIDR initially
-   assigned to a network when the network is created in the RAX cloud
-   control panel. You can specify any valid subnet. Multiple networks can
-   use the same subnet without collision as shown in the following example:
+Note: The CIDR you assign does not have to match the CIDR initially
+assigned to a network when the network is created in the RAX cloud
+control panel. You can specify any valid subnet. Multiple networks can
+use the same subnet without collision.
 
 1. robb-test-net
 
-   192.168.20.0/24
+-  192.168.20.0/24
 
 2. robb-vmnet
 
-   192.168.27.0/24
+-  192.168.27.0/24
 
 3. robb-ext1
 
-   192.168.33.0/24
+-  192.168.33.0/24
 
 Launch servers
 ~~~~~~~~~~~~~~
@@ -63,89 +61,84 @@ Launch servers
 Jump box node (robb-dev1)
 -------------------------
 
-#. Launch node.
+1. Launch node.
 
-   .. code-block:: console
+| OS: Ubuntu 14.04 (Trusty Tahr) PVHVM
+|  Flavor: 1 GB Performance 1
+|  Networks: PublicNet, ServiceNet, robb-test-net, robb-ext1
 
-      OS: Ubuntu 14.04 (Trusty Tahr) PVHVM
-      Flavor: 1 GB Performance 1
-      Networks: PublicNet, ServiceNet, robb-test-net, robb-ext1
+Note: Adding multiple tenant networks simultaneously yields inconsistent
+network interface device names. This guide adds one tenant network at a
+time as it becomes necessary. Also, changing tenant networks after
+configuration erases changes made in this guide.
 
-    .. note::
-
-       Adding multiple tenant networks simultaneously yields inconsistent
-       network interface device names. This guide adds one tenant network at a
-       time as it becomes necessary. Also, changing tenant networks after
-       configuration erases changes made in this guide.
-
-#. Access the node from the internet using the IP address assigned by
+1. Access the node from the internet using the IP address assigned by
    RAX.
 
-#. Update node.
+2. Update node.
 
-   ``apt-get update && apt-get dist-upgrade``
+``apt-get update && apt-get dist-upgrade``
 
-#. Install additional packages.
+1. Install additional packages.
 
-   ``apt-get install ntp shorewall``
+``apt-get install ntp shorewall``
 
-#. Reboot node.
+1.  Reboot node.
 
-#. Add the *robb-test-net* network to node.
+2.  Add the *robb-test-net* network to node.
 
-#. Add the *robb-ext1* network to node.
+3.  Add the *robb-ext1* network to node.
 
-#. Configure addtional network interfaces.
+4.  Configure addtional network interfaces.
 
-#. Edit the /etc/network/interfaces file.
+5.  Edit the /etc/network/interfaces file.
 
-   .. code-block:: console
+    .. code::
 
-      # Label robb-test-net
-       auto eth3
-       iface eth2 inet static
-         address 192.168.20.1
-         netmask 255.255.255.0
+        # Label robb-test-net
+        auto eth3
+        iface eth2 inet static
+            address 192.168.20.1
+            netmask 255.255.255.0
 
-       # Label robb-ext1
-       auto eth4
-       iface eth3 inet static
-         address 192.168.33.1
-         netmask 255.255.255.0
+        # Label robb-ext1
+        auto eth4
+        iface eth3 inet static
+            address 192.168.33.1
+            netmask 255.255.255.0
 
-       # Label vxlan1
-       auto vxlan1
-       iface vxlan1 inet static
-         pre-up ip link add vxlan1 type vxlan id 1 group 239.0.0.1 dev eth3
-         address 192.168.28.1
-         netmask 255.255.255.0
-         post-down ip link del vxlan1
+        # Label vxlan1
+        auto vxlan1
+        iface vxlan1 inet static
+            pre-up ip link add vxlan1 type vxlan id 1 group 239.0.0.1 dev eth3
+            address 192.168.28.1
+            netmask 255.255.255.0
+            post-down ip link del vxlan1
 
-#. Restart the network interfaces.
+6.  Restart the network interfaces.
 
-    .. code-block:: console
+    | ``ifdown eth3 && ifup eth3``
+    | ``ifdown eth4 && ifup eth4``
 
-      ifdown eth3 && ifup eth3
-      ifdown eth4 && ifup eth4
+7.  Bring up the vxlan1 interface.
 
-#. Bring up the vxlan1 interface.
+    ``ifup vxlan1``
 
-   .. code-block:: console
+8.  Configure the firewall service.
 
-      ifup vxlan1
+9.  Edit the /etc/shorewall/shorewall.conf file.
 
-#. Configure the firewall service.
-
-#. Edit the ``/etc/shorewall/shorewall.conf`` file.
+    ::
 
     ::
 
         IP_FORWARDING=Yes
 
-#. Edit the /etc/shorewall/interfaces file.
+10. Edit the /etc/shorewall/interfaces file.
 
     ::
 
+    ::
 
         ext eth0 - routefilter,tcpflags
         snet eth1
@@ -153,7 +146,9 @@ Jump box node (robb-dev1)
         rext1 eth4
         rvxln vxlan1
 
-#. Edit the /etc/shorewall/masq file.
+11. Edit the /etc/shorewall/masq file.
+
+    ::
 
     ::
 
@@ -161,7 +156,9 @@ Jump box node (robb-dev1)
         eth0 192.168.28.0/24
         eth0 192.168.33.0/24
 
-#. Edit the /etc/shorewall/policy file.
+12. Edit the /etc/shorewall/policy file.
+
+    ::
 
     ::
 
@@ -172,7 +169,9 @@ Jump box node (robb-dev1)
         rext1 all ACCEPT
         rvxln all ACCEPT
 
-#. Edit the /etc/shorewall/rules file.
+13. Edit the /etc/shorewall/rules file.
+
+    ::
 
     ::
 
@@ -185,17 +184,16 @@ Jump box node (robb-dev1)
         DNAT ext rtnet:192.168.20.11 tcp www
         DNAT ext rtnet:192.168.20.11 tcp 6080
 
-    .. note::
+    Note: Uncomment the DNAT rules and restart Shorewall as necessary to
+    enable remote access to the dashboard and instance consoles in the
+    OpenStack environment.
 
-       Uncomment the DNAT rules and restart Shorewall as necessary to
-       enable remote access to the dashboard and instance consoles in the
-       OpenStack environment.
+14. Edit the /etc/shorewall/zones file.
 
-#. Edit the ee``/etc/shorewall/zones``e file.
+    Note: Shorewall zone names are limited to 5 characters because
+    stupid.
 
-   .. note::
-
-      Shorewall zone names are limited to 5 characters.
+    ::
 
     ::
 
@@ -206,46 +204,46 @@ Jump box node (robb-dev1)
         rext1 ipv4
         rvxln ipv4
 
-#. Edit the /etc/default/shorewall file.
+15. Edit the /etc/default/shorewall file.
 
     ::
+
+    ::
+
         startup=1
 
-#. Check the shorewall configuration.
+16. Check the shorewall configuration.
+
+    ::
 
     ::
 
         # shorewall check
 
-#. Start the firewall service.
+17. Start the firewall service.
 
-   .. code-block:: console
-
-      service shorewall start
+    ``service shorewall start``
 
 OpenStack controller node (robb-controller1)
 --------------------------------------------
 
-#. Launch node
+1. Launch node
 
-   .. code-block:: console
+| OS: Ubuntu 14.04 (Trusty Tahr) PVHVM
+|  Flavor: 4 GB Performance 1
+|  Networks: robb-test-net
 
-      | OS: Ubuntu 14.04 (Trusty Tahr) PVHVM
-      |  Flavor: 4 GB Performance 1
-      |  Networks: robb-test-net
-
-#. Access the node from the jump box node using the IP address assigned
+1. Access the node from the jump box node using the IP address assigned
    by RAX.
 
-   .. note::
+Note: The node cannot access the internet without additional
+configuration.
 
-      The node cannot access the internet without additional configuration.
+1. Configure network interfaces.
 
-#. Configure network interfaces.
+2. Edit the /etc/network/interfaces file.
 
-#. Edit the /etc/network/interfaces file.
-
-   .. code-block:: console
+   .. code::
 
        # Label robb-test-net
        auto eth0
@@ -255,9 +253,11 @@ OpenStack controller node (robb-controller1)
            gateway 192.168.20.1
            dns-nameservers 72.3.128.241 72.3.128.240
 
-#. Edit the /etc/hosts file.
+3. Edit the /etc/hosts file.
 
-   ::
+::
+
+::
 
        # robb-controller
        192.168.20.11   robb-controller
@@ -268,50 +268,46 @@ OpenStack controller node (robb-controller1)
        # robb-comp1
        192.168.20.31   robb-comp1
 
-   .. note::
+Note: Comment out or remove any existing lines containing
+*robb-controller*.
 
-      Comment out or remove any existing lines containing *robb-controller*.
+4. Reboot node.
 
-#. Reboot node.
-
-#. Access the node from the network services node using the new IP
+5. Access the node from the network services node using the new IP
    address on the *robb-test-net* network.
 
-#. Test network connectivity to the internet.
+6. Test network connectivity to the internet.
 
-#. Update node.
+7. Update node.
 
-   .. code-block.. code-block:: consoleconsole
+``apt-get update && apt-get dist-upgrade``
 
-      apt-get update && apt-get dist-upgrade
-
-#. Reboot node.
+8. Reboot node.
 
 OpenStack network node (robb-net1)
 ----------------------------------
 
-#. Launch node.
+1. Launch node.
 
 | OS: Ubuntu 14.04 (Trusty Tahr) PVHVM
 |  Flavor: 1 GB Performance 1
 |  Networks: robb-test-net
 
-#. Access the node from the network services node using the IP address
+1. Access the node from the network services node using the IP address
    assigned by RAX.
 
-   .. note::
+Note: The node cannot access the internet without additional
+configuration.
 
-      The node cannot access the internet without additional configuration.
+1.  Add the *robb-vmnet* network to node.
 
-#.  Add the *robb-vmnet* network to node.
+2.  Add the *robb-ext1* network to node.
 
-#.  Add the *robb-ext1* network to node.
+3.  Configure network interfaces.
 
-#.  Configure network interfaces.
+4.  Edit the /etc/network/interfaces file.
 
-#.  Edit the ``/etc/network/interfaces`` file.
-
-    .. code-block:: console
+    .. code::
 
         # Label robb-test-net
         auto eth0
@@ -341,9 +337,11 @@ OpenStack network node (robb-net1)
             netmask 255.255.255.0
             post-down ip link del vxlan1
 
-#.  Edit the ``/etc/hosts`` file.
+5.  Edit the /etc/hosts file.
 
-    .. code-block:: console
+    ::
+
+    ::
 
         # robb-controller
         192.168.20.11   robb-controller
@@ -354,53 +352,47 @@ OpenStack network node (robb-net1)
         # robb-comp1
         192.168.20.31   robb-comp1
 
-    .. note::
+    Note: Comment out or remove any existing lines containing
+    *robb-net1*.
 
-       Comment out or remove any existing lines containing *robb-net1*.
+6.  Reboot node.
 
-#.  Reboot node.
-
-#.  Access the node from the network services node using the new IP
+7.  Access the node from the network services node using the new IP
     address on the *robb-test-net* network.
 
-#.  Test network connectivity to the internet.
+8.  Test network connectivity to the internet.
 
-#.  Update node.
+9.  Update node.
 
-   .. code-block:: console
+    ``apt-get update && apt-get dist-upgrade``
 
-      apt-get update && apt-get dist-upgrade
-
-#. Reboot node.
+10. Reboot node.
 
 OpenStack compute node (robb-comp1)
 -----------------------------------
 
-#. Launch the node.
+1. Launch the node.
 
-   .. code-block:: console
+| OS: Ubuntu 14.04 (Trusty Tahr) PVHVM
+|  Flavor:
+|  \* 2 GB Performance 1 (supports several CirrOS instances) \* 4 or 8
+  GB Performance 1 (supports a couple of Ubuntu/Fedora instances)
 
-      | OS: Ubuntu 14.04 (Trusty Tahr) PVHVM
-      | Flavor:
-      |  \* 2 GB Performance 1 (supports several CirrOS instances) \* 4 or 8
-         GB Performance 1 (supports a couple of Ubuntu/Fedora instances)
+Networks: robb-test-net
 
-      Networks: robb-test-net
-
-#. Access the node from the network services node using the IP address
+1. Access the node from the network services node using the IP address
    assigned by RAX.
 
-   .. note::
+Note: The node cannot access the internet without additional
+configuration.
 
-      The node cannot access the internet without additional configuration.
+1. Add the *robb-vmnet* network to node.
 
-#. Add the *robb-vmnet* network to node.
+2. Configure network interfaces.
 
-#. Configure network interfaces.
+3. Edit the /etc/network/interfaces file.
 
-#. Edit the /etc/network/interfaces file.
-
-   .. code-block:: console
+   .. code::
 
        # Label robb-test-net
        auto eth0
@@ -416,9 +408,9 @@ OpenStack compute node (robb-comp1)
            address 192.168.27.31
            netmask 255.255.255.0
 
-#. Edit the /etc/hosts file.
+4. Edit the /etc/hosts file.
 
-   .. code-block:: console
+   .. code::
 
        # robb-controller
        192.168.20.11   robb-controller
@@ -429,57 +421,51 @@ OpenStack compute node (robb-comp1)
        # robb-comp1
        192.168.20.31   robb-comp1
 
-   .. note::
+Note: Comment out or remove any existing lines containing *robb-comp1*.
 
-      Comment out or remove any existing lines containing *robb-comp1*.
+5. Reboot node.
 
-#. Reboot node.
-
-#. Access the node from the network services node using the new IP
+6. Access the node from the network services node using the new IP
    address on the *robb-test-net* network.
 
-#. Test network connectivity to the internet.
+7. Test network connectivity to the internet.
 
-#. Update node.
+8. Update node.
 
-   .. code-block:: console
+``apt-get update && apt-get dist-upgrade``
 
-      apt-get update && apt-get dist-upgrade
-
-#. Reboot node.
+9. Reboot node.
 
 Install and configure OpenStack services
 ----------------------------------------
 
-#. Use the `OpenStack Installation Guide
+1. Use the `OpenStack Installation Guide
    <http://docs.openstack.org/juno/install-guide/install/apt/content/>`_
    with the following changes:
 
-#. Configuring the basic environment on all nodes:
+2. Configuring the basic environment on all nodes:
 
-   -  Skip the network configuration sections.
+-  Skip the network configuration sections.
 
-   -  Use 192.168.20.1 (jump box node) as the NTP server.
+-  Use 192.168.20.1 (jump box node) as the NTP server.
 
-#. Configuring the Compute service on the compute node:
+3. Configuring the Compute service on the compute node:
 
-   Use *qemu* instead of *kvm* virtualization.
+-  Use *qemu* instead of *kvm* virtualization.
 
-#. Configuring the Networking service on the network node:
+4. Configuring the Networking service on the network node:
 
-   Add the *vxlan1* interface as a port on the *br-ex* bridge.
+-  Add the *vxlan1* interface as a port on the *br-ex* bridge.
 
-#. Creating initial networks.
+5. Creating initial networks.
 
-   Use the following command for the subnet on the external network:
+-  Use the following command for the subnet on the external network:
 
-   .. code-block:: console
+   .. code::
 
        neutron subnet-create ext-net --name ext-subnet \
        --allocation-pool start=192.168.28.101,end=192.168.28.200 \
        --disable-dhcp --gateway 192.168.28.1 192.168.28.0/24
 
-   .. note::
-
-      After performing the initial tenant network creation procedure,
-      try pinging 192.168.28.101 from the network services node.
+Note: After performing the initial tenant network creation procedure,
+try pinging 192.168.28.101 from the network services node.

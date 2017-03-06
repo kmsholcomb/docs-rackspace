@@ -35,7 +35,7 @@ Prepare cloud environment
 Keys
 ----
 
-Upload a public key.
+-  Upload a public key.
 
 Networks
 --------
@@ -45,23 +45,52 @@ In the Rackspace Cloud Control Panel, select :guilabel:`Networks` in the
 
 #. management
 
-   10.1.11.0/24
+   - 10.1.11.0/24
 
 #. internal
 
-   10.1.12.0/24
+   - 10.1.12.0/24
 
 #. external
 
-   10.1.13.0/24
+   - 10.1.13.0/24
+
+
+Orchestration
+~~~~~~~~~~~~~
+
+You can save time by orchestrating basic server creation:
+
+#. In the **Orchestration** menu, select **Custom Template**.
+
+#. Paste the contents of :download:`centos.yml` into the template editor.
+
+#. Replace ``key_name: mykey`` with the name of your SSH key.
+
+   .. warning::
+
+      The template does not display login passwords, so if you do not specify
+      a working SSH key you cannot access any of the nodes.
+
+#. Click **Create Template and Launch Stack**.
+
+The template builds the following resources:
+
+-  network-services node
+-  controller node
+-  compute node
+-  block node
+-  block storage volume (attached to the block node)
+
+The resources are all attached to the appropriate networks, however you still
+must manually configure the interfaces on each node.
 
 
 Network services node (network-services)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#. Create a cloud server named **network-services**.
-
-   .. code-block:: console
+#. Create a cloud server named **network-services**. If you orchestrated
+   server creation, skip to :ref:`net-net`.
 
    - OS: CentOS 7 (PVHVM)
    - Flavor: 1 GB General Purpose v1
@@ -73,6 +102,10 @@ Network services node (network-services)
       network interface device names. This guide adds one tenant network at a
       time as it becomes necessary. Also, changing tenant networks after
       configuration erases changes made in this guide.
+
+#. In the cloud control panel, add the **management** network to the node.
+
+#. In the cloud control panel, add the **external** network to the node.
 
 #. Access the node from a terminal using the IP address assigned by
    Rackspace.
@@ -99,17 +132,22 @@ Network services node (network-services)
 
       # reboot now
 
+.. _net-net:
+
 Configure additional network interfaces
 ---------------------------------------
 
-#. In the cloud control panel, add the **management** network to the node.
+#. Access the node from a terminal using the IP address assigned by
+   Rackspace.
 
-#. In the cloud control panel, add the **external** network to the node.
+   .. code-block:: console
+
+      $ ssh root@<IP_ADDRESS>
 
 #. Edit */etc/sysconfig/network-scripts/ifcfg-eth2*. Do not touch the
    HWADDR line, as this is determined by the system:
 
-   .. code-block:: console
+   .. code-block:: ini
 
       # Label management
       DEVICE=eth2
@@ -123,7 +161,7 @@ Configure additional network interfaces
 #. Edit */etc/sysconfig/network-scripts/ifcfg-eth3*. Do not touch the
    HWADDR line, as this is determined by the system:
 
-   .. code-block:: console
+   .. code-block:: ini
 
       # Label external
       DEVICE=eth3
@@ -255,18 +293,54 @@ Configure the firewall service
       64 bytes from 162.242.140.107: icmp_seq=2 ttl=50 time=180 ms
       ...
 
+#. Enable the **network-services** node to act as an NTP server for the other
+   nodes:
+
+   .. code-block:: console
+
+      # systemctl stop chronyd.service
+
+   Set ``allow 10.1.11.0/24`` in the */etc/chrony.conf* file.
+
+   .. code-block:: console
+
+      # systemctl enable chronyd.service
+      # systemctl start chronyd.service
+
+#. Confirm NTP synchronization:
+
+   .. code-block:: console
+
+      # chronyc sources
+
+      210 Number of sources = 4
+      MS Name/IP address         Stratum Poll Reach LastRx Last sample
+      =========================================================================
+      ^- yarrina.connect.com.au  2   7   377    76  +1204us[+1211us] +/-   39ms
+      ^- warrane.connect.com.au  2   7   377    74  +1636us[+1636us] +/-   22ms
+      ^- phyapp01.mel1.afoyi.com 2   7   377    76  -3862us[-3855us] +/-  443ms
+      ^* mail1.selcomm.com       1   7   377    75    +28us[  +35us] +/- 2724us
+
 #. Generate an ssh key for accessing other nodes:
 
    .. code-block:: console
 
       # ssh-keygen -t rsa -b 2048 -C "ns1" -P "" -f .ssh/id_rsa
 
+#. Reboot the node:
+
+   .. code-block:: console
+
+      # reboot now
+
 
 OpenStack controller node (controller)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+If you orchestrated server creation, skip to :ref:`controller-net`.
+
 #. Create a cloud server named **controller**, removing all networks except the
-   **management** network:
+   **management** network.
 
    - OS: CentOS 7 (PVHVM)
    - Flavor: 8 GB General Purpose v1
@@ -279,25 +353,29 @@ OpenStack controller node (controller)
 #. In the cloud control panel, add the **external** network to the
    node.
 
+   .. note::
+
+      The node cannot access the internet without additional configuration.
+
+.. _controller-net:
+
+Configure network interfaces
+----------------------------
+
 #. Access the node from the **network services** node using the IP
-   address assigned by Rackspace on the **management** network:
+   address assigned by Rackspace on the **management** network.
+
+   The root password for the controller node is: **stack**
 
    .. code-block:: console
 
       # ssh-copy-id -i .ssh/id_rsa.pub root@10.1.11.2
       # ssh root@10.1.11.2
 
-   .. note::
-
-      The node cannot access the internet without additional configuration.
-
-Configure network interfaces
-----------------------------
-
 #. Edit */etc/sysconfig/network-scripts/ifcfg-eth0*. Do not touch the
    HWADDR line, as this is determined by the system:
 
-   .. code-block:: console
+   .. code-block:: ini
 
       # Label management
       DEVICE=eth0
@@ -312,7 +390,7 @@ Configure network interfaces
 #. Edit */etc/sysconfig/network-scripts/ifcfg-eth1*. Do not touch the
    HWADDR line, as this is determined by the system:
 
-   .. code-block:: console
+   .. code-block:: ini
 
       # Label internal
       DEVICE=eth1
@@ -326,7 +404,7 @@ Configure network interfaces
 #. Edit */etc/sysconfig/network-scripts/ifcfg-eth2*. Do not touch the
    HWADDR line, as this is determined by the system:
 
-   .. code-block:: console
+   .. code-block:: ini
 
       # Label external
       DEVICE=eth2
@@ -381,17 +459,23 @@ Configure network interfaces
       # systemctl stop firewalld
       # systemctl disable firewalld
 
+#. Set the **network-services** node as the NTP server:
+
+   .. code-block:: console
+
+      # systemctl stop chronyd.service
+
+   Set ``server 10.1.11.1 iburst`` as the NTP server in */etc/chrony.conf*.
+
+   .. code-block:: console
+
+      # systemctl start chronyd.service
+
 #. Reboot the node:
 
    .. code-block:: console
 
       # reboot now
-
-#. After rebooting, run the *vxlan.sh* script:
-
-   .. code-block:: console
-
-      # bash -x ~/vxlan.sh
 
 Test and update
 ---------------
@@ -402,6 +486,12 @@ Test and update
 
       # ssh controller
 
+#. Run the *vxlan.sh* script:
+
+   .. code-block:: console
+
+      # bash -x ~/vxlan.sh
+
 #. Test network connectivity to the internet by pinging openstack.org:
 
    .. code-block:: console
@@ -411,6 +501,22 @@ Test and update
       64 bytes from 162.242.140.107: icmp_seq=1 ttl=50 time=181 ms
       64 bytes from 162.242.140.107: icmp_seq=2 ttl=50 time=180 ms
       ...
+
+   .. note::
+
+      If you cannot connect to the internet, restart the controller and
+      network-services nodes then try again.
+
+#. Confirm NTP synchronization:
+
+   .. code-block:: console
+
+      # chronyc sources
+
+      210 Number of sources = 1
+      MS Name/IP address  Stratum Poll Reach LastRx Last sample
+      ========================================================================
+      ^* gateway                2   6   377    34    +14us[  +24us] +/- 3322us
 
 #. Update the node:
 
@@ -424,7 +530,7 @@ Test and update
 
    .. code-block:: console
 
-      # yum install https://rdoproject.org/repos/openstack-newton/rdo-release-newton.rpm
+      # yum install https://rdoproject.org/repos/openstack-ocata/rdo-release-ocata.rpm
 
 #. Reboot the node:
 
@@ -442,8 +548,10 @@ Test and update
 OpenStack compute node (compute)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+If you orchestrated server creation, skip to :ref:`compute-net`.
+
 #. Create a cloud server, removing all networks except the **management**
-   network:
+   network.
 
    - OS: CentOS 7 (PVHVM)
    - 4 GB General Purpose v1 (supports several CirrOS instances)
@@ -456,25 +564,29 @@ OpenStack compute node (compute)
 #. In the cloud control panel, add the **external** network to the
    node.
 
+   .. note::
+
+      The node cannot access the internet without additional configuration.
+
+.. _compute-net:
+
+Configure network interfaces
+----------------------------
+
 #. Access the node from the network services node using the IP address
-   assigned by Rackspace on the **management** network:
+   assigned by Rackspace on the **management** network.
+
+   The root password for the compute node is: **stack**
 
    .. code-block:: console
 
       # ssh-copy-id -i .ssh/id_rsa.pub root@10.1.11.3
       # ssh root@10.1.11.3
 
-   .. note::
-
-      The node cannot access the internet without additional configuration.
-
-Configure network interfaces
-----------------------------
-
 #. Edit */etc/sysconfig/network-scripts/ifcfg-eth0*. Do not touch the
    HWADDR line, as this is determined by the system:
 
-   .. code-block:: console
+   .. code-block:: ini
 
       # Label management
       DEVICE=eth0
@@ -489,7 +601,7 @@ Configure network interfaces
 #. Edit */etc/sysconfig/network-scripts/ifcfg-eth1*. Do not touch the
    HWADDR line, as this is determined by the system:
 
-   .. code-block:: console
+   .. code-block:: ini
 
       # Label internal
       DEVICE=eth1
@@ -503,7 +615,7 @@ Configure network interfaces
 #. Edit */etc/sysconfig/network-scripts/ifcfg-eth2*. Do not touch the
    HWADDR line, as this is determined by the system:
 
-   .. code-block:: console
+   .. code-block:: ini
 
       # Label external
       DEVICE=eth2
@@ -558,6 +670,18 @@ Configure network interfaces
       # systemctl stop firewalld
       # systemctl disable firewalld
 
+#. Set the **network-services** node as the NTP server:
+
+   .. code-block:: console
+
+      # systemctl stop chronyd.service
+
+   Set ``server 10.1.11.1 iburst`` as the NTP server in */etc/chrony.conf*.
+
+   .. code-block:: console
+
+      # systemctl start chronyd.service
+
 #. Reboot the node:
 
    .. code-block:: console
@@ -574,6 +698,12 @@ Test and update
 
       # ssh compute
 
+#. Run the *vxlan.sh* script:
+
+   .. code-block:: console
+
+      # bash -x ~/vxlan.sh
+
 #. Test network connectivity to the internet by pinging openstack.org:
 
    .. code-block:: console
@@ -583,6 +713,17 @@ Test and update
       64 bytes from 162.242.140.107: icmp_seq=1 ttl=50 time=181 ms
       64 bytes from 162.242.140.107: icmp_seq=2 ttl=50 time=180 ms
       ...
+
+#. Confirm NTP synchronization:
+
+   .. code-block:: console
+
+      # chronyc sources
+
+      210 Number of sources = 1
+      MS Name/IP address  Stratum Poll Reach LastRx Last sample
+      ========================================================================
+      ^* gateway                2   6   377    34    +14us[  +24us] +/- 3322us
 
 #. Update the node:
 
@@ -596,7 +737,7 @@ Test and update
 
    .. code-block:: console
 
-      # yum install https://rdoproject.org/repos/openstack-newton/rdo-release-newton.rpm
+      # yum install https://rdoproject.org/repos/openstack-ocata/rdo-release-ocata.rpm
 
 #. Reboot the node:
 
@@ -608,8 +749,10 @@ Test and update
 OpenStack block storage node (block)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+If you orchestrated server creation, skip to :ref:`block-net`.
+
 #. Create a cloud server, removing all networks except the **management**
-   network:
+   network.
 
    - OS: CentOS 7 (PVHVM)
    - 4 GB General Purpose v1
@@ -618,25 +761,29 @@ OpenStack block storage node (block)
 #. In the cloud control panel, add the **internal** network to the
    node.
 
+   .. note::
+
+      The node cannot access the internet without additional configuration.
+
+.. _block-net:
+
+Configure network interfaces
+----------------------------
+
 #. Access the node from the network services node using the IP address
-   assigned by Rackspace on the **management** network:
+   assigned by Rackspace on the **management** network.
+
+   The root password for the block node is: **stack**
 
    .. code-block:: console
 
       # ssh-copy-id -i .ssh/id_rsa.pub root@10.1.11.4
       # ssh root@10.1.11.4
 
-   .. note::
-
-      The node cannot access the internet without additional configuration.
-
-Configure network interfaces
-----------------------------
-
 #. Edit */etc/sysconfig/network-scripts/ifcfg-eth0*. Do not touch the
    HWADDR line, as this is determined by the system:
 
-   .. code-block:: console
+   .. code-block:: ini
 
       # Label management
       DEVICE=eth0
@@ -651,7 +798,7 @@ Configure network interfaces
 #. Edit */etc/sysconfig/network-scripts/ifcfg-eth1*. Do not touch the
    HWADDR line, as this is determined by the system:
 
-   .. code-block:: console
+   .. code-block:: ini
 
       # Label internal
       DEVICE=eth1
@@ -674,19 +821,31 @@ Configure network interfaces
 
       Comment out or remove any existing lines containing *block*.
 
-#. Edit ``/etc/resolv.conf`` and add the Google DNS servers:
+#. Edit */etc/resolv.conf* and add the Google DNS servers:
 
    .. code-block:: text
 
       nameserver 8.8.8.8
       nameserver 8.8.4.4
 
-#. Stop and disable firewall to prevent access problems by other nodes:
+#. Stop and disable firewalld to prevent access problems by other nodes:
 
    .. code-block:: console
 
       # systemctl stop firewalld
       # systemctl disable firewalld
+
+#. Set the **network-services** node as the NTP server:
+
+   .. code-block:: console
+
+      # systemctl stop chronyd.service
+
+   Set ``server 10.1.11.1 iburst`` as the NTP server in */etc/chrony.conf*.
+
+   .. code-block:: console
+
+      # systemctl start chronyd.service
 
 #. Reboot the node:
 
@@ -714,6 +873,17 @@ Test and update
       64 bytes from 162.242.140.107: icmp_seq=2 ttl=50 time=180 ms
       ...
 
+#. Confirm NTP synchronization:
+
+   .. code-block:: console
+
+      # chronyc sources
+
+      210 Number of sources = 1
+      MS Name/IP address  Stratum Poll Reach LastRx Last sample
+      ========================================================================
+      ^* gateway                2   6   377    34    +14us[  +24us] +/- 3322us
+
 #. Update the node:
 
    .. code-block:: console
@@ -726,7 +896,7 @@ Test and update
 
    .. code-block:: console
 
-      # yum install https://rdoproject.org/repos/openstack-newton/rdo-release-newton.rpm
+      # yum install https://rdoproject.org/repos/openstack-ocata/rdo-release-ocata.rpm
 
 #. Reboot the node:
 
@@ -736,6 +906,8 @@ Test and update
 
 Create block storage volume (block1)
 ------------------------------------
+
+If you orchestrated server creation, skip to :ref:`services`.
 
 #. In the Rackspace Cloud Control Panel, select
    :guilabel:`Block Storage Volumes` in the :guilabel:`Storage` tab, and
@@ -748,6 +920,7 @@ Create block storage volume (block1)
 #. After the device is attached, note the device name. For example,
    `/dev/xvdb`. Use this value when setting up block storage for OpenStack.
 
+.. _services:
 
 Install and configure OpenStack services
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -759,14 +932,7 @@ following changes:
 - Configuring the basic environment on all nodes:
 
   - Skip the network configuration sections.
-  - In */etc/chrony.conf* on the network services node,
-    set ``allow 10.1.11.0/24``.
-  - On the **controller**, **compute**, and **block** nodes:
-
-    - ``systemctl stop chronyd.service``
-    - Set 10.1.11.1 (network services node) as the NTP server in the
-      */etc/chrony.conf* file.
-    - ``systemctl start chronyd.service``
+  - Skip the NTP sections.
 
 - Configuring the Compute service on the compute node:
 
@@ -774,14 +940,19 @@ following changes:
 
 - Configuring networking:
 
-  - on the *controller*, use ``physical_interface_mappings = provider:vxlan1``
+  - Use the instructions for *Networking Option 1: Provider networks*
+  - on the *controller* node, use ``physical_interface_mappings =
+    provider:vxlan1``
   - on the *compute* node, use ``physical_interface_mappings =
     provider:vxlan1``
+
+- Launching an instance (creating virtual networks):
+
   - use the following command to create the subnet:
 
     .. code-block:: console
 
-       neutron subnet-create --name provider \
+       openstack subnet create --network provider \
        --allocation-pool start=10.1.13.101,end=10.1.13.200 --enable-dhcp \
        --dns-nameserver 8.8.4.4 --gateway 10.1.11.1 provider 10.1.13.0/24
 
