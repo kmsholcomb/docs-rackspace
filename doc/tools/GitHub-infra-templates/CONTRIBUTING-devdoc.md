@@ -16,19 +16,230 @@ syntax and parser component of
 Source files for the Sphinx documentation project are in the ``api-docs``
 directory. Here are key files that define project and content architecture:
 
-<!--table-->
-Content | File
---- | ---
-|Index page for the main content structure| [index.rst](https://github.com/rackerlabs/docs-cloud-identity/blob/master/api-docs/index.rst)
-|Getting Started Guide| [getting-started](https://github.com/rackerlabs/docs-cloud-identity/tree/master/api-docs/getting-started)
-|General API information index|[general-api-info/index.rst](https://github.com/rackerlabs/docs-cloud-identity/blob/master/api-docs/general-api-info/index.rst)
-|API Reference index|[api-reference/index.rst](https://github.com/rackerlabs/docs-cloud-identity/blob/master/api-docs/api-reference/index.rst)
-|API methods, including code samples|[api-reference/methods](https://github.com/rackerlabs/docs-cloud-identity/tree/master/api-docs/api-reference/methods)
-|Sphinx documentation configuration file| [conf.py](https://github.com/rackerlabs/docs-cloud-identity/blob/master/api-docs/conf.py) (Typically, this file does not require changes.)
-|Linux and OS X build script|``Makefile``|
-|Windows build script|``make.bat``|
-|Requirements file to support local builds| ``requirements.txt``
-<!--endtable-->
+```eval_rst
+.. list-table::
+   :widths: 50 50
+   :header-rows: 1
+
+   * - Cont
+     - File   * - ent
+     -
+   * - Inde
+     - `ind   * - x
+     - ex.r   * - page
+     - st <   * - for
+     - http   * - the
+     - s://   * - main
+     - gith   * - cont
+     - ub.c   * - ent
+     - om/r   * - stru
+     - acke   * - ctur
+     - rlab   * - e
+     - s/do   * - 
+     - cs-c   * - 
+     - loud   * - 
+     - -ide   * - 
+     - ntit   * - 
+     - y/bl   * - 
+     - ob/m   * - 
+     - aste   * - 
+     - r/ap   * - 
+     - i-do   * - 
+     - cs/i   * - 
+     - ndex   * - 
+     - .rst   * - 
+     - >`__
+   * - Gett
+     - `get   * - ing
+     - ting   * - Star
+     - -sta   * - ted
+     - rted   * - Guid
+     - <ht   * - e
+     - tps:   * - 
+     - //gi   * - 
+     - thub   * - 
+     - .com   * - 
+     - /rac   * - 
+     - kerl   * - 
+     - abs/   * - 
+     - docs   * - 
+     - -clo   * - 
+     - ud-i   * - 
+     - dent   * - 
+     - ity/   * - 
+     - tree   * - 
+     - /mas   * - 
+     - ter/   * - 
+     - api-   * - 
+     - docs   * - 
+     - /get   * - 
+     - ting   * - 
+     - -sta   * - 
+     - rted   * - 
+     - >`__
+   * - Gene
+     - `gen   * - ral
+     - eral   * - API
+     - -api   * - info
+     - -inf   * - rmat
+     - o/in   * - ion
+     - dex.   * - inde
+     - rst   * - x
+     - <htt   * - 
+     - ps:/   * - 
+     - /git   * - 
+     - hub.   * - 
+     - com/   * - 
+     - rack   * - 
+     - erla   * - 
+     - bs/d   * - 
+     - ocs-   * - 
+     - clou   * - 
+     - d-id   * - 
+     - enti   * - 
+     - ty/b   * - 
+     - lob/   * - 
+     - mast   * - 
+     - er/a   * - 
+     - pi-d   * - 
+     - ocs/   * - 
+     - gene   * - 
+     - ral-   * - 
+     - api-   * - 
+     - info   * - 
+     - /ind   * - 
+     - ex.r   * - 
+     - st>`   * - 
+     - __
+   * - API
+     - `api   * - Refe
+     - -ref   * - renc
+     - eren   * - e
+     - ce/i   * - inde
+     - ndex   * - x
+     - .rst   * - 
+     - <ht   * - 
+     - tps:   * - 
+     - //gi   * - 
+     - thub   * - 
+     - .com   * - 
+     - /rac   * - 
+     - kerl   * - 
+     - abs/   * - 
+     - docs   * - 
+     - -clo   * - 
+     - ud-i   * - 
+     - dent   * - 
+     - ity/   * - 
+     - blob   * - 
+     - /mas   * - 
+     - ter/   * - 
+     - api-   * - 
+     - docs   * - 
+     - /api   * - 
+     - -ref   * - 
+     - eren   * - 
+     - ce/i   * - 
+     - ndex   * - 
+     - .rst   * - 
+     - >`__
+   * - API
+     - `api   * - meth
+     - -ref   * - ods,
+     - eren   * - incl
+     - ce/m   * - udin
+     - etho   * - g
+     - ds <   * - code
+     - http   * - samp
+     - s://   * - les
+     - gith   * - 
+     - ub.c   * - 
+     - om/r   * - 
+     - acke   * - 
+     - rlab   * - 
+     - s/do   * - 
+     - cs-c   * - 
+     - loud   * - 
+     - -ide   * - 
+     - ntit   * - 
+     - y/tr   * - 
+     - ee/m   * - 
+     - aste   * - 
+     - r/ap   * - 
+     - i-do   * - 
+     - cs/a   * - 
+     - pi-r   * - 
+     - efer   * - 
+     - ence   * - 
+     - /met   * - 
+     - hods   * - 
+     - >`__
+   * - Sphi
+     - `con   * - nx
+     - f.py   * - docu
+     - <ht   * - ment
+     - tps:   * - atio
+     - //gi   * - n
+     - thub   * - conf
+     - .com   * - igur
+     - /rac   * - atio
+     - kerl   * - n
+     - abs/   * - file
+     - docs   * - 
+     - -clo   * - 
+     - ud-i   * - 
+     - dent   * - 
+     - ity/   * - 
+     - blob   * - 
+     - /mas   * - 
+     - ter/   * - 
+     - api-   * - 
+     - docs   * - 
+     - /con   * - 
+     - f.py   * - 
+     - >`__   * - 
+     - (Typ   * - 
+     - ical   * - 
+     - ly,   * - 
+     - this   * - 
+     - file   * - 
+     - does   * - 
+     - not   * - 
+     - requ   * - 
+     - ire   * - 
+     - chan   * - 
+     - ges.   * - 
+     - )
+   * - Linu
+     - ``Ma   * - x
+     - kefi   * - and
+     - le``   * - OS X
+     -   * - buil
+     -   * - d
+     -   * - scri
+     -   * - pt
+     -
+   * - Wind
+     - ``ma   * - ows
+     - ke.b   * - buil
+     - at``   * - d
+     -   * - scri
+     -   * - pt
+     -
+   * - Requ
+     - ``re   * - irem
+     - quir   * - ents
+     - emen   * - file
+     - ts.t   * - to
+     - xt``   * - supp
+     -   * - ort
+     -   * - loca
+     -   * - l
+     -   * - buil
+     -   * - ds
+     -
+
+```
 
 * Update the source files by using the GitHub editor or any plain text editor.
 * Format source files with

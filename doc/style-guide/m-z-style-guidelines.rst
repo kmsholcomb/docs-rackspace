@@ -1,3 +1,4 @@
+
 .. _mz-style-reference:
 
 ===================
@@ -6,6 +7,7 @@ M-Z style reference
 
 This section of the writing style guide provides detailed guidelines
 about and instructions for applying style conventions. For more
+
 guidelines, see `A-L style reference <al-style-reference>`.
 
 -  `Messages <#messages>`__
@@ -58,11 +60,9 @@ message text, use the guidelines in this topic.
      - Include articles (*a*, *an*, *the*) to make the sentence complete. If
        possible, use active voice.
 
-       .. note::
-
-          Message text that serves as a heading or label (such as
-          ``Elapsed:hh:mm:ss``, which indicates elapsed time) is acceptable as
-          a fragment.
+       **Note**: Message text that serves as a heading or label (such as
+       ``Elapsed:hh:mm:ss``, which indicates elapsed time) is acceptable as
+       a fragment.
    * - Use more than one sentence if required for clarity.
      - You must provide a name for each domain. null is not a valid domain
        name.
@@ -132,13 +132,12 @@ Names
 ~~~~~
 
 Do not use real or copyrighted names in examples. For example, do not
-use kelly.holcomb@example.com.
+use john.smith@example.com.
 
 See the following topics for information about product names:
 
 - `Product names and version number <#product-names-and-version-numbers>`__
-- `Third-party names and trademarks
-  <../terminology-guidelines.html#third-party-names-and-trademarks>`__
+- :ref:`third-party-names-and-trademarks`
 
 Notes and other notation types
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -180,11 +179,10 @@ When creating notations, use the following guidelines:
 -  Use the style or element in your authoring tool to create the
    notation. If there is no style or element, create the notation as
    follows: Type the word **Important**, **Note**, **Tip**, or
-   **Warning**, follow it with a colon, make both the label and the
-   colon bold, and then provide the text of the notation in regular
-   font. If a notation contains more than one item (such as two notes
-   presented in a unordered list), make the label plural (for example,
-   **Notes**).
+   **Warning**, make the word bold, follow it with a colon, and then provide
+   the text of the notation in regular font. If a notation contains more than
+   one item (such as two notes presented in a unordered list), make the label
+   plural (for example, **Notes**).
 
 -  Place a notation as close as possible to the information that it
    emphasizes or clarifies.
@@ -270,6 +268,8 @@ after the numeral.
 
        zero (0) probability
 
+.. _commas-in-numbers:
+
 Commas in numbers
 -----------------
 
@@ -306,6 +306,8 @@ commas in the following types of numbers:
 
    Do not use European-style numbering, which uses commas in the
    place of periods. For example, use 3.14159, not 3,14159.
+
+.. _ranges-of-numbers:
 
 Ranges of numbers
 -----------------
@@ -354,7 +356,7 @@ digit and apply italics.
    * - Use
    * - Move the insertion point *n* spaces to the right.
 
-       Select the **Use *n* I/O Sessions** check box.
+       Select the **Use n I/O Sessions** check box.
 
        Your BlackBerry software must be version 4.\ *x*.
 
@@ -400,6 +402,8 @@ When documenting parameters, observe the following guidelines:
 -  Format parameter names in text according to the guidelines in `Text
    formatting <#text-formatting>`__.
 
+.. _placeholder-text:
+
 Placeholder (variable) text
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -429,8 +433,7 @@ When creating placeholder text, use the following guidelines.
 
    For specific information about showing placeholders for
    account information such as account numbers, user names, passwords, and
-   API keys, see `Cloud account
-   information <../a-l-style-guidelines.html#cloud-account-information>`__.
+   API keys, see :ref:`cloud-account-information`.
 
 .. list-table::
    :widths: 50 50
@@ -457,11 +460,9 @@ When creating placeholder text, use the following guidelines.
        capitalize the first letter of each word after the first word (called
        camelCase). Do not capitalize the first word.
 
-       .. note::
-
-          Use lowercase and camelCase unless you have to follow the
-          conventions of the programming language. For example, you might need
-          to use underscores (account\_ID) or all capitals (ACCOUNT\_ID).
+       **Note**: Use lowercase and camelCase unless you have to follow the
+       conventions of the programming language. For example, you might need
+       to use underscores (account_ID) or all capitals (ACCOUNT_ID).
      - *password* *serverName* *apiKey* *tenantId*
    * - In general, use one or more whole words to represent a placeholder. Do
        not sacrifice clarity for brevity. Create placeholders that are
@@ -532,7 +533,7 @@ Plurals
 Use the following general guidelines for forming and using plurals. To
 find out how to form the plural of a particular word, or for information
 about whether to use the singular or plural form of a particular word,
-see `Terminology <terminology-guidelines.md>`__ or consult a dictionary.
+see :ref:`alphabetical-list-of-terms` or consult a dictionary.
 
 .. list-table::
    :widths: 50 50
@@ -545,12 +546,10 @@ see `Terminology <terminology-guidelines.md>`__ or consult a dictionary.
 
        If an acronym already represents a plural noun, do not add an *s*.
 
-       .. note::
-
-          To refer to more than one FAQ document or section, add the
-          appropriate noun after *FAQ* and make the noun plural—for example,
-          *FAQ articles*. Follow this guideline for other plural acronyms when
-          you need to refer to more than one instance of them.
+       **Note**: To refer to more than one FAQ document or section, add the
+       appropriate noun after *FAQ* and make the noun plural—for example,
+       *FAQ articles*. Follow this guideline for other plural acronyms when
+       you need to refer to more than one instance of them.
 
      - CPUs, APIs, IDs, OSs, the 1990s, 0s and 1s
 
@@ -605,8 +604,7 @@ the following guidelines:
 
 When using third-party company and product names, use the name as it is
 used by the third-party. For a list of commonly used third-party names,
-see `Third-party names and
-trademarks <../terminology-guidelines.html#third-party-names-and-trademarks>`__.
+see :ref:`third-party-names-and-trademarks`.
 
 When referring to an OpenStack service, use the actual service name, and
 provide the project name in parentheses. For example, use OpenStack
@@ -637,6 +635,7 @@ for service and project names.
 
 
 .. _punctuation-guidelines:
+
 
 Punctuation
 ~~~~~~~~~~~
@@ -708,11 +707,9 @@ Use the following guidelines for colons.
        sentence intervenes between the introductory sentence and the list, use a
        period instead of a colon.
 
-       .. note::
-
-          Use a sentence, rather than a fragment, to introduce a list.
-          Fragments are difficult to translate and can be harder to comprehend
-          than sentences, so avoid using them to introduce lists.
+       **Note**: Use a sentence, rather than a fragment, to introduce a list.
+       Fragments are difficult to translate and can be harder to comprehend
+       than sentences, so avoid using them to introduce lists.
      - The following monitoring checks are available to users:
 
        You can use this product to perform the following tasks:
@@ -741,13 +738,13 @@ Use the following guidelines for colons.
        Table 5.1 lists the endpoints to use for your Cloud Databases API calls.
    * - Do not use a colon at the end a table column header, a title, or a
        heading.
-     - 3.2. Service Endpoints
+     - 3.2. Service endpoints
 
        To create a monitoring check
 
-       Table 3.1. Regionalized Service Endpoints
+       Table 3.1. Regionalized service endpoints
 
-       Example 4.4. List Versions Response: JSON
+       Example 4.4. List versions: JSON response
 
 Commas
 ------
@@ -830,10 +827,8 @@ grammar reference, such as the *Harbrace College Handbook*.
        decimal numbers, page numbers, literal representations of user-entered
        values or displayed values
 
-       .. note::
-
-          Do not use European-style numbering, which uses commas in the
-          place of periods. For example, use 3.14159, not 3,14159.
+       **Note**: Do not use European-style numbering, which uses commas in the
+       place of periods. For example, use 3.14159, not 3,14159.
      - 9001 N IH 35
 
        1452.7532
@@ -915,6 +910,8 @@ en dash for the following purposes:
    * - ``12–13=–1``
    * - Customer Support–related queries
 
+.. _ellipses:
+
 Ellipses
 --------
 
@@ -922,7 +919,7 @@ An ellipsis (...) is a punctuation construct that is used in syntax or
 to indicate omitted code in technical content. For technical writing, an
 ellipsis is used mainly in code examples.
 
-Do not use an ellipsis in the following cases:
+Do *not* use an ellipsis in the following cases:
 
 -  When writing header text for table columns and rows.
 -  When showing the name of an interface element, such as a text box,
@@ -960,9 +957,8 @@ Do this ... *(column header)*
 Exclamation points
 ------------------
 
-Avoid using exclamation points. For more information, see `Use
-interjections with
-care <../basic-writing-guidelines.html#use-interjections-with-care>`__.
+Avoid using exclamation points. For more information, see
+:ref:`use-interjections-with-care`.
 
 Hyphens
 -------
@@ -1003,10 +999,8 @@ guidelines.
        not be hyphenated in other parts of a sentence or when used as another
        part of speech. Hyphenate only if needed for clarity.
 
-       .. note::
-
-          One exception is *up-to-date*, which is hyphenated in any
-          position in a sentence.
+       **Note**: One exception is *up-to-date*, which is hyphenated in any
+       position in a sentence.
      - local-level attributes
 
        attributes that are defined at the local level
@@ -1087,7 +1081,7 @@ be necessary in the following cases:
    Whenever possible, work with the teams to use preferred spelling.
 
 For the correct formatting of a specific word, see a dictionary or
-`Terminology <terminology-guidelines.md>`__. For more information about
+:ref:`alphabetical-list-of-terms`. For more information about
 hyphenating prefixes, see *The Chicago Manual of Style*.
 
 Parentheses
@@ -1167,8 +1161,7 @@ grammar reference, such as the *Harbrace College Handbook*.
 
        • In a list of fragments, some or all of which are followed by
          sentences, end every fragment and sentence in the list with a period.
-     - See the examples in `Writing list items
-       <../a-l-style-guidelines.html#writing-list-items>`__.
+     - See the examples in :ref:`writing-list-items`.
    * - Use a period after an introduction to a table, figure, or example.
      - The following figure shows an overview of Cloud Databases
        infrastructure.
@@ -1230,8 +1223,10 @@ guidelines.
        document.
    * - When referring to a section of a web page, enclose the section title in
        parentheses if you cannot create a link.
-     - For information about patents, see the "Resources and Tools" section of
-       the `Racklaw website <https://inside.rackspace.com/web/racklaw/ip>`__.
+     - For information about the correct way to treat the
+       :bolditalic:`Fanatical Support` ® trademark, see the "Protect
+       Fanatical Support" section of the `Rackspace Trademarks wiki
+       page <https://one.rackspace.com/display/legal/Trademarks>`__.
    * - Include appropriate punctuation, such as periods and commas, inside
        quotation marks unless the quotation marks are part of the syntax that
        the user must type.
@@ -1266,7 +1261,7 @@ actions or objects. Rewrite the phrase to eliminate the slash mark.
 Exceptions are established terms like *client/server* and *read/write*.
 
 Do not use a slash in dates. For information about how to format dates,
-see `Dates <../a-l-style-guidelines.html#dates>`__.
+see :ref:`dates`.
 
 .. list-table::
    :widths: 50 50
@@ -1346,11 +1341,11 @@ following aspects of tables:
 
 -  `Introductory text for tables <#introductory-text-for-tables>`__
 -  `Table titles (captions) <#table-titles-captions>`__
--  `Column and row headers <#column-and-row-headers>`__
+-  `Column headers <#column-headers>`__
 -  `Table text <#table-text>`__
 -  `Table footnotes <#table-footnotes>`__
 -  `Attribute or parameter tables in API
-   documents <#attribute-or-parameter-tables-in-API-documents>`__
+   documents <#attribute-or-parameter-tables-in-api-documents>`__
 
 Table examples are presented in a separate section at the end of this
 topic.
@@ -1384,8 +1379,8 @@ tutorials do not require numbers or titles.
 
 When creating table titles, use the following guidelines:
 
-- Use sentence-style capitalization for table titles. However, for words that
-  are always uppercase or always lowercase, match that case.
+- Use sentence-style capitalization for table titles. However, for
+  words that are always uppercase or always lowercase, match that case.
 - Do not start a table title with an article (*a*, *an*, *the*).
 - Do not end a table title with a period or colon.
 - Place the title above the table, not below it, and tag it as bold.
@@ -1405,10 +1400,8 @@ Column headers
 
 Use the following guidelines for text in column headers:
 
--  Use `sentence-style
-   capitalization <../a-l-style-guidelines.html#cap-sentence-style>`__
-   in column headers. However, for words that are always uppercase or
-   always lowercase, match that case.
+-  Use sentence-style capitalization in column headers. However, for
+   words that are always uppercase or always lowercase, match that case.
 -  Use singular nouns for column headers, unless the context requires
    otherwise.
 -  Do not end column headers with ellipses or colons.
@@ -1419,7 +1412,7 @@ Table text
 Use the following guidelines for text in table cells:
 
 -  Use the same punctuation and capitalization guidelines that you use
-   for `text in lists <../a-l-style-guidelines.html#lists>`__.
+   for text in lists. See :ref:`writing-list-items`.
 -  Make the entries in a table parallel. For example, in a column that
    describes options, be consistent in beginning the entries with a verb
    or noun.
@@ -1622,7 +1615,7 @@ reference) that the customer needs to complete the task.
 This topic provides guidelines for developing task topics and
 procedures.
 
--  `Task titles <#tasks-titles>`__
+-  `Task titles <#task-titles>`__
 -  `Task introductions <#task-introductions>`__
 -  `Prerequisites <#prerequisites>`__
 -  `Procedural steps <#procedural-steps>`__
@@ -1657,8 +1650,7 @@ sense or is necessary for clarity.
 
        To create users in SQL Server
 
-For guidelines about capitalizing titles, see
-`Capitalization <../a-l-style-guidelines.html#capitalization>`__.
+For guidelines about capitalizing titles, see :ref:`capitalization`.
 
 Task introductions
 ------------------
@@ -1758,9 +1750,7 @@ Use imperative sentences
 
 Write each step as a complete and correctly punctuated imperative
 sentence (that is, a sentence that starts with an imperative verb). In
-steps, the `focus <../basic-writing-guidelines.html#write-to-user>`__ is
-on the customer, and the
-`voice <../basic-writing-guidelines.html#use-active-voice>`__ is active.
+steps, the focus is on the customer, and the voice is active.
 
 **Examples**
 
@@ -2047,8 +2037,7 @@ article or topic. Even if you have already included an embedded
 hyperlink to the material in the article or topic, you can provide the
 hyperlink again under "Related topics," but typically you should provide
 a link only once in an article or section. For more information about
-linking, see `Links and
-cross-references <../a-l-style-guidelines.html#links-and-cross-references>`__.
+linking, see :ref:`links-and-cross-references`.
 
 Telephone numbers
 ~~~~~~~~~~~~~~~~~
@@ -2093,6 +2082,8 @@ following guidelines:
 -  If a screenshot includes a nonfictional, non Rackspace number, mask
    out all or parts of it.
 
+.. _text-formatting:
+
 Text formatting
 ~~~~~~~~~~~~~~~
 
@@ -2106,7 +2097,7 @@ different font treatment (bold, italics, or monospace).
    *Monospace* is also called a *fixed-pitch* or *fixed-width*
    font. In monospace, each letter and character occupy the same amount of
    horizontal space. An example of a monospace font is Courier, and it
-   looks as follows: ``monospace font``.
+   looks as follows: ``monospace font``
 
 Observe the following general guidelines when formatting text:
 
@@ -2123,8 +2114,7 @@ Observe the following general guidelines when formatting text:
 -  Do not use capitalization to emphasize a term (for example, showing a
    general term in all capitals). Follow the capitalization that is
    normally used for a term, or follow the capitalization guidelines in
-   the following table. For more information, see
-   `Capitalization <../a-l-style-guidelines.html#capitalization>`__.
+   the following table. For more information, see :ref:`capitalization`.
 -  Do not use color alone to distinguish text. Color is powerful but
    unreliable. Not everyone can see every color, most people do not
    print using color, and monitors and browsers limit themselves to
@@ -2165,27 +2155,22 @@ appear in content that documents a UI, CLI, or API.
    * - Book titles
      - Italic
 
-       .. note::
-
-          Use italic even if the title is a hyperlink.
+       **Note**: Use italic even if the title is a hyperlink.
 
      - For the most up-to-date information about rate and absolute limits, see
        the Limits section in the *Rackspace Cloud Databases Developer Guide*.
    * - Cross-references
-     - See `Links and cross-references
-       <../a-l-style-guidelines.html#links-and-cross-references>`__.
+     - See :ref:`links-and-cross-references`.
      - Not applicable
    * - Document titles
      - Italic
 
-       .. note::
-
-          Use italic even if the title is a hyperlink.
+       **Note**: Use italic even if the title is a hyperlink.
 
      - For the most up-to-date information about rate and absolute limits, see
        the Limits section in the *Rackspace Cloud Databases Developer Guide*.
    * - Email addresses
-     - See `Email addresses <../a-l-style-guidelines.html#email-addresses>`__.
+     - See :ref:`email-addresses`.
      - Not applicable
    * - Emphasis
      - Italic
@@ -2205,7 +2190,7 @@ appear in content that documents a UI, CLI, or API.
           The user does not have permission to perform this action.
 
    * - Hyperlinks (live)
-     - See `Links and cross-references <a-l-style-guidelines.md#links>`__.
+     - See :ref:`links-and-cross-references`.
      - Not applicable
    * - Keyboard key combinations, names, and shortcuts
      - *(Public)* Bold
@@ -2222,8 +2207,7 @@ appear in content that documents a UI, CLI, or API.
      - Italic
      - Place *i* before *e* except after *c*.
    * - Links (live)
-     - See `Links and cross-references
-       <../a-l-style-guidelines.html#links-and-cross-references>`__.
+     - See :ref:`links-and-cross-references`.
      - Not applicable
    * - Messages, error
      - Monospace
@@ -2292,10 +2276,9 @@ appear in content that documents a UI, CLI, or API.
    * - URLs (not live)
      - Bold
      - To access the web interface, open your web browser and navigate to
-       **http:// *yourDomain.com*/zipit-install.php**.
+       **http://yourDomain.com/zipit-install.php**.
    * - URLs (live)
-     - See `Links and cross-references
-       <(../a-l-style-guidelines.html#links-and-cross-references)>`__.
+     - See :ref:`links-and-cross-references`.
      - Not applicable
    * - Variable text (placeholder text)
      - See `Placeholder (variable) text <#placeholder-variable-text>`__
@@ -2731,6 +2714,8 @@ guidelines:
    * - 1:30 p.m. central standard time (CST)
    * - midnight
 
+.. _titles-and-headings:
+
 Titles and headings
 ~~~~~~~~~~~~~~~~~~~
 
@@ -2751,20 +2736,19 @@ documentation.
 Capitalization of titles and headings
 -------------------------------------
 
-Use *sentence-style capitalization* for most titles and headings,
+Use *sentence-style* capitalization for most titles and headings,
 including article, chapter, table, figure, and example titles, as well
 as section and procedure headings. One exception is book titles, which
-use *title-style capitalization*.
+use *title-style* capitalization.
 
-For capitalization guidelines, see
-`Capitalization <../a-l-style-guidelines.html#capitalization>`__.
+For capitalization guidelines, see :ref:`capitalization`.
 
 Article titles and headings
 ---------------------------
 
 This section provides guidelines for titles of articles and headings
 within articles. For capitalization guidelines, see `Capitalization of
-titles and headings <#capitalizatin-of-titles-and-headings>`__.
+titles and headings <#capitalization-of-titles-and-headings>`__.
 
 -  `Titles of articles <#titles-of-articles>`__
 -  `Headings in articles <#headings-in-articles>`__
@@ -3081,6 +3065,8 @@ using a pronoun that refers to the title or heading as its antecedent.
 
        This article briefly describes how to do this.
 
+.. _trademarks:
+
 Trademarks
 ~~~~~~~~~~
 
@@ -3109,8 +3095,16 @@ For a complete list, see the `Rackspace Trademark
 List <https://www.rackspace.com/information/legal/tmlist>`__.
 
 Following are examples of third-party trademarks that are often used in
-our content: - Apache - Enterprise Linux - Linux - OpenStack - Python -
-Red Hat - SQL Server - Ubuntu
+our content:
+
+- Apache
+- Enterprise Linux
+- Linux
+- OpenStack
+- Python
+- Red Hat
+- SQL Server
+- Ubuntu
 
 If you need to verify whether a name is a trademark, see that company's
 website.
@@ -3122,7 +3116,7 @@ Use the following guidelines when showing Rackspace and third-party
 trademarks in documentation.
 
 .. list-table::
-   :widths: 33 33 33
+   :widths: 40 30 30
    :header-rows: 1
 
    * - Guideline

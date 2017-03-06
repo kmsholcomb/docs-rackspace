@@ -277,6 +277,8 @@ instances of future tense, search for *will*.
        release notes.
      - Not applicable. Future tense is appropriate in this example.
 
+.. _write-to-the-user:
+
 Write to the user by using second person and imperative mood
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -452,8 +454,7 @@ consistently throughout the documentation.
    -  panel, screen
    -  window, dialog box
 
-For guidelines about specific words, see `Terminology
-guidelines <terminology-guidelines.rst>`__.
+For guidelines about specific words, see :ref:`alphabetical-list-of-terms`.
 
 Use simple action verbs, and don't turn them into nouns
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -482,7 +483,7 @@ Use action-oriented verbs instead of weak verbs
 -----------------------------------------------
 
 When you use weak verbs like *be*, *have*, *make*, or *do* (and their
-variants), or when you use gerunds (*-ing* words), nouns instead of
+variants), or when you use gerunds (*ing* words), nouns instead of
 verbs carry the main action of the sentence. Shift the focus from nouns
 to verbs by replacing weak verbs and gerunds with strong,
 action-oriented verbs. Relying on verbs rather than nouns usually makes
@@ -543,8 +544,6 @@ understand than complex verbs, such as verbs in the progressive or
 perfect tense, or verbs combined with helping verbs (such as *can*,
 *may*, *might*, *must*, and *should*).
 
-
-
 .. list-table::
    :widths: 50 50
    :header-rows: 1
@@ -561,6 +560,8 @@ perfect tense, or verbs combined with helping verbs (such as *can*,
        differently.
      - If you **are using** a Red Hat distribution, iptables works a little
        differently.
+
+.. _helping-verbs:
 
 Use helping verbs accurately
 ----------------------------
@@ -684,11 +685,15 @@ if the performer of the action is understood or not important.
    * - Correct
      - Incorrect
    * - The installation program **loads** the files.
+
        *or*
+
        The files **are loaded**.
      - The files **load**.
    * - The product **displays** the available servers in the right pane.
+
        *or*
+
        The available servers **are displayed** in the right pane.
      - The available servers **display** in the right pane.
    * - After the installation **is completed**, ensure that the FTP services
@@ -774,16 +779,18 @@ meaning is not ambiguous.
 
    * - Use
      - Avoid
-   * - Options for Editing
+   * - Options for editing
+
        *or*
-       Editing of Options
-     - Editing Options
-   * - Billing for Services
-     - Billing Services
-   * - Changing the DNS Settings on Windows
-     - Changing DNS Settings on Windows
-   * - Changing a Password
-     - Changing Passwords
+
+       Editing of options
+     - Editing options
+   * - Billing for services
+     - Billing services
+   * - Changing the DNS settings on Windows
+     - Changing DNS settings on Windows
+   * - Changing a password
+     - Changing passwords
 
 Back up statements with details
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -810,6 +817,8 @@ clarity and completeness for brevity.
        provision servers in the Rackspace cloud in minutes.
      - The next generation Cloud Servers is a fast cloud compute solution.
 
+.. _use-interjections-with-care:
+
 Use interjections with care
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -824,6 +833,8 @@ end of a procedure that targets *novice* customers, you might write,
 
 However, because the tone of an interjection can be condescending, use
 them sparingly and with care.
+
+.. _restrictive-clauses:
 
 Use restrictive and nonrestrictive clauses correctly
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1061,13 +1072,11 @@ Use the following terms consistently:
    * - following, preceding
      - To locate an item in space
 
-       .. note::
-
-          Do not use *above*, *below*, *earlier*, *later*, *before*, or
-          *after* as references to information in text. Where possible, use
-          specific references. If you cannot make specific references, use
-          *preceding* and *following* as adjectives for elements such as
-          figures and tables.
+       **Note**: Do not use *above*, *below*, *earlier*, *later*, *before*, or
+       *after* as references to information in text. Where possible, use
+       specific references. If you cannot make specific references, use
+       *preceding* and *following* as adjectives for elements such as
+       figures and tables.
      - The **preceding** information explains how to print a document
        correctly.
 
@@ -1076,10 +1085,8 @@ Use the following terms consistently:
    * - earlier, later
      - To refer to product releases (version numbers).
 
-       .. note::
-
-          Do not use *higher*, *lower*, *above*, *below*, *older*, or
-          *newer*.
+       **Note**: Do not use *higher*, *lower*, *above*, *below*, *older*, or
+       *newer*.
      - The required namespace kernel features are not available in the default
        kernel shipped with Red Hat Enterprise Linux 6.4, CentOS 6.4, and
        **earlier** versions of these operating systems.
@@ -1130,6 +1137,8 @@ College Handbook*.
    useful when writing descriptions or instructions for customers. One
    exception is the use of question marks in FAQ topics.
 
+.. _avoid-obscure-words:
+
 Avoid obscure non-English words and abbreviations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -1165,10 +1174,8 @@ alternatives.
        The dashboard includes metrics such as CPU, network interfaces, and file
        systems.
 
-       .. note::
-
-          The term include implies a partial list, so you do not need to
-          use and so on.
+       **Note**: The term *include* implies a partial list, so you do not need
+       to use *and so on*.
 
      - If you have a compatible device, your account team assesses your device
        for RackConnect readiness (software versions, an available physical
@@ -1186,10 +1193,8 @@ alternatives.
        by way of
      - Update the script according to the specifications.
 
-       .. note::
-
-          The use of *per* to mean *for each* is acceptable and is
-          preferable to using a slash mark.
+       **Note**: The use of *per* to mean *for each* is acceptable and is
+       preferable to using a slash mark.
 
        The report shows bytes per second.
      - Update the script as per the specifications.
@@ -1402,9 +1407,7 @@ appropriate for the audience.
      - computer, server
      - If a UFO lands in the data center, the servers stop working.
 
-       .. note::
-
-          When referring to a virtual machine (VM), *machine* is correct.
+       **Note**:When referring to a virtual machine (VM), *machine* is correct.
 
    * - ping (v)
      - contact, alert

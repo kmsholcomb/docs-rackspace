@@ -1,11 +1,13 @@
 .. _al-style-reference:
 
+
 ===================
 A-L style reference
 ===================
 
 This section of the writing style guide provides detailed guidelines
 about and instructions for applying style conventions. For more
+
 guidelines, see :ref:`M-Z style reference <mz-style-reference>`
 
 -  `Acronyms and other
@@ -141,13 +143,10 @@ Also use the following guidelines related to abbreviations.
 
        If an acronym already represents a plural noun, do not add an *s*.
 
-       .. note::
-
-          To refer to more than one FAQ document or section, add the
-          appropriate noun after *FAQ* and make the noun plural—for example,
-          *FAQ articles*. Follow this guideline for other plural acronyms when
-          you need
-          to refer to more than one instance of them.
+       **Note**: To refer to more than one FAQ document or section, add the
+       appropriate noun after *FAQ* and make the noun plural—for example,
+       *FAQ articles*. Follow this guideline for other plural acronyms when
+       you need to refer to more than one instance of them.
      - user IDs
 
        10 mm
@@ -163,8 +162,7 @@ Also use the following guidelines related to abbreviations.
      - 256 MB
      - 256MB
    * - Do not use Latin abbreviations or non-English words and phrases. For
-       more information, see `Avoid obscure non-English words and abbreviations
-       <../basic-writing-guidelines.html#avoid-obscure-non-english-words-and-abbreviations>`__.
+       more information, see :ref:`avoid-obscure-words`.
      - for example
      - e.g.
 
@@ -202,6 +200,8 @@ GB, GHz, GUI, GUID, HTML, HTTP, HTTPS, ID, IMAP, I/O, IP, JSON, KB, kHz,
 LAN, LDAP, MB, MHz, NIC, NTFS, OLE, OS, PDF, PHP, POP, RAM, REST, ROM,
 SGML, SMTP, SQL, SSL, TCP, TCP/IP, URI, URL, USB, VLAN, WAN, XML
 
+.. _capitalization:
+
 Capitalization
 ~~~~~~~~~~~~~~
 
@@ -227,6 +227,7 @@ Terms
 
 Use the following guidelines to help you decide whether a word should be
 capitalized. For the correct capitalization of some common terms, see
+
 :ref:`Terminology <terminology-guidelines>`.
 
 -  `Capitalize proper nouns and
@@ -282,8 +283,7 @@ For the correct capitalization of Rackspace product names, see the
 `Rackspace Cloud corporate website <https://www.rackspace.com/cloud>`__.
 
 For the correct capitalization of some commonly used third-party names,
-see `Third-party names and
-trademarks <../terminology-guidelines.html#third-party-terms>`__.
+see :ref:`third-party-names-and-trademarks`.
 
 Capitalize most acronyms, initialisms, and short forms of names
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -431,20 +431,20 @@ Variables and placeholders
 Use camelCase (for example, *userName*) unless you have to follow the
 conventions of the programming language. For example, you might need to
 use underscores (*user\_name*) or all capitals (*USER\_NAME*). For more
-information about formatting placeholders, see `Text
-formatting <../m-z-style-guidelines.html#text-formatting>`__.
+information about formatting placeholders, see :ref:`text-formatting`.
 
 Titles and headings
 -------------------
 
-Use `sentence-style capitalization <#sentence-style-capitalization>`__
-for most titles and headings, including article, chapter, table, figure,
-and example titles, as well as section and procedure headings. One
-exception is book titles, which use `title-style
-capitalization <#title-style-capitalization>`__.
+Use *sentence-style* capitalization for most titles and headings,
+including article, chapter, table, figure, and example titles, as well as
+section and procedure headings. One exception is book titles, which use
+*title-style* capitalization.
 
-For additional guidelines for titles and headings, see `Titles and
-headings <../m-z-style-guidelines.html#titles-headings>`__.
+For additional guidelines for titles and headings, see
+:ref:`titles-and-headings`.
+
+.. _sentence-style-capitalization:
 
 Guidelines for sentence-style capitalization
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -477,6 +477,8 @@ of that text must match the capitalization on the interface.
      - Troubleshooting a Vyatta site-to-site VPN connection
    * - Back up your files
      - Differences between IMAP and POP
+
+.. _title-style-capitalization:
 
 Guidelines for title-style capitalization
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -523,8 +525,8 @@ For additional guidelines about formatting lists, see
 Tables
 ------
 
-Use `sentence-style capitalization <#sentence-style-capitalization>`__
-for table titles, column headers, row headers, and text in table cells.
+Use sentence-style capitalization for table titles, column headers,
+row headers, and text in table cells.
 
 
 Glossary terms and definitions
@@ -537,8 +539,7 @@ glossaries:
   term is a proper noun or acronym. For example, use *server* instead of
   *Server*.
 
-- For the definition, use `sentence-style
-  capitalization <#sentence-style-capitalization>`__.
+- For the definition, use sentence-style capitalization.
 
 .. list-table::
    :widths: 100
@@ -552,14 +553,13 @@ glossaries:
        finite duration.
 
 For more information about formatting glossary entries and definitions,
-see `Glossaries <../a-l-style-guidelines.html#glossaries>`__.
+see `Glossaries <#glossaries>`__.
 
 Figures
 -------
 
-Use `sentence-style capitalization <#sentence-style-capitalization>`__
-for figure titles, text callouts within figures, and for legends
-associated with a figure.
+Use sentence-style capitalization for figure titles, text callouts
+within figures, and for legends associated with a figure.
 
 Capitalization with punctuation
 -------------------------------
@@ -614,6 +614,8 @@ surrounding content, and the source is cited. Follow these guidelines:
       “Numbered citations in this article.” Then, go back to each numbered
       reference in the article and create a link between the reference
       number (such as [1]) and the numbered item at the end of the article.
+
+.. _cloud-account-information:
 
 Cloud account information
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -684,8 +686,7 @@ or output examples:
 
 -  Do not use screenshots to show code examples. Format them as blocks
    of code by using the appropriate markup in your authoring tool. For
-   more information about formatting, see `Text
-   formatting <../m-z-style-guidelines.html#text-formatting>`__.
+   more information about formatting, see :ref:`text-formatting`.
 
 -  When showing input, always include a command prompt (such as $).
 
@@ -706,9 +707,8 @@ or output examples:
 -  Ensure that any placeholder text in code is obvious. If the authoring
    tool allows it, apply italics to placeholders; if not, enclose them
    in angle brackets. For more information about placeholders and
-   formatting them, see `Placeholder (variable)
-   text <../m-z-style-guidelines.html#placeholder-variable-text>`__ and
-   `Cloud account information <#cloud-account-info>`__.
+   formatting them, see :ref:`placeholder-text` and
+   `Cloud account information <#cloud-account-information>`__.
 
 -  Follow the conventions of the programming language used and preserve
    the capitalization that the author of the code used.
@@ -872,6 +872,7 @@ For both API and How-To content, copyright statements are automatically
 inserted by the system. Use the generated statement unless RackLaw gives
 you other instructions.
 
+
 .. _date-format:
 
 Dates
@@ -945,7 +946,9 @@ format, which is *yyyy*-*mm*-*dd* (for example, 2012-11-10 for November
        extents from data collections beginning August 19, 2010.
 
 For information about and examples for showing a date range, see
-:ref:`dashes`.
+:ref:`ranges-of-numbers`.
+
+.. _email-addresses:
 
 Email addresses
 ~~~~~~~~~~~~~~~
@@ -1034,7 +1037,7 @@ Create a glossary to document the following items:
 
 This section provides guidelines for the following items:
 
-- `Glossary terms <#glossary>`__
+- `Glossary terms <#glossary-terms>`__
 - `Glossary definitions <#glossary-definitions>`__
 - `Cross-references to glossary terms <#cross-references-to-glossary-terms>`__
 - `Guidelines for a comprehensive glossary
@@ -1311,9 +1314,7 @@ the following guidelines:
        capitalize the letter. Use press when the action does not result in output
        on the interface.
 
-       .. note::
-
-          Do not use the verbs *hit*, *strike*, or *punch*.
+       **Note**: Do not use the verbs *hit*, *strike*, or *punch*.
 
        Separate the key names by **-** or **+**, depending on whether you are
        documenting Linux or Windows. If you are documenting for both, pick one
@@ -1346,6 +1347,8 @@ the following guidelines:
      - To jump to the end of the file, press **Shift+G**.
 
        To apply the general number format, press **Ctrl+Shift+~**.
+
+.. _links-and-cross-references:
 
 Links and cross-references
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1389,10 +1392,6 @@ specific cross-references and links:
 -  `Construction and format of
    links <#construction-and-format-of-links>`__
 
-.. note::
-
-   In the examples in this section, links are indicated by underlines.
-
 General cross-reference guidelines
 ----------------------------------
 
@@ -1421,11 +1420,15 @@ information, linked or not, observe the following guidelines:
    * - Use
      - Avoid
    * - For more information about the protocols that you can choose when
-       configuring a load balancer, see Choosing the right protocol.
-     - See Choosing the right protocol for more information about the protocols
-       that you can choose when configuring a load balancer.
-   * - Snapshots are described in Create and use Cloud Block Storage snapshots.
-     - Snapshots are described later in this Getting Started Guide.
+       configuring a load balancer, see `Available protocols when configuring a
+       Cloud Load Balancer <https://support.rackspace.com/how-to/available-protocols-when-configuring-a-cloud-load-balancer/>`__.
+     - See `Available protocols when configuring a
+       Cloud Load Balancer <https://support.rackspace.com/how-to/available-protocols-when-configuring-a-cloud-load-balancer/>`__
+       for more information about the protocols that you can choose when
+       configuring a load balancer.
+   * - Snapshots are described in `Create and use Cloud Block Storage
+       snapshots <https://support.rackspace.com/how-to/create-and-use-cloud-block-storage-snapshots/>`__.
+     - Snapshots are described `later in this Getting Started Guide <https://support.rackspace.com/how-to/create-and-use-cloud-block-storage-snapshots/>`__.
    * - The following table lists the OpenStack versions and components
        supported by the current releases of Rackspace Private Cloud.
      - The table below lists the OpenStack versions and components supported by
@@ -1522,41 +1525,44 @@ Construction and format of links
 
    * - Use
      - Avoid
-   * - The most current versions of all SDKs are located in the SDK guide.
-     - The most current versions of all SDKs are located in the SDK guide:
-       https://developer.rackspace.com/docs/#sdks.
-   * - You can obtain the key by logging in to the Cloud Control Panel and
-       selecting **Account Settings** from the **yourAccount** menu in the
+   * - The most current versions of all SDKs are located on the
+       `Rackspace Developer Docs site <https://developer.rackspace.com/docs/#sdks>`__.
+     - The most current versions of all SDKs are located on the Rackspace
+       Developer Docs site: https://developer.rackspace.com/docs/#sdks.
+   * - You can obtain the key by logging in to the `Cloud Control Panel <https://mycloud.rackspace.com/>`__
+       and selecting **Account Settings** from the **yourAccount** menu in the
        top-right corner of the window.
      - You can obtain the key from the Cloud Control Panel by selecting
        **Account Settings** from the **yourAccount** menu in the top-right
        corner of the window. (Log in at https://mycloud.rackspace.com/.)
    * - If you want your additional storage to be more portable or you need to
-       be able to take data snapshots, consider adding one or more volumes to
-       the new server.
+       be able to take data snapshots, consider `adding one or more volumes <https://support.rackspace.com/how-to/create-and-attach-a-cloud-block-storage-volume/>`__
+       to the new server.
      - If you want your additional storage to be more portable or you need to
        be able to take data snapshots, consider adding one or volumes to the
-       new server. See Create and Attach a Cloud Block Storage Volume.
+       new server. See `Create and attach a Cloud Block Storage volume <https://support.rackspace.com/how-to/create-and-attach-a-cloud-block-storage-volume/>`__.
    * - Set the transmit rate for **Warning** and **Critical State**. (For more
-       information about transmit rates, see Rackspace Cloud Monitoring checks
-       and alarms.)
+       information about transmit rates, see `Rackspace Monitoring checks
+       and alarms <https://support.rackspace.com/how-to/rackspace-monitoring-checks-and-alarms/>`__.)
      - Set the transmit rate for **Warning** and **Critical State**. (For more
-       information about what this means, click here.)
-   * - If you need assistance opening the web console, see Managing your server
-       2 - console session.
-     - If you need assistance opening the web console, see this article.
-   * - Download PuTTY from the PuTTY website.
-     - Download PuTTY.
-   * - For more information about cross-domain XML files, read the Cross-domain
-       policy file specification article on the Adobe website.
-     - For more information about cross-domain XML files, go to Adobe's
-       website.
-   * - Cloud Load Balancers [product page] has a content caching feature that
-       stores recently accessed files on the load balancer for easy retrieval
-       by web clients. *(when linking to the www.rackspace.com product page)*
-     - Cloud Load Balancers has a content caching feature that stores recently
-       accessed files on the load balancer for easy retrieval by web clients.
-       *(when linking to the www.rackspace.com product page)*
+       information about what this means, click `here <https://support.rackspace.com/how-to/rackspace-monitoring-checks-and-alarms/>`__.)
+   * - If you need assistance opening the web console, see `Start a Console
+       session <https://support.rackspace.com/how-to/start-a-console-session/>`__.
+     - If you need assistance opening the web console, see `this article <https://support.rackspace.com/how-to/start-a-console-session/>`__.
+   * - Download PuTTY from the `PuTTY website <http://www.chiark.greenend.org.uk/~sgtatham/putty/>`__.
+     - `Download <http://www.chiark.greenend.org.uk/~sgtatham/putty/>`__ PuTTY.
+   * - For more information about cross-domain XML files, read the
+       `Cross-domain policy file specification <http://www.adobe.com/devnet/articles/crossdomain_policy_file_spec.html>`__
+       article on the Adobe website.
+     - For more information about cross-domain XML files, go to `Adobe's
+       website <http://www.adobe.com/devnet/articles/crossdomain_policy_file_spec.html>`__.
+   * - Cloud Load Balancers [`product page <https://www.rackspace.com/cloud/load-balancing>`__]
+       has a content caching feature that stores recently accessed files on the
+       load balancer for easy retrieval by web clients. *(when linking to the www.rackspace.com product page)*
+     - `Cloud Load Balancers <https://www.rackspace.com/cloud/load-balancing>`__
+       has a content caching feature that stores recently accessed files on the
+       load balancer for easy retrieval by web clients. *(when linking to the
+       www.rackspace.com product page)*
 
 Lists
 ~~~~~
@@ -1603,11 +1609,9 @@ a procedure title. Use the following guidelines when introducing lists.
        In a procedure, apply this guideline to text that introduces a list of
        substeps.
 
-       .. note::
-
-          Avoid using fragments to introduce lists. Fragments are
-          difficult to translate and can be harder to comprehend than
-          sentences.
+       **Note**: Avoid using fragments to introduce lists. Fragments are
+       difficult to translate and can be harder to comprehend than
+       sentences.
 
      - You can use this product to perform the following tasks:
 
@@ -1646,6 +1650,8 @@ a procedure title. Use the following guidelines when introducing lists.
        You can use this product to do the following:
 
        The following are available:
+
+.. _writing-list-items:
 
 Writing list items
 ------------------

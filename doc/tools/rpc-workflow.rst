@@ -365,6 +365,12 @@ Publishing to the internal gh-pages site uses two remote repositories:
 Run the following commands while connected to the Rackspace network directly
 or through VPN. You only need to perform these steps once.
 
+#. Upload an SSH key to your internal GitHub account. You can access SSH key
+   options by going to **Settings -> SSH keys** in the GitHub interface.
+
+#. Ask an RPC writer to add you to the **rpcdocs** team. This membership gives
+   you push access to the **rpc-internal** repository.
+
 #. In your local **docs-rpc** repository, add the internal repository as a
    remote:
 
@@ -457,6 +463,35 @@ For example:
 Currently, we have completely separate books for internal and external
 content. We only use this directive to conditionalize the ``doc/index.rst``
 file.
+
+Excluding internal documents from public builds
+-----------------------------------------------
+
+Although documents labeled with ``ifconfig`` in a toctree do not appear in
+the external table of contents, the source is still processed and
+output to the build directory. This means that the internal content can be
+accessed externally through searches.
+
+To prevent this, directories containing internal books must be excluded from
+external builds by adding them to a conditional ``exclude_patterns`` list in
+``conf.py``:
+
+.. code::
+
+   if internal is False:
+       exclude_patterns.extend(['rpc-faq-internal', 'rpc-install-internal',
+                               'rpc-ops-internal', 'rpc-sales-eng-internal',
+                               'rpc-upgrade-exp'])
+
+Due to these files being excluded, when Strider runs a merge build it will
+output some ``nonexisting document`` and ``undefined label`` warnings. You
+can safely ignore these.
+
+.. code::
+
+   ./index.rst:36: WARNING: toctree contains reference to nonexisting document 'rpc-faq-internal/index'
+   ...
+   ./index.rst:31: WARNING: undefined label: rpc-faq-internal (if the link has no caption the label must precede a section header)
 
 
 Deconst global table of contents

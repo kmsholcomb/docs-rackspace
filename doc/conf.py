@@ -44,8 +44,8 @@ sys.path.insert(0, os.path.abspath('../tools/'))
 extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.viewcode',
-    'bolditalic',
-    'remotecode',
+    'chios.bolditalic',
+    'chios.remotecode',
 ]
 
 if spelling is not None:

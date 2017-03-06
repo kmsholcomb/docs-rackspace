@@ -21,6 +21,7 @@ Balancer
 balancer
 Balancers
 blog
+blogging
 blogs
 bmoss
 br
@@ -213,6 +214,7 @@ py
 quickstart
 RabbitMQ
 rackerlabs
+rackernexus
 Rackers
 Rackspace
 rackspace
@@ -240,6 +242,7 @@ rubygems
 runtime
 rvxln
 SaaS
+Santamaria
 Scalability
 scalability
 scalable

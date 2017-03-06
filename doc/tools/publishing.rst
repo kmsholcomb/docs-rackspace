@@ -19,8 +19,8 @@ If you want to move a development project to production, update the
 nexus-control configuration by following the steps to configure a production
 build.
 
-Complete the following steps to build and deploy a documentation project to the
-development environment.
+Complete the following steps to build and deploy a documentation project to
+the development environment.
 
 #. :ref:`Add a new content repository to deconst <add-content-repo>`.
 #. :ref:`Enable Strider build automation
@@ -38,8 +38,7 @@ to the production environment.
 
 #. :ref:`Add a new content repository to deconst <add-content-repo>`.
 #. :ref:`Enable Strider build automation <enable-strider-build>`.
-#. :ref:`Configure a project for production builds
-   <configure-production-build>`.
+#. :ref:`Configure project for production builds <configure-production-build>`.
 #. :ref:`Review Strider build information <review-strider-build>`.
 #. :ref:`Add documentation to landing page <add-documentation-to-menu>`.
 
@@ -65,13 +64,16 @@ repository on github.com.
 
    #. In the GitHub UI, click :guilabel:`Settings > Collaborators & teams`.
 
-   #. Add the GitHub user ID `rackernexus` to the account with administrator
+   #. Add the ``rackernexus`` service account as a collaborator with Admin
       privileges.
+
+      GitHub will send an invitation requesting that ``rackernexus`` join the
+      repository.
 
    #. In the `Deconst Slack channel
       <https://rackdx.slack.com/archives/deconst>`_,
-      notify the deconst administrator (@bmoss or @meker12) to accept the
-      GitHub invitation to add the `rackernexus` user to the repository.
+      request the deconst administrator to accept the GitHub invitation sent to
+      the ``rackernexus`` service account.
 
 #. Create a deconst configuration file for the project you want to build.
 
@@ -172,19 +174,33 @@ site configuration in the nexus-control content and template mapping files.
 These files are in the nexus control repository that manages the
 build and deployment process for the Rackspace documentation websites.
 
+The content mapping file associates the content in a source repository with the
+URL where the content is deployed. The content source repository is identified
+by the unique content ID for the project, the ``contentIDBase`` specified in
+the ``_deconst.json`` file.
 
-#. Add the contentIDBase for the branch content to the
-   `config/content.d/staging.horse.json <https://github.com/rackerlabs/
-   nexus-control/blob/master/config/content.d/staging.horse.json>`_
-   configuration file. For example:
+The template mapping file specifies the template applied to content when a user
+requests content. For example, for book-style content with previous and next
+links, use the ``user-guide.html`` template. For single page topics, use the
+``single-page.html`` template.
+
+#. Add the content mapping to `config/content.d/staging.horse.json <https://github.com/rackerlabs/
+   nexus-control/blob/master/config/content.d/staging.horse.json>`_.
+
+   The following example shows the specification to deploy content from the
+   docs-rpc master branch to the ``/docs/private-cloud/rpc/master/`` path on
+   the development staging server:
 
    .. code::
 
-      "/docs/private-cloud/rpc/master/": "https://github.com/rackerlabs/docs-rpc/<branchname>/",
+      "/docs/private-cloud/rpc/master/": "https://github.com/rackerlabs/docs-rpc/master",
 
 #. Add the template mapping to `config/routes.d/staging.horse.json
    <https://github.com/rackerlabs/nexus-control/blob/master/config/routes.d/staging.horse.json>`_
-   configuration file. For example:
+   configuration file.
+
+   The following example shows the mapping to apply the user guide template to
+   all Rackspace Private Cloud content:
 
    .. code::
 

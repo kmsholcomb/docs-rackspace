@@ -30,7 +30,6 @@ will review and edit the changes as necessary.
 
 For additional information, see the following sections:
 
-
 * `Who is the doc team and what do we do?`_
 * `Rackspace Private Cloud documentation`_
 * `OpenStack-Ansible (OSA) documentation`_
@@ -69,7 +68,6 @@ Following are the members of the team:
 
 * Karin Levenstein (IRC: klevenstein) - Manager of Austin, US team
 
-  * Margaret Eker - Senior Information Developer, RPC, Public Cloud
   * Kelly Holcomb - Editor
   * Catherine Richardson (IRC: cathrichardson) - Senior Information Developer,
     RPC and Public Cloud
@@ -82,7 +80,7 @@ Following are the members of the team:
 
   * Nate Archer - Information Developer, How-To
   * Stephanie Fillmon - Information Developer, How-To
-  * Kyle Laffoon - Information Developer, How-To
+  * Laura Santamaria - Information Developer, How-To
   * Cat Lookabaugh (IRC: catlook) - Senior Information Developer, How-To,
     Public Cloud
 
@@ -99,20 +97,19 @@ The RPCO docs repo is a private repo, and it is located at
 https://github.com/rackerlabs/docs-rpc. Send a message to one of the docs team
 managers for access.
 
-The two most important folders in the repo are ``/doc`` and ``/internal``.
+The ``/doc`` folder contains both the external and internal guides for RPCO.
 
-The ``/doc`` folder contains the following external guides that are published
+The following external guides that are published
 to the `Rackspace Developer Docs site
 <https://developer.rackspace.com/docs/#docs-private-cloud>`_:
 
-* Administrator Guide (rpc-admin)
 * Technical FAQ (external)
 * Operations Guide
 * Release Notes
 * Standalone Object Storage Guide (swift)
 * Upgrade Guide
 
-The ``/internal`` folder contains the internal guides that contain information
+The internal guides contain information
 specific to Rackspace support that is not intended for public use. For example,
 the internal operations guide contains the following information, which is not
 published in the external operations guide:
@@ -124,9 +121,11 @@ The following internal guides are published to the `Rackspace Developer Portal
 <https://pages.github.rackspace.com/rpc-internal/docs-rpc/>`_ using the GitHub
 pages feature:
 
-* Installation Guide
 * Technical FAQ (internal)
+* Installation Guide
 * Operations Guide (internal)
+* Rackspace Private Cloud Sales Engineering Documentation
+* Upgrade Expectations
 
 .. note::
 
