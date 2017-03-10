@@ -118,7 +118,7 @@ Network services node (network-services)
 
    .. code-block:: console
 
-      # yum update -y
+      # yum upgrade -y
 
 #. Install additional packages.
 
@@ -518,19 +518,27 @@ Test and update
       ========================================================================
       ^* gateway                2   6   377    34    +14us[  +24us] +/- 3322us
 
+#. For a normal install, use the CentOS package for the desired release:
+
+   .. code-block:: console
+
+      # yum install centos-release-openstack-ocata
+      # yum install python-openstackclient openstack-selinux -y
+
+   .. note::
+
+      If performing pre-release testing, install the repository for the
+      relevant release candidate:
+
+      .. code-block:: console
+
+         # yum install https://rdoproject.org/repos/openstack-ocata/rdo-release-ocata.rpm
+
 #. Update the node:
 
    .. code-block:: console
 
-      # yum update -y
-
-#. For a normal install, follow the package installation instructions in
-   the Install Guide. If performing pre-release testing, install the repository
-   for the relevant release candidate:
-
-   .. code-block:: console
-
-      # yum install https://rdoproject.org/repos/openstack-ocata/rdo-release-ocata.rpm
+      # yum upgrade -y
 
 #. Reboot the node:
 
@@ -725,19 +733,27 @@ Test and update
       ========================================================================
       ^* gateway                2   6   377    34    +14us[  +24us] +/- 3322us
 
+#. For a normal install, use the CentOS package for the desired release:
+
+   .. code-block:: console
+
+      # yum install centos-release-openstack-ocata
+      # yum install python-openstackclient openstack-selinux -y
+
+   .. note::
+
+      If performing pre-release testing, install the repository for the
+      relevant release candidate:
+
+      .. code-block:: console
+
+         # yum install https://rdoproject.org/repos/openstack-ocata/rdo-release-ocata.rpm
+
 #. Update the node:
 
    .. code-block:: console
 
-      # yum update -y
-
-#. For a normal install, follow the package installation instructions in
-   the Install Guide. If performing pre-release testing, install the repository
-   for the relevant release candidate:
-
-   .. code-block:: console
-
-      # yum install https://rdoproject.org/repos/openstack-ocata/rdo-release-ocata.rpm
+      # yum upgrade -y
 
 #. Reboot the node:
 
@@ -884,19 +900,27 @@ Test and update
       ========================================================================
       ^* gateway                2   6   377    34    +14us[  +24us] +/- 3322us
 
+#. For a normal install, use the CentOS package for the desired release:
+
+   .. code-block:: console
+
+      # yum install centos-release-openstack-ocata
+      # yum install python-openstackclient openstack-selinux -y
+
+   .. note::
+
+      If performing pre-release testing, install the repository for the
+      relevant release candidate:
+
+      .. code-block:: console
+
+         # yum install https://rdoproject.org/repos/openstack-ocata/rdo-release-ocata.rpm
+
 #. Update the node:
 
    .. code-block:: console
 
-      # yum update -y
-
-#. For a normal install, follow the package installation instructions in
-   the Install Guide. If performing pre-release testing, install the repository
-   for the relevant release candidate:
-
-   .. code-block:: console
-
-      # yum install https://rdoproject.org/repos/openstack-ocata/rdo-release-ocata.rpm
+      # yum upgrade -y
 
 #. Reboot the node:
 
