@@ -13,6 +13,8 @@
 
   
   
+  
+  
 
   
 
@@ -51,6 +53,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -87,7 +90,10 @@
           
             
             
-                <ul class="current">
+              
+            
+            
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../contributor-collateral/index.html">Contribute to Rackspace documentation</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">RPC team documentation</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="HowTo-BestPractices.html">RPCDocs Best practices</a></li>
@@ -145,8 +151,10 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">Rackspace Documentation Guides</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Rackspace Documentation Guides</a>
+        
       </nav>
 
 
@@ -155,25 +163,42 @@
         <div class="rst-content">
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../index.html">Docs</a> &raquo;</li>
-      
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
           <li><a href="index.html">RPC team documentation</a> &raquo;</li>
-      
-    <li>How-To: OpenStack on RAX CentOS Cloud Servers</li>
+        
+      <li>How-To: OpenStack on RAX CentOS Cloud Servers</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
+            
             <a href="../_sources/rpc/HowTo-OpenStack-On-RAX-Cloud-CentOS.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -290,7 +315,7 @@ Rackspace.</p>
 </div>
 </li>
 <li><p class="first">Update the node.</p>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> yum update -y
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> yum upgrade -y
 </pre></div>
 </div>
 </li>
@@ -651,15 +676,22 @@ network-services nodes then try again.</p>
 </pre></div>
 </div>
 </li>
-<li><p class="first">Update the node:</p>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> yum update -y
+<li><p class="first">For a normal install, use the CentOS package for the desired release:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> yum install centos-release-openstack-ocata
+<span class="gp">#</span> yum install python-openstackclient openstack-selinux -y
 </pre></div>
 </div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>If performing pre-release testing, install the repository for the
+relevant release candidate:</p>
+<div class="last highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> yum install https://rdoproject.org/repos/openstack-ocata/rdo-release-ocata.rpm
+</pre></div>
+</div>
+</div>
 </li>
-<li><p class="first">For a normal install, follow the package installation instructions in
-the Install Guide. If performing pre-release testing, install the repository
-for the relevant release candidate:</p>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> yum install https://rdoproject.org/repos/openstack-ocata/rdo-release-ocata.rpm
+<li><p class="first">Update the node:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> yum upgrade -y
 </pre></div>
 </div>
 </li>
@@ -838,15 +870,22 @@ address on the <strong>management</strong> network:</p>
 </pre></div>
 </div>
 </li>
-<li><p class="first">Update the node:</p>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> yum update -y
+<li><p class="first">For a normal install, use the CentOS package for the desired release:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> yum install centos-release-openstack-ocata
+<span class="gp">#</span> yum install python-openstackclient openstack-selinux -y
 </pre></div>
 </div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>If performing pre-release testing, install the repository for the
+relevant release candidate:</p>
+<div class="last highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> yum install https://rdoproject.org/repos/openstack-ocata/rdo-release-ocata.rpm
+</pre></div>
+</div>
+</div>
 </li>
-<li><p class="first">For a normal install, follow the package installation instructions in
-the Install Guide. If performing pre-release testing, install the repository
-for the relevant release candidate:</p>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> yum install https://rdoproject.org/repos/openstack-ocata/rdo-release-ocata.rpm
+<li><p class="first">Update the node:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> yum upgrade -y
 </pre></div>
 </div>
 </li>
@@ -983,15 +1022,22 @@ address on the <strong>management</strong> network:</p>
 </pre></div>
 </div>
 </li>
-<li><p class="first">Update the node:</p>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> yum update -y
+<li><p class="first">For a normal install, use the CentOS package for the desired release:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> yum install centos-release-openstack-ocata
+<span class="gp">#</span> yum install python-openstackclient openstack-selinux -y
 </pre></div>
 </div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>If performing pre-release testing, install the repository for the
+relevant release candidate:</p>
+<div class="last highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> yum install https://rdoproject.org/repos/openstack-ocata/rdo-release-ocata.rpm
+</pre></div>
+</div>
+</div>
 </li>
-<li><p class="first">For a normal install, follow the package installation instructions in
-the Install Guide. If performing pre-release testing, install the repository
-for the relevant release candidate:</p>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> yum install https://rdoproject.org/repos/openstack-ocata/rdo-release-ocata.rpm
+<li><p class="first">Update the node:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> yum upgrade -y
 </pre></div>
 </div>
 </li>
@@ -1066,15 +1112,18 @@ connectivity on the external network.</p>
 
 
            </div>
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="HowTo-OpenStack-On-RAX-Cloud-Ubuntu.html" class="btn btn-neutral float-right" title="How-To: OpenStack on Rackspace Ubuntu Cloud Servers" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="HowTo-OpenStack-On-RAX-Cloud-Ubuntu.html" class="btn btn-neutral float-right" title="How-To: OpenStack on Rackspace Ubuntu Cloud Servers" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="HowTo-BestPractices.html" class="btn btn-neutral" title="RPCDocs Best practices" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="HowTo-BestPractices.html" class="btn btn-neutral" title="RPCDocs Best practices" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -1108,7 +1157,8 @@ connectivity on the external network.</p>
             VERSION:'',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="../_static/jquery.js"></script>
