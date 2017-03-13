@@ -248,7 +248,7 @@ in ``conf.py``:
    scv_overflow = ('-q', )
    scv_show_banner = True
    scv_banner_main_ref = 'v13'
-   scv_whitelist_branches = ('master', 'v13', 'v12', 'v11', 'v10')
+   scv_whitelist_branches = (re.compile(r"\bmaster\b|\bv1[123]\b"),)
    scv_whitelist_tags = ('NIL', )
    scv_push_remote = 'internal'
    scv_grm_exclude = ('.nojekyll', '.gitignore')
@@ -261,6 +261,11 @@ SCVersioning works by reading the list of whitelisted branches and building
 each one as a version of the documentation suite. If you are on a working
 branch, you must add it to the whitelist in order to include it in the build.
 
+Adding ``v12`` to the whitelist matches all branches with ``v12`` in them. For
+example, ``testv12`` and ``v12-wip``. To prevent such matches, we use a regular
+expression that matches only branches with the exact names given. Currently the
+expression matches ``master``, ``v11``, ``v12``, and ``v13``.
+
 While testing your content, you may also want to remove some of the other
 branches to speed up local builds. Commenting out the production list makes
 it easier to restore later.
@@ -269,8 +274,8 @@ Assuming a working branch named ``issue-123``, you could use:
 
 .. code::
 
-   # scv_whitelist_branches = ('master', 'v13', 'v12', 'v11', 'v10')
-   scv_whitelist_branches = ('v13', 'issue-123')
+   # scv_whitelist_branches = (re.compile(r"\bmaster\b|\bv1[123]\b"),)
+   scv_whitelist_branches = (v13, issue-123)
 
 While you can remove most branches during testing, you must keep the branch
 designated as ``scv_root_ref``, as this is the branch treated as the default
@@ -318,6 +323,12 @@ directly:
 Open ``doc/_build/html/index.html`` in a browser to view the versioned site.
 Use the version selector to view your branch and see the latest changes.
 
+.. important::
+
+   Before building the versioned site, you must update the stable branches
+   (e.g. ``v11``, ``v12``, ``v13``) locally then push them to origin in order
+   to see the latest changes.
+
 Removing your working branch from the whitelist
 -----------------------------------------------
 
@@ -327,7 +338,7 @@ branches. Commit, push, then open your PR.
 
 .. code::
 
-   scv_whitelist_branches = ('master', 'v13', 'v12', 'v11', 'v10')
+   scv_whitelist_branches = (re.compile(r"\bmaster\b|\bv1[123]\b"),)
 
 Reviewers can check your content using the Nexus preview. If they need to see
 the internal gh-page styling or the versioned build, they must clone your fork
@@ -407,12 +418,25 @@ You are now ready to publish the RPC docs internally.
 Publishing internally
 ---------------------
 
-Run the following command from the master branch while connected to the
-Rackspace network directly or through VPN:
+#. Update the stable branches (e.g. ``v11``, ``v12``, ``v13``):
 
-.. code::
+   .. code-block:: bash
 
-   $ tox -e publish
+      branches=(v11 v12 v13)
+
+      for item in ${branches[@]}; do
+          git checkout $item
+          git fetch upstream
+          git merge upstream/$item
+          git push origin $item
+      done
+
+#. Run the publish command from the master branch while connected to the
+   Rackspace network directly or through VPN:
+
+   .. code::
+
+      $ tox -e publish
 
 
 Using conditionals

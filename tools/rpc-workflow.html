@@ -428,7 +428,7 @@ in <code class="docutils literal"><span class="pre">conf.py</span></code>:</p>
 <span class="n">scv_overflow</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;-q&#39;</span><span class="p">,</span> <span class="p">)</span>
 <span class="n">scv_show_banner</span> <span class="o">=</span> <span class="kc">True</span>
 <span class="n">scv_banner_main_ref</span> <span class="o">=</span> <span class="s1">&#39;v13&#39;</span>
-<span class="n">scv_whitelist_branches</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;master&#39;</span><span class="p">,</span> <span class="s1">&#39;v13&#39;</span><span class="p">,</span> <span class="s1">&#39;v12&#39;</span><span class="p">,</span> <span class="s1">&#39;v11&#39;</span><span class="p">,</span> <span class="s1">&#39;v10&#39;</span><span class="p">)</span>
+<span class="n">scv_whitelist_branches</span> <span class="o">=</span> <span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;\bmaster\b|\bv1[123]\b&quot;</span><span class="p">),)</span>
 <span class="n">scv_whitelist_tags</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;NIL&#39;</span><span class="p">,</span> <span class="p">)</span>
 <span class="n">scv_push_remote</span> <span class="o">=</span> <span class="s1">&#39;internal&#39;</span>
 <span class="n">scv_grm_exclude</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;.nojekyll&#39;</span><span class="p">,</span> <span class="s1">&#39;.gitignore&#39;</span><span class="p">)</span>
@@ -439,12 +439,16 @@ other configuration options, see <a class="reference external" href="https://rob
 <p>SCVersioning works by reading the list of whitelisted branches and building
 each one as a version of the documentation suite. If you are on a working
 branch, you must add it to the whitelist in order to include it in the build.</p>
+<p>Adding <code class="docutils literal"><span class="pre">v12</span></code> to the whitelist matches all branches with <code class="docutils literal"><span class="pre">v12</span></code> in them. For
+example, <code class="docutils literal"><span class="pre">testv12</span></code> and <code class="docutils literal"><span class="pre">v12-wip</span></code>. To prevent such matches, we use a regular
+expression that matches only branches with the exact names given. Currently the
+expression matches <code class="docutils literal"><span class="pre">master</span></code>, <code class="docutils literal"><span class="pre">v11</span></code>, <code class="docutils literal"><span class="pre">v12</span></code>, and <code class="docutils literal"><span class="pre">v13</span></code>.</p>
 <p>While testing your content, you may also want to remove some of the other
 branches to speed up local builds. Commenting out the production list makes
 it easier to restore later.</p>
 <p>Assuming a working branch named <code class="docutils literal"><span class="pre">issue-123</span></code>, you could use:</p>
-<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="c1"># scv_whitelist_branches = (&#39;master&#39;, &#39;v13&#39;, &#39;v12&#39;, &#39;v11&#39;, &#39;v10&#39;)</span>
-<span class="n">scv_whitelist_branches</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;v13&#39;</span><span class="p">,</span> <span class="s1">&#39;issue-123&#39;</span><span class="p">)</span>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="c1"># scv_whitelist_branches = (re.compile(r&quot;\bmaster\b|\bv1[123]\b&quot;),)</span>
+<span class="n">scv_whitelist_branches</span> <span class="o">=</span> <span class="p">(</span><span class="n">v13</span><span class="p">,</span> <span class="n">issue</span><span class="o">-</span><span class="mi">123</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>While you can remove most branches during testing, you must keep the branch
@@ -482,13 +486,19 @@ directly:</p>
 </div>
 <p>Open <code class="docutils literal"><span class="pre">doc/_build/html/index.html</span></code> in a browser to view the versioned site.
 Use the version selector to view your branch and see the latest changes.</p>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p class="last">Before building the versioned site, you must update the stable branches
+(e.g. <code class="docutils literal"><span class="pre">v11</span></code>, <code class="docutils literal"><span class="pre">v12</span></code>, <code class="docutils literal"><span class="pre">v13</span></code>) locally then push them to origin in order
+to see the latest changes.</p>
+</div>
 </div>
 <div class="section" id="removing-your-working-branch-from-the-whitelist">
 <h3>Removing your working branch from the whitelist<a class="headerlink" href="#removing-your-working-branch-from-the-whitelist" title="Permalink to this headline">#</a></h3>
 <p>When you are finished testing and you are ready to create a pull request, you
 must remove your branch from the whitelist and restore the list of stable
 branches. Commit, push, then open your PR.</p>
-<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="n">scv_whitelist_branches</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;master&#39;</span><span class="p">,</span> <span class="s1">&#39;v13&#39;</span><span class="p">,</span> <span class="s1">&#39;v12&#39;</span><span class="p">,</span> <span class="s1">&#39;v11&#39;</span><span class="p">,</span> <span class="s1">&#39;v10&#39;</span><span class="p">)</span>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="n">scv_whitelist_branches</span> <span class="o">=</span> <span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;\bmaster\b|\bv1[123]\b&quot;</span><span class="p">),)</span>
 </pre></div>
 </div>
 <p>Reviewers can check your content using the Nexus preview. If they need to see
@@ -558,11 +568,26 @@ upstream  git@github.com:rackerlabs/docs-rpc.git (push)
 </div>
 <div class="section" id="publishing-internally">
 <h3>Publishing internally<a class="headerlink" href="#publishing-internally" title="Permalink to this headline">#</a></h3>
-<p>Run the following command from the master branch while connected to the
+<ol class="arabic">
+<li><p class="first">Update the stable branches (e.g. <code class="docutils literal"><span class="pre">v11</span></code>, <code class="docutils literal"><span class="pre">v12</span></code>, <code class="docutils literal"><span class="pre">v13</span></code>):</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="nv">branches</span><span class="o">=(</span>v11 v12 v13<span class="o">)</span>
+
+<span class="k">for</span> item in <span class="si">${</span><span class="nv">branches</span><span class="p">[@]</span><span class="si">}</span><span class="p">;</span> <span class="k">do</span>
+    git checkout <span class="nv">$item</span>
+    git fetch upstream
+    git merge upstream/<span class="nv">$item</span>
+    git push origin <span class="nv">$item</span>
+<span class="k">done</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Run the publish command from the master branch while connected to the
 Rackspace network directly or through VPN:</p>
 <div class="code highlight-default"><div class="highlight"><pre><span></span>$ tox -e publish
 </pre></div>
 </div>
+</li>
+</ol>
 </div>
 </div>
 <div class="section" id="using-conditionals">
