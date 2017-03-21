@@ -977,8 +977,9 @@ following changes:
     .. code-block:: console
 
        openstack subnet create --network provider \
-       --allocation-pool start=10.1.13.101,end=10.1.13.200 --enable-dhcp \
-       --dns-nameserver 8.8.4.4 --gateway 10.1.11.1 provider 10.1.13.0/24
+       --allocation-pool start=10.1.13.101,end=10.1.13.200 --dhcp \
+       --dns-nameserver 8.8.4.4 --gateway 10.1.11.1 \
+       --subnet-range 10.1.13.0/24 provider
 
   .. note::
 

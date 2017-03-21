@@ -1093,8 +1093,9 @@ following changes:</p>
 <ul>
 <li><p class="first">use the following command to create the subnet:</p>
 <div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">openstack subnet create --network provider \</span>
-<span class="go">--allocation-pool start=10.1.13.101,end=10.1.13.200 --enable-dhcp \</span>
-<span class="go">--dns-nameserver 8.8.4.4 --gateway 10.1.11.1 provider 10.1.13.0/24</span>
+<span class="go">--allocation-pool start=10.1.13.101,end=10.1.13.200 --dhcp \</span>
+<span class="go">--dns-nameserver 8.8.4.4 --gateway 10.1.11.1 \</span>
+<span class="go">--subnet-range 10.1.13.0/24 provider</span>
 </pre></div>
 </div>
 </li>
