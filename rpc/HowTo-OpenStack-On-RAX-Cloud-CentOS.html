@@ -117,12 +117,12 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#openstack-compute-node-compute">OpenStack compute node (compute)</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#compute-net">Configure network interfaces</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#centos-compute-net">Configure network interfaces</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#id2">Test and update</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#openstack-block-storage-node-block">OpenStack block storage node (block)</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#block-net">Configure network interfaces</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#centos-block-net">Configure network interfaces</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#id4">Test and update</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#create-block-storage-volume-block1">Create block storage volume (block1)</a></li>
 </ul>
@@ -513,7 +513,7 @@ nodes:</p>
 </div>
 <div class="section" id="openstack-controller-node-controller">
 <h2>OpenStack controller node (controller)<a class="headerlink" href="#openstack-controller-node-controller" title="Permalink to this headline">#</a></h2>
-<p>If you orchestrated server creation, skip to <a class="reference internal" href="#controller-net"><span class="std std-ref">Configure network interfaces</span></a>.</p>
+<p>If you orchestrated server creation, skip to <a class="reference internal" href="#centos-controller-net"><span class="std std-ref">Configure network interfaces</span></a>.</p>
 <ol class="arabic">
 <li><p class="first">Create a cloud server named <strong>controller</strong>, removing all networks except the
 <strong>management</strong> network.</p>
@@ -535,7 +535,7 @@ node.</p>
 </li>
 </ol>
 <div class="section" id="configure-network-interfaces">
-<span id="controller-net"></span><h3>Configure network interfaces<a class="headerlink" href="#configure-network-interfaces" title="Permalink to this headline">#</a></h3>
+<span id="centos-controller-net"></span><h3>Configure network interfaces<a class="headerlink" href="#configure-network-interfaces" title="Permalink to this headline">#</a></h3>
 <ol class="arabic">
 <li><p class="first">Access the node from the <strong>network services</strong> node using the IP
 address assigned by Rackspace on the <strong>management</strong> network.</p>
@@ -710,7 +710,7 @@ relevant release candidate:</p>
 </div>
 <div class="section" id="openstack-compute-node-compute">
 <h2>OpenStack compute node (compute)<a class="headerlink" href="#openstack-compute-node-compute" title="Permalink to this headline">#</a></h2>
-<p>If you orchestrated server creation, skip to <a class="reference internal" href="#compute-net"><span class="std std-ref">Configure network interfaces</span></a>.</p>
+<p>If you orchestrated server creation, skip to <a class="reference internal" href="#centos-compute-net"><span class="std std-ref">Configure network interfaces</span></a>.</p>
 <ol class="arabic">
 <li><p class="first">Create a cloud server, removing all networks except the <strong>management</strong>
 network.</p>
@@ -732,8 +732,8 @@ node.</p>
 </div>
 </li>
 </ol>
-<div class="section" id="compute-net">
-<span id="id1"></span><h3>Configure network interfaces<a class="headerlink" href="#compute-net" title="Permalink to this headline">#</a></h3>
+<div class="section" id="centos-compute-net">
+<span id="id1"></span><h3>Configure network interfaces<a class="headerlink" href="#centos-compute-net" title="Permalink to this headline">#</a></h3>
 <ol class="arabic">
 <li><p class="first">Access the node from the network services node using the IP address
 assigned by Rackspace on the <strong>management</strong> network.</p>
@@ -899,7 +899,7 @@ relevant release candidate:</p>
 </div>
 <div class="section" id="openstack-block-storage-node-block">
 <h2>OpenStack block storage node (block)<a class="headerlink" href="#openstack-block-storage-node-block" title="Permalink to this headline">#</a></h2>
-<p>If you orchestrated server creation, skip to <a class="reference internal" href="#block-net"><span class="std std-ref">Configure network interfaces</span></a>.</p>
+<p>If you orchestrated server creation, skip to <a class="reference internal" href="#centos-block-net"><span class="std std-ref">Configure network interfaces</span></a>.</p>
 <ol class="arabic">
 <li><p class="first">Create a cloud server, removing all networks except the <strong>management</strong>
 network.</p>
@@ -917,8 +917,8 @@ node.</p>
 </div>
 </li>
 </ol>
-<div class="section" id="block-net">
-<span id="id3"></span><h3>Configure network interfaces<a class="headerlink" href="#block-net" title="Permalink to this headline">#</a></h3>
+<div class="section" id="centos-block-net">
+<span id="id3"></span><h3>Configure network interfaces<a class="headerlink" href="#centos-block-net" title="Permalink to this headline">#</a></h3>
 <ol class="arabic">
 <li><p class="first">Access the node from the network services node using the IP address
 assigned by Rackspace on the <strong>management</strong> network.</p>
@@ -1050,7 +1050,7 @@ relevant release candidate:</p>
 </div>
 <div class="section" id="create-block-storage-volume-block1">
 <h3>Create block storage volume (block1)<a class="headerlink" href="#create-block-storage-volume-block1" title="Permalink to this headline">#</a></h3>
-<p>If you orchestrated server creation, skip to <a class="reference internal" href="HowTo-OpenStack-On-RAX-Cloud-Ubuntu.html#services"><span class="std std-ref">Install and configure OpenStack services</span></a>.</p>
+<p>If you orchestrated server creation, skip to <a class="reference internal" href="#centos-services"><span class="std std-ref">Install and configure OpenStack services</span></a>.</p>
 <ol class="arabic simple">
 <li>In the Rackspace Cloud Control Panel, select
 <span class="guilabel">Block Storage Volumes</span> in the <span class="guilabel">Storage</span> tab, and
@@ -1065,7 +1065,7 @@ create the following volume named <strong>block1</strong>:<ul>
 </div>
 </div>
 <div class="section" id="install-and-configure-openstack-services">
-<span id="services"></span><h2>Install and configure OpenStack services<a class="headerlink" href="#install-and-configure-openstack-services" title="Permalink to this headline">#</a></h2>
+<span id="centos-services"></span><h2>Install and configure OpenStack services<a class="headerlink" href="#install-and-configure-openstack-services" title="Permalink to this headline">#</a></h2>
 <p>Use the <a class="reference external" href="http://docs.openstack.org/newton/install-guide-rdo/">RDO OpenStack Installation Guides</a> with the
 following changes:</p>
 <ul>
