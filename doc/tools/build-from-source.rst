@@ -1,10 +1,14 @@
-====================
-Building from Source
-====================
+=================================
+Build Sphinx doc projects locally
+=================================
 
 These instructions are for local builds using the default Sphinx templates.
 If you want to build locally using the Rackspace documentation templates, use
 the `Deconst client <https://github.com/deconst/client>`_.
+
+You might want to build locally to find and fix build errors before committing
+your updates to the GitHub source repository. You also might want to review
+format and navigational structure locally before you commit updates.
 
 **Prerequisites**
 

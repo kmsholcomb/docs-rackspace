@@ -2,7 +2,7 @@
 Configure development and production builds for Sphinx projects
 ===============================================================
 
-This document describes how to configure new documentation projects
+This document describes how to configure new Sphinx documentation projects
 for development and production.
 
 Configure a project for development
