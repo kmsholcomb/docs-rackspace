@@ -1,0 +1,459 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Configure redirects &mdash; Rackspace Documentation Guides  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../_static/bespoke.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../_static/bolditalic.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="Rackspace Documentation Guides  documentation" href="../index.html"/>
+        <link rel="up" title="Tools" href="index.html"/>
+        <link rel="next" title="Add GitHub links for contributors" href="add-github-links-to-docs.html"/>
+        <link rel="prev" title="Remove a Sphinx documentation project from production" href="remove-content-configuration.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Rackspace Documentation Guides
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../contributor-collateral/index.html">Contribute to Rackspace documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rpc/index.html">RPC team documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../style-guide/index.html">Style guidelines for technical content</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../templates/index.html">Templates</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Tools</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="publishing.html">Configure development and production builds for Sphinx projects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rpc-workflow.html">RPC workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="remove-content-configuration.html">Remove a Sphinx documentation project from production</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Configure redirects</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#configure-a-redirect-rule">Configure a redirect rule</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#add-a-redirect-rule">Add a redirect rule</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#test-a-redirect-rule">Test a redirect rule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#troubleshoot-rewrites-file">Troubleshoot rewrites file</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#after-updating-a-rewrite-file-all-legacy-links-return-404">After updating a rewrite file, all legacy links return 404</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#individual-rule-redirect-incorrectly-or-returns-404">Individual rule redirect incorrectly or returns 404</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="add-github-links-to-docs.html">Add GitHub links for contributors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="build-from-source.html">Build Sphinx doc projects locally</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mdsphinx.html">Markdown to RST table conversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rtd-tables.html">Table width fix for Read the Docs Sphinx theme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="table-conversion.html">Convert grid tables to list-table directives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="use-extlink-library.html">Linking to external resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GitHub-infra-templates/index.html">GitHub Infra Templates</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Rackspace Documentation Guides</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Tools</a> &raquo;</li>
+        
+      <li>Configure redirects</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/tools/configure-redirects.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="configure-redirects">
+<span id="id1"></span><h1>Configure redirects<a class="headerlink" href="#configure-redirects" title="Permalink to this headline">#</a></h1>
+<p>Deconst control repositories specify the configuration for each site managed
+by a deconst instance. When you move or delete content from a site, add a
+redirect rule to the <a class="reference external" href="https://github.com/rackerlabs/nexus-control/tree/master/config/rewrites.d">rewrites JSON files</a> for the site that hosts the
+content so that users requesting access to the deleted content are
+sent to a new location instead of getting a 404.</p>
+<p>The rewrites files manage redirects for traffic to the following domains:</p>
+<p>Active sites:</p>
+<ul class="simple">
+<li>support.rackspace.com</li>
+<li>developer.rackspace.com,</li>
+<li>getcarina.com.</li>
+</ul>
+<p>Archived sites:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">docs.rackspace.com</span></code></li>
+<li><code class="docutils literal"><span class="pre">api.rackspace.com</span></code></li>
+</ul>
+<p>Each file contains the rewrite rules for the specified domain, for example
+<code class="docutils literal"><span class="pre">developer.rackspace.com.json</span></code> specifies the rules to rewrite URLs or
+URL patterns from that site to a specified URL.</p>
+<p>For each rule, the <code class="docutils literal"><span class="pre">from</span></code> parameter specifies the URL to
+be redirected. The <code class="docutils literal"><span class="pre">to</span></code> parameter specifies the target destination for the
+redirected link.</p>
+<p><strong>Example: Redirect traffic from a legacy Cloud Images API developer guide
+link</strong></p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+   <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;Redirect images developer-guide URL&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;from&quot;</span><span class="o">:</span> <span class="s2">&quot;^\\/docs\\/cloud-images\\/v2\\/developer-guide\\/(.*?)&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;to&quot;</span><span class="o">:</span> <span class="s2">&quot;/docs/cloud-images/v2/$1&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;rewrite&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+   <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">301</span>
+<span class="p">},</span>
+</pre></div>
+</div>
+<p>This example from the developer.rackspace.com redirects file redirects any
+URL that matches the following pattern:</p>
+<p><code class="docutils literal"><span class="pre">https://developer.rackspace.com/docs/cloud-images/v2/developer-guide/*.*</span></code></p>
+<p>to the following URL:</p>
+<p><code class="docutils literal"><span class="pre">https://developer.rackspace.com/docs/cloud-images/v2/&lt;filename&gt;</span></code></p>
+<p>This rule specifies the <code class="docutils literal"><span class="pre">$1</span></code> pattern to append the final node
+of the original URL to the new path.</p>
+<p>For example, a request for the following URL:</p>
+<p><code class="docutils literal"><span class="pre">https://developer.rackspace.com/docs/cloud-images/v2/developer-guide/glossary/</span></code></p>
+<p>redirects the user to the following URL:</p>
+<p><code class="docutils literal"><span class="pre">https://developer.rackspace.com/docs/cloud-images/v2/glossary/</span></code></p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">You can specify redirect rules by using glob patterns to match a set of
+URLs that you want to redirect. For information about understanding and
+using glob patterns, see <a class="reference external" href="https://www.npmjs.com/package/globby">globby npm module</a> and <a class="reference external" href="http://www.tldp.org/LDP/GNU-Linux-Tools-Summary/html/x11655.htm">wildcard reference</a>.</p>
+</div>
+<div class="section" id="configure-a-redirect-rule">
+<h2>Configure a redirect rule<a class="headerlink" href="#configure-a-redirect-rule" title="Permalink to this headline">#</a></h2>
+<p>When you add a redirect rule, place the rule in the order that you want it
+processed. For example, if you have a specific redirect rule for a deep link,
+you want to process that rule before a more general rule.</p>
+<p>For example, if you have a set of rules to redirect traffic from the same
+documentation project, place a rule to redirect a specific page in the content
+above a rule that redirects the top-level page as shown in the following
+example.</p>
+<p><strong>Example: Order redirect rules</strong></p>
+<div class="code JSON highlight-default"><div class="highlight"><pre><span></span><span class="p">{</span>
+   <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Reach Cloud Monitoring Metrics API Link&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;from&quot;</span><span class="p">:</span> <span class="s2">&quot;^/cm/api/v1.0/cm-devguide/content/metrics-api.html&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;to&quot;</span><span class="p">:</span> <span class="s2">&quot;/docs/rackspace-monitoring/v1/api-reference/metrics-operations/&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;toProtocol&quot;</span><span class="p">:</span> <span class="s2">&quot;https&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;toHostname&quot;</span><span class="p">:</span> <span class="s2">&quot;developer.rackspace.com&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;rewrite&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+   <span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="mi">301</span>
+<span class="p">},</span>
+<span class="p">{</span>
+   <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Cloud Monitoring Developer Guide&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;from&quot;</span><span class="p">:</span> <span class="s2">&quot;^/cm&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;to&quot;</span><span class="p">:</span> <span class="s2">&quot;/docs/rackspace-monitoring/v1/&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;toProtocol&quot;</span><span class="p">:</span> <span class="s2">&quot;https&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;toHostname&quot;</span><span class="p">:</span> <span class="s2">&quot;developer.rackspace.com&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;rewrite&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+   <span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="mi">301</span>
+   <span class="p">},</span>
+</pre></div>
+</div>
+<p>In this example, the first rule redirects a link from the Monitoring Metrics
+API topic on the legacy docs.rackspace.com site to the new location on
+developer.rackspace.com.</p>
+<p>The second rule directs all links to the legacy Monitoring documentation to
+the Monitoring documentation index page on developer.rackspace.com.</p>
+<p>If these rules were reversed, the second rule would never be processed
+because all traffic to the legacy Monitoring Guide would be redirected to
+the index page and the more specific rule would not be processed.</p>
+<div class="section" id="add-a-redirect-rule">
+<h3>Add a redirect rule<a class="headerlink" href="#add-a-redirect-rule" title="Permalink to this headline">#</a></h3>
+<p>Complete the following steps to add a rewrite rule:</p>
+<ol class="arabic">
+<li><p class="first">Fork and clone the nexus-control repository.</p>
+</li>
+<li><p class="first">On your local system, navigate to the following directory:
+<code class="docutils literal"><span class="pre">config/rewrites.d</span></code>.</p>
+</li>
+<li><p class="first">Edit the rewrites file for the site that controls the traffic you want to
+redirect.</p>
+</li>
+<li><p class="first">Determine where to add the rule.</p>
+<ul class="simple">
+<li>Find similar rules and insert or append your rule to that group.</li>
+<li>Verify that traffic from the specified location won't be redirected
+by a preceding rule.</li>
+</ul>
+</li>
+<li><p class="first">Add the rule.</p>
+<p>If you are redirecting a URL from one domain to another, make sure
+that you specify the <code class="docutils literal"><span class="pre">ToHostName</span></code> parameter in the redirect rule.</p>
+</li>
+<li><p class="first">Commit your changes and push to GitHub.</p>
+</li>
+<li><p class="first">Submit a pull request to the nexus-control repository.</p>
+</li>
+<li><p class="first">After your updates are approved and merged, verify that the
+updates have been applied.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="section" id="test-a-redirect-rule">
+<h2>Test a redirect rule<a class="headerlink" href="#test-a-redirect-rule" title="Permalink to this headline">#</a></h2>
+<p>When you merge an update to the nexus-control configuration, it
+can take time for the changes to be deployed to production.
+You can check the status of the update in <a class="reference external" href="https://build.developer.rackspace.com/rackerlabs/nexus-control/">nexus-control build results</a>.
+When the updates have been successfully deployed, the log shows the
+following message:</p>
+<div class="code console highlight-default"><div class="highlight"><pre><span></span><span class="n">Done</span><span class="p">,</span> <span class="n">without</span> <span class="n">errors</span><span class="o">.</span>
+<span class="n">Asset</span> <span class="n">preparer</span> <span class="n">completed</span><span class="o">.</span> <span class="p">{</span> <span class="n">status</span><span class="p">:</span> <span class="mi">0</span> <span class="p">}</span>
+<span class="n">All</span> <span class="n">assets</span> <span class="kn">from</span> <span class="nn">repository</span> <span class="n">uploaded</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>After the changes are deployed to production, test the redirect rule.</p>
+<p>In the browser, navigate to a URL that matches the one specified in the
+<code class="docutils literal"><span class="pre">from</span></code> parameter of the redirect rule and verify that the browser directs you
+to a URL that matches the one specified in the <code class="docutils literal"><span class="pre">to</span></code> parameter.</p>
+<p>If the browser returns a 404 page or a different URL, update the rewrite file
+to fix the issue.</p>
+</div>
+<div class="section" id="troubleshoot-rewrites-file">
+<h2>Troubleshoot rewrites file<a class="headerlink" href="#troubleshoot-rewrites-file" title="Permalink to this headline">#</a></h2>
+<div class="section" id="after-updating-a-rewrite-file-all-legacy-links-return-404">
+<h3>After updating a rewrite file, all legacy links return 404<a class="headerlink" href="#after-updating-a-rewrite-file-all-legacy-links-return-404" title="Permalink to this headline">#</a></h3>
+<p>If you have a missing comma or other syntax error in the rewrite JSON file,
+the redirect configuration does not work.</p>
+<p>To resolve the problem, use a <a class="reference external" href="http://jsonlint.com/">JSON linter</a> to verify the rewrite file syntax.</p>
+<p>If you don't find any errors, make sure that you have a comma between redirect
+rules as shown in the following example from the <code class="docutils literal"><span class="pre">api.rackspace.com</span></code> rewrites
+file.</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+   <span class="s2">&quot;api.rackspace.com&quot;</span><span class="o">:</span> <span class="p">[</span>
+         <span class="p">{</span>
+            <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;Redirect root traffic to developer.rs.com/docs/&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;from&quot;</span><span class="o">:</span> <span class="s2">&quot;^\\/$&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;to&quot;</span><span class="o">:</span> <span class="s2">&quot;/docs/&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;rewrite&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+            <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">301</span>
+         <span class="p">},</span>
+         <span class="p">{</span>
+            <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;Cloud Servers redirect&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;from&quot;</span><span class="o">:</span> <span class="s2">&quot;^\\/(api-ref(\\.html)?)?$&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;to&quot;</span><span class="o">:</span> <span class="s2">&quot;/docs/cloud-servers/v2/developer-guide/&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;rewrite&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+            <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">301</span>
+         <span class="p">},</span>
+         <span class="p">{</span>
+            <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;Cloud Servers extensions redirect&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;from&quot;</span><span class="o">:</span> <span class="s2">&quot;^\\/api-ref-servers-ext(\\.html)?$&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;to&quot;</span><span class="o">:</span> <span class="s2">&quot;/docs/cloud-servers/v2/developer-guide/&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;rewrite&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+            <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">301</span>
+         <span class="p">}</span>
+      <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">You do not need a comma after the last rule. Also, delete any blank
+lines at the end of the file.</p>
+</div>
+</div>
+<div class="section" id="individual-rule-redirect-incorrectly-or-returns-404">
+<h3>Individual rule redirect incorrectly or returns 404<a class="headerlink" href="#individual-rule-redirect-incorrectly-or-returns-404" title="Permalink to this headline">#</a></h3>
+<p>Review the rewrites file to verify that the configuration for the redirect rule
+is valid. Check the glob patterns and file syntax and fix any errors that
+affect the rewrite rule processing service.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="add-github-links-to-docs.html" class="btn btn-neutral float-right" title="Add GitHub links for contributors" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="remove-content-configuration.html" class="btn btn-neutral" title="Remove a Sphinx documentation project from production" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Rackspace.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

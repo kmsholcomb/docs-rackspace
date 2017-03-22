@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Building from Source &mdash; Rackspace Documentation Guides  documentation</title>
+  <title>Build Sphinx doc projects locally &mdash; Rackspace Documentation Guides  documentation</title>
   
 
   
@@ -43,8 +43,8 @@
         <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="Rackspace Documentation Guides  documentation" href="../index.html"/>
         <link rel="up" title="Tools" href="index.html"/>
-        <link rel="next" title="GitHub Infra Templates" href="GitHub-infra-templates/index.html"/>
-        <link rel="prev" title="Adding support for contributions" href="add-github-links-to-docs.html"/> 
+        <link rel="next" title="Markdown to RST table conversion" href="mdsphinx.html"/>
+        <link rel="prev" title="Add GitHub links for contributors" href="add-github-links-to-docs.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -99,16 +99,17 @@
 <li class="toctree-l1"><a class="reference internal" href="../style-guide/index.html">Style guidelines for technical content</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../templates/index.html">Templates</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Tools</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="add-github-links-to-docs.html">Adding support for contributions</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Building from Source</a></li>
-<li class="toctree-l2"><a class="reference internal" href="GitHub-infra-templates/index.html">GitHub Infra Templates</a></li>
-<li class="toctree-l2"><a class="reference internal" href="rpc-workflow.html">RPC workflow</a></li>
-<li class="toctree-l2"><a class="reference internal" href="manage-labels-readme.html">Importing and exporting labels</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mdsphinx.html">Markdown to RST table conversion</a></li>
-<li class="toctree-l2"><a class="reference internal" href="nexus-deletion.html">Content deletion from Nexus</a></li>
 <li class="toctree-l2"><a class="reference internal" href="publishing.html">Configure development and production builds for Sphinx projects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rpc-workflow.html">RPC workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="remove-content-configuration.html">Remove a Sphinx documentation project from production</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configure-redirects.html">Configure redirects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="add-github-links-to-docs.html">Add GitHub links for contributors</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Build Sphinx doc projects locally</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mdsphinx.html">Markdown to RST table conversion</a></li>
 <li class="toctree-l2"><a class="reference internal" href="rtd-tables.html">Table width fix for Read the Docs Sphinx theme</a></li>
 <li class="toctree-l2"><a class="reference internal" href="table-conversion.html">Convert grid tables to list-table directives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="use-extlink-library.html">Linking to external resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GitHub-infra-templates/index.html">GitHub Infra Templates</a></li>
 </ul>
 </li>
 </ul>
@@ -157,7 +158,7 @@
         
           <li><a href="index.html">Tools</a> &raquo;</li>
         
-      <li>Building from Source</li>
+      <li>Build Sphinx doc projects locally</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -176,11 +177,14 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="building-from-source">
-<h1>Building from Source<a class="headerlink" href="#building-from-source" title="Permalink to this headline">#</a></h1>
+  <div class="section" id="build-sphinx-doc-projects-locally">
+<h1>Build Sphinx doc projects locally<a class="headerlink" href="#build-sphinx-doc-projects-locally" title="Permalink to this headline">#</a></h1>
 <p>These instructions are for local builds using the default Sphinx templates.
 If you want to build locally using the Rackspace documentation templates, use
 the <a class="reference external" href="https://github.com/deconst/client">Deconst client</a>.</p>
+<p>You might want to build locally to find and fix build errors before committing
+your updates to the GitHub source repository. You also might want to review
+format and navigational structure locally before you commit updates.</p>
 <p><strong>Prerequisites</strong></p>
 <ul class="simple">
 <li>Python 2.7 or later</li>
@@ -224,10 +228,10 @@ run the following command:</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="GitHub-infra-templates/index.html" class="btn btn-neutral float-right" title="GitHub Infra Templates" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="mdsphinx.html" class="btn btn-neutral float-right" title="Markdown to RST table conversion" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="add-github-links-to-docs.html" class="btn btn-neutral" title="Adding support for contributions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="add-github-links-to-docs.html" class="btn btn-neutral" title="Add GitHub links for contributors" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
