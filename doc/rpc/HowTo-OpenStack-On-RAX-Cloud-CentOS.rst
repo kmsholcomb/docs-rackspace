@@ -337,7 +337,7 @@ Configure the firewall service
 OpenStack controller node (controller)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you orchestrated server creation, skip to :ref:`controller-net`.
+If you orchestrated server creation, skip to :ref:`centos-controller-net`.
 
 #. Create a cloud server named **controller**, removing all networks except the
    **management** network.
@@ -357,7 +357,7 @@ If you orchestrated server creation, skip to :ref:`controller-net`.
 
       The node cannot access the internet without additional configuration.
 
-.. _controller-net:
+.. _centos-controller-net:
 
 Configure network interfaces
 ----------------------------
@@ -556,7 +556,7 @@ Test and update
 OpenStack compute node (compute)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you orchestrated server creation, skip to :ref:`compute-net`.
+If you orchestrated server creation, skip to :ref:`centos-compute-net`.
 
 #. Create a cloud server, removing all networks except the **management**
    network.
@@ -576,7 +576,7 @@ If you orchestrated server creation, skip to :ref:`compute-net`.
 
       The node cannot access the internet without additional configuration.
 
-.. _compute-net:
+.. _centos-compute-net:
 
 Configure network interfaces
 ----------------------------
@@ -765,7 +765,7 @@ Test and update
 OpenStack block storage node (block)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you orchestrated server creation, skip to :ref:`block-net`.
+If you orchestrated server creation, skip to :ref:`centos-block-net`.
 
 #. Create a cloud server, removing all networks except the **management**
    network.
@@ -781,7 +781,7 @@ If you orchestrated server creation, skip to :ref:`block-net`.
 
       The node cannot access the internet without additional configuration.
 
-.. _block-net:
+.. _centos-block-net:
 
 Configure network interfaces
 ----------------------------
@@ -931,7 +931,7 @@ Test and update
 Create block storage volume (block1)
 ------------------------------------
 
-If you orchestrated server creation, skip to :ref:`services`.
+If you orchestrated server creation, skip to :ref:`centos-services`.
 
 #. In the Rackspace Cloud Control Panel, select
    :guilabel:`Block Storage Volumes` in the :guilabel:`Storage` tab, and
@@ -944,7 +944,7 @@ If you orchestrated server creation, skip to :ref:`services`.
 #. After the device is attached, note the device name. For example,
    `/dev/xvdb`. Use this value when setting up block storage for OpenStack.
 
-.. _services:
+.. _centos-services:
 
 Install and configure OpenStack services
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
