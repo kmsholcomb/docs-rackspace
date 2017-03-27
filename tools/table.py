@@ -69,6 +69,10 @@ Notes
 
 - The script automatically uses the first row of the table as a header.
   After conversion, you may want to manually edit ``:header-rows:``.
+
+- The script requires a blank line after each table. If the blank line is at
+  the end of the file, you must add an extra line temporarily for the script
+  to process the table correctly.
 """
 
 import argparse
