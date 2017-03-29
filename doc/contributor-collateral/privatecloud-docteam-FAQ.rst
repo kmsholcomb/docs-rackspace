@@ -228,15 +228,18 @@ opinionated, focusing on ensuring that the deployer has to make very few
 decisions and implement the least amount of configuration possible to deploy a
 running OpenStack environment.
 
-.. note::
-
-   As of June 2016, the OpenStack-Ansible Installation Guide is under review
-   and will be newly formatted for the next release.
-
 The **Upgrade Guide** contains information and instructions for upgrading your
 OSA environment per release. It specifically details manual upgrade steps,
 scripts that are used in the upgrade process, and playbooks that are used in
 the upgrade process.
+
+The **Operations Guide** contains information and instructions for administering
+your OSA environment.
+
+.. note::
+
+   As of March 2017, the OpenStack-Ansible Operations Guide is under review
+   and will be newly formatted for the next release.
 
 The **Developer Documentation** provides documentation relevant to developing
 OpenStack-Ansible:
