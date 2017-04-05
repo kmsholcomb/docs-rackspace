@@ -1,0 +1,359 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>How-To: Generate RPC documentation release notes &mdash; Rackspace Documentation Guides  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../_static/bespoke.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../_static/bolditalic.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="Rackspace Documentation Guides  documentation" href="../index.html"/>
+        <link rel="up" title="RPC team documentation" href="index.html"/>
+        <link rel="next" title="RPC Docs + the rest of RPC = better docs" href="rpcdocs-interaction.html"/>
+        <link rel="prev" title="How-To: Tag RPC GitHub commits" href="HowTo-tag-rpc-github-commits.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Rackspace Documentation Guides
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../contributor-collateral/index.html">Contribute to Rackspace documentation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">RPC team documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="HowTo-BestPractices.html">RPCDocs Best practices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HowTo-OpenStack-On-RAX-Cloud-CentOS.html">How-To: OpenStack on RAX CentOS Cloud Servers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HowTo-OpenStack-On-RAX-Cloud-Ubuntu.html">How-To: OpenStack on Rackspace Ubuntu Cloud Servers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HowTo-OpenStack-On-RAX-Cloud-RR.html">How-To: OpenStack on RAX Cloud Servers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HowTo-docs-rpc-With-A-Fork.html">How-To: RPC Docs with a fork</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HowTo-tag-rpc-github-commits.html">How-To: Tag RPC GitHub commits</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">How-To: Generate RPC documentation release notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rpcdocs-interaction.html">RPC Docs + the rest of RPC = better docs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../style-guide/index.html">Style guidelines for technical content</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../templates/index.html">Templates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/index.html">Tools</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Rackspace Documentation Guides</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">RPC team documentation</a> &raquo;</li>
+        
+      <li>How-To: Generate RPC documentation release notes</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/rpc/HowTo-generate-doc-release-notes.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="how-to-generate-rpc-documentation-release-notes">
+<h1>How-To: Generate RPC documentation release notes<a class="headerlink" href="#how-to-generate-rpc-documentation-release-notes" title="Permalink to this headline">#</a></h1>
+<p>The purpose of the documentation release notes is to inform stakeholders about
+changes in documentation between releases.</p>
+<p>The process involves generating a changelog based on the RPC release tag.</p>
+<dl class="docutils">
+<dt>$. Check merged pull requests are assigned the release tag that matches the</dt>
+<dd>RPC engineering release tag. For more information, see <a class="reference internal" href="HowTo-tag-rpc-github-commits.html#tag-commits"><span class="std std-ref">How-To: Tag RPC GitHub commits</span></a>.</dd>
+</dl>
+<p>$. Clone the docs-rpc repository:</p>
+<blockquote>
+<div><div class="code highlight-default"><div class="highlight"><pre><span></span>$ git clone https://github.com/rackerlabs/docs-rpc.git
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Clone the upstream docs-rpc repository. The changelog generator will not
+work correctly from a personal fork.</p>
+</div>
+</div></blockquote>
+<p>$. Create a new branch:</p>
+<blockquote>
+<div><div class="code highlight-default"><div class="highlight"><pre><span></span>$ git checkout -b NEWBRANCHNAME
+</pre></div>
+</div>
+</div></blockquote>
+<p>$. In your local docs-rpc directory, install the GitHub Changelog Generator:</p>
+<blockquote>
+<div><div class="code highlight-default"><div class="highlight"><pre><span></span>$ gem install github_changelog_generator
+</pre></div>
+</div>
+</div></blockquote>
+<dl class="docutils">
+<dt>$. <a class="reference external" href="https://github.com/settings/tokens/new?description=GitHub%20Changelog%20Generator%20token">Generate a token</a></dt>
+<dd>to allow more than 50 unauthenticated GitHub requests per hour.</dd>
+</dl>
+<p>$. Set the environment variable:</p>
+<blockquote>
+<div><div class="code highlight-default"><div class="highlight"><pre><span></span>$ export CHANGELOG_GITHUB_TOKEN=&quot;«your-40-digit-github-token»&quot;
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">For your convenience, set this variable in your <code class="file docutils literal"><span class="pre">bashrc</span></code> file.</p>
+</div>
+</div></blockquote>
+<dl class="docutils">
+<dt>$. Create a <code class="file docutils literal"><span class="pre">.github_changelog_generator</span></code> file to override the default</dt>
+<dd><p class="first">parameters and configure your generated output. For example:</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="n">header</span><span class="o">-</span><span class="n">label</span><span class="o">=</span><span class="c1"># RPC Documentation Change Log</span>
+<span class="n">unreleased</span><span class="o">=</span><span class="n">false</span>
+<span class="n">issues</span><span class="o">=</span><span class="n">false</span>
+<span class="n">author</span><span class="o">=</span><span class="n">false</span>
+<span class="n">pr</span><span class="o">-</span><span class="n">label</span><span class="o">=</span><span class="c1">### Documentation changes:</span>
+</pre></div>
+</div>
+<p class="last">For more information on parameters, see <a class="reference external" href="https://github.com/skywinder/github-changelog-generator/wiki/Advanced-change-log-generation-examples">Advanced change log generation
+examples</a></p>
+</dd>
+</dl>
+<p>$. Run the changelog command to generate a <code class="file docutils literal"><span class="pre">changelog.md</span></code> file:</p>
+<blockquote>
+<div><div class="code highlight-default"><div class="highlight"><pre><span></span>$ github_changelog_generator
+</pre></div>
+</div>
+</div></blockquote>
+<dl class="docutils">
+<dt>$. Edit the file to include only notable merged PRs. such as revisions</dt>
+<dd>and changes to technical information, migrated content, and changes to the
+content structure. Do not include editorial changes and changes to the
+documentation toolchain.</dd>
+</dl>
+<p>$. Convert the <code class="file docutils literal"><span class="pre">changelog.md</span></code> file to RST format using Pandoc:</p>
+<blockquote>
+<div><div class="code highlight-default"><div class="highlight"><pre><span></span>$ pandoc -s rst changelog.md -o changelog.rst
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Pandoc conversion is not perfect, so editing the file may be required to
+comply with RST conventions.</p>
+</div>
+</div></blockquote>
+<dl class="docutils">
+<dt>$. Add the <code class="file docutils literal"><span class="pre">changelog.rst</span></code> and <code class="file docutils literal"><span class="pre">.github_changelog_generator</span></code> files</dt>
+<dd><p class="first">to your commit:</p>
+<div class="code last highlight-default"><div class="highlight"><pre><span></span>$ git add changelog.rst .github_changelog_generator
+</pre></div>
+</div>
+</dd>
+</dl>
+<p>$. Commit your changes:</p>
+<blockquote>
+<div><div class="code highlight-default"><div class="highlight"><pre><span></span>$ git commit
+</pre></div>
+</div>
+</div></blockquote>
+<p>$. Push your commit to the docs-rpc repository:</p>
+<blockquote>
+<div><div class="code highlight-default"><div class="highlight"><pre><span></span>$ git push -u origin NEWBRANCHNAME
+</pre></div>
+</div>
+</div></blockquote>
+<dl class="docutils">
+<dt>$. Go to the</dt>
+<dd><a class="reference external" href="https://github.com/rackerlabs/docs-rpc.git">GitHub docs-rpc repository</a>
+and create a pull request.</dd>
+</dl>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="rpcdocs-interaction.html" class="btn btn-neutral float-right" title="RPC Docs + the rest of RPC = better docs" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="HowTo-tag-rpc-github-commits.html" class="btn btn-neutral" title="How-To: Tag RPC GitHub commits" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Rackspace.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
