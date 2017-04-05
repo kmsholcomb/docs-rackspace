@@ -13,6 +13,8 @@ Non-product material for the RPC documentation team.
    HowTo-OpenStack-On-RAX-Cloud-Ubuntu.rst
    HowTo-OpenStack-On-RAX-Cloud-RR.rst
    HowTo-docs-rpc-With-A-Fork.rst
+   HowTo-tag-rpc-github-commits.rst
+   HowTo-generate-doc-release-notes
 
 .. toctree::
    :caption: Other documentation

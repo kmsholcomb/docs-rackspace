@@ -233,8 +233,8 @@ OSA environment per release. It specifically details manual upgrade steps,
 scripts that are used in the upgrade process, and playbooks that are used in
 the upgrade process.
 
-The **Operations Guide** contains information and instructions for administering
-your OSA environment.
+The **Operations Guide** contains information and instructions for
+administering your OSA environment.
 
 .. note::
 
