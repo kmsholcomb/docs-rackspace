@@ -786,9 +786,13 @@ the following changes:</p>
 <li>Use <em>qemu</em> instead of <em>kvm</em> virtualization.</li>
 </ul>
 </li>
-<li><p class="first">Configuring the Networking service on the controller node:</p>
+<li><p class="first">Configuring the Networking:</p>
 <ul class="simple">
-<li>Add the <em>vxlan1</em> interface as a port on the <em>br-ex</em> bridge.</li>
+<li>Use the instructions for <em>Networking Option 1: Provider networks</em></li>
+<li>On the <em>controller</em> node, use <code class="docutils literal"><span class="pre">physical_interface_mappings</span> <span class="pre">=</span>
+<span class="pre">provider:vxlan1</span></code></li>
+<li>On the <em>compute</em> node, use <code class="docutils literal"><span class="pre">physical_interface_mappings</span> <span class="pre">=</span>
+<span class="pre">provider:vxlan1</span></code></li>
 </ul>
 </li>
 <li><p class="first">Creating initial networks.</p>

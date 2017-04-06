@@ -1,3 +1,4 @@
+
 ===================================================
 How-To: OpenStack on Rackspace Ubuntu Cloud Servers
 ===================================================
@@ -629,16 +630,19 @@ the following changes:
 - Configuring the basic environment on all nodes:
 
   -  Skip the network configuration sections.
-
   -  Use 10.1.11.1 (network services node) as the NTP server.
 
 - Configuring the Compute service on the compute node:
 
   -  Use *qemu* instead of *kvm* virtualization.
 
-- Configuring the Networking service on the controller node:
+- Configuring the Networking:
 
-  -  Add the *vxlan1* interface as a port on the *br-ex* bridge.
+  - Use the instructions for *Networking Option 1: Provider networks*
+  - On the *controller* node, use ``physical_interface_mappings =
+    provider:vxlan1``
+  - On the *compute* node, use ``physical_interface_mappings =
+    provider:vxlan1``
 
 - Creating initial networks.
 

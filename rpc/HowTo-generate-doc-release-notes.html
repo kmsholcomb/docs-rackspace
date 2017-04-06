@@ -179,13 +179,12 @@
 <p>The purpose of the documentation release notes is to inform stakeholders about
 changes in documentation between releases.</p>
 <p>The process involves generating a changelog based on the RPC release tag.</p>
-<dl class="docutils">
-<dt>$. Check merged pull requests are assigned the release tag that matches the</dt>
-<dd>RPC engineering release tag. For more information, see <a class="reference internal" href="HowTo-tag-rpc-github-commits.html#tag-commits"><span class="std std-ref">How-To: Tag RPC GitHub commits</span></a>.</dd>
-</dl>
-<p>$. Clone the docs-rpc repository:</p>
-<blockquote>
-<div><div class="code highlight-default"><div class="highlight"><pre><span></span>$ git clone https://github.com/rackerlabs/docs-rpc.git
+<ol class="arabic">
+<li><p class="first">Check merged pull requests are assigned the release tag that matches the
+RPC engineering release tag. For more information, see <a class="reference internal" href="HowTo-tag-rpc-github-commits.html#tag-commits"><span class="std std-ref">How-To: Tag RPC GitHub commits</span></a>.</p>
+</li>
+<li><p class="first">Clone the docs-rpc repository:</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span>$ git clone https://github.com/rackerlabs/docs-rpc.git
 </pre></div>
 </div>
 <div class="admonition note">
@@ -193,36 +192,34 @@ changes in documentation between releases.</p>
 <p class="last">Clone the upstream docs-rpc repository. The changelog generator will not
 work correctly from a personal fork.</p>
 </div>
-</div></blockquote>
-<p>$. Create a new branch:</p>
-<blockquote>
-<div><div class="code highlight-default"><div class="highlight"><pre><span></span>$ git checkout -b NEWBRANCHNAME
+</li>
+<li><p class="first">Create a new branch:</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span>$ git checkout -b NEWBRANCHNAME
 </pre></div>
 </div>
-</div></blockquote>
-<p>$. In your local docs-rpc directory, install the GitHub Changelog Generator:</p>
-<blockquote>
-<div><div class="code highlight-default"><div class="highlight"><pre><span></span>$ gem install github_changelog_generator
+</li>
+<li><p class="first">In your local docs-rpc directory, install the GitHub Changelog Generator:</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span>$ gem install github_changelog_generator
 </pre></div>
 </div>
-</div></blockquote>
-<dl class="docutils">
-<dt>$. <a class="reference external" href="https://github.com/settings/tokens/new?description=GitHub%20Changelog%20Generator%20token">Generate a token</a></dt>
-<dd>to allow more than 50 unauthenticated GitHub requests per hour.</dd>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://github.com/settings/tokens/new?description=GitHub%20Changelog%20Generator%20token">Generate a token</a></dt>
+<dd><p class="first last">to allow more than 50 unauthenticated GitHub requests per hour.</p>
+</dd>
 </dl>
-<p>$. Set the environment variable:</p>
-<blockquote>
-<div><div class="code highlight-default"><div class="highlight"><pre><span></span>$ export CHANGELOG_GITHUB_TOKEN=&quot;«your-40-digit-github-token»&quot;
+</li>
+<li><p class="first">Set the environment variable:</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span>$ export CHANGELOG_GITHUB_TOKEN=&quot;«your-40-digit-github-token»&quot;
 </pre></div>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">For your convenience, set this variable in your <code class="file docutils literal"><span class="pre">bashrc</span></code> file.</p>
 </div>
-</div></blockquote>
-<dl class="docutils">
-<dt>$. Create a <code class="file docutils literal"><span class="pre">.github_changelog_generator</span></code> file to override the default</dt>
-<dd><p class="first">parameters and configure your generated output. For example:</p>
+</li>
+<li><p class="first">Create a <code class="file docutils literal"><span class="pre">.github_changelog_generator</span></code> file to override the default
+parameters and configure your generated output. For example:</p>
 <div class="code highlight-default"><div class="highlight"><pre><span></span><span class="n">header</span><span class="o">-</span><span class="n">label</span><span class="o">=</span><span class="c1"># RPC Documentation Change Log</span>
 <span class="n">unreleased</span><span class="o">=</span><span class="n">false</span>
 <span class="n">issues</span><span class="o">=</span><span class="n">false</span>
@@ -230,25 +227,21 @@ work correctly from a personal fork.</p>
 <span class="n">pr</span><span class="o">-</span><span class="n">label</span><span class="o">=</span><span class="c1">### Documentation changes:</span>
 </pre></div>
 </div>
-<p class="last">For more information on parameters, see <a class="reference external" href="https://github.com/skywinder/github-changelog-generator/wiki/Advanced-change-log-generation-examples">Advanced change log generation
+<p>For more information on parameters, see <a class="reference external" href="https://github.com/skywinder/github-changelog-generator/wiki/Advanced-change-log-generation-examples">Advanced change log generation
 examples</a></p>
-</dd>
-</dl>
-<p>$. Run the changelog command to generate a <code class="file docutils literal"><span class="pre">changelog.md</span></code> file:</p>
-<blockquote>
-<div><div class="code highlight-default"><div class="highlight"><pre><span></span>$ github_changelog_generator
+</li>
+<li><p class="first">Run the changelog command to generate a <code class="file docutils literal"><span class="pre">changelog.md</span></code> file:</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span>$ github_changelog_generator
 </pre></div>
 </div>
-</div></blockquote>
-<dl class="docutils">
-<dt>$. Edit the file to include only notable merged PRs. such as revisions</dt>
-<dd>and changes to technical information, migrated content, and changes to the
+</li>
+<li><p class="first">Edit the file to include only notable merged PRs. such as revisions
+and changes to technical information, migrated content, and changes to the
 content structure. Do not include editorial changes and changes to the
-documentation toolchain.</dd>
-</dl>
-<p>$. Convert the <code class="file docutils literal"><span class="pre">changelog.md</span></code> file to RST format using Pandoc:</p>
-<blockquote>
-<div><div class="code highlight-default"><div class="highlight"><pre><span></span>$ pandoc -s rst changelog.md -o changelog.rst
+documentation toolchain.</p>
+</li>
+<li><p class="first">Convert the <code class="file docutils literal"><span class="pre">changelog.md</span></code> file to RST format using Pandoc:</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span>$ pandoc -s rst changelog.md -o changelog.rst
 </pre></div>
 </div>
 <div class="admonition note">
@@ -256,32 +249,28 @@ documentation toolchain.</dd>
 <p class="last">Pandoc conversion is not perfect, so editing the file may be required to
 comply with RST conventions.</p>
 </div>
-</div></blockquote>
-<dl class="docutils">
-<dt>$. Add the <code class="file docutils literal"><span class="pre">changelog.rst</span></code> and <code class="file docutils literal"><span class="pre">.github_changelog_generator</span></code> files</dt>
-<dd><p class="first">to your commit:</p>
-<div class="code last highlight-default"><div class="highlight"><pre><span></span>$ git add changelog.rst .github_changelog_generator
+</li>
+<li><p class="first">Add the <code class="file docutils literal"><span class="pre">changelog.rst</span></code> and <code class="file docutils literal"><span class="pre">.github_changelog_generator</span></code> files
+to your commit:</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span>$ git add changelog.rst .github_changelog_generator
 </pre></div>
 </div>
-</dd>
-</dl>
-<p>$. Commit your changes:</p>
-<blockquote>
-<div><div class="code highlight-default"><div class="highlight"><pre><span></span>$ git commit
+</li>
+<li><p class="first">Commit your changes:</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span>$ git commit
 </pre></div>
 </div>
-</div></blockquote>
-<p>$. Push your commit to the docs-rpc repository:</p>
-<blockquote>
-<div><div class="code highlight-default"><div class="highlight"><pre><span></span>$ git push -u origin NEWBRANCHNAME
+</li>
+<li><p class="first">Push your commit to the docs-rpc repository:</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span>$ git push -u origin NEWBRANCHNAME
 </pre></div>
 </div>
-</div></blockquote>
-<dl class="docutils">
-<dt>$. Go to the</dt>
-<dd><a class="reference external" href="https://github.com/rackerlabs/docs-rpc.git">GitHub docs-rpc repository</a>
-and create a pull request.</dd>
-</dl>
+</li>
+<li><p class="first">Go to the
+<a class="reference external" href="https://github.com/rackerlabs/docs-rpc.git">GitHub docs-rpc repository</a>
+and create a pull request.</p>
+</li>
+</ol>
 </div>
 
 

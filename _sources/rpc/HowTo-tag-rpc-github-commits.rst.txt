@@ -53,12 +53,19 @@ In a series of merged commits to a branch, the last commit is tagged
 for the latest release. For example:
 
 ...
+
 commit6
+
 commit5 <-- tagged as r14.0.0
+
 commit4
+
 commit3
+
 commit2 <-- tagged as r14.0.0rc1
+
 commit1
+
 ...
 
 At the end of the sprint milestone or development release cycle, tag commits
