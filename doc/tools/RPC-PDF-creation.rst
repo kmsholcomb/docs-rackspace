@@ -5,7 +5,7 @@ Creating a PDF file from RPC docs
 .. note::
    This process is also documented at
    https://github.com/rackerlabs/docs-rpc/tree/master/pdf. It's included here
-   with other tools to make sure it can be easily found. the ``pdf.sh`` is
+   with other tools to make sure it can be easily found. The ``pdf.sh`` is
    in https://github.com/rackerlabs/docs-rpc/tree/master/pdf.
 
 **pdf.sh**
