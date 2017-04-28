@@ -2316,6 +2316,8 @@ appear in content that documents a CLI or API environment.
        automatically becomes invalid.
    * - Code
      - Monospace
+
+       In RST, apply the ``.. code-block:: console`` directive.
      - ``$ grep "ftp" /etc/xinetd.d/*`` ``/etc/xinetd.d/vsftpd:service ftp``
        ``/etc/xinetd.d/vsftpd:server = /usr/sbin/vsftpd``
 
