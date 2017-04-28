@@ -43,4 +43,5 @@ Run the following command from your local ``docs-rpc`` directory:
 
     ``bash pdf/pdf.sh``
 
-RPC.pdf and Handbook.pdf files are created in the ``docs-rpc/pdf`` directory.
+``RPC.pdf`` and ``Handbook.pdf`` files are created in the ``docs-rpc/pdf``
+directory.

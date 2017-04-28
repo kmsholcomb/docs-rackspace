@@ -9,6 +9,7 @@ How to use the Cloud documentation team tools.
 
    publishing.rst
    rpc-workflow.rst
+   reno-notes.rst
    RPC-PDF-creation.rst
    remove-content-configuration.rst
    configure-redirects.rst
