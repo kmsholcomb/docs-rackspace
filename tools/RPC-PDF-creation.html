@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Table width fix for Read the Docs Sphinx theme &mdash; Rackspace Documentation Guides  documentation</title>
+  <title>Creating a PDF file from RPC docs &mdash; Rackspace Documentation Guides  documentation</title>
   
 
   
@@ -43,8 +43,8 @@
         <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="Rackspace Documentation Guides  documentation" href="../index.html"/>
         <link rel="up" title="Tools" href="index.html"/>
-        <link rel="next" title="Convert grid tables to list-table directives" href="table-conversion.html"/>
-        <link rel="prev" title="Markdown to RST table conversion" href="mdsphinx.html"/> 
+        <link rel="next" title="Remove a Sphinx documentation project from production" href="remove-content-configuration.html"/>
+        <link rel="prev" title="Reno release notes" href="reno-notes.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -102,13 +102,17 @@
 <li class="toctree-l2"><a class="reference internal" href="publishing.html">Configure development and production builds for Sphinx projects</a></li>
 <li class="toctree-l2"><a class="reference internal" href="rpc-workflow.html">RPC workflow</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reno-notes.html">Reno release notes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="RPC-PDF-creation.html">Creating a PDF file from RPC docs</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Creating a PDF file from RPC docs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#initial-setup">Initial setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#usage">Usage</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="remove-content-configuration.html">Remove a Sphinx documentation project from production</a></li>
 <li class="toctree-l2"><a class="reference internal" href="configure-redirects.html">Configure redirects</a></li>
 <li class="toctree-l2"><a class="reference internal" href="add-github-links-to-docs.html">Add GitHub links for contributors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="build-from-source.html">Build Sphinx doc projects locally</a></li>
 <li class="toctree-l2"><a class="reference internal" href="mdsphinx.html">Markdown to RST table conversion</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Table width fix for Read the Docs Sphinx theme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rtd-tables.html">Table width fix for Read the Docs Sphinx theme</a></li>
 <li class="toctree-l2"><a class="reference internal" href="table-conversion.html">Convert grid tables to list-table directives</a></li>
 <li class="toctree-l2"><a class="reference internal" href="use-extlink-library.html">Linking to external resources</a></li>
 <li class="toctree-l2"><a class="reference internal" href="GitHub-infra-templates/index.html">GitHub Infra Templates</a></li>
@@ -160,13 +164,13 @@
         
           <li><a href="index.html">Tools</a> &raquo;</li>
         
-      <li>Table width fix for Read the Docs Sphinx theme</li>
+      <li>Creating a PDF file from RPC docs</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/tools/rtd-tables.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/tools/RPC-PDF-creation.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -179,61 +183,43 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="table-width-fix-for-read-the-docs-sphinx-theme">
-<h1>Table width fix for Read the Docs Sphinx theme<a class="headerlink" href="#table-width-fix-for-read-the-docs-sphinx-theme" title="Permalink to this headline">#</a></h1>
-<p>The <strong>Read the Docs</strong> Sphinx theme contains a bug that causes text in table
-cells not to wrap. This results in very wide tables with horizontal scroll
-bars.</p>
-<p>You can workaround this issue by defining a custom CCS override file.</p>
-<ol class="arabic">
-<li><p class="first">Change into your documentation directory. This is usually where
-the <code class="docutils literal"><span class="pre">index.rst</span></code> and <code class="docutils literal"><span class="pre">conf.py</span></code> files are located:</p>
-<div class="code highlight-default"><div class="highlight"><pre><span></span>$ cd doc
-</pre></div>
+  <div class="section" id="creating-a-pdf-file-from-rpc-docs">
+<h1>Creating a PDF file from RPC docs<a class="headerlink" href="#creating-a-pdf-file-from-rpc-docs" title="Permalink to this headline">#</a></h1>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This process is also documented at
+<a class="reference external" href="https://github.com/rackerlabs/docs-rpc/tree/master/pdf">https://github.com/rackerlabs/docs-rpc/tree/master/pdf</a>. It's included here
+with other tools to make sure it can be easily found. The <code class="docutils literal"><span class="pre">pdf.sh</span></code> is
+in <a class="reference external" href="https://github.com/rackerlabs/docs-rpc/tree/master/pdf">https://github.com/rackerlabs/docs-rpc/tree/master/pdf</a>.</p>
 </div>
-</li>
-<li><p class="first">If it does not already exist, create a <code class="docutils literal"><span class="pre">_static</span></code> directory:</p>
-<div class="code highlight-default"><div class="highlight"><pre><span></span>$ mkdir _static
-</pre></div>
-</div>
-</li>
-<li><p class="first">Create a <code class="docutils literal"><span class="pre">theme_overrides.css</span></code> file in the <code class="docutils literal"><span class="pre">_static</span></code> directory:</p>
-<div class="code highlight-default"><div class="highlight"><pre><span></span>$ touch _static/theme_overrides.css
-</pre></div>
-</div>
-</li>
-<li><p class="first">Open the <code class="docutils literal"><span class="pre">theme_overrides.css</span></code> file and add the following CSS:</p>
-<div class="code highlight-default"><div class="highlight"><pre><span></span>/* override table width restrictions */
-@media screen and (min-width: 767px) {
-
-   .wy-table-responsive table td {
-      /* !important prevents the common CSS stylesheets from overriding
-         this as on RTD they are loaded after this stylesheet */
-      white-space: normal !important;
-   }
-
-   .wy-table-responsive {
-      overflow: visible !important;
-   }
-}
-</pre></div>
-</div>
-</li>
-<li><p class="first">Open the <code class="docutils literal"><span class="pre">conf.py</span></code> file and add the following configuration options:</p>
-<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="n">html_static_path</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;_static&#39;</span><span class="p">]</span>
-
-<span class="n">html_context</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s1">&#39;css_files&#39;</span><span class="p">:</span> <span class="p">[</span>
-        <span class="s1">&#39;_static/theme_overrides.css&#39;</span><span class="p">,</span>  <span class="c1"># override wide tables in RTD theme</span>
-        <span class="p">],</span>
-     <span class="p">}</span>
-</pre></div>
-</div>
-</li>
-<li><p class="first">Build your documentation using Sphinx and check the tables; cells should
-now wrap correctly.</p>
-</li>
+<p><strong>pdf.sh</strong></p>
+<p><code class="docutils literal"><span class="pre">pdf.sh</span></code> is a helper script for creating PDF output from the RPC
+documentation. It uses a two stage process:</p>
+<ol class="arabic simple">
+<li>Build documentation into a single HTML page.</li>
+<li>Convert the HTML page to a PDF by using <code class="docutils literal"><span class="pre">wkhtmltopdf</span></code>.</li>
 </ol>
+<p><strong>Important</strong></p>
+<p>The PDFs are current to the last updated date on the first page. You can find
+the most current version in HTML format at
+<a class="reference external" href="https://pages.github.rackspace.com/rpc-internal/docs-rpc/">https://pages.github.rackspace.com/rpc-internal/docs-rpc/</a>. You must be on the
+Rackspace network to access this link.</p>
+<p>If the content is out of date, rebuild the PDF.</p>
+<div class="section" id="initial-setup">
+<h2>Initial setup<a class="headerlink" href="#initial-setup" title="Permalink to this headline">#</a></h2>
+<p><code class="docutils literal"><span class="pre">pdf.sh</span></code> requires the <code class="docutils literal"><span class="pre">wkhtmltopdf</span></code> package.</p>
+<p>Install <code class="docutils literal"><span class="pre">wkhtmltopdf</span></code> from the <code class="docutils literal"><span class="pre">wkhtmltopdf</span></code> downloads page.</p>
+<p>Linux systems may also have <code class="docutils literal"><span class="pre">wkhtmltopdf</span></code> available through their package
+manager.</p>
+</div>
+<div class="section" id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">#</a></h2>
+<p>Run the following command from your local <code class="docutils literal"><span class="pre">docs-rpc</span></code> directory:</p>
+<blockquote>
+<div><code class="docutils literal"><span class="pre">bash</span> <span class="pre">pdf/pdf.sh</span></code></div></blockquote>
+<p><code class="docutils literal"><span class="pre">RPC.pdf</span></code> and <code class="docutils literal"><span class="pre">Handbook.pdf</span></code> files are created in the <code class="docutils literal"><span class="pre">docs-rpc/pdf</span></code>
+directory.</p>
+</div>
 </div>
 
 
@@ -246,10 +232,10 @@ now wrap correctly.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="table-conversion.html" class="btn btn-neutral float-right" title="Convert grid tables to list-table directives" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="remove-content-configuration.html" class="btn btn-neutral float-right" title="Remove a Sphinx documentation project from production" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="mdsphinx.html" class="btn btn-neutral" title="Markdown to RST table conversion" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="reno-notes.html" class="btn btn-neutral" title="Reno release notes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

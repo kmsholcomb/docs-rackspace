@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Table width fix for Read the Docs Sphinx theme &mdash; Rackspace Documentation Guides  documentation</title>
+  <title>Reno release notes &mdash; Rackspace Documentation Guides  documentation</title>
   
 
   
@@ -43,8 +43,8 @@
         <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="Rackspace Documentation Guides  documentation" href="../index.html"/>
         <link rel="up" title="Tools" href="index.html"/>
-        <link rel="next" title="Convert grid tables to list-table directives" href="table-conversion.html"/>
-        <link rel="prev" title="Markdown to RST table conversion" href="mdsphinx.html"/> 
+        <link rel="next" title="Creating a PDF file from RPC docs" href="RPC-PDF-creation.html"/>
+        <link rel="prev" title="RPC workflow" href="rpc-workflow.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -101,14 +101,19 @@
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Tools</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="publishing.html">Configure development and production builds for Sphinx projects</a></li>
 <li class="toctree-l2"><a class="reference internal" href="rpc-workflow.html">RPC workflow</a></li>
-<li class="toctree-l2"><a class="reference internal" href="reno-notes.html">Reno release notes</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Reno release notes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#installation">Installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#usage">Usage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#generating-a-report">Generating a report</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="RPC-PDF-creation.html">Creating a PDF file from RPC docs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="remove-content-configuration.html">Remove a Sphinx documentation project from production</a></li>
 <li class="toctree-l2"><a class="reference internal" href="configure-redirects.html">Configure redirects</a></li>
 <li class="toctree-l2"><a class="reference internal" href="add-github-links-to-docs.html">Add GitHub links for contributors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="build-from-source.html">Build Sphinx doc projects locally</a></li>
 <li class="toctree-l2"><a class="reference internal" href="mdsphinx.html">Markdown to RST table conversion</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Table width fix for Read the Docs Sphinx theme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rtd-tables.html">Table width fix for Read the Docs Sphinx theme</a></li>
 <li class="toctree-l2"><a class="reference internal" href="table-conversion.html">Convert grid tables to list-table directives</a></li>
 <li class="toctree-l2"><a class="reference internal" href="use-extlink-library.html">Linking to external resources</a></li>
 <li class="toctree-l2"><a class="reference internal" href="GitHub-infra-templates/index.html">GitHub Infra Templates</a></li>
@@ -160,13 +165,13 @@
         
           <li><a href="index.html">Tools</a> &raquo;</li>
         
-      <li>Table width fix for Read the Docs Sphinx theme</li>
+      <li>Reno release notes</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/tools/rtd-tables.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/tools/reno-notes.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -179,61 +184,71 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="table-width-fix-for-read-the-docs-sphinx-theme">
-<h1>Table width fix for Read the Docs Sphinx theme<a class="headerlink" href="#table-width-fix-for-read-the-docs-sphinx-theme" title="Permalink to this headline">#</a></h1>
-<p>The <strong>Read the Docs</strong> Sphinx theme contains a bug that causes text in table
-cells not to wrap. This results in very wide tables with horizontal scroll
-bars.</p>
-<p>You can workaround this issue by defining a custom CCS override file.</p>
-<ol class="arabic">
-<li><p class="first">Change into your documentation directory. This is usually where
-the <code class="docutils literal"><span class="pre">index.rst</span></code> and <code class="docutils literal"><span class="pre">conf.py</span></code> files are located:</p>
-<div class="code highlight-default"><div class="highlight"><pre><span></span>$ cd doc
+  <div class="section" id="reno-release-notes">
+<h1>Reno release notes<a class="headerlink" href="#reno-release-notes" title="Permalink to this headline">#</a></h1>
+<p>Reno organizes notes into logical groups based on whether they describe
+new features, bug fixes, known issues, or other topics of interest
+to the user. Contributors categorize individual notes as they are
+added, and reno combines them before publishing.</p>
+<p>The RPC developer team writes release notes concurrently with development
+patches. Notes are styled using reStructuredText directives, and reno’s
+Sphinx integration makes it easy to incorporate release notes into
+automated documentation builds.</p>
+<p>For more details, see the official
+<a class="reference external" href="https://docs.openstack.org/developer/reno/">reno documentation</a>.</p>
+<div class="section" id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">#</a></h2>
+<p>At the command line:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> pip install reno
 </pre></div>
 </div>
-</li>
-<li><p class="first">If it does not already exist, create a <code class="docutils literal"><span class="pre">_static</span></code> directory:</p>
-<div class="code highlight-default"><div class="highlight"><pre><span></span>$ mkdir _static
+<p>To use the Sphinx extension built into reno, install the [sphinx] extra
+dependencies:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> pip install <span class="s1">&#39;reno[sphinx]&#39;</span>
 </pre></div>
 </div>
-</li>
-<li><p class="first">Create a <code class="docutils literal"><span class="pre">theme_overrides.css</span></code> file in the <code class="docutils literal"><span class="pre">_static</span></code> directory:</p>
-<div class="code highlight-default"><div class="highlight"><pre><span></span>$ touch _static/theme_overrides.css
-</pre></div>
 </div>
-</li>
-<li><p class="first">Open the <code class="docutils literal"><span class="pre">theme_overrides.css</span></code> file and add the following CSS:</p>
-<div class="code highlight-default"><div class="highlight"><pre><span></span>/* override table width restrictions */
-@media screen and (min-width: 767px) {
+<div class="section" id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">#</a></h2>
+<p>The reno command line tool is used to create a new release note file in
+the correct format and with a unique name. The new subcommand combines
+a random suffix with a “slug” value to create the file with a unique
+name that is easy to identify again later.</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> reno new SLUG
 
-   .wy-table-responsive table td {
-      /* !important prevents the common CSS stylesheets from overriding
-         this as on RTD they are loaded after this stylesheet */
-      white-space: normal !important;
-   }
-
-   .wy-table-responsive {
-      overflow: visible !important;
-   }
-}
+<span class="go">Created new notes file in releasenotes/notes/slug-goes-here-95915aaedd3c48d8.yaml</span>
 </pre></div>
 </div>
-</li>
-<li><p class="first">Open the <code class="docutils literal"><span class="pre">conf.py</span></code> file and add the following configuration options:</p>
-<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="n">html_static_path</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;_static&#39;</span><span class="p">]</span>
+<p>The <code class="docutils literal"><span class="pre">--edit</span></code> option opens the new note in a text editor:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> reno new slug-goes-here --edit
 
-<span class="n">html_context</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s1">&#39;css_files&#39;</span><span class="p">:</span> <span class="p">[</span>
-        <span class="s1">&#39;_static/theme_overrides.css&#39;</span><span class="p">,</span>  <span class="c1"># override wide tables in RTD theme</span>
-        <span class="p">],</span>
-     <span class="p">}</span>
+<span class="go">... Opens the editor set in the EDITOR environment variable, editing the new file ...</span>
+
+<span class="go">Created new notes file in releasenotes/notes/slug-goes-here-95915aaedd3c48d8.yaml</span>
 </pre></div>
 </div>
-</li>
-<li><p class="first">Build your documentation using Sphinx and check the tables; cells should
-now wrap correctly.</p>
-</li>
-</ol>
+<p>By default, the new note is created under <code class="docutils literal"><span class="pre">./releasenotes/notes</span></code>.
+The <code class="docutils literal"><span class="pre">--rel-notes-dir</span></code> command-line flag changes the parent directory
+(the notes subdirectory is always appended). It’s also possible to set a
+custom template to create notes.</p>
+<p>For more configuration options, see
+<a class="reference external" href="https://docs.openstack.org/developer/reno/usage.html#configuring-reno">configuring reno</a>.</p>
+</div>
+<div class="section" id="generating-a-report">
+<h2>Generating a report<a class="headerlink" href="#generating-a-report" title="Permalink to this headline">#</a></h2>
+<p>To run a reno report to generate a report containing the release notes,
+execute the following:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> reno report &lt;path-to-git-repository&gt;
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The <code class="docutils literal"><span class="pre">--branch</span></code> argument can be used to generate a report for a specific
+branch (the default is the branch that is checked out). To limit the report
+to a subset of the available versions on the branch, use the <code class="docutils literal"><span class="pre">--version</span></code>
+option (it can be repeated).</p>
+</div>
+</div>
 </div>
 
 
@@ -246,10 +261,10 @@ now wrap correctly.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="table-conversion.html" class="btn btn-neutral float-right" title="Convert grid tables to list-table directives" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="RPC-PDF-creation.html" class="btn btn-neutral float-right" title="Creating a PDF file from RPC docs" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="mdsphinx.html" class="btn btn-neutral" title="Markdown to RST table conversion" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="rpc-workflow.html" class="btn btn-neutral" title="RPC workflow" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
