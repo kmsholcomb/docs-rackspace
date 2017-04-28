@@ -154,6 +154,8 @@ spellings (for example, *canceled* instead of *cancelled*).
      - several
    * - refer to
      - see
+   * - revert back
+     - revert
    * - select the *buttonName* button
      - click *buttonName*
    * - specify the name of the

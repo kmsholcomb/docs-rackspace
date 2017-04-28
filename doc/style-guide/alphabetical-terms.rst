@@ -2268,6 +2268,9 @@ parts of speech:
 
        Domain administrators use a primary user account, which has basic user
        rights in the domain.
+   * - road map
+     -
+     - Use as two words.
    * - roll back (v), rollback (adj, n)
      -
      - Use these terms to describe a feature that reverses the current
@@ -2758,6 +2761,9 @@ parts of speech:
        While setting a bandwidth limit might increase your backup time, it can
        reduce the impact on other network activity like web browsing and
        downloads.
+   * - white paper
+     -
+     - Use as two words.
    * - Wi-Fi
      -
      - This term is a proper noun and a registered trademark. Always use with
