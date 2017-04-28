@@ -55,7 +55,7 @@ The ``--edit`` option opens the new note in a text editor:
 
    Created new notes file in releasenotes/notes/slug-goes-here-95915aaedd3c48d8.yaml
 
-By default, the new note is created under ``./releasenotes/notes``. 
+By default, the new note is created under ``./releasenotes/notes``.
 The ``--rel-notes-dir`` command-line flag changes the parent directory
 (the notes subdirectory is always appended). It’s also possible to set a
 custom template to create notes.
