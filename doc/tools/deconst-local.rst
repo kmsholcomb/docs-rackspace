@@ -61,11 +61,13 @@ Installing deconst
    debugging turned up to full.
 #. Once that terminal has stopped loading, leave it running. In the other
    terminal, run the following commands in order:
+
    #. `script/add-assets <path-to-nexus-control>`
       (e.g., `script/add-assets ~/nexus-control`)
    #. `script/add-<type> <path-to-content-repo>`
       (e.g., `script/add-jekyll ~/rackspace-how-to/` or
       `script/add-sphinx ~/docs-rpc/`)
+
 #. Refresh Kitematic to see your containers. Click “View” and then
    “Refresh Container List”.
 #. You should now be able to go to `localhost/<repo-link>` (e.g.,
@@ -98,6 +100,6 @@ Jenkins access
    https://rackspace.service-now.com/kb_view.do?sysparm_article=KB0010631#group
    The groups to request are currently ``lnx-infodev-admin`` and
    ``lnx-infodev-admins``.
-#. Ping the tools team directly when you’ve requested access. A member
+#. Ping the tools team directly when you have requested access. A member
    of the team will need to go in and approve your access request.
 #. Once access is all set, log in to https://infodev.jenkins.cit.rackspace.net/
