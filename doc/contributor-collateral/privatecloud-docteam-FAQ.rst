@@ -59,12 +59,6 @@ Architects, and Editors.
 Following are the members of the team:
 
 * **Senior Manager: Laura Clymer (IRC: onthecly)**
-* Lana Brindley (IRC: loquacities) - Manager of AU team and PTL for OpenStack
-  manuals
-
-  * Darren Chan (IRC: darrenc) - Information Architect, OSIC
-  * Brian Moss (IRC: bmoss) - Information Architect, OSIC
-  * Joseph Robinson (IRC: JRobinson\_) - Information Developer, OSIC
 
 * Karin Levenstein (IRC: klevenstein) - Manager of Austin, US team
 
@@ -72,7 +66,7 @@ Following are the members of the team:
   * Catherine Richardson (IRC: cathrichardson) - Senior Information Developer,
     RPC and Public Cloud
   * Robb Romans (IRC: rromans) - Senior Information Developer, RPC and OSA
-  * Alexandra Settle (IRC: asettle) - Information Developer, OSIC, RPC and
+  * Alexandra Settle (IRC: asettle) - Information Developer, RPC and
     OSA
   * Erik Wilson (IRC: erikmwilson) - Senior Information Developer, RPC
 
