@@ -8,9 +8,6 @@ on your local machine.
 For more information on the Deconst staging,
 see the `Deconst README <https://github.com/deconst/integrated/blob/master/README.md>`_.
 
-For more information on the Jenkins building,
-see the `Jenkins website <https://jenkins.io/>`_.
-
 Installing deconst
 ~~~~~~~~~~~~~~~~~~
 
@@ -39,9 +36,15 @@ Installing deconst
    folder: https://github.com/deconst/integrated/
 #. Fork and clone the ``nexus-control`` repo into your ``Tools``
    folder: https://github.com/rackerlabs/nexus-control
-#. Fork and clone ``docs-rpc`` and/or ``rackspace-how-to``.
-   #. https://github.com/rackerlabs/docs-rpc
-   #. https://github.com/rackerlabs/rackspace-how-to
+#. Fork and clone ``docs-rpc`` and/or ``rackspace-how-to``:
+
+   - https://github.com/rackerlabs/docs-rpc
+   - https://github.com/rackerlabs/rackspace-how-to
+
+   .. note::
+
+      You can use any content repo, and here are some sample ones to use
+
 #. In your clone of ``deconst/integrated``, rename `env.example` to `env`
    and change the following lines:
 
@@ -78,10 +81,9 @@ Installing deconst
 Additional information
 ----------------------
 
-If you change the *content* repo, you just need to run
-`script/add-<type> <path-to-content-repo>` again to
-refresh the pages. If you change the *control* repo, you need to restart
-everything. You can do that through one of two ways:
+If you change the control repo, run script/refresh in the same terminal
+window where you ran script/add-assets. If that does not work, you can
+restart everything in one of two ways:
 
 #. Use the terminal to stop all containers. Use the second terminal window,
    and run the following command to stop all containers:
@@ -92,14 +94,3 @@ everything. You can do that through one of two ways:
 
 #. Use Kitematic to stop all containers. You must *stop* each container, not
    restart it. Deconst needs to go up all at once to work properly.
-
-Jenkins access
-~~~~~~~~~~~~~~
-
-#. Request access to our Jenkins box through RackerApp:
-   https://rackspace.service-now.com/kb_view.do?sysparm_article=KB0010631#group
-   The groups to request are currently ``lnx-infodev-admin`` and
-   ``lnx-infodev-admins``.
-#. Ping the tools team directly when you have requested access. A member
-   of the team will need to go in and approve your access request.
-#. Once access is all set, log in to https://infodev.jenkins.cit.rackspace.net/
