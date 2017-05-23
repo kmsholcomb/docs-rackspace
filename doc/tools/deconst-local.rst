@@ -44,16 +44,21 @@ Installing deconst
    #. https://github.com/rackerlabs/rackspace-how-to
 #. In your clone of ``deconst/integrated``, rename `env.example` to `env`
    and change the following lines:
+
    - Line 12: enter the value 1111 after the equal sign.
+
    - Line 16: change `deconst.horse` to `support.rackspace.com` or
      `developer.rackspace.com`.
+
    - Line 30: enter the path to your nexus-control repo clone
      (e.g., `/Users/laur0616/nexus-control`).
+
    - Line 66: enter "true" (with quotes) after the equal sign.
+
 #. Open your terminal with two tabs or windows.
 #. In both windows, navigate to the deconst/integrated directory.
-#. In one terminal, run `script/up`. You will see deconst running with debugging
-   turned up to full.
+#. In one terminal, run `script/up`. You will see deconst running with
+   debugging turned up to full.
 #. Once that terminal has stopped loading, leave it running. In the other
    terminal, run the following commands in order:
    #. `script/add-assets <path-to-nexus-control>`
@@ -63,7 +68,8 @@ Installing deconst
       `script/add-sphinx ~/docs-rpc/`)
 #. Refresh Kitematic to see your containers. Click “View” and then
    “Refresh Container List”.
-#. You should now be able to go to `localhost/<repo-link>` (e.g., `localhost/how-to/`
+#. You should now be able to go to `localhost/<repo-link>` (e.g.,
+   `localhost/how-to/`
    or `localhost/docs/private-cloud/rpc/v14/`) in your browser to see the
    delivered content.
 
@@ -72,20 +78,26 @@ Additional information
 
 If you change the *content* repo, you just need to run
 `script/add-<type> <path-to-content-repo>` again to
-refresh the pages. If you change the *control* repo, you need to restart everything.
-You can do that through one of two ways:
+refresh the pages. If you change the *control* repo, you need to restart
+everything. You can do that through one of two ways:
 
-#. Use the terminal to stop all containers. Use the second terminal window, and run:
-  `docker stop $(docker ps -a -q)` to stop all containers.
-#. Use Kitematic to stop all containers. You must *stop* each container, not restart it.
-   Deconst needs to go up all at once to work properly.
+#. Use the terminal to stop all containers. Use the second terminal window,
+   and run the following command to stop all containers:
+
+  .. code-block:: console
+
+     docker stop $(docker ps -a -q)
+
+#. Use Kitematic to stop all containers. You must *stop* each container, not
+   restart it. Deconst needs to go up all at once to work properly.
 
 Jenkins access
 ~~~~~~~~~~~~~~
 
 #. Request access to our Jenkins box through RackerApp:
    https://rackspace.service-now.com/kb_view.do?sysparm_article=KB0010631#group
-   The groups to request are currently ``lnx-infodev-admin`` and ``lnx-infodev-admins``.
-#. Ping the tools team directly when you’ve requested access. A member of the team will
-   need to go in and approve your access request.
-#. Once access is all set, log in to https://infodev.jenkins.cit.rackspace.net/ .
+   The groups to request are currently ``lnx-infodev-admin`` and
+   ``lnx-infodev-admins``.
+#. Ping the tools team directly when you’ve requested access. A member
+   of the team will need to go in and approve your access request.
+#. Once access is all set, log in to https://infodev.jenkins.cit.rackspace.net/
