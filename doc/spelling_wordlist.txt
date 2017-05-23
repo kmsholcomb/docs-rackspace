@@ -138,6 +138,7 @@ json
 Kbps
 Kibana
 kilobits
+Kitematic
 klevenstein
 Laffoon
 LBaaS
