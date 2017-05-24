@@ -418,11 +418,22 @@ You are now ready to publish the RPC docs internally.
 Publishing internally
 ---------------------
 
-#. Update the stable branches (e.g. ``v11``, ``v12``, ``v13``):
+#. Update the stable branches (e.g. ``v12``, ``v13``, ``v14``). You
+   can use the following script:
 
    .. code-block:: bash
 
-      branches=(v11 v12 v13)
+      #!/bin/bash
+
+      # Merges upstream into local stable branches and pushes the
+      # results to origin.
+      #
+      # NOTE: the local branches (v12, v13, ...) must exist before
+      # running this script
+
+
+      branches=(v12 v13 v14)
+      echo
 
       for item in ${branches[@]}; do
           git checkout $item
@@ -431,8 +442,12 @@ Publishing internally
           git push origin $item
       done
 
-#. Run the publish command from the master branch while connected to the
-   Rackspace network directly or through VPN:
+      git checkout master
+      git branch
+      echo
+
+#. Run the publish command from the master branch while connected to
+   the Rackspace network directly or through VPN:
 
    .. code::
 
