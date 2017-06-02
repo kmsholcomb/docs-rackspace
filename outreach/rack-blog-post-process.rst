@@ -91,15 +91,15 @@ Before you start writing, consider the following questions:
 
   When you write your content, we recommend the following rules of thumb:
 
-  *  *Length*: Rackspace blog posts generally run between 500-1,000 words, but
+  *  **Length**: Rackspace blog posts generally run between 500-1,000 words, but
      let the content be your guide. Take the space you need to tell your story,
      but don’t pad it unnecessarily. Going long is okay, too, as long as it’s
      worth reading.
 
-  *  *Tools*: We recommend using a word processor, like MicroSoft Word, or a
+  *  **Tools**: We recommend using a word processor, like MicroSoft Word, or a
      text editor for your writing.
 
-  *  *General Format*: Send your blog contact (that’s Tracy or Abe - see
+  *  **General Format**: Send your blog contact (that’s Tracy or Abe - see
       contact information at the bottom of these instructions) your draft as
       a Word document. They will edit it with tracked changes and send back for
       your approval.
@@ -120,60 +120,60 @@ Blogging tips
 
 Following are some good blogging tips:
 
-*  *Write a good “lede”*.
+*  **Write a good “lede”**.
    When crafting your lede, consider how the information
    in your post helps customers. An announcement of a new product is not a
    lede, but that product’s money-saving capacity may well be one!
 
    For example:
 
-   *Not good*: “Today Rackspace is pleased to announce the release of four new
+   **Not good**: “Today Rackspace is pleased to announce the release of four new
    features in Office 365.”
 
-   *Good*: “Increased storage, security and cost-saving measures are now
+   **Good**: “Increased storage, security and cost-saving measures are now
    available to enhance the already-robust Office 365 suite available from
    Rackspace, making it even more attractive to a wider variety of business
    users.”
 
-*  *Stay focused on your topic*.
+*  **Stay focused on your topic**.
    If you find yourself straying, you may have enough material for a series.
    It’s okay to break up a big topic into more digestible bites.
 
-*  *Formulas like How to, Top 5 or 10, and curated lists tend to do well*.
+*  **Formulas like How to, Top 5 or 10, and curated lists tend to do well**.
    This HubSpot blog topic generator
    (https://www.hubspot.com/blog-topic-generator) might help you with ideas.
    Another tool, Portent (https://www.portent.com/tools/title-maker), creates
    post titles/topics from keywords.
 
-*  *Think “be helpful”* rather than trying to selling a product or service.
+*  **Think “be helpful”** rather than trying to selling a product or service.
    WHAT does the product do? HOW does it help the customer?
 
-*  *Use concrete examples* whenever possible.
+*  **Use concrete examples** whenever possible.
 
-*  *Bullet points* are useful for listing features
+*  **Bullet points** are useful for listing features
 
-*  *Show don’t tell*. Can you create a graphic or image, or add a screen shot
+*  **Show don’t tell**. Can you create a graphic or image, or add a screen shot
    to illustrate your point?
 
-*  *Avoid jargon!* Rackers (and the entire tech industry) tend to speak in
+*  **Avoid jargon!** Rackers (and the entire tech industry) tend to speak in
    jargon. Unless your post is aimed at a technical audience, use plain
    English. There is never a reason to use business jargon.
 
-*  *Link link link*. First product mention? Link to the product page. Outside
+*  **Link link link**. First product mention? Link to the product page. Outside
    accolades? Link to it. Citing a study or source or article? Link to it.
    Have we written about it before? Link to it. Mention a partner or customer?
    Link to their site.
 
-*  *Keep it concise*. The internet has shrunken everyone’s attention span.
+*  **Keep it concise**. The internet has shrunken everyone’s attention span.
    Say it once, say it well. No need to repeat the same information in
    different format. Similarly, keep paragraphs short. Long blocks of text are
    intimidating.
 
-*  *Always include a call to action (CTA)*. Give readers the nest step to take:
+*  **Always include a call to action (CTA)**. Give readers the nest step to take:
    go to a landing page, sign up for a webinar, click to Rackspace.com/_______,
    etc.
 
-*  *If you get stuck, don’t fret*. Just send your draft to the blog team
+*  **If you get stuck, don’t fret**. Just send your draft to the blog team
    (contact information at the end of this document). They will help you.
 
 Rackspace blog contact
