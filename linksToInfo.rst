@@ -15,7 +15,7 @@ developers.
      - Link
    * - **General information**
      -
-   * - Video -  Treat Documentation Like Code
+   * - Video - Treat Documentation Like Code
      - https://www.youtube.com/watch?v=haFooDkKr-A&feature=youtu.be
    * - Style guidelines for technical content (full)
      - http://rackerlabs.github.io/docs-rackspace/style-guide/index.html
@@ -23,8 +23,10 @@ developers.
      - https://github.com/rackerlabs/rackspace-how-to/blob/master/style-guidelines.md
    * - Documentation team tools and how to use them
      - http://rackerlabs.github.io/docs-rackspace/tools/index.html
-   * - Templates
+   * - General templates
      - http://rackerlabs.github.io/docs-rackspace/templates/index.html
+   * - Templates for different doc types
+     - https://github.com/rackerlabs/docs-repo-template
    * - **How-To information**
      -
    * - Contributing to the Rackspace How-To content repository
@@ -40,6 +42,7 @@ developers.
    * - RPC team documentation
      - http://rackerlabs.github.io/docs-rackspace/rpc/index.html
    * - **Public Cloud information**
+     -
    * - Documentation team FAQ for Rackspace Public Cloud and Managed services
      - http://rackerlabs.github.io/docs-rackspace/contributor-collateral/publiccloud-docteam-FAQ.html
    * - **Blog information**
