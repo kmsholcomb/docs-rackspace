@@ -28,7 +28,7 @@ developers.
    * - Templates for different doc types
      - https://github.com/rackerlabs/docs-repo-template
    * - How to publish and deploy to the developer.rackspace.com landing page
-     - https://github.com/rackerlabs/docs-common/issues/79  
+     - https://github.com/rackerlabs/docs-common/issues/79
    * - **How-To information**
      -
    * - Contributing to the Rackspace How-To content repository
@@ -49,5 +49,7 @@ developers.
      - http://rackerlabs.github.io/docs-rackspace/contributor-collateral/publiccloud-docteam-FAQ.html
    * - **Blog information**
      -
-   * -  Rackspace blog process
-     -  https://github.com/rackerlabs/docs-rackspace/blob/master/outreach/rack-blog-post-process.rst
+   * - Rackspace corporate blog process
+     - https://github.com/rackerlabs/docs-rackspace/blob/master/outreach/rack-blog-post-process.rst
+   * - Rackspace developer blog process
+     - https://github.com/rackerlabs/docs-developer-blog/blob/master/CONTRIBUTING.md
