@@ -8,26 +8,6 @@ This section of the writing style guide provides detailed guidelines
 about and instructions for applying style conventions. For more
 guidelines, see :ref:`a-l-style-guidelines`.
 
--  `Messages <#messages>`__
--  `Names <#names>`__
--  `Notes and other notation types <#notes-and-other-notation-types>`__
--  `Numbers <#numbers>`__
--  `Parameters <#parameters>`__
--  `Placeholder (variable) text <#placeholder-variable-text>`__
--  `Plurals <#plurals>`__
--  `Product names and version
-   numbers <#product-names-and-version-numbers>`__
--  `Punctuation <#punctuation>`__
--  `Symbols <#symbols>`__
--  `Tables <#tables>`__
--  `Tasks and procedures <#tasks-and-procedures>`__
--  `Telephone numbers <#telephone-numbers>`__
--  `Text formatting <#text-formatting>`__
--  `Time <#time>`__
--  `Titles and headings <#titles-and-headings>`__
--  `Trademarks <#trademarks>`__
--  `URLs and domain names <#urls-and-domain-names>`__
-
 Messages
 ~~~~~~~~
 
