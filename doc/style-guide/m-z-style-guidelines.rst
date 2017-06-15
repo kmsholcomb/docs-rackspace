@@ -669,14 +669,14 @@ Colons
 Use the following guidelines for colons:
 
 - Use a colon at the end of a sentence that introduces a list, table, figure,
-or example. If another sentence intervenes between the introduction and the
-thing being introduced, use a period instead of a colon.
+  or example. If another sentence intervenes between the introduction and the
+  thing being introduced, use a period instead of a colon.
 
 - Use a colon at the end of the step to introduce substeps, a bullet list, or
-code that the user is expected to enter.
+  code that the user is expected to enter.
 
 - In a list item, if you need to separate an initial term or phrase from the
-information that follows it, use a colon. For example:
+  information that follows it, use a colon. For example:
 
   **Public**: This setting allows any two servers with public IP addresses to
   be load balanced. These can be nodes outside of the Rackspace network, but if
@@ -1363,6 +1363,8 @@ The following chart compares these top content management systems
    * - **Installation**
      - Drupal Installation Forum
      - WordPress Installation Forum
+
+.. _tasks:
 
 Tasks
 ~~~~~
