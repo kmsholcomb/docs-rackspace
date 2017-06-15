@@ -101,6 +101,7 @@ github
 githubUrl
 githubBranch
 gl
+graf
 gscreendemp
 Hadoop
 Harbrace
@@ -143,6 +144,7 @@ klevenstein
 Laffoon
 LBaaS
 lcoation
+lede
 Levenstein
 Lifecycle
 lighttpd
@@ -308,12 +310,14 @@ virtualenv
 virtualization
 vlan
 vmnet
+VMware
 vN
 vn
 Vn
 vxlan
 Vyatta
 webhook
+webinar
 Webmail
 whitelist
 whitelisted
