@@ -7,24 +7,6 @@ Writing guidelines
 Use these writing guidelines to create Rackspace content that's clear and
 consistent, and that helps users accomplish their goals.
 
--  `Use active voice`_
--  `Use present tense`_
--  `Write to the user by using second person and imperative mood`_
--  `Write clear and concise sentences and paragraphs`_
--  `Use short, familiar words and phrases`_
--  `Use consistent terminology`_
--  `Use simple action verbs, and don't turn them into nouns`_
--  `Clarify gerunds and participles`_
--  `Back up statements with details`_
--  `Use interjections with care`_
--  `Use restrictive and nonrestrictive clauses correctly`_
--  `Clarify pronouns`_
--  `Use positive statements`_
--  `Use consistent references to time, space, and versions`_
--  `Use correct punctuation`_
--  `Avoid obscure non-English words and abbreviations`_
--  `Write for a global audience`_
-
 Use active voice
 ~~~~~~~~~~~~~~~~
 
