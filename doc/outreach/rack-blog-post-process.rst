@@ -82,7 +82,8 @@ Before you start writing, consider the following questions:
 
 *  Is it to provide “thought leadership” or show our expertise in an area?
 
-*  Is it to drive traffic to a landing page, or drum up attendance to a webinar?
+*  Is it to drive traffic to a landing page, or drum up attendance to a
+   webinar?
 
 *  Is it something else altogether? If so, what?
 
@@ -91,18 +92,18 @@ Before you start writing, consider the following questions:
 
   When you write your content, we recommend the following rules of thumb:
 
-  *  **Length**: Rackspace blog posts generally run between 500-1,000 words, but
-     let the content be your guide. Take the space you need to tell your story,
-     but don’t pad it unnecessarily. Going long is okay, too, as long as it’s
-     worth reading.
+  *  **Length**: Rackspace blog posts generally run between 500-1,000 words,
+     but let the content be your guide. Take the space you need to tell your
+     story, but don’t pad it unnecessarily. Going long is okay, too, as long
+     as it’s worth reading.
 
   *  **Tools**: We recommend using a word processor, like MicroSoft Word, or a
      text editor for your writing.
 
   *  **General Format**: Send your blog contact (that’s Tracy or Abe - see
       contact information at the bottom of these instructions) your draft as
-      a Word document. They will edit it with tracked changes and send back for
-      your approval.
+      a Word document. They will edit it with tracked changes and send back
+      for your approval.
 
      -  an attention-grabbing opening, known in the news biz as a “lede”
 
@@ -127,8 +128,8 @@ Following are some good blogging tips:
 
    For example:
 
-   **Not good**: “Today Rackspace is pleased to announce the release of four new
-   features in Office 365.”
+   **Not good**: “Today Rackspace is pleased to announce the release of four
+   new features in Office 365.”
 
    **Good**: “Increased storage, security and cost-saving measures are now
    available to enhance the already-robust Office 365 suite available from
