@@ -8,23 +8,6 @@ This section of the writing style guide provides detailed guidelines
 about and instructions for applying style conventions. For more
 guidelines, see :ref:`m-z-style-guidelines`.
 
--  `Acronyms and other
-   abbreviations <#acronyms-and-other-abbreviations>`__
--  `Capitalization <#capitalization>`__
--  `Citations <#citations>`__
--  `Cloud account information <#cloud-account-information>`__
--  `Code examples <#code-examples>`__
--  `Contractions <#contractions>`__
--  `Copyrights <#copyrights>`__
--  `Dates <#dates>`__
--  `Email addresses <#email-addresses>`__
--  `File types <#file-types>`__
--  `Glossaries <#glossaries>`__
--  `IP addresses <#ip-addresses>`__
--  `Keyboard keys <#keyboard-keys>`__
--  `Links and cross-references <#links-and-cross-references>`__
--  `Lists <#lists>`__
-
 Acronyms and other abbreviations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
