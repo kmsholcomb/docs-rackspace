@@ -170,9 +170,9 @@ Following are some good blogging tips:
    different format. Similarly, keep paragraphs short. Long blocks of text are
    intimidating.
 
-*  **Always include a call to action (CTA)**. Give readers the nest step to take:
-   go to a landing page, sign up for a webinar, click to Rackspace.com/_______,
-   etc.
+*  **Always include a call to action (CTA)**. Give readers the nest step to
+   take: go to a landing page, sign up for a webinar, click to
+   Rackspace.com/_______, etc.
 
 *  **If you get stuck, don’t fret**. Just send your draft to the blog team
    (contact information at the end of this document). They will help you.
