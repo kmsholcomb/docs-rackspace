@@ -18,7 +18,7 @@ April 28, 2017
 
 -  Added *road map* and *white paper* to :ref:`alphabetical-list-of-terms`.
 -  Added *revert back* > *revert* to :ref:`concise-terms`.
--  Added use of the `.. code-block:: console` directive to
+-  Added use of the ``.. code-block:: console`` directive to
    :ref:`text-formatting`.
 
 November 10, 2016

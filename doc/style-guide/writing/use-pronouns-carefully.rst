@@ -80,11 +80,10 @@ often uses unnecessary words.
 That
 ~~~~
 
-Although you should use *that* as a relative pronoun (see `Use
-restrictive and nonrestrictive clauses
-correctly <#use-restrictive-and-nonrestrictive-clauses-correctly>`__),
-avoid using it as a demonstrative pronoun (which stands in for or points
-to a noun). Instead, use it as an adjective and follow it with a noun.
+Although you should use *that* as a relative pronoun
+(see :ref:`use-that-which-correctly`), avoid using it as a demonstrative
+pronoun (which stands in for or points to a noun). Instead, use it as an
+adjective and follow it with a noun.
 
 .. list-table::
    :widths: 50 50
