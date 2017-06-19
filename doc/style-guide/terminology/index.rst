@@ -1,9 +1,18 @@
-===========
-Terminology
-===========
+.. _index-terminology-guidelines:
 
-This topic provides guidelines for using terms in Rackspace
-documentation.
+======================
+Terminology guidelines
+======================
+
+This section provides guidelines for using terms in Rackspace content.
+
+:ref:`index-general-terminology-guidelines`
+   Provides some general guidelines for using consistent, short, and familiar
+   words.
+
+:ref:`terms-for-global-audience`
+   Provides guidelines specifically for clarifying content for global
+   audiences.
 
 :ref:`alphabetical-list-of-terms`
    Provides usage guidelines for common words and technical terms that are used
@@ -21,6 +30,8 @@ documentation.
    :hidden:
    :maxdepth: 1
 
+   general-term-guidelines/index.rst
+   terms-for-global-audience.rst
    alphabetical-terms.rst
    concise-terms.rst
    trademarks.rst
