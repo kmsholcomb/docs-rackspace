@@ -59,7 +59,7 @@ Use the following guidelines for commas. For basic comma usage, see a
 grammar reference, such as the *Harbrace College Handbook*.
 
 .. list-table::
-   :widths: 33 33 33
+   :widths: 40 30 30
    :header-rows: 1
 
    * - Guideline
@@ -76,12 +76,12 @@ grammar reference, such as the *Harbrace College Handbook*.
        as *and*) between them and precede the conjunction with a comma.
      - Click **Options**, and then click **Allow Fast Saves**.
 
-       The UUID for ServiceNet is ``11111111-1111-1111-1111-111111111111``, and
-       the UUID for PublicNet is ``00000000-0000-0000-0000-000000000000``.
+       CentOS 6 comes with Apache 2.2.3 and PHP 5.1.6, and you can install
+       them by using the default CentOS Package Manager, ``yum``.
      - Click **Options**, then click **Allow Fast Saves**.
 
-       The UUID for ServiceNet is ``11111111-1111-1111-1111-111111111111``, the
-       UUID for PublicNet is ``00000000-0000-0000-0000-000000000000``.
+       CentOS 6 comes with Apache 2.2.3 and PHP 5.1.6, you can install them
+       by using the default CentOS Package Manager, ``yum``.
    * - Use a comma to set off a nonrestrictive clause (one that begins with
        *which*).
 

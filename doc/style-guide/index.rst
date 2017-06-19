@@ -1,12 +1,12 @@
-======================================
-Style guidelines for technical content
-======================================
+=================================
+Style guide for technical content
+=================================
 
 *Last updated:* |today|
 
-This document contains writing, style, and terminology guidelines for Rackspace
-documentation. Use these guidelines to create clear, concise, and consistent
-technical content for Rackspace customers.
+This document contains writing, style, terminology, and image guidelines for
+Rackspace documentation. Use these guidelines to create clear, concise, and
+consistent technical content for Rackspace customers.
 
 .. toctree::
    :maxdepth: 1
@@ -14,7 +14,7 @@ technical content for Rackspace customers.
    writing/index.rst
    style/index.rst
    terminology/index.rst
-   screenshot-diagram-guidelines.rst
+   screenshots/index.rst
    release-notes-guidelines.rst
    revision-history.rst
 

@@ -33,7 +33,7 @@ elements. The following style differences are highlighted:
 - Content that documents a CLI or API versus a GUI
 
 .. list-table::
-   :widths: 30 20 50
+   :widths: 20 20 60
    :header-rows: 1
 
    * - Text element
@@ -100,7 +100,8 @@ elements. The following style differences are highlighted:
      - Monospace
 
        In RST, apply the ``.. code-block:: console`` directive.
-     - ``$ grep "ftp" /etc/xinetd.d/*`` ``/etc/xinetd.d/vsftpd:service ftp``
+     - ``$ grep "ftp" /etc/xinetd.d/*``
+       ``/etc/xinetd.d/vsftpd:service ftp``
        ``/etc/xinetd.d/vsftpd:server = /usr/sbin/vsftpd``
 
        To set the environment variable, run ``export token="token"``.
@@ -195,13 +196,12 @@ elements. The following style differences are highlighted:
        database and selecting **Properties**, the following error message
        appears:
 
-       .. code::
-
-          The user doesn't have permission to perform this action.
+       ``The user doesn't have permission to perform this action.``
 
    * - Examples, code
      - Monospace
-     - ``$ grep "ftp" /etc/xinetd.d/*`` ``/etc/xinetd.d/vsftpd:service ftp``
+     - ``$ grep "ftp" /etc/xinetd.d/*``
+       ``/etc/xinetd.d/vsftpd:service ftp``
        ``/etc/xinetd.d/vsftpd:server = /usr/sbin/vsftpd``
    * - Field names, GUI
      - Bold
@@ -312,9 +312,7 @@ elements. The following style differences are highlighted:
        database and selecting **Properties**, the following error message
        appears:
 
-       .. code::
-
-          The user doesn't have permission to perform this action.
+       ``The user doesn't have permission to perform this action.``
 
    * - Method names (HTTP)
      - Bold

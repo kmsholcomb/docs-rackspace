@@ -1,23 +1,15 @@
-======================================
-Style guidelines for technical content
-======================================
+=================================
+Style guide for technical content
+=================================
 
-This document contains writing, style, and terminology guidelines for Rackspace
-documentation. Use these guidelines to create clear, concise, and consistent
-technical content for Rackspace customers.
+This document contains writing, style, terminology, and image guidelines for
+Rackspace documentation. Use these guidelines to create clear, concise, and
+consistent technical content for Rackspace customers.
 
-.. toctree::
-   :maxdepth: 1
+The guide is published to GitHub Pages at
+http://rackerlabs.github.io/docs-rackspace/style-guide/index.html.
 
-   writing/index.rst
-   style/index.rst
-   terminology/index.rst
-   screenshot-diagram-guidelines.rst
-   release-notes-guidelines.rst
-   revision-history.rst
+.. image:: https://i.creativecommons.org/l/by/4.0/88x31.png
 
-
-.. note::
-
-   This style guidelines document is published to GitHub Pages at
-   http://rackerlabs.github.io/docs-rackspace/style-guide/index.html.
+This work is licensed under a `Creative Commons Attribution 4.0
+International License <http://creativecommons.org/licenses/by/4.0/>`_.
