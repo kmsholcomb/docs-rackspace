@@ -9,7 +9,7 @@ indicates the following special types of terms:
 
 -  Restricted: Terms that can create problems if used incorrectly
 -  Avoid: Terms to avoid in favor of better alternatives
--  Do not use: Terms that should not be used
+-  Don't use: Terms that shouldn't be used
 
 A blank cell in the "Special usage" column indicates that a word is
 generally acceptable and should be used as directed in the "Comments"
@@ -24,7 +24,7 @@ parts of speech:
 - (adv)=adverb
 
 .. list-table::
-   :widths: 33 33 33
+   :widths: 20 15 65
    :header-rows: 1
 
    * - Term
@@ -32,7 +32,7 @@ parts of speech:
      - Comments
    * - 24x7x365
      -
-     - Use this phrase to describe continuous availability. Do not replace the
+     - Use this phrase to describe continuous availability. Don't replace the
        *x*'s with slashes, hyphens, or the word *by*.
 
        *Use:*
@@ -40,10 +40,10 @@ parts of speech:
        *Fanatical Support* sets Rackspace apart. We are here to help, 24x7x365.
    * - about, on
      - Restricted
-     - Do not use *on* to mean *about*. For example, use *information about*,
+     - Don't use *on* to mean *about*. For example, use *information about*,
        not *information on*.
 
-       Do not use *about* to mean *approximately*.
+       Don't use *about* to mean *approximately*.
 
        *Use:*
 
@@ -51,7 +51,7 @@ parts of speech:
 
        The installation takes approximately 10 minutes to complete.
 
-       *Do not use:*
+       *Don't use:*
 
        Help provides information on the console.
 
@@ -61,7 +61,7 @@ parts of speech:
        The installation takes about 10 minutes to complete.
    * - above
      - Restricted
-     - Do not use *above* to locate information within a topic or a deliverable
+     - Don't use *above* to locate information within a topic or a deliverable
        or to refer to releases or product versions.
 
        To locate information, use *preceding* or provide a specific link or
@@ -80,7 +80,7 @@ parts of speech:
        To configure a custom error page for 3.5 SP1 and later, follow this
        example.
 
-       *Do not use:*
+       *Don't use:*
 
        The above commands create a **/etc/sysconfig/iptables** flat file with
        human readable syntax that can be manually edited.
@@ -92,11 +92,11 @@ parts of speech:
    * - accessible
      - Restricted
      - Use *accessible* only to refer to things that all people, including
-       those with disabilities, can easily use. Do not use it to mean *simple*
+       those with disabilities, can easily use. Don't use it to mean *simple*
        or *open*.
    * - add-on (n, adj)
      -
-     - Hyphenate this term when using it as a noun or adjective. Do not use
+     - Hyphenate this term when using it as a noun or adjective. Don't use
        *add on* or *addon*.
 
        *Use:*
@@ -105,7 +105,7 @@ parts of speech:
        provided by Microsoft.
    * - ad hoc
      -
-     - Use as two words. Do not hyphenate *ad hoc*, even when it is used as a
+     - Use as two words. Don't hyphenate *ad hoc*, even when it's used as a
        modifier (for example, *ad hoc tasks*).
    * - affect, effect
      -
@@ -124,12 +124,12 @@ parts of speech:
      - Use *after* to mean occurring subsequently in time or order. Use *once*
        to mean one time.
 
-       Do not use *after* to refer to the location of information. Instead, use
+       Don't use *after* to refer to the location of information. Instead, use
        *next*, *follows*, *following*, or provide a specific cross-reference.
 
        *Use:*
 
-       After you create a volume, you cannot resize it.
+       After you create a volume, you can't resize it.
 
        The client ID is generated once, and it persists between restarts of the
        client.
@@ -137,9 +137,9 @@ parts of speech:
        You can resize the server, change the image, or add a record by
        selecting the option that follows the description for each setting.
 
-       *Do not use:*
+       *Don't use:*
 
-       Once you create a volume, you cannot resize it.
+       Once you create a volume, you can't resize it.
 
        You can resize the server, change the image, or add a record by
        selecting the option that appears after the description for each
@@ -148,7 +148,7 @@ parts of speech:
      -
      - Use instead of *afterwards*.
    * - all caps
-     - Do not use
+     - Don't use
      - Use *uppercase* instead.
 
        *Use:*
@@ -156,7 +156,7 @@ parts of speech:
        Commands are written in uppercase to distinguish them from field names
        and other data.
 
-       *Do not use:*
+       *Don't use:*
 
        Commands are written in all caps to distinguish them from field names
        and other data.
@@ -170,13 +170,13 @@ parts of speech:
 
        *Use:*
 
-       By default, network policies do not allow inbound access from the
+       By default, network policies don't allow inbound access from the
        Internet to your cloud servers.
 
        You can use Cloud Block Storage to expand the storage capacity of your
        cloud server.
 
-       *Do not use:*
+       *Don't use:*
 
        Cloud Block Storage allows you to expand the storage capacity of your
        cloud server.
@@ -190,7 +190,7 @@ parts of speech:
 
        *Use:*
 
-       If your system does not receive information from clients in a timely
+       If your system doesn't receive information from clients in a timely
        manner, results alternate between error messages and successful data
        collection.
 
@@ -212,15 +212,15 @@ parts of speech:
        To learn more about the differences between IMAP and POP, see the
        following article.
 
-       If you are new to Linux, you have to choose among unfamiliar
+       If you're new to Linux, you have to choose among unfamiliar
        distributions.
 
        Acting as an abstraction layer between a guest OS and the physical
        hardware, the hypervisor must juggle physical resources among multiple
        competing consumers.
    * - and/or
-     - Do not use
-     - This construction is ambiguous and does not exist in other languages.
+     - Don't use
+     - This construction is ambiguous and doesn't exist in other languages.
        For clarity, use one of the following constructions:
 
        To indicate that one alternative or another is acceptable, use *or*.
@@ -232,11 +232,11 @@ parts of speech:
 
        *Use:*
 
-       If you are using the Cloud Servers API to create cloud servers, you can
+       If you're using the Cloud Servers API to create cloud servers, you can
        use API options to create servers without the PublicNet network or the
        ServiceNet network.
 
-       You are now ready to complete one or more of the following tasks:
+       you're now ready to complete one or more of the following tasks:
 
        - Create a profile
 
@@ -247,19 +247,19 @@ parts of speech:
        From this window you can edit the job, schedule it to run later, or
        both.
 
-       *Do not use:*
+       *Don't use:*
 
-       If you are using the Cloud Servers API to create cloud servers, you can
+       If you're using the Cloud Servers API to create cloud servers, you can
        use API options to create servers without the PublicNet and/or
        ServiceNet network.
 
-       You are now ready to create a profile, modify the sample files, and/or
+       you're now ready to create a profile, modify the sample files, and/or
        generate a job.
 
        From this window you can edit the job and/or schedule it to run later.
    * - anti (prefix)
      -
-     - Do not hyphenate words that begin with the prefix *anti* unless the root
+     - Don't hyphenate words that begin with the prefix *anti* unless the root
        word starts with an *i* or a capital letter.
 
        If you have a question about a particular word, look it up in a
@@ -270,7 +270,7 @@ parts of speech:
        antivirus, antispam, antispyware, anti-intelligence
    * - appear
      -
-     - Unlike *display*, *appear* does not require a direct object. You can use
+     - Unlike *display*, *appear* doesn't require a direct object. You can use
        *appear* instead of *is displayed* if the context is appropriate.
 
        *Use:*
@@ -282,7 +282,7 @@ parts of speech:
      -
      - As the plural of *appendix*, use *appendixes* rather than *appendices*.
    * - architect (v), architected (adj)
-     - Do not use
+     - Don't use
      - Use *architect* only as a noun. For a verb, use *design*, *create*,
        *plan*, or another appropriate verb.
 
@@ -290,20 +290,20 @@ parts of speech:
        another appropriate word.
    * - as, since
      - Restricted
-     - Do not use *as* or *since* when describing the reason for a situation,
+     - Don't use *as* or *since* when describing the reason for a situation,
        event, and so on. Use *because* instead.
 
        Use *since* only to express an interval, not causality.
 
        *Use:*
 
-       Because the utility failed, you cannot complete the transaction.
+       Because the utility failed, you can't complete the transaction.
 
-       The status has not changed since the error occurred.
+       The status hasn't changed since the error occurred.
 
-       *Do not use:*
+       *Don't use:*
 
-       Since the utility failed, you cannot complete the transaction.
+       Since the utility failed, you can't complete the transaction.
    * - as a service (aaS)
      -
      - For example, infrastructure as a service (IaaS). Note the capitalization
@@ -311,22 +311,22 @@ parts of speech:
        the spelled-out term and introduce the abbreviation in parentheses. Use
        the abbreviation thereafter.
    * - as per
-     - Do not use
+     - Don't use
      - Use *according to* instead.
    * - assure
      - Restricted
-     - Use *ensure* to mean make certain of an action, event, or outcome. Do
-       not use *assure* (to set someone's mind at ease) to convey this meaning.
+     - Use *ensure* to mean make certain of an action, event, or outcome. Don't
+       use *assure* (to set someone's mind at ease) to convey this meaning.
    * - auto (prefix)
      -
-     - Do not hyphenate words that begin with the prefix *auto* unless it is
+     - Don't hyphenate words that begin with the prefix *auto* unless it's
        necessary to avoid confusion.
 
-       Do not make up words that start with *auto*. When in doubt, use
+       Don't make up words that start with *auto*. When in doubt, use
        *automatic* or *automatically* instead.
 
-       Do not use *auto* as an abbreviation for *automatic* or *automatically*,
-       unless you are referring to a label on a UI.
+       Don't use *auto* as an abbreviation for *automatic* or *automatically*,
+       unless you're referring to a label on a UI.
 
        If you have a question about a particular word, look it up in a
        dictionary.
@@ -338,7 +338,7 @@ parts of speech:
 
        The installation automatically starts the service.
 
-       *Do not use:*
+       *Don't use:*
 
        You can access the auto configuration tool to set up your Outlook email
        client.
@@ -351,7 +351,7 @@ parts of speech:
    * - backslash
      -
      - Use *backslash* to refer to the character. Use *slash* to refer to the /
-       character. Do not use *slash mark*.
+       character. Don't use *slash mark*.
    * - back up (v), backup (adj, n)
      -
      - *Use:*
@@ -378,14 +378,14 @@ parts of speech:
 
        The system issues an error message because the syntax is wrong.
 
-       *Do not use:*
+       *Don't use:*
 
        The system issues an error message since the syntax is wrong.
    * - before
      -
      - Use *before* to mean to precede in time or order of actions.
 
-       Do not use *before* to refer to the location of information. Instead,
+       Don't use *before* to refer to the location of information. Instead,
        use *previous*, *preceding*, or provide a specific cross-reference.
 
        *Use:*
@@ -396,13 +396,13 @@ parts of speech:
        Because the entity recipe precedes this stanza, it implicitly selects
        the entityId for this or any check in scope.
 
-       *Do not use:*
+       *Don't use:*
 
        Because the entity recipe is placed before this stanza, it implicitly
        selects the entityId for this or any check in scope.
    * - below
      - Restricted
-     - Do not use *below* to locate information within a topic or a deliverable
+     - Don't use *below* to locate information within a topic or a deliverable
        or to refer to releases or product versions.
 
        To locate information, use *following* or provide a specific link or
@@ -421,7 +421,7 @@ parts of speech:
        To configure a custom error page for 3.5 SP1 and earlier, follow this
        example.
 
-       *Do not use:*
+       *Don't use:*
 
        In the below example, ``cbsvolume1`` is the name of the volume.
 
@@ -443,7 +443,7 @@ parts of speech:
        To learn more about the differences between IMAP and POP, see the
        following article.
 
-       If you are new to Linux, you have to choose among unfamiliar
+       If you're new to Linux, you have to choose among unfamiliar
        distributions.
 
        Acting as an abstraction layer between a guest OS and the physical
@@ -451,7 +451,7 @@ parts of speech:
        competing consumers.
    * - bi (prefix)
      -
-     - Do not hyphenate words that begin with the prefix *bi*, such as
+     - Don't hyphenate words that begin with the prefix *bi*, such as
        *bidirectional* and *bimodal*, unless the root word starts with an *i*
        or a capital letter.
    * - billion
@@ -461,7 +461,7 @@ parts of speech:
        indicates 109, or 1,000,000,000. In the long-scale system (used in
        Spanish-speaking countries), it indicates 1012, or 1,000,000,000,000.
 
-       To avoid confusion when you are citing a large number such as a billion,
+       To avoid confusion when you're citing a large number such as a billion,
        express the amount in numerals. If space constraints prevent writing
        numerals, use *billion* as defined in the short-scale system.
    * - biweekly, bimonthly
@@ -485,12 +485,12 @@ parts of speech:
        OpenStack provides large, medium, and small organizations an alternative
        to closed cloud environments.
 
-       *Do not use:*
+       *Don't use:*
 
        OpenStack provides both large, medium, and small organizations an
        alternative to closed cloud environments.
    * - bottom left, bottom right
-     - Do not use
+     - Don't use
      - When referring to the location of an item on a UI, use *lower left* and
        *lower right* instead.
 
@@ -504,7 +504,7 @@ parts of speech:
        when naming a check box. In contrast, when citing one of these terms
        generically, use the complete term, such as *list box*.
 
-       **Note**: Do not use *box* to refer to a computer.
+       **Note**: Don't use *box* to refer to a computer.
 
        *Use:*
 
@@ -514,11 +514,11 @@ parts of speech:
 
        Complete each list box.
    * - bring up
-     - Do not use
-     - Do not use this term to refer to starting or turning on a system. Use
+     - Don't use
+     - Don't use this term to refer to starting or turning on a system. Use
        *start* or *turn on* instead.
 
-       Do not use this term to refer to the opening of a window or part of a
+       Don't use this term to refer to the opening of a window or part of a
        UI. Use *open* instead.
 
        *Use:*
@@ -528,7 +528,7 @@ parts of speech:
        To start ``eth1`` without restarting the device, use the ``ifup``
        command.
 
-       *Do not use:*
+       *Don't use:*
 
        Press the **F1** key to bring up a help screen with the keyboard
        commands.
@@ -537,9 +537,9 @@ parts of speech:
        command.
    * - button
      -
-     - Do not use *button* and *icon* interchangeably. If you are referring to
+     - Don't use *button* and *icon* interchangeably. If you're referring to
        a command button or toolbar button (labeled or unlabeled), use *button*.
-       If you are referring to a graphic on a screen, window, or other area,
+       If you're referring to a graphic on a screen, window, or other area,
        use *icon*.
 
        When providing an instruction to click a button that executes a command,
@@ -576,7 +576,7 @@ parts of speech:
    * - check (v)
      - Avoid
      - In a user action, tell the user whether to *clear* or *select* the check
-       box. Do not tell them to *check the box*. Additionally, prefer *verify*
+       box. Don't tell them to *check the box*. Additionally, prefer *verify*
        over *check*.
    * - check box
      -
@@ -589,7 +589,7 @@ parts of speech:
 
        Clear the selected check box.
 
-       *Do not use:*
+       *Don't use:*
 
        Check the **No Output** box.
 
@@ -600,19 +600,19 @@ parts of speech:
        *Choose* is acceptable in a general sense.
    * - clear (v)
      -
-     - Use *clear* to mean the opposite of *select* or *enter*. Do not use
+     - Use *clear* to mean the opposite of *select* or *enter*. Don't use
        *deselect* or *unselect*.
    * - click
      -
      - Use *click* to mean press and release a mouse button. Use *click* to
-       refer to operations and selections that you make with a mouse. Do not
+       refer to operations and selections that you make with a mouse. Don't
        use *click on* or *press*.
 
        *Use:*
 
        Click **OK**.
 
-       *Do not use:*
+       *Don't use:*
 
        Click on **OK**.
 
@@ -621,10 +621,10 @@ parts of speech:
      -
      - Use *client* to refer to a computer, object, or program that obtains
        data or services from a server. If the context is clear, you can use
-       *client* as a noun. If the context is not clear, use *client* as an
+       *client* as a noun. If the context isn't clear, use *client* as an
        adjective (for example, *client computer*).
 
-       Do not use *client* to refer to a person. Use *customer* instead.
+       Don't use *client* to refer to a person. Use *customer* instead.
 
        *Use:*
 
@@ -662,7 +662,7 @@ parts of speech:
        See also *collapse, expand* and *exit (close, quit, stop)*.
    * - co (prefix)
      -
-     - Do not hyphenate words that begin with the prefix *co*, such as
+     - Don't hyphenate words that begin with the prefix *co*, such as
        *coexist* or *coprocessor*, unless the root word begins with *o*, such
        as *co-op*.
    * - collapse, expand
@@ -682,7 +682,7 @@ parts of speech:
    * - command (UI)
      -
      - Use *command* when referring to a selection on a menu, an instruction
-       for an action to take place, or the name of a command. Do not use *menu
+       for an action to take place, or the name of a command. Don't use *menu
        item*, *menu option*, or *menu choice*.
 
        *Use:*
@@ -691,7 +691,7 @@ parts of speech:
 
        Use the ``SQL CREATE`` command.
 
-       *Do not use:*
+       *Don't use:*
 
        The **Open** menu item opens a file.
    * - command button
@@ -709,7 +709,7 @@ parts of speech:
        **Exit** button.
    * - command line (n), command-line (adj)
      -
-     - Do not hyphenate *command line* when it is used as a noun. Hyphenate it
+     - Don't hyphenate *command line* when it's used as a noun. Hyphenate it
        when used as an adjective, as in *command-line interface*.
 
        *Use:*
@@ -721,7 +721,7 @@ parts of speech:
      -
      - If you need to use the spelled-out term for clarity, hyphenate it.
        However, you can use the abbreviation without first spelling out the
-       term; it is a common abbreviation.
+       term; it's a common abbreviation.
    * - comment out
      -
      - Use as a phrasal verb meaning to cause to become a comment. When you
@@ -743,7 +743,7 @@ parts of speech:
    * - complete (v, adj)
      -
      - *Complete* is a transitive verb, which means that it requires a direct
-       object. If you cannot give it a direct object, use the adjective
+       object. If you can't give it a direct object, use the adjective
        *complete* (*is complete*) or use a different word, such as *finish*.
 
        *Use:*
@@ -753,17 +753,17 @@ parts of speech:
 
        Internet access is required to complete the installation.
 
-       *Do not use:*
+       *Don't use:*
 
        When the migration completes and the server starts, test your web sites
        and applications.
    * - comprise
      - Avoid
-     - Even when this term is used correctly, people think it is used
+     - Even when this term is used correctly, people think it's used
        incorrectly. Because of the confusion associated with this term, use
        *consist of*, *include*, or *contain* instead.
 
-       Do not use *comprised of*.
+       Don't use *comprised of*.
 
        *Use:*
 
@@ -773,10 +773,10 @@ parts of speech:
    * - computer
      -
      - Use *computer* instead of *machine* or *box*. Use *server* instead of
-       *computer* if that is more accurate.
+       *computer* if that's more accurate.
    * - console
      -
-     - Use lowercase letters when *console* is not part of a product name or a
+     - Use lowercase letters when *console* isn't part of a product name or a
        proper name.
 
        *Use:*
@@ -796,13 +796,13 @@ parts of speech:
 
        *Use:*
 
-       If you cannot access your Cloud Databases instance, your data is still
+       If you can't access your Cloud Databases instance, your data is still
        protected on a redundant SAN.
    * - data center
      -
      - Use *region* rather than *data center*. *Region* is the term used in the
        control panel and API. If you need to use *data center*, show it as two
-       words and do not capitalize it.
+       words and don't capitalize it.
    * - data store
      -
      - Use *data store* as two words.
@@ -811,29 +811,29 @@ parts of speech:
      - Use *database* as one word.
    * - default (n, adj)
      -
-     - Use *default* as a noun or adjective. Do not use *default* as a verb.
+     - Use *default* as a noun or adjective. Don't use *default* as a verb.
 
        *Use:*
 
        The field contains the default value that you specified during
        installation.
 
-       *Do not use:*
+       *Don't use:*
 
        The field value defaults to the value that you specified during
        installation.
    * - deinstall
-     - Do not use
+     - Don't use
      - Use *uninstall* instead.
    * - deselect
-     - Do not use
+     - Don't use
      - Use *clear* instead.
 
        *Use:*
 
        Clear the check box.
    * - desire, desired
-     - Do not use
+     - Don't use
      - Use *want*, *appropriate*, *required*, or another word or phrase
        instead.
    * - destroy
@@ -844,34 +844,34 @@ parts of speech:
      - See *dialog box*.
    * - dialog box
      -
-     - Do not use *dialog*, *dialogue*, *window*, *pop-up*, *screen*, or
-       *display* to mean dialog box. Capitalize *dialog box* only if it is part
-       of a name that is shown in the software. Use lowercase letters for
+     - Don't use *dialog*, *dialogue*, *window*, *pop-up*, *screen*, or
+       *display* to mean dialog box. Capitalize *dialog box* only if it's part
+       of a name that's shown in the software. Use lowercase letters for
        generic references (the filter dialog box).
 
-       **Note**: A dialog box is usually modal, which means that you cannot
+       **Note**: A dialog box is usually modal, which means that you can't
        minimize it and must respond to it before proceeding. In contrast,
        you can keep a window open but minimized while working on another
        task.
    * - different than
-     - Do not use
+     - Don't use
      - Use *different from* instead.
    * - dimmed
      -
      - Use *dimmed* to describe the appearance of an unavailable command,
-       option, or button. Do not use *disabled*, *grayed*, or *grayed out*.
+       option, or button. Don't use *disabled*, *grayed*, or *grayed out*.
 
        See also *unavailable*.
 
        *Use:*
 
-       If the button is dimmed, it is unavailable.
+       If the button is dimmed, it's unavailable.
    * - disabled
      - Restricted
-     - Do not use *disabled* to describe inactive commands, options, or buttons
+     - Don't use *disabled* to describe inactive commands, options, or buttons
        on the interface. Use *dimmed* to describe the appearance of an inactive
-       command, option, or button; use *unavailable* to refer to its state. Do
-       not use *disabled* to refer to individuals with disabilities.
+       command, option, or button; use *unavailable* to refer to its state.
+       Don't use *disabled* to refer to individuals with disabilities.
 
        Use of *disabled* is acceptable in other contexts. For example, a
        feature might be disabled through configuration.
@@ -881,7 +881,7 @@ parts of speech:
        displayed*, or you can use *appears* or *opens* in the appropriate
        context.
 
-       Do not use *display* as a noun to mean pane, window, or dialog box.
+       Don't use *display* as a noun to mean pane, window, or dialog box.
 
        *Use:*
 
@@ -891,7 +891,7 @@ parts of speech:
 
        The dialog box opens.
 
-       *Do not use:*
+       *Don't use:*
 
        The message displays.
 
@@ -900,10 +900,10 @@ parts of speech:
        The display shows the results of your search.
    * - do
      - Restricted
-     - Do not use in phrases such as *do the following*. Use *perform* instead.
+     - Don't use in phrases such as *do the following*. Use *perform* instead.
    * - double-click
      -
-     - Always hyphenate when used as a verb or modifier. Do not use
+     - Always hyphenate when used as a verb or modifier. Don't use
        *double-click on*.
 
        *Use:*
@@ -930,7 +930,7 @@ parts of speech:
      - In UI environments, *drag* refers to using the mouse to "pull" an item
        from one area of the screen to another area. Because the action of
        dropping (releasing the mouse button) is intrinsic to the action of
-       dragging items in a UI, do not use *drag and drop* as a verb.
+       dragging items in a UI, don't use *drag and drop* as a verb.
 
        *Use:*
 
@@ -939,7 +939,7 @@ parts of speech:
        You can add objects to Cloud File containers by using a drag-and-drop
        user interface. (adjective)
 
-       *Do not use:*
+       *Don't use:*
 
        Drag and drop the video and image file to the container window.
    * - drill down
@@ -955,14 +955,14 @@ parts of speech:
 
        Drill down to the folder that contains your file.
    * - drop-down list, drop-down menu
-     - Do not use
+     - Don't use
      - Use *list* or *menu*, or use the name of the list or menu.
 
        *Use:*
 
        In the **Extend registration for** menu, select the number of years.
 
-       *Do not use:*
+       *Don't use:*
 
        In the **Extend registration for** drop-down menu, select the number of
        years.
@@ -972,7 +972,7 @@ parts of speech:
    * - earlier, later
      -
      - Use these terms (instead of *lower* and *higher* or *below* and *above*)
-       when referring to product releases and version numbers. Do not use
+       when referring to product releases and version numbers. Don't use
        *earlier* or *later* to refer to information in text.
 
        See also *following, preceding*.
@@ -983,14 +983,14 @@ parts of speech:
 
        Windows 3.1 or later
 
-       *Do not use:*
+       *Don't use:*
 
        Ubuntu 12.04 or lower
 
        Windows 3.1 or above
    * - ecommerce
      -
-     - Do not hyphenate. Capitalize the word if it occurs at the beginning of a
+     - Don't hyphenate. Capitalize the word if it occurs at the beginning of a
        sentence or in a title.
 
        *Use:*
@@ -1012,7 +1012,7 @@ parts of speech:
 
        The open cloud has a long-term effect on innovation.
    * - e.g.
-     - Do not use
+     - Don't use
      - Use *for example* instead. See :ref:`avoid-obscure-words`.
    * - either
      -
@@ -1024,12 +1024,12 @@ parts of speech:
 
        Select **Quick**, **Standard**, or **Customized**.
 
-       *Do not use:*
+       *Don't use:*
 
        Select either **Quick**, **Standard**, or **Customized**.
    * - email
      -
-     - Use as a noun, adjective, and verb. Do not hyphenate. Capitalize when
+     - Use as a noun, adjective, and verb. Don't hyphenate. Capitalize when
        referring to the Rackspace product or if the word occurs at the
        beginning of a sentence or in a title.
 
@@ -1058,7 +1058,7 @@ parts of speech:
        enables customers to create an OpenStack cluster on Ubuntu, CentOS, or
        Red Hat Enterprise Linux.
 
-       *Do not use:*
+       *Don't use:*
 
        Rackspace Private Cloud can be deployed with a Chef-based approach that
        allows customers to create an OpenStack cluster on Ubuntu, CentOS, or
@@ -1070,16 +1070,16 @@ parts of speech:
        audience (for example, the users of a developer's program or the users
        that an administrator supports).
 
-       Hyphenate the term when it is used as a modifier.
+       Hyphenate the term when it's used as a modifier.
 
        *Use:*
 
-       As the Email Administrator, you are responsible for setting up end-user
+       As the Email Administrator, you're responsible for setting up end-user
        clients and devices.
    * - ensure
      -
-     - Use *ensure* to mean *make certain of an action, event, or outcome*. Do
-       not use the following similar terms to convey that meaning:
+     - Use *ensure* to mean *make certain of an action, event, or outcome*.
+       Don't use the following similar terms to convey that meaning:
 
        - *assure* (which means to set someone's mind at ease)
        - *be sure*
@@ -1098,12 +1098,12 @@ parts of speech:
        You might see the ``Connection timed out – please try again`` error
        message because your browser is storing an invalid cookie.
 
-       *Do not use:*
+       *Don't use:*
 
        You might see the ``Connection timed out – please try again`` error
        because your browser is storing an invalid cookie.
    * - etc.
-     - Do not use
+     - Don't use
      - Remove *etc.* from the text and replace it with *and so on* or explain
        what it means (in general terms or by example). Precede a limited list
        of examples with *such as*, or list all specific items. See
@@ -1121,10 +1121,10 @@ parts of speech:
        beginning of a sentence or a title. If the term is hyphenated,
        capitalize the letter following the hyphen in titles.
 
-       Do not make up new e-words.
+       Don't make up new e-words.
    * - exit (close, quit, stop)
      -
-     - Use *exit* to refer to closing a program or application. Do not use
+     - Use *exit* to refer to closing a program or application. Don't use
        *end*, *leave*, *stop*, or *terminate* to refer to closing a program or
        application.
 
@@ -1149,9 +1149,9 @@ parts of speech:
      - Avoid
      - Use *unable to* instead.
    * - fanatical, fanatically
-     - Do not use
-     - Because *Fanatical* and *Fanatical Support* are Rackspace trademarks, do
-       not use *fanatical* as a general adjective, and do not use
+     - Don't use
+     - Because *Fanatical* and *Fanatical Support* are Rackspace trademarks,
+       don't use *fanatical* as a general adjective, and don't use
        *fanatically*.
 
        *Use:*
@@ -1160,7 +1160,7 @@ parts of speech:
        expert live assistance to ensuring that customers have access to
        self-help tools.
 
-       *Do not use:*
+       *Don't use:*
 
        We fanatically support your infrastructure.
    * - FAQ
@@ -1168,7 +1168,7 @@ parts of speech:
      - Use the acronym *FAQ* to refer to an article or section that documents
        frequently asked questions, or a collections of question and answer
        (Q&A) pairs. If you need to refer to more than one FAQ, follow *FAQ*
-       with a plural noun, such as *articles* or *documents*. Do not use
+       with a plural noun, such as *articles* or *documents*. Don't use
        *FAQs*.
 
        To refer to the Q&A pairs themselves, spell out *frequently asked
@@ -1209,7 +1209,7 @@ parts of speech:
 
        Complete the follow-up.
 
-       *Do not use:*
+       *Don't use:*
 
        Follow-up the installation with a configuration.
 
@@ -1226,34 +1226,34 @@ parts of speech:
 
        See the preceding example.
 
-       *Do not use:*
+       *Don't use:*
 
        Check the following: user ID and password.
 
        See the preceding.
 
-       Do not use *above*, *below*, *earlier*, or *later* to refer to
+       Don't use *above*, *below*, *earlier*, or *later* to refer to
        information in text. Where possible, use specific references. If you
-       cannot use specific references, use *preceding* and *following* as
+       can't use specific references, use *preceding* and *following* as
        adjectives to refer to elements such as figures and tables.
    * - for instance
-     - Do not use
+     - Don't use
      - Use *for example* instead.
    * - forward slash
-     - Do not use
+     - Don't use
      - Use *slash* to refer to the / character. Use *backslash* to refer to
        the character.
    * - free
      - Restricted
-     - Do not use *free* when describing the availability of Rackspace products
+     - Don't use *free* when describing the availability of Rackspace products
        and services. Use *no charge* or *at no cost* instead.
    * - front end (n), front-end (adj)
      -
      - Use a more specific term if possible. If you need to use the term, show
        it as noted.
    * - given (adj)
-     - Do not use
-     - Do not use given to mean *particular* or *specific*. In many cases, no
+     - Don't use
+     - Don't use given to mean *particular* or *specific*. In many cases, no
        adjective is necessary. If one is, use *particular* or *specific*.
 
        *Use:*
@@ -1263,7 +1263,7 @@ parts of speech:
        Session persistence directs incoming traffic from an address to the same
        web server node behind the load balancer.
 
-       *Do not use:*
+       *Don't use:*
 
        The ``enabled`` option defines whether a given section is enabled.
 
@@ -1281,22 +1281,22 @@ parts of speech:
 
        The printed report uses gray shading to identify the data categories.
    * - grayed or grayed out
-     - Do not use
+     - Don't use
      - Use *dimmed* to describe the appearance of an unavailable command,
        option, or button. Use *unavailable* to refer to the state, not the
        appearance, of inactive commands, options, or buttons on the interface.
    * - guarantee, guaranteed to
-     - Do not use
-     - Do not make guarantees in Rackspace content. Use terms like *intended
+     - Don't use
+     - Don't make guarantees in Rackspace content. Use terms like *intended
        to*, *expected to*, or *designed to* instead.
    * - high availability (HA) (n), high-availability (adj)
      -
      - Use the spelled out term on first use in an article or document, and
        introduce the abbreviation in parentheses. Hyphenate the spelled-out
-       term when it is used as a modifier.
+       term when it's used as a modifier.
    * - higher, lower
      - Restricted
-     - Do not use these terms when referring to product releases and version
+     - Don't use these terms when referring to product releases and version
        numbers. Use *earlier* or *later* instead.
 
        *Use:*
@@ -1305,7 +1305,7 @@ parts of speech:
 
        Windows 3.1 or later
 
-       *Do not use:*
+       *Don't use:*
 
        Ubuntu 12.04 or lower
 
@@ -1328,8 +1328,8 @@ parts of speech:
      - See *link*.
    * - icon
      -
-     - Do not use *icon* and *button* interchangeably. If you are referring to
-       a graphic on a screen, window, or other area, use *icon*. If you are
+     - Don't use *icon* and *button* interchangeably. If you're referring to
+       a graphic on a screen, window, or other area, use *icon*. If you're
        referring to a command button or toolbar button (labeled or unlabeled),
        use *button.*
 
@@ -1339,17 +1339,17 @@ parts of speech:
        the **Camera** icon.
    * - ID, IDs
      -
-     - Use uppercase letters. Do not use *id* or *Id* unless the context
+     - Use uppercase letters. Don't use *id* or *Id* unless the context
        requires it.
 
-       Do not use *ID* as a verb; use *identify* instead.
+       Don't use *ID* as a verb; use *identify* instead.
 
        *Use:*
 
        The ``<affected-end-user-id>`` element specifies the user ID of the end
        user who is affected by the incident.
    * - i.e.
-     - Do not use
+     - Don't use
      - Use *that is* instead. See :ref:`avoid-obscure-words`.
    * - if necessary
      - Avoid
@@ -1361,7 +1361,7 @@ parts of speech:
        If you select **Specific local ports**, specify the port numbers. If you
        specify more than one port number, separate the numbers with a comma.
 
-       *Do not use:*
+       *Don't use:*
 
        If you select **Specific local ports**, specify the port numbers,
        separating them with a comma if necessary.
@@ -1373,27 +1373,27 @@ parts of speech:
        Use *whether* to introduce a noun clause that describes a possibility or
        an alternative.
 
-       Use *whether or not* to describe a condition on which an action does not
+       Use *whether or not* to describe a condition on which an action doesn't
        depend.
 
        *Use:*
 
-       If the application is missing, the file does not open.
+       If the application is missing, the file doesn't open.
 
        Choose a method based on whether you need to monitor transactions.
 
        The program uses a large amount of space, whether or not your system can
        spare it.
    * - impact (v)
-     - Do not use
-     - Do not use *impact* as a verb. Use *affect* instead.
+     - Don't use
+     - Don't use *impact* as a verb. Use *affect* instead.
 
        *Use:*
 
        Migrating to a hosted SharePoint environment can also affect user
        support and training.
 
-       *Do not use:*
+       *Don't use:*
 
        Migrating to a hosted SharePoint environment can also impact user
        support and training.
@@ -1408,7 +1408,7 @@ parts of speech:
 
        Insert the DVD into the disc drive.
 
-       *Do not use:*
+       *Don't use:*
 
        Log into the computer.
    * - include, including
@@ -1437,7 +1437,7 @@ parts of speech:
 
        Complete the installation process.
 
-       *Do not use:*
+       *Don't use:*
 
        After completing the install, you can configure the product.
 
@@ -1447,17 +1447,17 @@ parts of speech:
        or facility.
    * - insure
      - Restricted
-     - Use *ensure* to mean make certain of an action, event, or outcome. Do
-       not use *insure* (to guarantee financially against risk) to convey this
+     - Use *ensure* to mean make certain of an action, event, or outcome. Don't
+       use *insure* (to guarantee financially against risk) to convey this
        meaning.
    * - inter (prefix)
      -
-     - Do not hyphenate words that begin with the prefix *inter*, such as
+     - Don't hyphenate words that begin with the prefix *inter*, such as
        *interrelated* or *interdependent*, unless the root word starts with a
        capital letter.
    * - interface
      - Restricted
-     - Use *interface* as a noun meaning user interface. Do not use *interface*
+     - Use *interface* as a noun meaning user interface. Don't use *interface*
        as a verb; use *interact* instead.
 
        *Use:*
@@ -1468,7 +1468,7 @@ parts of speech:
        The phpMyAdmin package enables you to interact with your database
        through a PHP user interface.
 
-       *Do not use:*
+       *Don't use:*
 
        The phpMyAdmin package enables you to interface with your database
        through a PHP user interface.
@@ -1494,10 +1494,10 @@ parts of speech:
 
        *Use:*
 
-       Rackspace does not administer your cloud or its contents—just the
+       Rackspace doesn't administer your cloud or its contents—just the
        equipment on which it is hosted.
    * - keep in mind
-     - Do not use
+     - Don't use
      - Use *remember* or *consider*, or rewrite to eliminate the need for the
        term.
 
@@ -1508,7 +1508,7 @@ parts of speech:
        Remember the important considerations when planning and configuring your
        setup.
 
-       *Do not use:*
+       *Don't use:*
 
        Keep in mind the effects of increasing the value.
 
@@ -1522,7 +1522,7 @@ parts of speech:
      -
      - Hyphenate *key-value* when used as an adjective.
    * - kick off (v)
-     - Do not use
+     - Don't use
      - Use *start* instead.
    * - kill
      - Avoid
@@ -1539,7 +1539,7 @@ parts of speech:
 
        Start the program.
 
-       *Do not use:*
+       *Don't use:*
 
        Launch the program.
    * - left
@@ -1547,7 +1547,7 @@ parts of speech:
      - Avoid using *left* by itself as a directional term. When possible, use
        such terms as *upper left*, *lower left*, *leftmost*, and *on the left
        side of* instead. Include a hyphen if the term modifies a noun, as in
-       *upper-left* corner. Do not use *left hand*.
+       *upper-left* corner. Don't use *left hand*.
 
        *Use:*
 
@@ -1577,13 +1577,13 @@ parts of speech:
        When you create a cloud server, use the metadata option to specify the
        pools.
 
-       *Do not use:*
+       *Don't use:*
 
        When you create a cloud server, leverage the metadata option to specify
        the pools.
    * - life cycle (n), life-cycle (adj)
      -
-     - In most cases, use as two words. Use *lifecycle* only if it is used in a
+     - In most cases, use as two words. Use *lifecycle* only if it's used in a
        product interface, is part of a product name, or is part of the name of
        an external standard.
 
@@ -1621,7 +1621,7 @@ parts of speech:
 
        Use *login* and *logoff* as nouns or adjectives.
 
-       Do not use *log into*; use *log in to* instead.
+       Don't use *log into*; use *log in to* instead.
 
        *Use:*
 
@@ -1630,13 +1630,13 @@ parts of speech:
        Routine events such as logins help determine network usage.
    * - lowercase
      -
-     - Do not use *lower-case*. Do not use *upper/lowercase* to mean mixed
+     - Don't use *lower-case*. Don't use *upper/lowercase* to mean mixed
        case.
 
        See also *mixed case, mixed-case (compound modifier preceding a noun)*.
    * - lower, higher
      - Restricted
-     - Do not use these terms when referring to product releases and version
+     - Don't use these terms when referring to product releases and version
        numbers. Use *earlier* or *later* instead.
 
        *Use:*
@@ -1645,7 +1645,7 @@ parts of speech:
 
        Windows 3.1 or later
 
-       *Do not use:*
+       *Don't use:*
 
        Ubuntu 12.04 or lower
 
@@ -1661,12 +1661,12 @@ parts of speech:
      - Use *machine* only when referring to a virtual machine (VM). In all
        other cases, use *computer*, *server*, or another specific term.
    * - make sure
-     - Do not use
+     - Don't use
      - Use *ensure* instead of *make sure* to mean to make certain of an
        action, event, or outcome.
    * - man
      - Restricted
-     - Use *man* to refer to man pages or to the ``man`` command. Do not use
+     - Use *man* to refer to man pages or to the ``man`` command. Don't use
        *man* to refer to people, as in the term *man-hours*, or to refer to
        working in the service of something, as in *man the phone lines*. Use
        gender-neutral terms instead.
@@ -1680,7 +1680,7 @@ parts of speech:
        server hardware, software, upgrades, and staff hours needed to run it
        all.
 
-       *Do not use:*
+       *Don't use:*
 
        In a hosted environment, you pay as you grow, which saves you money in
        server hardware, software, upgrades, and man-hours needed to run it all.
@@ -1698,11 +1698,11 @@ parts of speech:
        See also *can*, *might*, *must*, *should*, and :ref:`helping-verbs`.
    * - menu
      -
-     - Capitalize *menu* only if it is part of the name that is shown in the
+     - Capitalize *menu* only if it's part of the name that's shown in the
        software. Use lowercase letters for generic names (for example, the
        primary menu).
    * - menu item
-     - Do not use
+     - Don't use
      - Use *command* instead of *menu item* in the following situations:
 
        - Referring to a selection on a menu
@@ -1722,7 +1722,7 @@ parts of speech:
        to your messages.
    * - metadata
      -
-     - Do not hyphenate.
+     - Don't hyphenate.
    * - might
      -
      - Use *might* to indicate probability or possibility.
@@ -1731,7 +1731,7 @@ parts of speech:
    * - mixed case (n), mixed-case (adj)
      -
      - Use *mixed case* to refer to terms that have been formatted with a
-       combination of uppercase and lowercase letters. Do not use *upper- and
+       combination of uppercase and lowercase letters. Don't use *upper- and
        lowercase* or *upper/lowercase* to mean mixed case.
 
        *Use:*
@@ -1742,7 +1742,7 @@ parts of speech:
 
        The mixed-case term is correct.
 
-       *Do not use:*
+       *Don't use:*
 
        Format the term in mixed-case.
 
@@ -1757,17 +1757,17 @@ parts of speech:
        *Use:*
 
        After you have installed the Rackspace application on your mobile
-       device, you are ready to start managing Cloud Servers on your account.
+       device, you're ready to start managing Cloud Servers on your account.
 
        To set up IMAP on your iPhone, perform the following steps.
    * - mouse (v)
-     - Do not use
-     - Do not use *mouse* as a verb (as in *mouse over the menu*). Use a phrase
-       such as *point to* or *move the pointer over*. It is acceptable to use
+     - Don't use
+     - Don't use *mouse* as a verb (as in *mouse over the menu*). Use a phrase
+       such as *point to* or *move the pointer over*. It's acceptable to use
        *mouse* as a noun or adjective.
    * - multi (prefix)
      -
-     - Do not hyphenate words that begin with the prefix *multi*, such as
+     - Don't hyphenate words that begin with the prefix *multi*, such as
        *multitenant* and *multifaceted*, unless the root word starts with an
        *i* or a capital letter.
    * - must
@@ -1787,18 +1787,18 @@ parts of speech:
      - Use as one word.
    * - non (prefix)
      -
-     - Do not hyphenate words beginning with *non*, such as *nonnumeric* and
+     - Don't hyphenate words beginning with *non*, such as *nonnumeric* and
        *nonzero*, unless a hyphen is necessary to avoid confusion or the root
        word is a proper noun.
 
-       Do not use *non* to negate an entire phrase, as in *non-security
+       Don't use *non* to negate an entire phrase, as in *non-security
        related* (use *unrelated to security* instead).
 
-       Also, do not attach *non* to a trademark, such as *non-Windows*.
+       Also, don't attach *non* to a trademark, such as *non-Windows*.
 
        *Use:*
 
-       A catchall address is a designated mailbox where any email that is sent
+       A catchall address is a designated mailbox where any email that's sent
        to a nonexistent email address is delivered.
 
        If the test fails, the script stops with a nonzero exit status.
@@ -1813,14 +1813,14 @@ parts of speech:
        constraints prevent spelling out *Not applicable* or *None*, use *NA*.
    * - number sign (#)
      -
-     - Use *number sign* to refer to the # symbol. Do not use *pound sign* or
+     - Use *number sign* to refer to the # symbol. Don't use *pound sign* or
        *hash sign*.
    * - offline
      -
-     - Do not hyphenate this term.
+     - Don't hyphenate this term.
    * - offsite, onsite
      -
-     - Do not hyphenate these terms.
+     - Don't hyphenate these terms.
    * - on
      -
      - See *about, on*.
@@ -1829,7 +1829,7 @@ parts of speech:
      - See *after, once*.
    * - online
      -
-     - Do not hyphenate.
+     - Don't hyphenate.
    * - only
      -
      - Place *only* preceding the word or group that it modifies. If *only*
@@ -1856,7 +1856,7 @@ parts of speech:
      - Use these terms to distinguish local computing (in which resources are
        located on a customer’s own site) from remote computing (in which
        resources are provided partially or totally through the cloud). Always
-       hyphenate. *Premises* is plural; do not use *on-premise* or
+       hyphenate. *Premises* is plural; don't use *on-premise* or
        *off-premise*.
 
        *Use:*
@@ -1884,11 +1884,11 @@ parts of speech:
        callout), use the abbreviated forms but explain them in text.
    * - out-of-the-box (adj), out of the box (adv)
      -
-     - This term describes a system, item, functionality, or feature that is
-       usable without customization. Do not abbreviate as *OOTB*.
+     - This term describes a system, item, functionality, or feature that's
+       usable without customization. Don't abbreviate as *OOTB*.
 
        When used as an adjective preceding a noun, the phrase is hyphenated,
-       but when used as an adverb, it is not hyphenated.
+       but when used as an adverb, it isn't hyphenated.
 
        *Use:*
 
@@ -1897,8 +1897,8 @@ parts of speech:
        Reporting is available out of the box.
    * - over, more than
      -
-     - Do not use *over* to indicate quantities; use *more than* instead. Also,
-       do not use *over* to refer to version numbers.
+     - Don't use *over* to indicate quantities; use *more than* instead. Also,
+       don't use *over* to refer to version numbers.
 
        See also *earlier, later*.
 
@@ -1907,13 +1907,13 @@ parts of speech:
        More than three million business email users rely on Rackspace email
        hosting.
 
-       *Do not use:*
+       *Don't use:*
 
        Over three million business email users rely on Rackspace email hosting.
    * - page
      -
      - When documenting a wizard, use *page* to mean the successively displayed
-       windows of the wizard. Do not use *dialog box*, *pane*, *screen*, or
+       windows of the wizard. Don't use *dialog box*, *pane*, *screen*, or
        *window*.
 
        See also *web, web page, website, WWW, www, home page* and *wizard
@@ -1933,8 +1933,8 @@ parts of speech:
        Program.
    * - path name
      -
-     - Use *path name* as two words unless the software requires otherwise. Do
-       not use *path* when referring to a *path name*.
+     - Use *path name* as two words unless the software requires otherwise.
+       Don't use *path* when referring to a *path name*.
    * - PC
      - Avoid
      - Use *computer* instead.
@@ -1943,7 +1943,7 @@ parts of speech:
      - Use *per* rather than a slash in text to mean for each. In graphical
        material, use the slash if space is a constraint.
 
-       Do not use *per* to mean *according to* or *by way of*.
+       Don't use *per* to mean *according to* or *by way of*.
 
        See also :ref:`avoid-obscure-words`.
 
@@ -1951,7 +1951,7 @@ parts of speech:
 
        The report shows bytes per second.
 
-       *Do not use:*
+       *Don't use:*
 
        The report shows bytes/second.
 
@@ -1963,10 +1963,10 @@ parts of speech:
        use a singular verb. If the percentage refers to a plural term, use a
        plural verb. When a prepositional phrase exists between percent and the
        verb, the form of the verb is determined by the nearest noun. When a
-       prepositional phrase does not follow percent, a singular verb or a
+       prepositional phrase doesn't follow percent, a singular verb or a
        plural verb is acceptable.
 
-       Always use a number with *percent*. If you are describing a nonspecific
+       Always use a number with *percent*. If you're describing a nonspecific
        quantity, use *percentage*.
 
        Unless space is restricted, use *percent* rather than %.
@@ -1990,10 +1990,10 @@ parts of speech:
        on a network.
 
        **Note**: The meaning of this term can vary. Ensure that you use the
-       term correctly for the product or technology that you are
+       term correctly for the product or technology that you're
        documenting.
 
-       Do not use *permissions*, *privileges*, and *rights* interchangeably to
+       Don't use *permissions*, *privileges*, and *rights* interchangeably to
        mean the same thing.
 
        See also *privileges* and *rights*.
@@ -2013,8 +2013,8 @@ parts of speech:
        abbreviation in parentheses. Use the abbreviation thereafter.
    * - please
      - Restricted
-     - Do not use *please* in instructions. Reserve *please* for situations in
-       which you are asking the user to do something inconvenient. However, it
+     - Don't use *please* in instructions. Reserve *please* for situations in
+       which you're asking the user to do something inconvenient. However, it
        is rarely necessary.
 
        *Use:*
@@ -2029,7 +2029,7 @@ parts of speech:
        report the issue to our Support team, post in our forums, or visit
        DotNetNuke's community forums.
 
-       *Do not use:*
+       *Don't use:*
 
        If you want to remove your Exchange account from your iPhone, please
        follow these steps.
@@ -2038,38 +2038,38 @@ parts of speech:
        technology, add a MySQL database, and connect to FTP.
    * - plug-in (n, adj)
      -
-     - Hyphenate; do not use *plugin*.
+     - Hyphenate; don't use *plugin*.
    * - p.m., a.m.
      -
      - Use lowercase, with a period after each letter.
    * - pop-up
      - Restricted
-     - Use *pop-up* as an adjective to refer to a menu that is displayed when
+     - Use *pop-up* as an adjective to refer to a menu that's displayed when
        you right-click an icon or screen, or to refer to a window in
-       context-sensitive Help. Do not use *pop-up* as a noun or verb.
+       context-sensitive Help. Don't use *pop-up* as a noun or verb.
 
        *Use:*
 
        You can use the pop-up menu to set thresholds.
 
-       *Do not use:*
+       *Don't use:*
 
        The pop-up contains configuration commands.
    * - post (prefix)
      -
-     - Do not hyphenate words beginning with *post*, such as *postmigration*
-       and *postproduction*, unless it is necessary to avoid confusion or if
+     - Don't hyphenate words beginning with *post*, such as *postmigration*
+       and *postproduction*, unless it's necessary to avoid confusion or if
        the root word is a proper noun.
    * - pre (prefix)
      -
-     - Do not hyphenate words beginning with *pre*, such as *preexisting* and
+     - Don't hyphenate words beginning with *pre*, such as *preexisting* and
        *prerequisite*, unless the root word is a proper noun or a date.
    * - preceding
      -
      - See *following, preceding*.
    * - press
      -
-     - Use *press* to mean to push down a key or keys. Do not use the verbs
+     - Use *press* to mean to push down a key or keys. Don't use the verbs
        *strike*, *punch*, *depress*, *push*, or *hit*.
 
        See also *click*.
@@ -2096,10 +2096,10 @@ parts of speech:
        global groups, and individual users.
 
        **Note**: The meaning of this term can vary. Ensure that you use the
-       term correctly for the product or technology that you are
+       term correctly for the product or technology that you're
        documenting.
 
-       Do not use *permissions*, *privileges*, and *rights* interchangeably to
+       Don't use *permissions*, *privileges*, and *rights* interchangeably to
        mean the same thing.
 
        See also *permissions* and *rights*.
@@ -2133,15 +2133,15 @@ parts of speech:
        with the name of your password-protected area (for example, ``AuthName
        "My Password-Protected Directory"``).
 
-       *Do not use:*
+       *Don't use:*
 
        Replace the text inside of the quotes on the ``AuthName`` line with the
        name of your password-protected area (for example, ``AuthName "My
        Password-Protected Directory"``).
    * - re (prefix)
      -
-     - Do not hyphenate words beginning with *re*, such as *reinstall* and
-       *reinitialize*, unless it is necessary to avoid confusion with another
+     - Don't hyphenate words beginning with *re*, such as *reinstall* and
+       *reinitialize*, unless it's necessary to avoid confusion with another
        word.
 
        *Use:*
@@ -2158,7 +2158,7 @@ parts of speech:
      - Always hyphenate.
    * - read/write
      -
-     - Use a slash. Do not hyphenate this term.
+     - Use a slash. Don't hyphenate this term.
    * - real time (n), real-time (adj)
      -
      - Use two words as a noun. Hyphenate the term as an adjective.
@@ -2172,7 +2172,7 @@ parts of speech:
        Having a single file to manage (the image) enables you to easily
        re-create a new server with that identical configuration and state.
 
-       *Do not use:*
+       *Don't use:*
 
        Having a single file to manage (the image) enables you to easily
        recreate a new server with that identical configuration and state.
@@ -2186,7 +2186,7 @@ parts of speech:
        For a detailed description of the prerequisites, see Installation
        prerequisites and concepts.
 
-       *Do not use:*
+       *Don't use:*
 
        For a detailed description of the prerequisites, refer to Installation
        prerequisites and concepts.
@@ -2197,7 +2197,7 @@ parts of speech:
    * - release notes
      -
      - Use lowercase letters for a general reference; capitalize the term only
-       when it is used in a title.
+       when it's used in a title.
    * - respectively
      - Avoid
      - Avoid this term. Express relationships directly rather than making the
@@ -2217,7 +2217,7 @@ parts of speech:
 
        The Single Backup window shows the progress of the restore operation.
 
-       *Do not use:*
+       *Don't use:*
 
        The Single Backup window shows the progress of the restore.
    * - right
@@ -2225,9 +2225,9 @@ parts of speech:
      - Avoid using *right* by itself as a directional term. When possible, use
        such terms as *upper right*, *lower right*, *rightmost*, and *on the
        right side of* instead. Include a hyphen if modifying a noun, as in
-       *upper-right corner*. Do not use *right hand*.
+       *upper-right corner*. Don't use *right hand*.
 
-       Do not use *right* to mean *correct*.
+       Don't use *right* to mean *correct*.
 
        *Use:*
 
@@ -2236,17 +2236,17 @@ parts of speech:
 
        When you enter the correct answer, the wizard continues.
 
-       *Do not use:*
+       *Don't use:*
 
        When you enter the right answer, the wizard continues.
    * - right-click
      -
-     - Always hyphenate when used as a verb or modifier. Do not use
+     - Always hyphenate when used as a verb or modifier. Don't use
        *right-click on*.
 
        *Use:*
 
-       If the Server Manager window is not displayed, right-click the
+       If the Server Manager window isn't displayed, right-click the
        **Computer** icon and select **Manage**.
    * - rights
      -
@@ -2256,10 +2256,10 @@ parts of speech:
        certain actions on the system.
 
        **Note**: The meaning of this term can vary. Ensure that you use the
-       term correctly for the product or technology that you are
+       term correctly for the product or technology that you're
        documenting.
 
-       Do not use *permissions*, *privileges*, and *rights* interchangeably to
+       Don't use *permissions*, *privileges*, and *rights* interchangeably to
        mean the same thing.
 
        See also *permissions* and *privileges*.
@@ -2285,8 +2285,8 @@ parts of speech:
    * - run time (n), runtime (adj)
      -
      - Use the noun *run time* to indicate the time during which an application
-       is running. Use the adjective *runtime* to describe a thing that is
-       occurring or relevant at run time. Do not hyphenate this term.
+       is running. Use the adjective *runtime* to describe a thing that's
+       occurring or relevant at run time. Don't hyphenate this term.
 
        *Use:*
 
@@ -2294,8 +2294,8 @@ parts of speech:
 
        The application generates a runtime error.
    * - (s), (es)
-     - Do not use
-     - Do not add *(s)* or *(es)* to the end of a noun to indicate the
+     - Don't use
+     - Don't add *(s)* or *(es)* to the end of a noun to indicate the
        possibility of more than one item. Use the singular form or the plural
        form, or use both forms joined by a conjunction.
 
@@ -2303,7 +2303,7 @@ parts of speech:
 
        Close any applications that are open.
 
-       *Do not use:*
+       *Don't use:*
 
        Close any application(s) that is/are open.
    * - screen
@@ -2317,7 +2317,7 @@ parts of speech:
    * - see
      -
      - Use *see* for references within a document and cross-references to other
-       documents. Do not use *refer to*, and do not precede *see* with
+       documents. Don't use *refer to*, and don't precede *see* with
        *please*.
 
        *Use:*
@@ -2325,7 +2325,7 @@ parts of speech:
        For a detailed description of the prerequisites, see Installation
        prerequisites and concepts.
 
-       *Do not use:*
+       *Don't use:*
 
        For a detailed description of the prerequisites, refer to Installation
        prerequisites and concepts.
@@ -2359,10 +2359,10 @@ parts of speech:
        Complete the setup procedure.
    * - should
      -
-     - Use *should* only to describe a user action that is recommended. In such
+     - Use *should* only to describe a user action that's recommended. In such
        cases, however, prefer *we recommend* instead.
 
-       Do not use *should* to indicate probability; use *might* instead. Do not
+       Don't use *should* to indicate probability; use *might* instead. Don't
        use *should* to indicate necessity; use *must* instead.
 
        See also *can*, *may*, *might*, *must*, and :ref:`helping-verbs`.
@@ -2376,14 +2376,14 @@ parts of speech:
        Enter the following command to test your shutdown script.
    * - simply
      - Avoid
-     - Do not use *simply* to imply that something is easy; it might not be
+     - Don't use *simply* to imply that something is easy; it might not be
        easy for the user. The term is usually superfluous and can be omitted.
 
        *Use:*
 
        Enter the IP address of the server, and press **Enter**.
 
-       *Do not use:*
+       *Don't use:*
 
        Enter the IP address of the server, and simply press **Enter**.
    * - since
@@ -2395,9 +2395,9 @@ parts of speech:
    * - slash
      -
      - Use *slash* to refer to the / character. Use *backslash* to refer to
-       the character. Do not use *slash mark*.
+       the character. Don't use *slash mark*.
    * - slash mark
-     - Do not use
+     - Don't use
      - Use *slash* to refer to the / character, and use *backslash* to refer to
        the character.
    * - software as a service (SaaS)
@@ -2425,7 +2425,7 @@ parts of speech:
 
        Insert the startup disk into the drive.
 
-       *Do not use:*
+       *Don't use:*
 
        Start up the program.
 
@@ -2443,20 +2443,20 @@ parts of speech:
        Stop the job.
    * - sub (prefix)
      -
-     - Do not hyphenate words beginning with *sub*, such as *subdomain*,
-       *subclass*, and *subaccount*, unless it is necessary to avoid confusion
+     - Don't hyphenate words beginning with *sub*, such as *subdomain*,
+       *subclass*, and *subaccount*, unless it's necessary to avoid confusion
        or the root word is capitalized.
    * - supported
      - Avoid
      - Software moves in and out of supported status as the software evolves
        and as Rackspace organizations change. If you claim that Rackspace
-       supports product X, you will have to follow product X and the Support
+       supports product X, you must follow product X and the Support
        organization to keep the claim true. Without claiming that product X is
        supported, advise customers how to discover whether Support can help
        them with product X (call Support) and how to query the API version.
    * - sync
      -
-     - Use *sync* as the abbreviation of *synchronize*. Do not use *synch*. As
+     - Use *sync* as the abbreviation of *synchronize*. Don't use *synch*. As
        often as possible, use the unabbreviated word.
    * - tap
      -
@@ -2479,14 +2479,14 @@ parts of speech:
 
        You can terminate the process by pressing **Ctrl+C**.
 
-       Do not use *terminate* to refer to closing a program or application; use
+       Don't use *terminate* to refer to closing a program or application; use
        *exit* instead.
    * - text box
      -
      - Use *text box* as two words.
    * - that, which
      -
-     - Use *that* to introduce a restrictive clause, and do not use a comma.
+     - Use *that* to introduce a restrictive clause, and don't use a comma.
        Use *which* to introduce a nonrestrictive clause, and use a comma. If a
        nonrestrictive clause occurs in midsentence, set the clause off with
        commas.
@@ -2512,7 +2512,7 @@ parts of speech:
 
        Specify a name for the network drive; then set the maximum cache size.
 
-       *Do not use:*
+       *Don't use:*
 
        Specify a name for the network drive, then set the maximum cache size.
    * - there are, there is
@@ -2527,7 +2527,7 @@ parts of speech:
        When errors occur in the script, the product writes information to the
        message log.
 
-       *Do not use:*
+       *Don't use:*
 
        There is no parameter for this option.
 
@@ -2540,7 +2540,7 @@ parts of speech:
        Many enterprises rely on multiple third-party applications to augment
        their SharePoint environments.
 
-       A website that is hosted by a third party can scale up or down to match
+       A website that's hosted by a third party can scale up or down to match
        fluctuating demand.
    * - time frame
      -
@@ -2562,13 +2562,13 @@ parts of speech:
      -
      - Use each of these terms as one word.
    * - top left, top right
-     - Do not use
+     - Don't use
      - When referring to the location of an item on a UI, use *upper left* and
        *upper right* instead.
 
        See also *left* and *right*.
    * - towards
-     - Do not use
+     - Don't use
      - Use *toward* instead.
    * - trillion
      -
@@ -2578,13 +2578,13 @@ parts of speech:
        Spanish-speaking countries), it indicates 1018, or
        1,000,000,000,000,000,000.
 
-       To avoid confusion when you are citing a large number such as a
+       To avoid confusion when you're citing a large number such as a
        trillion, express the amount in numerals. If space constraints prevent
        writing numerals, use *trillion* as defined in the short-scale system.
    * - un (prefix)
      -
-     - Do not hyphenate words that begin with *un*, such as *undo* and
-       *uninstall*, unless it is necessary to avoid confusion (*un-ionized*
+     - Don't hyphenate words that begin with *un*, such as *undo* and
+       *uninstall*, unless it's necessary to avoid confusion (*un-ionized*
        versus *unionized*) or unless the root word is a proper noun
        (*un-American*).
    * - unavailable
@@ -2613,7 +2613,7 @@ parts of speech:
        abbreviation USA.
    * - UNIX
      -
-     - Use uppercase for all occurrences of *UNIX*. Do not connect this
+     - Use uppercase for all occurrences of *UNIX*. Don't connect this
        trademark to another word by using a hyphen.
 
        *Use:*
@@ -2624,7 +2624,7 @@ parts of speech:
        On Linux and other systems based on UNIX, you can use the ping6 tool to
        check an IPv6 address.
 
-       *Do not use:*
+       *Don't use:*
 
        You can think of a container as analogous to a folder in a Windows
        system or a directory in a Unix system.
@@ -2633,7 +2633,7 @@ parts of speech:
        check an IPv6 address.
    * - uppercase
      -
-     - Do not use *upper-case* or *upper-lowercase*.
+     - Don't use *upper-case* or *upper-lowercase*.
 
        See also *mixed case, mixed-case (compound modifier preceding a noun)*.
    * - upper left, upper right
@@ -2665,7 +2665,7 @@ parts of speech:
      - Use *user name* as two words.
    * - using, by using, with
      -
-     - Use *by using*, or recast the sentence. Do not use *using* (alone) or
+     - Use *by using*, or recast the sentence. Don't use *using* (alone) or
        *with*. *By using* is easier for worldwide audiences to understand.
 
        *Use:*
@@ -2674,7 +2674,7 @@ parts of speech:
 
        Use the text tool to select the text.
 
-       *Do not use:*
+       *Don't use:*
 
        You can select the text using the text tool. (Is the text using the text
        tool?)
@@ -2745,8 +2745,8 @@ parts of speech:
      - See *that, which*.
    * - while
      -
-     - Use *while* to refer to something occurring during a period of time. Do
-       not use it to mean *although*, *though*, or *whereas*.
+     - Use *while* to refer to something occurring during a period of time.
+       Don't use it to mean *although*, *though*, or *whereas*.
 
        *Use:*
 
@@ -2756,7 +2756,7 @@ parts of speech:
 
        A clock icon is displayed while the database completes the setup.
 
-       *Do not use:*
+       *Don't use:*
 
        While setting a bandwidth limit might increase your backup time, it can
        reduce the impact on other network activity like web browsing and
@@ -2767,7 +2767,7 @@ parts of speech:
    * - Wi-Fi
      -
      - This term is a proper noun and a registered trademark. Always use with
-       the capitalization and hyphenation shown. Do not use *WiFi*, *wifi*,
+       the capitalization and hyphenation shown. Don't use *WiFi*, *wifi*,
        *Wifi*, or *wi-fi*.
    * - wildcard
      -
@@ -2781,7 +2781,7 @@ parts of speech:
 
        See also *dialog box*.
    * - wish
-     - Do not use
+     - Don't use
      - Use *want* or another appropriate word instead.
    * - with
      -

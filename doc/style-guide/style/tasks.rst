@@ -103,7 +103,6 @@ When writing steps, use the following guidelines.
 
 -  `Use imperative sentences <#use-imperative-sentences>`__
 -  `Show one action per step <#show-one-action-per-step>`__
--  `Use consistent verbs <#use-consistent-verbs>`__
 -  `Provide context before the
    action <#provide-context-before-the-action>`__
 -  `Provide conditions before
@@ -114,8 +113,6 @@ When writing steps, use the following guidelines.
 -  `Use screenshots sparingly <#use-screenshots-sparingly>`__
 -  `Label optional steps <#label-optional-steps>`__
 -  `Omit extraneous words <#omit-extraneous-words>`__
--  `Show multiple conditions in a
-   list <#show-multiple-conditions-in-a-list>`__
 -  `Show multiple possibilities in a
    list <#show-multiple-possibilities-in-a-list>`__
 -  `Document only one method <#document-only-one-method>`__
@@ -239,6 +236,9 @@ illustrates. Don't rely on the screenshot to show information or values that
 the user must enter; always provide that information in the text of the steps.
 However, ensure that the screenshot accurately reflects the directions and
 values in the step text.
+
+For more information about when to use screenshots, see
+:ref:`screenshot-guidelines`.
 
 Label optional steps
 --------------------

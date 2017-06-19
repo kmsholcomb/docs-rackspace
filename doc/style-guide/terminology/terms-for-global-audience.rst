@@ -13,9 +13,9 @@ all audiences, but the following guidelines will especially clarify
 content for global audiences.
 
 -  `Don't use idioms or
-   colloquialisms <#don't-use-idioms-or-colloquialisms>`__
+   colloquialisms <#don-t-use-idioms-or-colloquialisms>`__
 -  `Avoid metaphorical terms <#avoid-metaphorical-terms>`__
--  `Don't use humor <#don't-use-humor>`__
+-  `Don't use humor <#don-t-use-humor>`__
 -  `Use jargon carefully <#use-jargon-carefully>`__
 -  `Use culture-neutral language and
    examples <#use-culture-neutral-language-and-examples>`__
@@ -128,7 +128,7 @@ The following table lists some jargon typically used in the high tech
 industry and some possible alternatives.
 
 .. list-table::
-   :widths: 33 33 33
+   :widths: 25 25 50
    :header-rows: 1
 
    * - Jargon
@@ -184,7 +184,8 @@ industry and some possible alternatives.
      - computer, server
      - If a UFO lands in the data center, the servers stop working.
 
-       **Note**:When referring to a virtual machine (VM), *machine* is correct.
+       **Note**: When referring to a virtual machine (VM), *machine* is
+       correct.
 
    * - ping (v)
      - contact, alert

@@ -11,8 +11,8 @@ apply:
 -  Use a period at the end of sentences, even imperative ones (such as steps).
 -  Use a comma before the last item in a series (known as the *serial*
    comma).
--  Use a comma to separate independent clauses, and be sure to include a
-   coordinating conjunction.
+-  Use a comma to separate independent clauses, and include a coordinating
+   conjunction.
 -  Avoid using semicolons to separate clauses. They can make long
    sentences seem even longer. You can almost always use a period in the
    place of a semicolon.
