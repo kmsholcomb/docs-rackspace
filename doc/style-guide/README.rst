@@ -2,19 +2,20 @@
 Style guidelines for technical content
 ======================================
 
-This document contains writing, style, and terminology guidelines for
-Rackspace Public Cloud and Private Cloud documentation. Use these
-guidelines to create clear, concise, and consistent technical
-documentation for Rackspace Cloud services.
+This document contains writing, style, and terminology guidelines for Rackspace
+documentation. Use these guidelines to create clear, concise, and consistent
+technical content for Rackspace customers.
 
--  `Basic writing guidelines <basic-writing-guidelines.rst>`__
--  `A-L style reference <a-l-style-guidelines.rst>`__
--  `M-Z style reference <m-z-style-guidelines.rst>`__
--  `Terminology guidelines <terminology-guidelines.rst>`__
--  `Screenshot and diagram
-   guidelines <screenshot-diagram-guidelines.rst>`__
--  `Release notes guidelines <release-notes-guidelines.rst>`__
--  `Style guide revision history <revision-history.rst>`__
+.. toctree::
+   :maxdepth: 1
+
+   writing/index.rst
+   style/index.rst
+   terminology/index.rst
+   screenshot-diagram-guidelines.rst
+   release-notes-guidelines.rst
+   revision-history.rst
+
 
 .. note::
 
