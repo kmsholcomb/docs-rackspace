@@ -20,7 +20,7 @@ end of this topic.
   adjectives <#capitalize-proper-nouns-and-adjectives>`__
 - `Capitalize most abbreviations <#capitalize-most-abbreviations>`__
 - `Capitalize UI labels as shown on the
-  UI <#capitalize-UI-labels-as-shown-on-the-UI>`__
+  UI <#capitalize-ui-labels-as-shown-on-the-ui>`__
 - `Capitalize the names of product components as
   appropriate <#capitalize-the-names-of-product-components-as-appropriate>`__
 - `Don't capitalize common nouns <#don-t-capitalize-common-nouns>`__
