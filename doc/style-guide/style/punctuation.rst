@@ -31,6 +31,8 @@ the UI includes an ampersand (&):
 
 To continue, click **Save & Go to Step 3**.
 
+.. _colons:
+
 Colons
 ~~~~~~
 
@@ -51,6 +53,9 @@ Use the following guidelines for colons:
   they are, standard bandwidth rates apply.
 
 - Don't use a colon at the end a table column header, a title, or a heading.
+
+- Don't capitalize the word that follows a colon in a sentence, unless the word
+  is proper or is the beginning of a quotation.
 
 Commas
 ~~~~~~
@@ -183,6 +188,8 @@ readability. If you use em dashes for this purpose, don't use spaces around
 them. (For an example, see the second paragraph in the following section,
 "Ellipses.")
 
+Don't capitalize the word following an em dash, unless the word is proper.
+
 Don't use an em dash to separate a long sentence into two parts. Instead,
 create two sentences.
 
@@ -221,6 +228,8 @@ about using dashes, see `Dashes <#dashes>`__.
 
 -  `Hyphens in compound modifiers <#hyphens-in-compound-modifiers>`__
 -  `Hyphens with prefixes <#hyphens-with-prefixes>`__
+
+.. _hyphens-in-compound-modifiers:
 
 Hyphens in compound modifiers
 -----------------------------

@@ -62,8 +62,10 @@ often uses unnecessary words.
 
    * - Use
      - Avoid
-   * - This option has no parameter
+   * - This option has no parameter.
+
        *or*
+
        No parameter exists for this option.
      - There is no parameter for this option.
    * - When errors occur in the script, the product writes information to the

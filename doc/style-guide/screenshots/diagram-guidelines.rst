@@ -98,18 +98,16 @@ Text formatting
 -  **Font**: Set the font to **Helvetica**.
 
 -  **Titles:** Title must be **bolded**, aligned **left**, and be at
-   least **24px** in size.
+   least **24px** in size. Use sentence-style capitalization.
 
 Objects
 -------
 
--  **Product icons**: An icon represents it's corresponding product.
-   Product icons are always blue.
+-  **Product icons**: An icon represents its corresponding product. Product
+   icons are always blue. Following is the Cloud Images icon.
 
    .. figure:: images/img/images.png
       :alt: Cloud Images stencil
-
-      Cloud Images stencil
 
    .. note::
 
@@ -121,8 +119,9 @@ Objects
    Stencils that are *not* Rackspace products should always appear in
    black.
 
--  **Labels**: Label all product icons, stencils, and shapes, must
-   be labeled according to their function within the diagram.
+-  **Labels**: Label all product icons, stencils, and shapes, according to
+   their function within the diagram. Use sentence-style capitalization (that
+   is, capitalize *only* terms that are proper or are normally capitalized).
 
 Lines and arrows
 ----------------
@@ -144,28 +143,22 @@ Lines and arrows
    dropdown menu.
 
 -  **Solid lines**: Use solid lines to show a direct relationship
-   between objects, as shown in the example below.
+   between objects, as shown in the following example.
 
    .. figure:: images/img/solid-lines.png
       :alt: Example of solid lines
 
-      Example of solid lines
-
 -  **Dashed lines**: Use dashed lines to group objects that are
-   connected through a network, as shown in the example below.
+   connected through a network, as shown in the following example.
 
    .. figure:: images/img/dashed-lines.png
       :alt: Example of dashed lines
 
-      Example of dashed lines
-
 -  **Dotted lines**: Use dotted lines to show how data entered by
-   the user travels, as shown in the example below.
+   the user travels, as shown in the following example.
 
    .. figure:: images/img/dotted-lines.png
       :alt: Example of dotted lines
-
-      Example of dotted lines
 
 -  **One-way and two-way arrows:** Use arrows to represent direct
    interactions between two or more stencils. If a stencil is attached
@@ -179,5 +172,3 @@ Lines and arrows
 
    .. figure:: images/img/arrowsscreenshot.png
       :alt: Example of one-way and two-way arrows
-
-      Example of one-way and two-way arrows

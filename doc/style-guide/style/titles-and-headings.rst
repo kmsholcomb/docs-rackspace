@@ -22,8 +22,74 @@ as section and procedure headings.
 
 One exception is guide titles, which use *title-style* capitalization.
 
-For capitalization guidelines, see :ref:`sentence-style-capitalization` and
-:ref:`title-style-capitalization`.
+.. _sentence-style-capitalization:
+
+Guidelines for sentence-style capitalization
+--------------------------------------------
+
+In sentence-style capitalization, you capitalize only the first word of
+the title or heading, plus any proper nouns, proper adjectives, and
+terms that are always capitalized, such as some acronyms and
+abbreviations. If the title includes a colon, capitalize the first word
+that follows the colon, regardless of its part of speech.
+
+If the heading includes text from a user interface, the capitalization
+of that text must match the capitalization on the interface.
+
+.. list-table::
+   :widths: 50 50
+   :header-rows: 1
+
+   * - Examples
+     -
+   * - Preparing a cloud server to be a mail server
+     - Can I buy extra IP addresses?
+   * - What are cloud servers?
+     - What are the PHP configuration limits for Cloud Sites?
+   * - Install or upgrade PHP 5.3 for CentOS 5.x
+     - How do I install my own PEAR module?
+   * - Ubuntu Hardy: Using mod\_python to serve your application
+     - I live outside the United States. Can I use my foreign credit card to
+       pay for my account?
+   * - Shopping cart software: The basics
+     - Troubleshooting a Vyatta site-to-site VPN connection
+   * - Back up your files
+     - Differences between IMAP and POP
+
+.. _title-style-capitalization:
+
+Guidelines for title-style capitalization
+-----------------------------------------
+
+Title-style capitalization uses initial uppercase letters for the first,
+last, and all the significant words in the title.
+
+Capitalize all words in the title except for the following types of
+words:
+
+- Articles (*a*, *an*, *the*) unless the article is the first word in the title
+  or follows a colon
+- Coordinating conjunctions (*and*, *but*, *for*, *nor*, *or*, *yet*, *so*)
+  unless the conjunction is the first word in the title
+- Prepositions of any length, unless the preposition is the first or the last
+  word in the title or is part of a verb phrase
+- The word *to* in an infinitive phrase unless to is the first word in the
+  title
+- Second elements attached by hyphens to prefixes unless they're proper nouns
+  or proper adjectives
+- Words that always begin with a lowercase letter, such as literal command
+  names or certain product or software names
+
+.. list-table::
+   :widths: 100
+   :header-rows: 1
+
+   * - Examples
+   * - Next Generation Cloud Servers Developer Guide
+   * - Rackspace Cloud DNS Getting Started Guide
+   * - Stand-alone Object Storage Guide
+   * - Rackspace Private Cloud powered by VMware Customer Handbook
+   * - Cloud Networks Release Notes
 
 Style and structure
 ~~~~~~~~~~~~~~~~~~~

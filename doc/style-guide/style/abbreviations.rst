@@ -14,7 +14,8 @@ spelled-out term.
 .. note::
 
    In FAQ documents, treat every occurrence of a term as the first use (that
-   is, spell out the term and show the abbreviation in parentheses).
+   is, spell out the term and show the abbreviation in parentheses on every
+   occurrence).
 
 Don't capitalize the spelled-out term unless it's a proper name or normally
 capitalized. For example, the spelled-out term for *AJAX* is *Asynchronous
@@ -53,8 +54,7 @@ Also use the following guidelines related to abbreviations.
    * - If an abbreviation is used as part of a compound modifier, hyphenate it
        as you would a word.
 
-       For more information about hyphenating compound modifiers, see the
-       "Hyphens" section in :ref:`punctuation`.
+       For more information, see :ref:`hyphens-in-compound-modifiers`.
      - 1000-bps rate
      - 1000 bps rate
    * - Don't surround abbreviations with quotation marks.

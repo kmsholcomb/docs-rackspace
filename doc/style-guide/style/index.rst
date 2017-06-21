@@ -4,7 +4,7 @@
 Style guidelines
 ================
 
-This section of the writing style guide provides detailed guidelines about and
+This section of the style guide provides detailed guidelines about and
 instructions for applying style conventions.
 
 .. toctree::

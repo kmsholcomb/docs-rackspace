@@ -4,15 +4,14 @@
 Use active voice
 ================
 
-Active voice makes the performer of the action, usually the user, the subject
-of the sentence. Sentences that use the active voice are usually easier to
-understand than sentences that use the passive voice.
+Active voice makes the performer of the action (usually the user) the subject
+of the sentence. Passive voice makes the recipient of the action (not the
+performer) the subject of the sentence.
 
-In passive voice, the recipient (not the performer) of the action is the
-subject of the sentence. Passive voice is usually less engaging and more
-complicated than active voice. When you use passive voice, the actions and
-responses of the technology can be difficult to distinguish from those of the
-user. In addition, passive voice usually requires more words than active voice.
+Active-voice sentences are more engaging, less complicated, less wordy, and
+easier to understand than passive-voice sentences. With active voice, the
+actions and responses of the user are easier to distinguish from the actions
+and responses of the technology.
 
 .. list-table::
    :widths: 50 50
@@ -29,7 +28,7 @@ user. In addition, passive voice usually requires more words than active voice.
    * - Rackspace products and services solve your business problems.
      - Your business problems are solved by Rackspace products and services.
 
-Passive voice is acceptable in the following situations:
+However, passive voice is acceptable in the following situations:
 
 -  Using active voice sounds like you're blaming the user. For
    example, you can use passive voice in an error message or
