@@ -6,7 +6,7 @@ Use pronouns carefully
 
 Pronouns are useful, but you must ensure that their antecedents (the
 words that they are used in place of) are clear, and that they (the
-pronouns) don’t contribute to vagueness and ambiguity.
+pronouns) don’t cause vagueness and ambiguity.
 
 The following pronouns often cause problems, so use them carefully: *it*,
 *this*, *there*, and *that*.

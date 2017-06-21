@@ -54,8 +54,13 @@ Use the following guidelines for colons:
 
 - Don't use a colon at the end a table column header, a title, or a heading.
 
-- Don't capitalize the word that follows a colon in a sentence, unless the word
-  is proper or is the beginning of a quotation.
+- Avoid using colons in sentences. You can almost always use two sentences
+  instead. If you do use a colon in a sentence, however, don't capitalize the
+  word that follows the colon unless the word is proper or is the beginning of
+  a quotation.
+
+- If a title or heading includes a colon, capitalize the first word that
+  follows the colon, regardless of its part of speech.
 
 Commas
 ~~~~~~
