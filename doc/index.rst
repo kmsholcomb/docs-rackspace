@@ -12,7 +12,6 @@ includes information about how to contribute to blog.rackspace.com.
    :maxdepth: 1
 
    contributor-collateral/index.rst
-   rpc/index.rst
    style-guide/index.rst
    templates/index.rst
    tools/index.rst
