@@ -6,8 +6,8 @@ Use effective verbs
 
 Verbs carry the action in a sentence, and they make your content
 come alive for users. To make the biggest impact with your writing,
-use strong, simple, action verbs, and use the guidelines in this
-section.
+use strong, simple, action verbs. See the following sections for specific
+guidelines.
 
 -  `Use action-oriented verbs <#use-action-oriented-verbs>`__
 -  `Avoid nouns built from verbs <#avoid-nouns-built-from-verbs>`__
@@ -15,11 +15,11 @@ section.
 -  `Use helping verbs accurately <#use-helping-verbs-accurately>`__
 -  `Use single-word verbs <#use-single-word-verbs>`__
 -  `Don't use verbs as nouns or
-   adjectives <#don't-use-verbs-as-nouns-or-adjectives>`__
--  `Don't use nonverbs as verbs <#don't-use-nonverbs-as-verbs>`__
+   adjectives <#don-t-use-verbs-as-nouns-or-adjectives>`__
+-  `Don't use nonverbs as verbs <#don-t-use-nonverbs-as-verbs>`__
 -  `Use transitive verbs transitively, not
    intransitively <#use-transitive-verbs-transitively-not-intransitively>`__
--  `Don't humanize inanimate objects <#don't-humanize-inanimate-objects>`__
+-  `Don't humanize inanimate objects <#don-t-humanize-inanimate-objects>`__
 
 Use action-oriented verbs
 ~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -4,13 +4,13 @@
 Use present tense
 =================
 
-Users read documentation to perform tasks or gather information. For them,
-these activities occur in their present, so the present tense is appropriate in
-most content. Additionally, present tense is easier to read than past or future
-tense.
+Users read content to help them perform tasks or to gather information. These
+activities occur in the users' present time, so the present tense is
+appropriate in most content. Additionally, sentences that use the present tense
+are easier to read than sentences that use past or future tense.
 
-Use future tense only when you need to emphasize that something will occur
-later, from the users' perspective.
+Use future tense only when you need to emphasize that something occurs later,
+from the users' perspective.
 
 .. tip::
 
@@ -38,6 +38,5 @@ later, from the users' perspective.
        database instances.
      - Any customer with a Cloud account **will be able to provision** multiple
        ServiceNet database instances.
-   * - When the contract changes, Rackspace **will notify** customers in
-       release notes.
+   * - The migrations will begin in June 2017 and continue through July 2017.
      - Not applicable. Future tense is appropriate in this example.

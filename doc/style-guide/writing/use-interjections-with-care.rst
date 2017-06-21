@@ -9,9 +9,9 @@ an exclamation point. For example, expressions such as *Hooray!*,
 *Excuse me!*, *Sorry!*, *No thank you!*, *Oh dear!*, and *Hey, that's
 mine!* are interjections.
 
-In rare cases, an interjection might be appropriate. For example, at the
-end of a procedure that targets *novice* users, you might write,
-"Congratulations! You successfully created your first cloud server."
+In rare cases, an interjection might be appropriate in technical content.
+For example, at the end of a procedure that targets novice users, you might
+write, "Congratulations! You successfully created your first cloud server."
 
 However, because the tone of an interjection can be condescending, use
 them sparingly and with care.

@@ -93,12 +93,11 @@ Screenshot checklist
 Use the following standards when creating your screenshots:
 
 -  **Size**: Make screenshots no larger than 600 pixels wide.
--  **Callouts**: Use only arrows and boxes for callouts.
 -  **Scope**: Limit the scope of a screenshot to just the portion of
    the UI that shows the action, plus enough surrounding detail to help
    the user locate the item.
--  **Callout color**: Use **Red** (hexadecimal color **FF0000**) for
-   all callouts.
+-  **Callouts**: Use only arrows and boxes for callouts. Use **Red**
+   (hexadecimal color **FF0000**) for all callout arrows and boxes.
 -  **File name**: Create unique and meaningful file names to easily
    differentiate between screenshots.
 -  **Titles:** Titles are not required, especially for screenshots

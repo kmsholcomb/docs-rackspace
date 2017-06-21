@@ -6,7 +6,7 @@ Clarify gerunds and participles
 
 Participles are verbs that end in *-ed* or *-ing* and act as modifiers. Gerunds
 are verbs that end in *-ing* and act as nouns. Both types of words are useful
-and acceptable, but confusion can arise if they aren't placed correctly in a
+and acceptable, but they can cause confusion if they are misplaced in a
 sentence. For example, the word *meeting* can be a gerund or a participle (or
 even a noun) depending on its placement in a sentence. When you use gerunds and
 participles, ensure that the meaning is clear.
@@ -32,14 +32,15 @@ participles, ensure that the meaning is clear.
      - When **using** a load balancer with a public-facing IP address, this
        address becomes the IP address of your website.
 
-The last example illustrates a dangling modifier. In the "Avoid"
+The last example illustrates a *dangling modifier*. In the "Avoid"
 example, *using* doesn't have a subject, so the implied subject is
 *address*, which is incorrect. If the implied subject isn't correct,
 you must revise the sentence to provide a subject for the modifying
 phrase.
 
-Gerunds are used to start the titles of tutorial or high-level process articles
-or topics. Ensure that their meaning is clear.
+The titles of tutorial or high-level process articles or topics usually start
+with a gerund. Titles have less context than sentences, so you have to be
+especially careful to ensure that the meaning is clear.
 
 .. list-table::
    :widths: 50 50

@@ -35,7 +35,7 @@ clarity.
 - Configure SQL Server Management Studio to connect to SQL Server on Windows
 - Add new ServiceNet routes to a server
 
-For guidelines about capitalizing titles, see :ref:`capitalization`.
+For guidelines about capitalizing titles, see :ref:`titles-and-headings`.
 
 Task introductions
 ~~~~~~~~~~~~~~~~~~
