@@ -47,8 +47,8 @@ names, and shortcuts, see :ref:`text-formatting`.
 
        To change from command mode to insert mode, type ``i``.
    * - When telling users to press a letter key (as in a key combination),
-       capitalize the letter. Use press when the action doesn't result in output
-       on the interface.
+       capitalize the letter. Use *press* when the action doesn't result in
+       output on the interface.
 
        **Note**: Don't use the verbs *hit*, *strike*, or *punch*.
 

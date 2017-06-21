@@ -6,7 +6,7 @@ Write clear and concise sentences and paragraphs
 
 Users can understand wordy and complex writing, and they can wade through walls
 of text, but we shouldn't force them to. Use the following guidelines to help
-you write clear sentences and paragraphs.
+you write clear and concise sentences and paragraphs.
 
 -  `Use a consistent sentence
    structure <#use-a-consistent-sentence-structure>`__
@@ -40,10 +40,10 @@ starts with an *if* clause or places the condition before the action.
 Restrict sentence length
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-Even when a long sentence is well written, it can be hard to follow and
-understand. Try to limit sentences to 20-25 words. If you must write a longer
-sentence, it should have more than one clause and the relationship between the
-clauses should be clear.
+Even a well-written long sentence can be hard to follow and understand. Try to
+limit sentences to 20-25 words. If you must write a longer sentence, it should
+have more than one clause, and the relationship between the clauses should be
+clear.
 
 .. list-table::
    :widths: 50 50
@@ -75,10 +75,10 @@ necessary to the meaning, remove them. Can prepositional phrases be shortened?
 Are you using empty phrases that don't clarify the content?
 
 Conversely, be sure to include all the words that *are* necessary to make the
-meaning of a sentence clear the first time it's read. Include all necessary
-articles (*a*, *an*, *the*), prepositions, connectors, and other syntactic
-cues, such as those described in :ref:`clarify-gerunds-participles`,
-:ref:`use-that-which-correctly`, and :ref:`use-pronouns-carefully`.
+meaning of a sentence clear. Include all necessary articles (*a*, *an*, *the*),
+prepositions, connectors, and other syntactic cues, such as those described in
+:ref:`clarify-gerunds-participles`, :ref:`use-that-which-correctly`, and
+:ref:`use-pronouns-carefully`.
 
 .. list-table::
    :widths: 50 50
@@ -114,8 +114,8 @@ cues, such as those described in :ref:`clarify-gerunds-participles`,
 Create short paragraphs
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-Short paragraphs are easier to scan and understand. Use the following
-guidelines for paragraphs:
+Short paragraphs are easier to scan and understand than longer ones. Use the
+following guidelines for paragraphs:
 
 - Cover only one idea in each paragraph.
 - Limit paragraphs to four to five sentences. However, avoid having
