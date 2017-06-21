@@ -170,3 +170,5 @@ list makes it easy for the user to scan the text.
        you select for deletion are highlighted with a dark gray background.
        When you delete a file, it's permanently removed from the Cloud Files
        container.
+
+For style guidelines for lists, see :ref:`lists`.

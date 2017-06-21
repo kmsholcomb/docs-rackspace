@@ -11,6 +11,7 @@ consistent technical content for Rackspace customers.
 .. toctree::
    :maxdepth: 1
 
+   quickstart.rst
    writing/index.rst
    style/index.rst
    terminology/index.rst
