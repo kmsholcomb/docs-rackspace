@@ -51,7 +51,7 @@ following ones to help you boost the effectiveness of your writing.
        possible**.
 
        Even a well-written long sentence can be hard to follow and understand,
-       so try to limit them to 25 words. Short paragraphs are easier to
+       so try to limit sentences to 25 words. Short paragraphs are easier to
        scan and understand than longer ones. When listing three or more items,
        use a bullet list instead of embedding the items in a paragraph.
      - :ref:`write-clear-concise-sentences-paragraphs`
