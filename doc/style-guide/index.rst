@@ -11,7 +11,7 @@ Rackspace documentation. Use these guidelines to create clear, concise, and
 consistent technical content for Rackspace customers.
 
 :ref:`quickstart`
-   Highlights top writing and style guidelines for content contributors
+   Highlights top writing and style guidelines for content contributors.
 
 :ref:`index-writing-guidelines`
    Provides detailed advice for writing content that is clear, active, direct,
@@ -21,7 +21,7 @@ consistent technical content for Rackspace customers.
 :ref:`index-style-guidelines`
    Provides information about how certain elements appear in Rackspace
    content—for example, how we show abbreviations, how we capitalize
-   headings, whether we allow contractions, what formatting we apply to
+   headings, whether we allow contractions, and what formatting we apply to
    certain text.
 
 :ref:`index-terminology-guidelines`
