@@ -12,37 +12,14 @@ Your willingness to share what you know with users will help them to accomplish
 their goals and be successful.
 
 The Information Development team is ready to help turn your contributions into
-clear, concise, consistent, easy-to-read content for users. We do this,
-in part, by adhering to the standards that are defined in this style guide.
-The team doesn't expect contributors to know or adhere to any of
-these guidelines; however, if you are interested in improving your writing or
-learning some of the style standards at Rackspace, we invite you to explore
-the guidelines.
-
-They are divided into the following categories:
-
-- **Writing guidelines** provide advice for writing content that is clear,
-  active, direct, and grammatically correct. In this section you'll encounter
-  grammatical terms like *voice*, *tense*, and *mood*, but don't let that deter
-  you from learning some fundamental standards for good technical writing.
-
-- **Style guidelines** provide information about how certain elements appear in
-  Rackspace content—for example, how we show abbreviations, how we capitalize
-  headings, whether we allow contractions, what formatting we apply to
-  certain text.
-
-- **Terminology guidelines** provide advice for using accurate, consistent, and
-  concise terminology in your content, and for writing for a global audience.
-
-- **Screenshot and diagram guidelines** provide instructions for when to use
-  and how to create screenshots and diagrams to enhance your content.
-
-- **Release notes guidelines** provide instructions specifically for writing
-  release notes for Rackspace Cloud services APIs. You can use these basic
-  guidelines, however, when writing release notes for any product.
+clear, concise, consistent, easy-to-read content for users. We do this, in
+part, by adhering to the standards that are defined in this style guide. The
+team doesn't expect contributors to know or adhere to all of these standards;
+however, if you are interested in improving your writing or learning some of
+the style standards at Rackspace, we invite you to explore them.
 
 The style guide includes hundreds of guidelines, but you can start with the
-following guidelines to help you boost the effectiveness of your writing.
+following ones to help you boost the effectiveness of your writing.
 
 .. list-table::
    :widths: 80 20
