@@ -27,19 +27,19 @@ following ones to help you boost the effectiveness of your writing.
 
    * - Guideline
      - More information and examples
-   * - Write in *active voice*.
+   * - **Write in active voice**
 
        Active voice makes the performer of the action (usually the user) the
        subject of the sentence. Active-voice sentences are more direct and
        easier to understand than passive-voice sentences.
      - :ref:`use-active-voice`
-   * - Use *present tense*.
+   * - **Use present tense**.
 
        Users read content to help them perform tasks or to gather
        information. These activities occur in the users' present
        time, so the present tense is appropriate in most content.
      - :ref:`use-present-tense`
-   * - Write to the user by using *second person* and *imperative mood*.
+   * - **Write to the user by using second person and imperative mood**.
 
        Users are more engaged with content when it talks to them directly.
        You talk to users directly by using second person, addressing the user
@@ -47,56 +47,60 @@ following ones to help you boost the effectiveness of your writing.
        the subject *you* is understood) *and* active voice, you make the text
        clear, concise, and direct.
      - :ref:`write-to-the-user`
-   * - Write *short sentences* and *short paragraphs*, and use *lists* whenever
-       possible.
+   * - **Write short sentences and paragraphs, and use lists whenever
+       possible**.
 
        Even a well-written long sentence can be hard to follow and understand,
        so try to limit them to 25 words. Short paragraphs are easier to
        scan and understand than longer ones. When listing three or more items,
        use a bullet list instead of embedding the items in a paragraph.
      - :ref:`write-clear-concise-sentences-paragraphs`
-   * - Use *action-oriented verbs*.
+   * - **Use action-oriented verbs**.
 
        Verbs carry the action in a sentence, and they make your content come
        alive for users. To make the biggest impact with your writing, use
        strong, simple, action verbs.
      - :ref:`use-effective-verbs`
-   * - Write clear and brief *step text*.
+   * - **Write clear and brief step text**.
 
        When you write instructions for users, write short steps, number them,
        and use active voice and imperative mood.
      - :ref:`tasks`
-   * - Clarify pronouns such as *it*, *this*, *there*, and *that*.
+   * - **Clarify pronouns**.
 
-       Pronouns are useful, but you must ensure that their antecedents (the
-       words that they are used in place of) are clear, and that they (the
-       pronouns) don’t cause vagueness and ambiguity.
+       Pronouns  such as *it*, *this*, *there*, and *that* are useful, but
+       you must ensure that their antecedents (the words that they are used
+       in place of) are clear, and that they (the pronouns) don’t cause
+       vagueness and ambiguity.
      - :ref:`use-pronouns-carefully`
-   * - Use *correct punctuation*.
+   * - **Use correct punctuation**.
 
-       Use periods to end most sentences, and use serial commas.
+       Use periods to end most sentences, avoid quotation marks, and use
+       serial commas.
      - :ref:`use-correct-punctuation`
 
        :ref:`punctuation`
-   * - Use *sentence-style capitalization* for all titles and headings.
+   * - **Use sentence-style capitalization for all titles and headings**.
 
        In sentence-style capitalization, you capitalize only the first word
-       of the title or heading, plus any proper nouns, proper adjectives,
-       and terms that are always capitalized, such as some abbreviations.
+       of the title or heading, plus any proper terms and terms that are
+       always capitalized, such as some abbreviations.
      - :ref:`titles-and-headings`
-   * - Write clear and consistent *code examples*.
+   * - **Write clear and consistent code examples**.
 
        When you create blocks of code as input or output examples, follow some
        basic guidelines to make them clear to users.
      - :ref:`code-examples`
-   * - Use *consistent and simple terminology*.
+   * - **Use consistent and simple terminology**.
 
        Use short, simple words, and use them as they are defined in a general
        or accepted industry dictionary. Each word or phrase should have only
        one meaning that is used consistently throughout the content. Avoid
        using humor, jargon, and metaphors.
-     - :ref:`alphabetical-list-of-terms`
+     - :ref:`use-consistent-terms`
+     
+       :ref:`terms-for-global-audience`
 
        :ref:`concise-terms`
 
-       :ref:`terms-for-global-audience`
+       
