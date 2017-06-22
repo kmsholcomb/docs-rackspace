@@ -27,7 +27,7 @@ following ones to help you boost the effectiveness of your writing.
 
    * - Guideline
      - More information and examples
-   * - **Write in active voice**
+   * - **Write in active voice**.
 
        Active voice makes the performer of the action (usually the user) the
        subject of the sentence. Active-voice sentences are more direct and
