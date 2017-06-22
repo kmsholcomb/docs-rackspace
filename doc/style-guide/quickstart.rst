@@ -18,14 +18,14 @@ team doesn't expect contributors to know or adhere to all of these standards;
 however, if you are interested in improving your writing or learning some of
 the style standards at Rackspace, we invite you to explore them.
 
-The style guide includes hundreds of guidelines, but you can start with the
+The style guide includes hundreds of standards, but you can start with the
 following ones to help you boost the effectiveness of your writing.
 
 .. list-table::
-   :widths: 80 20
+   :widths: 75 25
    :header-rows: 1
 
-   * - Guideline
+   * - Standard
      - More information and examples
    * - **Write in active voice**.
 
