@@ -4,6 +4,12 @@
 Code examples
 =============
 
+.. note::
+   
+   When using reStructuredText syntax to format code in the
+   documentation, use the
+ + ``.. code-block:: console`` directive.
+
 Use the following guidelines when creating blocks of code as input
 or output examples:
 
@@ -35,7 +41,7 @@ or output examples:
 
      .. note::
 
-        Use Use lowercase and camelCase unless you have to follow the
+        Use lowercase and camelCase unless you have to follow the
         conventions of the programming language. For example, you might need to
         use underscores (account_ID) or all capitals (ACCOUNT_ID).
 
