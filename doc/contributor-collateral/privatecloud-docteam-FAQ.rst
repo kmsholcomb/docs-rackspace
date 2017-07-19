@@ -94,11 +94,9 @@ The following external guides that are published
 to the `Rackspace Developer Docs site
 <https://developer.rackspace.com/docs/#docs-private-cloud>`_:
 
-* Technical FAQ (external)
-* Operations Guide
+* Technical FAQ
 * Release Notes
 * Standalone Object Storage Guide (swift)
-* Upgrade Guide
 
 The internal guides contain information
 specific to Rackspace support that is not intended for public use. For example,
