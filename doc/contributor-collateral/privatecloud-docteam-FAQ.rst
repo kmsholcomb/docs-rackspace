@@ -110,11 +110,14 @@ The following internal guides are published to the `Rackspace Developer Portal
 <https://pages.github.rackspace.com/rpc-internal/docs-rpc/>`_ using the GitHub
 pages feature:
 
-* Technical FAQ (internal)
+* Technical FAQ 
 * Installation Guide
-* Operations Guide (internal)
+* Magnum Guide
+* Monitoring and Logging Guide
+* Operations Guide 
 * Rackspace Private Cloud Sales Engineering Documentation
 * Upgrade Expectations
+* Upgrade Guide
 
 .. note::
 
