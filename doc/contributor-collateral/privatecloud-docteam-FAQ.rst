@@ -58,25 +58,22 @@ Architects, and Editors.
 
 Following are the members of the team:
 
-* **Senior Manager: Laura Clymer (IRC: onthecly)**
+* **Senior Manager: Christie Lenneville**
 
 * Karin Levenstein (IRC: klevenstein) - Manager of Austin, US team
 
   * Kelly Holcomb - Editor
-  * Catherine Richardson (IRC: cathrichardson) - Senior Information Developer,
-    RPC and Public Cloud
-  * Robb Romans (IRC: rromans) - Senior Information Developer, RPC and OSA
-  * Alexandra Settle (IRC: asettle) - Information Developer, RPC and
-    OSA
-  * Erik Wilson (IRC: erikmwilson) - Senior Information Developer, RPC
+  * Catherine Richardson (IRC: cathrichardson) - Senior Information Developer
+  * Robb Romans (IRC: rromans) - Senior Information Developer
+  * Alexandra Settle (IRC: asettle) - Information Developer
+  * Erik Wilson (IRC: erikmwilson) - Senior Information Developer
 
 * Renee Rendon - Manager of San Antonio, US team
 
-  * Nate Archer - Information Developer, How-To
-  * Stephanie Fillmon - Information Developer, How-To
-  * Laura Santamaria - Information Developer, How-To
-  * Cat Lookabaugh (IRC: catlook) - Senior Information Developer, How-To,
-    Public Cloud
+  * Nate Archer - Information Developer
+  * Stephanie Fillmon - Information Developer
+  * Laura Santamaria - Information Developer
+  * Cat Lookabaugh (IRC: catlook) - Senior Information Developer
 
 Rackspace Private Cloud documentation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -97,11 +94,9 @@ The following external guides that are published
 to the `Rackspace Developer Docs site
 <https://developer.rackspace.com/docs/#docs-private-cloud>`_:
 
-* Technical FAQ (external)
-* Operations Guide
+* Technical FAQ
 * Release Notes
 * Standalone Object Storage Guide (swift)
-* Upgrade Guide
 
 The internal guides contain information
 specific to Rackspace support that is not intended for public use. For example,
@@ -115,11 +110,14 @@ The following internal guides are published to the `Rackspace Developer Portal
 <https://pages.github.rackspace.com/rpc-internal/docs-rpc/>`_ using the GitHub
 pages feature:
 
-* Technical FAQ (internal)
+* Technical FAQ
 * Installation Guide
-* Operations Guide (internal)
+* Magnum Guide
+* Monitoring and Logging Guide
+* Operations Guide
 * Rackspace Private Cloud Sales Engineering Documentation
 * Upgrade Expectations
+* Upgrade Guide
 
 .. note::
 
@@ -160,19 +158,21 @@ guides describe the following tasks for cloud operators:
 * Manage Galera clusters
 * Diagnose and fix issues with the cloud environment
 
-The **Administrator Guide** describes how to create and manage projects, users,
-quotas, and security in a Rackspace Private Cloud environment. This guide is
-intended for customer system administrators who perform the following tasks:
-
-* Create and configure projects
-* Create and manage users
-* Manage project quotas
-* Add and manage project security group rules
-* Diagnose and fix Identity service issues
-
 The **Standalone Object Storage Guide** is intended for Rackspace Support and
 any other Rackers who are adding stand-alone OpenStack Object Storage (swift)
 for a customer in a Rackspace data center or a customer data center.
+
+The **Magnum Guide** contains information and instructions for managing and
+troubleshooting RPC Magnum.
+
+The **Monitoring and Logging Guide** contains information and instructions
+about using monitoring and logging with RPC.
+
+**Rackspace Private Cloud Sales Engineering Documentation** is a work in
+progress that contains information from the sales engineering team.
+
+**Upgrade Expectations** provides information about what to expect when
+upgrading to Kilo and Liberty.
 
 The **Upgrade Guide** contains information and instructions for upgrading a
 Rackspace Private Cloud environment. Note that this guide is different from the
