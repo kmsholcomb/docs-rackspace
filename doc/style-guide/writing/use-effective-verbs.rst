@@ -211,7 +211,7 @@ abbreviations, nouns, or conjunctions.
 Use transitive verbs transitively, not intransitively
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Transitive verbs, such as *display* and *complete* require a direct
+Transitive verbs, such as *display* and *complete*, require a direct
 object. Intransitive verbs don't require a direct object. Be sure to
 use each type of verb correctly.
 
