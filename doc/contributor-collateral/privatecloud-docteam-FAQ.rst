@@ -110,11 +110,11 @@ The following internal guides are published to the `Rackspace Developer Portal
 <https://pages.github.rackspace.com/rpc-internal/docs-rpc/>`_ using the GitHub
 pages feature:
 
-* Technical FAQ 
+* Technical FAQ
 * Installation Guide
 * Magnum Guide
 * Monitoring and Logging Guide
-* Operations Guide 
+* Operations Guide
 * Rackspace Private Cloud Sales Engineering Documentation
 * Upgrade Expectations
 * Upgrade Guide
@@ -165,10 +165,10 @@ for a customer in a Rackspace data center or a customer data center.
 The **Magnum Guide** contains information and instructions for managing and
 troubleshooting RPC Magnum.
 
-The **Monitoring and Logging Guide** contains information and instructions 
+The **Monitoring and Logging Guide** contains information and instructions
 about using monitoring and logging with RPC.
 
-**Rackspace Private Cloud Sales Engineering Documentation** is a work in 
+**Rackspace Private Cloud Sales Engineering Documentation** is a work in
 progress that contains information from the sales engineering team.
 
 **Upgrade Expectations** provides information about what to expect when
