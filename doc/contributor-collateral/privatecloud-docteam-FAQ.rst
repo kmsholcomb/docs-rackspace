@@ -58,25 +58,22 @@ Architects, and Editors.
 
 Following are the members of the team:
 
-* **Senior Manager: Laura Clymer (IRC: onthecly)**
+* **Senior Manager: Christie Lenneville**
 
 * Karin Levenstein (IRC: klevenstein) - Manager of Austin, US team
 
   * Kelly Holcomb - Editor
-  * Catherine Richardson (IRC: cathrichardson) - Senior Information Developer,
-    RPC and Public Cloud
-  * Robb Romans (IRC: rromans) - Senior Information Developer, RPC and OSA
-  * Alexandra Settle (IRC: asettle) - Information Developer, RPC and
-    OSA
-  * Erik Wilson (IRC: erikmwilson) - Senior Information Developer, RPC
+  * Catherine Richardson (IRC: cathrichardson) - Senior Information Developer
+  * Robb Romans (IRC: rromans) - Senior Information Developer
+  * Alexandra Settle (IRC: asettle) - Information Developer
+  * Erik Wilson (IRC: erikmwilson) - Senior Information Developer
 
 * Renee Rendon - Manager of San Antonio, US team
 
-  * Nate Archer - Information Developer, How-To
-  * Stephanie Fillmon - Information Developer, How-To
-  * Laura Santamaria - Information Developer, How-To
-  * Cat Lookabaugh (IRC: catlook) - Senior Information Developer, How-To,
-    Public Cloud
+  * Nate Archer - Information Developer
+  * Stephanie Fillmon - Information Developer
+  * Laura Santamaria - Information Developer
+  * Cat Lookabaugh (IRC: catlook) - Senior Information Developer
 
 Rackspace Private Cloud documentation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
