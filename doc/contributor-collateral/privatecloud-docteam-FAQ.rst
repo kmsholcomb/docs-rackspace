@@ -158,19 +158,21 @@ guides describe the following tasks for cloud operators:
 * Manage Galera clusters
 * Diagnose and fix issues with the cloud environment
 
-The **Administrator Guide** describes how to create and manage projects, users,
-quotas, and security in a Rackspace Private Cloud environment. This guide is
-intended for customer system administrators who perform the following tasks:
-
-* Create and configure projects
-* Create and manage users
-* Manage project quotas
-* Add and manage project security group rules
-* Diagnose and fix Identity service issues
-
 The **Standalone Object Storage Guide** is intended for Rackspace Support and
 any other Rackers who are adding stand-alone OpenStack Object Storage (swift)
 for a customer in a Rackspace data center or a customer data center.
+
+The **Magnum Guide** contains information and instructions for managing and
+troubleshooting RPC Magnum.
+
+The **Monitoring and Logging Guide** contains information and instructions 
+about using monitoring and logging with RPC.
+
+**Rackspace Private Cloud Sales Engineering Documentation** is a work in 
+progress that contains information from the sales engineering team.
+
+**Upgrade Expectations** provides information about what to expect when
+upgrading to Kilo and Liberty.
 
 The **Upgrade Guide** contains information and instructions for upgrading a
 Rackspace Private Cloud environment. Note that this guide is different from the
