@@ -211,9 +211,9 @@ abbreviations, nouns, or conjunctions.
 Use transitive verbs transitively, not intransitively
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Transitive verbs, such as *load*, *display*, *complete*, and *execute*,
-require a direct object. Intransitive verbs don't require a direct
-object. Be sure to use each type of verb correctly.
+Transitive verbs, such as *display* and *complete*, require a direct
+object. Intransitive verbs don't require a direct object. Be sure to
+use each type of verb correctly.
 
 To avoid using a transitive verb intransitively, you can make it passive
 if the performer of the action is understood or not important.
@@ -224,12 +224,6 @@ if the performer of the action is understood or not important.
 
    * - Correct
      - Incorrect
-   * - The installation program **loads** the files.
-
-       *or*
-
-       The files **are loaded**.
-     - The files **load**.
    * - The product **displays** the available servers in the right pane.
 
        *or*
