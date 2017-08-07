@@ -6,12 +6,8 @@ Code examples
 
 .. note::
    
-   When using reStructuredText syntax to format code in the
-   documentation, use the
- + ``.. code-block:: console`` directive.
- 
-   For configuration files, use ``.. code-block:: ini``
-   or ``.. code-block:: yaml`` as appropriate.
+   For more information about formatting code, see the "Code" row in
+   the Text formatting topic.
 
 Use the following guidelines when creating blocks of code as input
 or output examples:
