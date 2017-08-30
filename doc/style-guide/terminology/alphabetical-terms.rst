@@ -2647,7 +2647,7 @@ parts of speech:
      - Use *uptime* as one word.
    * - up-to-date
      -
-     - Hyphenate this compound modifier whether it precedes or follows that
+     - Hyphenate this compound modifier whether it precedes or follows the
        noun that it modifies.
    * - us
      - Restricted
