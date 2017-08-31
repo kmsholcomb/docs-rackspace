@@ -92,9 +92,15 @@ Also use the following guidelines related to abbreviations.
 
        FAQs
    * - For abbreviated units of measure, insert a space between the number and
-       the abbreviation.
+       the abbreviation. Insert a hyphen if the phrase is a compound modifier.
      - 256 MB
+       
+       100-GB drive
      - 256MB
+     
+       100GB drive
+       
+       100 GB drive
    * - Don't use Latin abbreviations or non-English words and phrases. For
        more information, see :ref:`avoid-obscure-words`.
      - for example
@@ -115,7 +121,7 @@ addition to the abbreviation.
    :header-rows: 1
 
    * - Examples
-   * - The 100 GB drive appears as 107.4 GB because of how the megabytes
+   * - The 100-GB drive appears as 107.4 GB because of how the megabytes
        are counted.
    * - The unit of value for this alarm is megabits per second (Mbps).
 
