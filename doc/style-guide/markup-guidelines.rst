@@ -32,14 +32,17 @@ MarkDown (MD)
 
 MD is a straightforward markup language that uses simple and implicit
 syntax to introduce a variety of content elements. All the source
-content formatted using MD is stored in files with the ``.md`` extension.
+content formatted using MD is stored in files with the ``.md``
+extension.
 
 To keep the documentation format consistent, follow the guidelines
 included in this chapter for all the MD source content.
 
-.. TODO: LINK THE ABOVE TO THE MD SHEET (A.S)
-
-For more information on MD conventions, see the following
+For more information about MD conventions, see the following
 resources:
 
-* `Markdown Cheatsheet <https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#lists>`_
+* `Kramdown Quick Reference
+  <https://kramdown.gettalong.org/quickref.html>`_
+* `Kramdown Syntax <https://kramdown.gettalong.org/syntax.html>`_
+* `Markdown Cheatsheet
+  <https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet>`_
