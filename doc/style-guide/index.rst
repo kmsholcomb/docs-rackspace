@@ -44,6 +44,7 @@ consistent technical content for Rackspace customers.
    quickstart.rst
    writing/index.rst
    style/index.rst
+   markup-guidelines.rst
    terminology/index.rst
    screenshots/index.rst
    release-notes-guidelines.rst
