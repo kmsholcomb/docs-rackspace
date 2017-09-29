@@ -152,6 +152,8 @@ spellings (for example, *canceled* instead of *cancelled*).
      - describes
    * - quite a few
      - several
+   * - reach out to
+     - contact
    * - refer to
      - see
    * - revert back
